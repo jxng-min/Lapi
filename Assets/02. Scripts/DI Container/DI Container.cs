@@ -10,7 +10,7 @@ public static class DIContainer
         m_instances[typeof(T)] = instance;
     }
 
-    public static T Get<T>()
+    public static T Resolve<T>()
     {
         if (!IsRegistered<T>())
         {

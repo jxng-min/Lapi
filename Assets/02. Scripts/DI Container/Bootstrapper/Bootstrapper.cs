@@ -8,12 +8,12 @@ public abstract class Bootstrapper : MonoBehaviour
 
     private IInstaller[] m_installers;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         m_installers = m_installer_root.GetComponentsInChildren<IInstaller>();
     }
 
-    private void Start()
+    protected virtual void Start()
     {
         foreach (var installer in m_installers)
         {
