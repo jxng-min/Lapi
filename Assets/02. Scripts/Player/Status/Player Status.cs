@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UserService;
 
@@ -30,6 +31,12 @@ public class PlayerStatus : MonoBehaviour, IStatus
         m_user_service = user_service;
     }
 
+    public void Initialize()
+    {
+        UpdateHP(0f);
+        UpdateMP(0f);
+    }
+
     public void UpdateHP(float amount)
     {
         m_user_service.Status.HP += amount;
@@ -41,7 +48,7 @@ public class PlayerStatus : MonoBehaviour, IStatus
         }
         else
         {
-            if (amount <= 0f)
+            if (amount < 0f)
             {
                 Damage();
             }

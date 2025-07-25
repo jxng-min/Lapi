@@ -25,5 +25,7 @@ public class GameBootstrapper : Bootstrapper
         var growth_status = DIContainer.Resolve<GrowthStatus>();
 
         player_ctrl.Inject(movement, attack, status, default_status, growth_status);
+
+        (status as PlayerStatus).Initialize();
     }
 }
