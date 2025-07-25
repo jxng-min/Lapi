@@ -3,9 +3,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour, IMovement
 {
     private PlayerCtrl m_controller;
-    private float m_speed = 10f;
 
-    public float SPD => m_speed;
+    public float SPD => m_controller.DefaultStatus.SPD;
     public Vector2 Direction { get; set; }
 
     private void Awake()

@@ -7,6 +7,9 @@ public class PlayerCtrl : MonoBehaviour
     public IAttack Attack { get; private set; }
     public IStatus Status { get; private set; }
 
+    public DefaultStatus DefaultStatus { get; private set; }
+    public GrowthStatus GrowthStatus { get; private set; }
+
     public Rigidbody2D Rigidbody { get; private set; }
     public Animator Animator { get; private set; }
 
@@ -21,11 +24,14 @@ public class PlayerCtrl : MonoBehaviour
         SetAnime();   
     }
 
-    public void Inject(IMovement movement, IAttack attack, IStatus status)
+    public void Inject(IMovement movement, IAttack attack, IStatus status, DefaultStatus default_status, GrowthStatus growth_status)
     {
         Movement = movement;
         Attack = attack;
         Status = status;
+
+        DefaultStatus = default_status;
+        GrowthStatus = growth_status;
     }
 
     public void SetAnime()
