@@ -12,11 +12,13 @@ public class PlayerCtrl : MonoBehaviour
 
     public Rigidbody2D Rigidbody { get; private set; }
     public Animator Animator { get; private set; }
+    public SpriteRenderer Renderer { get; private set; }
 
     private void Awake()
     {
         Rigidbody = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
+        Renderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
