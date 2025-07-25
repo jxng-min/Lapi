@@ -16,7 +16,10 @@ public class GameBootstrapper : Bootstrapper
         var player_ctrl = DIContainer.Resolve<PlayerCtrl>();
 
         var movement = DIContainer.Resolve<IMovement>();
+
         var attack = DIContainer.Resolve<IAttack>();
+        var weapon = DIContainer.Resolve<Weapon>();
+        (attack as PlayerAttack).Inject(ServiceLocator.Get<IUserService>(), weapon);
 
         var status = DIContainer.Resolve<IStatus>();
         (status as PlayerStatus).Inject(ServiceLocator.Get<IUserService>());

@@ -22,6 +22,10 @@ public class PlayerInstaller : MonoBehaviour, IInstaller
     [Header("성장 능력치")]
     [SerializeField] private GrowthStatus m_growth_status;
 
+    [Space(30f)]
+    [Header("기본 무기")]
+    [SerializeField] private Weapon m_weapon;
+
     public void Install()
     {
         DIContainer.Register<PlayerCtrl>(m_controller);
@@ -32,5 +36,7 @@ public class PlayerInstaller : MonoBehaviour, IInstaller
 
         DIContainer.Register<DefaultStatus>(m_default_status);
         DIContainer.Register<GrowthStatus>(m_growth_status);
+
+        DIContainer.Register<Weapon>(m_weapon);
     }
 }
