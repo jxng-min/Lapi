@@ -14,10 +14,10 @@ public class PlayerStatus : MonoBehaviour, IStatus
     private bool m_is_dead;
 
     public float MaxHP => m_controller.DefaultStatus.HP
-                                + m_user_service.Status.Level * m_controller.GrowthStatus.HP;
+                                + (m_user_service.Status.Level - 1) * m_controller.GrowthStatus.HP;
 
     public float MaxMP => m_controller.DefaultStatus.MP
-                                + m_user_service.Status.Level * m_controller.GrowthStatus.MP;
+                                + (m_user_service.Status.Level - 1) * m_controller.GrowthStatus.MP;
 
     private void Awake()
     {
