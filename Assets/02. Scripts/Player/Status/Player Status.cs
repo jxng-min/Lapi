@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class PlayerStatus : MonoBehaviour, IStatus
 {
+
+    
     public Action<float, float> OnUpdatedHP;
     public Action<float, float> OnUpdatedMP;
 
