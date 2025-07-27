@@ -82,6 +82,8 @@ public class EnemyStatus : MonoBehaviour
 
     private void Return()
     {
+        m_controller.Spawner.UpdateCount(m_controller.SpawnerID, -1);
+
         ObjectManager.Instance.ReturnObject(gameObject,
                                             m_controller.SO.Type == EnemyType.MELEE ?
                                             ObjectType.MELEE_ENEMY : ObjectType.RANGED_ENEMY);

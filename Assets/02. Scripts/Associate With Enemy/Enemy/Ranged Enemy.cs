@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Ranged Enemy", menuName = "SO/Enemy/Create Ranged Enemy")]
-public class RangedEnemy : MeleeEnemy
+public class RangedEnemy : Enemy
 {
     [Space(30f)]
     [Header("원거리 몬스터 관련")]

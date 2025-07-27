@@ -16,7 +16,10 @@ public class EnemyCtrl : MonoBehaviour
     public EnemyStatus Status { get; private set; }
     public EnemyAttack Attack { get; private set; }
     public Pathfinder Pathfinder { get; private set; }
-    public MeleeEnemy SO { get; private set; }
+
+    public SpawnerManager Spawner { get; private set; }
+    public int SpawnerID { get; private set; }
+    public Enemy SO { get; private set; }
 
     public Animator Animator { get; private set; }
     public Rigidbody2D Rigidbody { get; private set; }
@@ -60,9 +63,11 @@ public class EnemyCtrl : MonoBehaviour
         m_state_context?.ExecuteUpdate();
     }
 
-    public void Initialize(MeleeEnemy so)
+    public void Initialize(Enemy so, SpawnerManager spawner_manager, int spawner_id)
     {
         SO = so;
+        Spawner = spawner_manager;
+        SpawnerID = spawner_id;
 
         Animator.runtimeAnimatorController = SO.Animator;
 
