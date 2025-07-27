@@ -55,19 +55,18 @@ public class GridMap : MonoBehaviour
     #region Methods
     private void Initialize()
     {
-        m_row_count = Mathf.CeilToInt(m_map_size.y / m_node_size);
         m_col_count = Mathf.CeilToInt(m_map_size.x / m_node_size);
-
-        var top_left_offset = (Vector2)transform.position + new Vector2(-m_map_size.x, m_map_size.y) / 2f;
+        m_row_count = Mathf.CeilToInt(m_map_size.y / m_node_size);
 
         m_grid = new Node[m_col_count, m_row_count];
         for (int col = 0; col < m_col_count; col++)
         {
             for (int row = 0; row < m_row_count; row++)
             {
-                var position = top_left_offset + new Vector2((col + 0.5f) * m_node_size, -(row + 0.5f) * m_node_size);
+                Vector2 bottom_left_offset = (Vector2)transform.position + new Vector2(-m_map_size.x, -m_map_size.y) / 2f;
+                Vector2 position = bottom_left_offset + new Vector2((col + 0.5f) * m_node_size, (row + 0.5f) * m_node_size);
 
-                var hit = Physics2D.OverlapBox(position, new Vector2(m_node_size, m_node_size), 0f, m_obstacle_layer);
+                var hit = Physics2D.OverlapBox(position, new Vector2(m_node_size, m_node_size), 0, m_obstacle_layer);
                 m_grid[col, row] = new Node(hit == null, position, new Vector2(col, row));
             }
         }
@@ -75,15 +74,20 @@ public class GridMap : MonoBehaviour
 
     public Node GetNode(Vector3 position)
     {
-        int row = Mathf.RoundToInt(position.y / m_node_size);
-        int col = Mathf.RoundToInt(position.x / m_node_size);
+        Vector2 bottom_left_offset = (Vector2)transform.position + new Vector2(-m_map_size.x, -m_map_size.y) / 2f;
+        Vector2 local_pos = (Vector2)position - bottom_left_offset;
 
-        if (0 <= row && row < m_row_count && 0 <= col && col < m_col_count)
+        int pos_x = Mathf.FloorToInt(local_pos.x / m_node_size);
+        int pos_y = Mathf.FloorToInt(local_pos.y / m_node_size);
+
+        if (pos_x >= 0 && pos_y >= 0 && pos_x < m_col_count && pos_y < m_row_count)
         {
-            return m_grid[col, row];
+            return m_grid[pos_x, pos_y];
         }
-
-        return null;
+        else
+        {
+            return null;
+        }
     }
 
     public List<Node> GetNeighborNode(Node node)

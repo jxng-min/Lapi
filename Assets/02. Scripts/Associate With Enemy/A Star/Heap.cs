@@ -78,6 +78,7 @@ public class Heap
         }
 
         m_heap[parent] = last_node;
+        
 
         return return_node;
     }

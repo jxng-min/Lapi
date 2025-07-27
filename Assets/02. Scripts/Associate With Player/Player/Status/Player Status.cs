@@ -104,7 +104,7 @@ public class PlayerStatus : MonoBehaviour, IStatus
         }
 
         SetAlpha(1f);
-        gameObject.layer = LayerMask.NameToLayer("Default");
+        gameObject.layer = LayerMask.NameToLayer("PLAYER");
     }
 
     private IEnumerator SetDeath()

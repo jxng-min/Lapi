@@ -8,6 +8,11 @@ public class Pathfinder : MonoBehaviour
 
     private GridMap m_grid_map;
 
+    public void Inject(GridMap grid_map)
+    {
+        m_grid_map = grid_map;
+    }
+
     public List<Node> Pathfind(Vector3 start_pos, Vector3 end_pos)
     {
         var open_list = new Heap();
@@ -16,8 +21,6 @@ public class Pathfinder : MonoBehaviour
         var start_node = m_grid_map.GetNode(start_pos);
         var end_node = m_grid_map.GetNode(end_pos);
 
-        start_node.G = 0;
-        start_node.H = GetManhattan(start_node, end_node);
         open_list.Push(start_node);
 
         while (open_list.Count > 0)
