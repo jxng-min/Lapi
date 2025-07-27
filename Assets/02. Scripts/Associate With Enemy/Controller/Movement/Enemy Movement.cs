@@ -19,6 +19,11 @@ public class EnemyMovement : MonoBehaviour
         m_controller = GetComponent<EnemyCtrl>();
     }
 
+    private void OnDisable()
+    {
+        Reset();
+    }
+
     public void Initialize(float spd)
     {
         SPD = spd;

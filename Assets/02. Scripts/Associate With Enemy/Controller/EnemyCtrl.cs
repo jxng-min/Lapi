@@ -10,6 +10,7 @@ public class EnemyCtrl : MonoBehaviour
     private IState<EnemyCtrl> m_move_state;
     private IState<EnemyCtrl> m_trace_state;
     private IState<EnemyCtrl> m_attack_state;
+    private IState<EnemyCtrl> m_dead_state;
     #endregion States
 
     public EnemyMovement Movement { get; private set; }
@@ -26,6 +27,8 @@ public class EnemyCtrl : MonoBehaviour
     public CircleCollider2D Collider { get; private set; }
     public SpriteRenderer Renderer { get; private set; }
 
+    public bool IsInit { get; private set; }
+
     protected virtual void Awake()
     {
         m_state_context = new EnemyStateContext(this);
@@ -33,6 +36,7 @@ public class EnemyCtrl : MonoBehaviour
         m_idle_state = gameObject.AddComponent<EnemyIdleState>();
         m_move_state = gameObject.AddComponent<EnemyMoveState>();
         m_trace_state = gameObject.AddComponent<EnemyTraceState>();
+        m_dead_state = gameObject.AddComponent<EnemyDeadState>();
 
         Movement = GetComponent<EnemyMovement>();
         Status = GetComponent<EnemyStatus>();
@@ -47,10 +51,14 @@ public class EnemyCtrl : MonoBehaviour
 
     private void OnEnable()
     {
+        IsInit = false;
+
         Animator.speed = 1f;
         Rigidbody.simulated = true;
         Collider.enabled = true;
         Renderer.color = Color.white;
+
+        Status.IsDead = false;
 
         var grid = FindFirstObjectByType<GridMap>();
         Pathfinder.Inject(grid);
@@ -60,6 +68,11 @@ public class EnemyCtrl : MonoBehaviour
 
     private void Update()
     {
+        if (!IsInit)
+        {
+            return;
+        }
+
         m_state_context?.ExecuteUpdate();
     }
 
@@ -74,6 +87,8 @@ public class EnemyCtrl : MonoBehaviour
         Movement.Initialize(SO.SPD);
         Status.Initialize(SO.HP);
         Attack.Initialize(SO.ATK);
+
+        IsInit = true;
     }
 
     public void ChangeState(EnemyState state)
@@ -94,6 +109,10 @@ public class EnemyCtrl : MonoBehaviour
 
             case EnemyState.ATTACK:
                 m_state_context.Transition(m_attack_state);
+                break;
+
+            case EnemyState.DEAD:
+                m_state_context.Transition(m_dead_state);
                 break;
         }
     }

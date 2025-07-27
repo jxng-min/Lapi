@@ -4,6 +4,11 @@ public class EnemyTraceState : MonoBehaviour, IState<EnemyCtrl>
 {
     private EnemyCtrl m_controller;
 
+    private void OnDisable()
+    {
+        CancelInvoke(nameof(UpdateTrace));
+    }
+
     public void ExecuteEnter(EnemyCtrl sender)
     {
         if (!m_controller)

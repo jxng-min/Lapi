@@ -12,8 +12,11 @@ public class EnemyIdleState : MonoBehaviour, IState<EnemyCtrl>
             m_controller = sender;
         }
 
-        m_controller.Animator.SetBool("Move", false);
-        m_idle_time = Random.Range(0f, 1f);
+        if (m_controller.IsInit)
+        {
+            m_controller.Animator.SetBool("Move", false);
+            m_idle_time = Random.Range(0f, 1f);
+        }
     }
 
     public void Execute()

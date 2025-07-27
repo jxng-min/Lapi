@@ -4,4 +4,5 @@ public enum EnemyState
     MOVE = 1,
     TRACE = 2,
     ATTACK = 3,
+    DEAD = 4,
 }
