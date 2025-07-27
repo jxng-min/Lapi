@@ -90,7 +90,7 @@ public class EnemyStatus : MonoBehaviour
     private IEnumerator SetDamage()
     {
         float elapsed_time = 0f;
-        float target_time = 0.5f;
+        float target_time = 0.25f;
 
         m_controller.Renderer.color = Color.black;
 

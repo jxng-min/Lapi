@@ -13,9 +13,14 @@ public class Sword : Weapon
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.CompareTag("Enemy"))
+        if (collider.CompareTag("ENEMY"))
         {
-            // TODO: 공격 처리 ㅠ
+            var knockback_direction = (Vector2)(collider.transform.position - transform.parent.position).normalized;
+
+            var enemy = collider.GetComponent<EnemyStatus>();
+            enemy.UpdateHP(-ATK, knockback_direction);
+
+            InstantiateIndicator(collider.transform, -ATK);
         }
     }
 

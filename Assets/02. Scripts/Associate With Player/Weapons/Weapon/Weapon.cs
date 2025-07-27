@@ -7,6 +7,7 @@ public abstract class Weapon : MonoBehaviour
     private bool m_can_use = true;
     private float m_cooltime;
     private Animator m_animator;
+    private PlayerAttack m_player_attack;
 
     protected bool CanUse
     {
@@ -15,10 +16,12 @@ public abstract class Weapon : MonoBehaviour
     }
 
     protected Animator Animator => m_animator;
+    protected float ATK => m_player_attack.ATK;
 
     protected virtual void Awake()
     {
         m_animator = GetComponent<Animator>();
+        m_player_attack = transform.parent.parent.GetComponent<PlayerAttack>();
     }
 
     #region Methods
@@ -48,9 +51,14 @@ public abstract class Weapon : MonoBehaviour
         m_can_use = true;
     }
 
-    protected void InstantiateIndicator(Vector3 position, float amount)
+    protected void InstantiateIndicator(Transform target, float amount)
     {
-        // TODO: 데이지 인디케이터를 position 위치에 amount 수치만큼
+        var di_obj = ObjectManager.Instance.GetObject(ObjectType.DAMAGE_INDICATOR);
+        di_obj.transform.SetParent(target);
+        di_obj.transform.localPosition = Vector3.zero;
+
+        var di = di_obj.GetComponent<DamageIndicator>();
+        di.Initialize(amount);
     }
     #endregion Methods
 }
