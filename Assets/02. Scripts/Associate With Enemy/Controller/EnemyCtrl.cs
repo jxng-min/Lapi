@@ -16,7 +16,7 @@ public class EnemyCtrl : MonoBehaviour
     public EnemyStatus Status { get; private set; }
     public EnemyAttack Attack { get; private set; }
     public Pathfinder Pathfinder { get; private set; }
-    [field: SerializeField] public MeleeEnemy SO { get; private set; }
+    public MeleeEnemy SO { get; private set; }
 
     public Animator Animator { get; private set; }
     public Rigidbody2D Rigidbody { get; private set; }
@@ -51,8 +51,6 @@ public class EnemyCtrl : MonoBehaviour
 
         var grid = FindFirstObjectByType<GridMap>();
         Pathfinder.Inject(grid);
-
-        Initialize(SO);
 
         ChangeState(EnemyState.IDLE);
     }

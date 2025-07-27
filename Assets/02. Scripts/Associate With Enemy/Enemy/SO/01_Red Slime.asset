@@ -17,7 +17,7 @@ MonoBehaviour:
   m_animator: {fileID: 9100000, guid: bbcaf1662e86dc04a8630166c6c0caff, type: 2}
   m_hp: 200
   m_atk: 30
-  m_spd: 4
+  m_spd: 2
   m_exp: 55
   m_exp_dev: 10
   m_gold: 55
