@@ -1,3 +1,4 @@
+using InventoryService;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -23,6 +24,8 @@ public class EnemyCtrl : MonoBehaviour
     public SpawnerManager Spawner { get; private set; }
     public int SpawnerID { get; private set; }
     public Enemy SO { get; private set; }
+
+    public IInventoryService InventoryService { get; private set; }
 
     public Animator Animator { get; private set; }
     public Rigidbody2D Rigidbody { get; private set; }
@@ -80,11 +83,13 @@ public class EnemyCtrl : MonoBehaviour
         m_state_context?.ExecuteUpdate();
     }
 
-    public void Initialize(Enemy so, SpawnerManager spawner_manager, int spawner_id)
+    public void Initialize(Enemy so, SpawnerManager spawner_manager, int spawner_id, IInventoryService inventory_service)
     {
         SO = so;
         Spawner = spawner_manager;
         SpawnerID = spawner_id;
+
+        InventoryService = inventory_service;
 
         Animator.runtimeAnimatorController = SO.Animator;
 

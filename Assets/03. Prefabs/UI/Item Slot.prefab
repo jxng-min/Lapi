@@ -195,7 +195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -380,3 +380,4 @@ MonoBehaviour:
   m_item_image: {fileID: 1841846468071762094}
   m_count_label: {fileID: 6851222926478730727}
   m_cooldown_image: {fileID: 1272934198848726795}
+  m_slot_type: 0

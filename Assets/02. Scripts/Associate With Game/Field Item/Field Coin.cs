@@ -1,17 +1,17 @@
+using InventoryService;
 using UnityEngine;
 
 public class FieldCoin : FieldObject
 {
-    #region Variables
     [Space(30)][Header("코인 관련")]
     [Header("코인의 가치")]
     [SerializeField] private int m_amount;
 
     [Header("코인의 오브젝트 타입")]
     [SerializeField] private ObjectType m_type;
-    #endregion Variables
 
-    #region Properties
+    private IInventoryService m_inventory_service;
+
     public int Amount
     {
         get => m_amount;
@@ -23,12 +23,17 @@ public class FieldCoin : FieldObject
         get => m_type;
         set => m_type = value;
     }
-    #endregion Properties
+
+    public void Initialize(IInventoryService inventory_service)
+    {
+        m_inventory_service = inventory_service;
+    }
 
     protected override void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.CompareTag("Player"))
         {
+            m_inventory_service.UpdateGold(Amount);
             ObjectManager.Instance.ReturnObject(gameObject, Type);
         }
     }

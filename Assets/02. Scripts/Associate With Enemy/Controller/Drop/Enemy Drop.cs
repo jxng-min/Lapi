@@ -57,18 +57,27 @@ public class EnemyDrop : MonoBehaviour
         {
             var gold_coin_obj = ObjectManager.Instance.GetObject(ObjectType.GOLD_COIN);
             gold_coin_obj.transform.position = transform.position;
+
+            var gold_coin = gold_coin_obj.GetComponent<FieldCoin>();
+            gold_coin.Initialize(m_controller.InventoryService);
         }
 
         for (int i = 0; i < sliver_count; i++)
         {
             var silver_coin_obj = ObjectManager.Instance.GetObject(ObjectType.SILVER_COIN);
             silver_coin_obj.transform.position = transform.position;
+
+            var silver_coin = silver_coin_obj.GetComponent<FieldCoin>();
+            silver_coin.Initialize(m_controller.InventoryService);
         }
 
         for (int i = 0; i < bronze_count; i++)
         {
             var bronze_coin_obj = ObjectManager.Instance.GetObject(ObjectType.BRONZE_COIN);
             bronze_coin_obj.transform.position = transform.position;
+
+            var bronze_coin = bronze_coin_obj.GetComponent<FieldCoin>();
+            bronze_coin.Initialize(m_controller.InventoryService);
         }        
     }
 
@@ -98,7 +107,7 @@ public class EnemyDrop : MonoBehaviour
                 item_obj.transform.position = transform.position;
 
                 var field_item = item_obj.GetComponent<FieldItem>();
-                field_item.Initialize(item.Item);
+                field_item.Initialize(item.Item, m_controller.InventoryService);
             }
         }
     }

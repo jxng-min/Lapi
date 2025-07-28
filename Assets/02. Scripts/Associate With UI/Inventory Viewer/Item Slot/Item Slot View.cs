@@ -21,7 +21,6 @@ public class ItemSlotView : MonoBehaviour, IItemSlotView
 
     public void Inject(ItemSlotPresenter presenter)
     {
-        Debug.Log("호출됨");
         m_presenter = presenter;
     }
 
@@ -46,6 +45,8 @@ public class ItemSlotView : MonoBehaviour, IItemSlotView
             m_count_label.gameObject.SetActive(true);
             m_count_label.text = NumberFormatter.FormatNumber(count);
         }
+
+        m_cooldown_image.gameObject.SetActive(false);
     }
 
     private void SetAlpha(float alpha)
@@ -57,12 +58,12 @@ public class ItemSlotView : MonoBehaviour, IItemSlotView
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-
+        m_presenter.OnPointerEnter();
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-
+        m_presenter.OnPointerExit();
     }
 
     public void OnBeginDrag(PointerEventData eventData)

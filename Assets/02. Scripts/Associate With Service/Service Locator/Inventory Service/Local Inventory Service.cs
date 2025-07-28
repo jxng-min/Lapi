@@ -16,6 +16,12 @@ namespace InventoryService
             Code = ItemCode.NONE;
             Count = 0;
         }
+
+        public ItemData(ItemCode code, int count)
+        {
+            Code = code;
+            Count = count;
+        }
     }
 
     [System.Serializable]
@@ -54,7 +60,18 @@ namespace InventoryService
             m_items = new ItemData[30];
             for (int i = 0; i < m_items.Length; i++)
             {
-                m_items[i] = new ItemData();
+                if (i == 0)
+                {
+                    m_items[i] = new ItemData(ItemCode.SMALL_HP_POTION, 3);
+                }
+                else if (i == 3)
+                {
+                    m_items[i] = new ItemData(ItemCode.SMALL_MP_POTION, 5);
+                }
+                else
+                {
+                    m_items[i] = new ItemData();
+                }
             }
 
             CreateDirectory();
@@ -78,9 +95,14 @@ namespace InventoryService
             m_item_db = item_db;
         }
 
-        public void Initialize(int offset)
+        public void InitializeSlot(int offset)
         {
             OnUpdatedSlot?.Invoke(offset, m_items[offset]);
+        }
+
+        public void InitializeGold()
+        {
+            OnUpdatedGold(0);
         }
 
         public void UpdateGold(int amount)

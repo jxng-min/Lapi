@@ -1,0 +1,34 @@
+{
+  "Data": [
+    {
+      "Code": 1,
+      "Name": "작은 체력 포션",
+      "Description": "어린이들을 위한 작은 체력 포션이다.\n체력 +<color=green>50</color>"
+    },
+    {
+      "Code": 2,
+      "Name": "작은 마나 포션",
+      "Description": "어린이들을 위한 작은 마나 포션이다.\n마나 +<color=green>30</color>"
+    },
+    {
+      "Code": 3,
+      "Name": "작은 만능 포션",
+      "Description": "귀해서 구하기 힘든 만능 포션이다.\n체력 +<color=green>50</color>\n마나 <color=green>30</color>"
+    },
+    {
+      "Code": 4,
+      "Name": "중급 체력 포션",
+      "Description": "새싹 모험가를 위한 체력 포션이다.\n체력 +<color=green>120</color>"
+    },
+    {
+      "Code": 5,
+      "Name": "중급 마나 포션",
+      "Description": "새싹 모험가를 위한 마나 포션이다.\n마나 +<color=green>80</color>"
+    },
+    {
+      "Code": 6,
+      "Name": "중급 만능 포션",
+      "Description": "새싹 모험가에겐 과분한 만능 포션이다.\n체력 +<color=green>120</color>\n마나 +<color=green>80</color>"
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 using InventoryService;
+using ItemDataService;
 using UnityEngine;
 
 public class InventoryUIInstaller : MonoBehaviour, IInstaller
@@ -12,6 +13,9 @@ public class InventoryUIInstaller : MonoBehaviour, IInstaller
     [Header("아이템 슬롯의 루트")]
     [SerializeField] private Transform m_item_slot_root;
 
+    [Header("툴팁 뷰")]
+    [SerializeField] private ToolTipView m_tooltip_view;
+
     private IItemSlotView[] m_slot_views;
 
     public void Install()
@@ -24,12 +28,15 @@ public class InventoryUIInstaller : MonoBehaviour, IInstaller
 
         DIContainer.Register<IInventoryService>(ServiceLocator.Get<IInventoryService>());
 
+        var tooltip_presenter = new ToolTipPresenter(m_tooltip_view, ServiceLocator.Get<IItemDataService>(), m_item_db);
+        DIContainer.Register<ToolTipPresenter>(tooltip_presenter);
+
         m_slot_views = m_item_slot_root.GetComponentsInChildren<IItemSlotView>();
 
         var slot_presenters = new ItemSlotPresenter[m_slot_views.Length];
         for (int i = 0; i < slot_presenters.Length; i++)
         {
-            slot_presenters[i] = new ItemSlotPresenter(m_slot_views[i], ServiceLocator.Get<IInventoryService>(), m_item_db);
+            slot_presenters[i] = new ItemSlotPresenter(m_slot_views[i], ServiceLocator.Get<IInventoryService>(), m_item_db, tooltip_presenter, i);
         }
     }
 }

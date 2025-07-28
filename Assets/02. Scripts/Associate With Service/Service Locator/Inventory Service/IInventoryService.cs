@@ -6,11 +6,13 @@ namespace InventoryService
     {
         void Inject(ItemDataBase item_db);
 
+        void InitializeSlot(int offset);
+        void InitializeGold();
+
         event Action<int> OnUpdatedGold;
         void UpdateGold(int amount);
 
         event Action<int, ItemData> OnUpdatedSlot;
-        void Initialize(int offset);
         void AddItem(ItemCode code, int count);
         void SwapItem(int offset1, int offset2);
         void RemoveItem(int offset, int count);

@@ -45,9 +45,10 @@ public class InventoryPresenter
 
     private void Initialize()
     {
+        m_model.InitializeGold();
         for (int i = 0; i < 30; i++)
         {
-            m_model.Initialize(i);
+            m_model.InitializeSlot(i);
         }
     }
 }
