@@ -1,4 +1,12 @@
+using System.Collections.Generic;
 using UnityEngine;
+
+[System.Serializable]
+public class ItemTable
+{
+    public Item Item;
+    public float Weight;
+}
 
 [CreateAssetMenu(fileName = "Melee Enemy", menuName = "SO/Enemy/Create Melee Enemy")]
 public class Enemy : ScriptableObject
@@ -41,8 +49,17 @@ public class Enemy : ScriptableObject
 
     [Header("골드")]
     [SerializeField] private int m_gold;
+    public int GOLD => m_gold;
 
     [Header("골드 편차")]
     [SerializeField] private int m_gold_dev;
     public int GOLD_DEV => m_gold_dev;
+
+    [Header("드랍 아이템 목록")]
+    [SerializeField] private List<ItemTable> m_item_list;
+    public List<ItemTable> DropList { get => m_item_list; }
+
+    [Header("아이템 드랍 확률(0 ~ 100)")]
+    [SerializeField] private float m_drop_rate;
+    public float DropRate { get => m_drop_rate; }
 }

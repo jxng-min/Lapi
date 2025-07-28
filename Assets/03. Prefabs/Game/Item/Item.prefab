@@ -300,3 +300,4 @@ MonoBehaviour:
   m_gravity: 15
   m_sprite_transform: {fileID: 303198697943133374}
   m_shadow_transform: {fileID: 8454420987635201194}
+  m_item_image: {fileID: 7978862345546321711}

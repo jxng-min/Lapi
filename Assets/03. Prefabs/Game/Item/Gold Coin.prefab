@@ -203,7 +203,7 @@ MonoBehaviour:
   m_gravity: 15
   m_sprite_transform: {fileID: 378584647576053228}
   m_shadow_transform: {fileID: 4962857058953921884}
-  m_amount: 100
+  m_amount: 25
   m_type: 203
 --- !u!1 &8338432725318679168
 GameObject:
