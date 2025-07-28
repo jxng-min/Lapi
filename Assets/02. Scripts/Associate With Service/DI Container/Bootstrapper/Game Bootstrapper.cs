@@ -1,3 +1,4 @@
+using InventoryService;
 using UserService;
 
 public class GameBootstrapper : Bootstrapper
@@ -9,6 +10,7 @@ public class GameBootstrapper : Bootstrapper
         base.Start();
 
         InjectPlayer();
+        InjectInventory();
     }
 
     private void InjectPlayer()
@@ -30,5 +32,18 @@ public class GameBootstrapper : Bootstrapper
         player_ctrl.Inject(movement, attack, status, default_status, growth_status);
 
         (status as PlayerStatus).Initialize();
+    }
+
+    private void InjectInventory()
+    {
+        var item_db = DIContainer.Resolve<ItemDataBase>();
+
+        var inventory_model = DIContainer.Resolve<IInventoryService>();
+        inventory_model.Inject(item_db);
+
+        var inventory_presenter = DIContainer.Resolve<InventoryPresenter>();
+
+        var inventory_view = DIContainer.Resolve<IInventoryView>();
+        inventory_view.Inject(inventory_presenter);
     }
 }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using EXPService;
+using InventoryService;
 using UserService;
 
 public static class ServiceLocator
@@ -13,6 +14,7 @@ public static class ServiceLocator
     {
         Register<IEXPService>(new LocalEXPService());
         Register<IUserService>(new LocalUserService());
+        Register<IInventoryService>(new LocalInventoryService());
     }
 
     public static void Register<T>(T service)
