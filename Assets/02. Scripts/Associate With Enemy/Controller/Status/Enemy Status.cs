@@ -35,11 +35,11 @@ public class EnemyStatus : MonoBehaviour
         {
             if (HP <= 0f)
             {
-                Damage(knockback_direction);
+                Death();
             }
             else
             {
-                Death();
+                Damage(knockback_direction);
             }
         }
     }

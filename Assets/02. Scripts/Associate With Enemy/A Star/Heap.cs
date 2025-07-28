@@ -1,6 +1,6 @@
 public class Heap
 {
-    private Node[] m_heap = new Node[101];
+    private Node[] m_heap = new Node[51];
     private int m_count = 0;
 
     public int Count => m_count;
