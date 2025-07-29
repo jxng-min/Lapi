@@ -304,10 +304,11 @@ public class ItemSlotPresenter
         }
 
         if (!m_view.IsMask(item.Type))
-            {
-                return;
-            }
+        {
+            return;
+        }
 
         ChangeSlot();
+        m_tooltip_presenter.OpenUI(item.Code);
     }
 }
