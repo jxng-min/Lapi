@@ -144,33 +144,25 @@ namespace InventoryService
             }
         }
 
-        public void SwapItem(int offset1, int offset2)
+        public void SetItem(int offset, ItemCode code, int count)
         {
-            var temp = m_items[offset1];
-            m_items[offset1] = m_items[offset2];
-            m_items[offset2] = temp;
+            m_items[offset].Code = code;
+            m_items[offset].Count = count;
 
-            OnUpdatedSlot?.Invoke(offset1, m_items[offset1]);
-            OnUpdatedSlot?.Invoke(offset2, m_items[offset2]);
+            OnUpdatedSlot?.Invoke(offset, m_items[offset]);
         }
 
-        public void RemoveItem(int offset, int count)
+        public bool UpdateItem(int offset, int count)
         {
-            var code = m_items[offset].Code;
-            var item = m_item_db.GetItem(code);
-
-            if (item.Stackable)
+            if (m_items[offset].Count + count <= 99)
             {
-                if (m_items[offset].Count > count)
-                {
-                    m_items[offset].Count -= count;
+                m_items[offset].Count += count;
+                OnUpdatedSlot?.Invoke(offset, m_items[offset]);
 
-                    OnUpdatedSlot?.Invoke(offset, m_items[offset]);
-                    return;
-                }
+                return true;
             }
 
-            Clear(offset);
+            return false;
         }
 
         public void Clear(int offset)

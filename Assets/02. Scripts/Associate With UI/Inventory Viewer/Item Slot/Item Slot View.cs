@@ -49,6 +49,11 @@ public class ItemSlotView : MonoBehaviour, IItemSlotView
         m_cooldown_image.gameObject.SetActive(false);
     }
 
+    public bool IsMask(ItemType type)
+    {
+        return ((int)m_slot_type & (int)type) != 0;
+    }
+
     private void SetAlpha(float alpha)
     {
         var color = m_item_image.color;
@@ -68,17 +73,38 @@ public class ItemSlotView : MonoBehaviour, IItemSlotView
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        DragMode drag_mode;
+        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+        {
+            drag_mode = DragMode.SHIFT;
+        }
+        else if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl))
+        {
+            drag_mode = DragMode.CTRL;
+        }
+        else
+        {
+            drag_mode = DragMode.DEFAULT;
+        }
 
+        var mouse_position = new System.Numerics.Vector2(eventData.position.x, eventData.position.y);
+        m_presenter.OnBeginDrag(mouse_position, drag_mode);
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-
+        var mouse_position = new System.Numerics.Vector2(eventData.position.x, eventData.position.y);
+        m_presenter.OnDrag(mouse_position);
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        m_presenter.OnEndDrag();
+    }
 
+    public void OnDrop(PointerEventData eventData)
+    {
+        m_presenter.OnDrop();
     }
 
     public void OnPointerClick(PointerEventData eventData)
