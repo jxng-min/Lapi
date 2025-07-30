@@ -188,6 +188,28 @@ namespace InventoryService
             return total_count;
         }
 
+        public int GetValidOffset(ItemCode code)
+        {
+            for (int offset = 0; offset < m_items.Length; offset++)
+            {
+                var item = m_item_db.GetItem(code);
+                if (item.Stackable)
+                {
+                    if (m_items[offset].Count < 99)
+                    {
+                        return offset;
+                    }
+                }
+
+                if (m_items[offset].Code == ItemCode.NONE)
+                {
+                    return offset;
+                }
+            }
+
+            return -1;
+        }
+
         public bool HasItem(ItemCode code)
         {
             foreach (var slot in m_items)

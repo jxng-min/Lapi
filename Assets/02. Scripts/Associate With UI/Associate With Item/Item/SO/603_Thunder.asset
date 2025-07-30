@@ -12,17 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d20378f01922b444aa18d41055ee8e88, type: 3}
   m_Name: 603_Thunder
   m_EditorClassIdentifier: 
-  m_code: 0
-  m_type: 0
-  m_name: 
+  m_code: 603
+  m_type: 8
+  m_name: "\uB099\uB8B0"
   m_stackable: 0
-  m_cool: -1
-  m_sprite: {fileID: 0}
-  m_constraint: 0
-  m_main_rate: 0
-  m_sub_rate: 0
-  m_mp: 0
-  m_growth_cool: 0
-  m_growth_main_rate: 0
-  m_growth_sub_rate: 0
-  m_growth_mp: 0
+  m_cool: 8
+  m_sprite: {fileID: 21300000, guid: 583b707551a372140a23610d2971766a, type: 3}
+  m_constraint: 9
+  m_main_rate: 150
+  m_sub_rate: 20
+  m_mp: 120
+  m_growth_cool: -0.1
+  m_growth_main_rate: 2
+  m_growth_sub_rate: 1
+  m_growth_mp: -2

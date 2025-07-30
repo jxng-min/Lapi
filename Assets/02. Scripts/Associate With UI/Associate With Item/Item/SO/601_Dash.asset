@@ -17,7 +17,7 @@ MonoBehaviour:
   m_name: "\uB3CC\uC9C4"
   m_stackable: 0
   m_cool: 4
-  m_sprite: {fileID: 0}
+  m_sprite: {fileID: 21300000, guid: 53a5792e8c7a2b24285e2c4006fb7725, type: 3}
   m_constraint: 3
   m_main_rate: 0
   m_sub_rate: 0

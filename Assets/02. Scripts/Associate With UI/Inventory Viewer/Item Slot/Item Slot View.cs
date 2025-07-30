@@ -19,6 +19,14 @@ public class ItemSlotView : MonoBehaviour, IItemSlotView
 
     private ItemSlotPresenter m_presenter;
 
+    private void Update()
+    {
+        if (!m_presenter.IsEmpty())
+        {
+            m_cooldown_image.fillAmount = m_presenter.GetCool();
+        }
+    }
+
     public void Inject(ItemSlotPresenter presenter)
     {
         m_presenter = presenter;
@@ -32,7 +40,7 @@ public class ItemSlotView : MonoBehaviour, IItemSlotView
         m_count_label.text = string.Empty;
         m_count_label.gameObject.SetActive(false);
 
-        m_cooldown_image.gameObject.SetActive(false);
+        m_cooldown_image.fillAmount = 0f;
     }
 
     public void UpdateUI(Sprite item_image, bool stackable, int count)
@@ -113,6 +121,9 @@ public class ItemSlotView : MonoBehaviour, IItemSlotView
 
     public void OnPointerClick(PointerEventData eventData)
     {
-
+        if (eventData.button == PointerEventData.InputButton.Right)
+        {
+            m_presenter.UseItem();
+        }
     }
 }

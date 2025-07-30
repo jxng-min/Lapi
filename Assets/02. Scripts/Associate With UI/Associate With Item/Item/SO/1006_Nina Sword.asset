@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 1006_Nina Sword
   m_EditorClassIdentifier: 
   m_code: 1006
-  m_type: 32
+  m_type: 64
   m_name: "\uB2C8\uB098\uC758 \uAC80"
   m_stackable: 0
   m_cool: 3

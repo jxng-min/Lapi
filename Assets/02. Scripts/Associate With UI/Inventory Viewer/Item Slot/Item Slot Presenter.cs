@@ -12,6 +12,9 @@ public class ItemSlotPresenter
     private ToolTipPresenter m_tooltip_presenter;
     private DragSlotPresenter m_drag_slot_presenter;
 
+    private IItemActivator m_item_activator;
+    private IItemCooler m_item_cooler;
+
     private int m_offset;
     private SlotType m_slot_type;
 
@@ -21,6 +24,8 @@ public class ItemSlotPresenter
                              ItemDataBase item_db,
                              ToolTipPresenter tooltip_presenter,
                              DragSlotPresenter drag_slot_presenter,
+                             IItemActivator item_activator,
+                             IItemCooler item_cooler,
                              int offset,
                              SlotType slot_type = SlotType.Inventory)
     {
@@ -33,6 +38,9 @@ public class ItemSlotPresenter
 
         m_tooltip_presenter = tooltip_presenter;
         m_drag_slot_presenter = drag_slot_presenter;
+
+        m_item_activator = item_activator;
+        m_item_cooler = item_cooler;
 
         m_slot_type = slot_type;
 
@@ -281,6 +289,71 @@ public class ItemSlotPresenter
         return null;
     }
 
+    private void Clear(int offset)
+    {
+        switch (m_slot_type)
+        {
+            case SlotType.Inventory:
+                m_inventory_service.Clear(offset);
+                break;
+
+            case SlotType.Equipment:
+                m_equipment_service.Clear(offset);
+                break;
+        }        
+    }
+
+    public void UseItem()
+    {
+        var code = GetItem(m_offset).Code;
+        if (code == ItemCode.NONE)
+        {
+            return;
+        }
+
+        if (m_item_cooler.GetCool(code) > 0f)
+        {
+            return;
+        }
+
+        var item = m_item_db.GetItem(code);
+        if (!m_item_activator.UseItem(item, m_offset, m_slot_type))
+        {
+            return;
+        }
+
+        if (item.Cool > 0f)
+        {
+            m_item_cooler.Push(code, item.Cool);
+        }
+
+        if (item.Type == ItemType.Consumable)
+        {
+            var count = GetItem(m_offset).Count;
+            if (count > 1)
+            {
+                UpdateItem(m_offset, -1);
+            }
+            else
+            {
+                Clear(m_offset);
+            }
+        }
+    }
+
+    public bool IsEmpty()
+    {
+        return GetItem(m_offset).Code == ItemCode.NONE;
+    }
+
+    public float GetCool()
+    {
+        var code = GetItem(m_offset).Code;
+        var item = m_item_db.GetItem(code);
+
+        return m_item_cooler.GetCool(code) / item.Cool;
+    }
+
     public void OnPointerEnter()
     {
         var code = GetItem(m_offset).Code;
@@ -331,6 +404,7 @@ public class ItemSlotPresenter
         var item = m_drag_slot_presenter.GetItem();
         if (item.Code == ItemCode.NONE)
         {
+            UnityEngine.Debug.Log("여기1");
             return;
         }
 
@@ -341,12 +415,14 @@ public class ItemSlotPresenter
 
             if (current_item_data.Code != ItemCode.NONE && current_item_data.Code != draged_item_data.Code)
             {
+                UnityEngine.Debug.Log("여기2");
                 return;
             }
         }
 
         if (!m_view.IsMask(item.Type))
         {
+            UnityEngine.Debug.Log("여기3");
             return;
         }
 

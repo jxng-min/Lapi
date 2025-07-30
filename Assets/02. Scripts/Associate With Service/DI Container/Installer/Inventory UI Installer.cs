@@ -42,6 +42,9 @@ public class InventoryUIInstaller : MonoBehaviour, IInstaller
                                                         ServiceLocator.Get<IEquipmentService>());
         DIContainer.Register<DragSlotPresenter>(drag_slot_presenter);
 
+        var item_activator = DIContainer.Resolve<IItemActivator>();
+        var item_cooler = DIContainer.Resolve<IItemCooler>();
+
         var slot_views = m_item_slot_root.GetComponentsInChildren<IItemSlotView>();
 
         var slot_presenters = new ItemSlotPresenter[slot_views.Length];
@@ -53,6 +56,8 @@ public class InventoryUIInstaller : MonoBehaviour, IInstaller
                                                        m_item_db,
                                                        tooltip_presenter,
                                                        drag_slot_presenter,
+                                                       item_activator,
+                                                       item_cooler,
                                                        i);
         }
 

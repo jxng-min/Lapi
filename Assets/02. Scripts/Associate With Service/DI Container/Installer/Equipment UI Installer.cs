@@ -28,10 +28,12 @@ public class EquipmentUIInstaller : MonoBehaviour, IInstaller
         DIContainer.Register<IEquipmentService>(ServiceLocator.Get<IEquipmentService>());
 
         var tooltip_presenter = DIContainer.Resolve<ToolTipPresenter>();
-
         var drag_slot_presenter = DIContainer.Resolve<DragSlotPresenter>();
 
         var slot_views = m_item_slot_root.GetComponentsInChildren<IItemSlotView>();
+
+        var item_activator = DIContainer.Resolve<IItemActivator>();
+        var item_cooler = DIContainer.Resolve<IItemCooler>();
 
         var slot_presenters = new ItemSlotPresenter[slot_views.Length];
         for (int i = 0; i < slot_presenters.Length; i++)
@@ -42,6 +44,8 @@ public class EquipmentUIInstaller : MonoBehaviour, IInstaller
                                                        m_item_db,
                                                        tooltip_presenter,
                                                        drag_slot_presenter,
+                                                       item_activator,
+                                                       item_cooler,
                                                        i,
                                                        SlotType.Equipment);
         }
