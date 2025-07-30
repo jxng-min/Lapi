@@ -1,0 +1,373 @@
+fileFormatVersion: 2
+guid: b84b0f4d1c73cfe478caab57565d6ae5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6236303023221975405
+    second: iconset_16x16_05_standalone_outline_0
+  - first:
+      213: 9033255539546903906
+    second: iconset_16x16_05_standalone_outline_1
+  - first:
+      213: 3116455336087722445
+    second: iconset_16x16_05_standalone_outline_2
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Equipment_8
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 162
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b002e498545787646b2dbf97929e58a4
+      internalID: 380255949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment_18
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 144
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87da658f58469fb4baacb455b228bbe5
+      internalID: 215145345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment_49
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 90
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d3b104bfc35ef746bee99820a3a72fe
+      internalID: -112695228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment_59
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 72
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 095bc4306335a3b4ba45215ffccf4f2f
+      internalID: -236284018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment_0
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 163
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 932884978a2a2f9498149b10cb75abd4
+      internalID: 1723230044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment_1
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 145
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 516e73c1dfa0a1f4a807f1cfe9d8e562
+      internalID: -1760730656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 4e721bc4a045f2443b0fa23f75e8bcc3
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":18.0,"y":18.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Equipment_0: 1723230044
+      Equipment_1: -1760730656
+      Equipment_10: 634996576
+      Equipment_11: -648508855
+      Equipment_12: -1556415362
+      Equipment_13: 896945540
+      Equipment_14: 1909384978
+      Equipment_15: 2054589466
+      Equipment_16: 343542200
+      Equipment_17: -1002451527
+      Equipment_18: 215145345
+      Equipment_19: -1998296048
+      Equipment_2: 980651311
+      Equipment_20: -609527990
+      Equipment_21: 628946821
+      Equipment_22: -77985788
+      Equipment_23: 1988558769
+      Equipment_24: -1404684861
+      Equipment_25: -1967411100
+      Equipment_26: 1948733483
+      Equipment_27: -2078641521
+      Equipment_28: 467552709
+      Equipment_29: -1550424284
+      Equipment_3: 1632113967
+      Equipment_30: -81557979
+      Equipment_31: 1732020812
+      Equipment_32: 67552598
+      Equipment_33: 287037060
+      Equipment_34: 1960887728
+      Equipment_35: 1005575661
+      Equipment_36: -1082300903
+      Equipment_37: 1258645941
+      Equipment_38: -964559240
+      Equipment_39: -1776874555
+      Equipment_4: -146758381
+      Equipment_40: 1834617906
+      Equipment_41: 533026292
+      Equipment_42: 323840794
+      Equipment_43: 492738725
+      Equipment_44: 1928375067
+      Equipment_45: -70569309
+      Equipment_46: -314452629
+      Equipment_47: 1489126894
+      Equipment_48: 189934011
+      Equipment_49: -112695228
+      Equipment_5: -1697036656
+      Equipment_50: -739759456
+      Equipment_51: -1985120012
+      Equipment_52: 1506238284
+      Equipment_53: 85479918
+      Equipment_54: 907701119
+      Equipment_55: -1522024876
+      Equipment_56: -924726557
+      Equipment_57: 2145843506
+      Equipment_58: 1021310290
+      Equipment_59: -236284018
+      Equipment_6: 1173925335
+      Equipment_60: 974171715
+      Equipment_61: 1900828124
+      Equipment_62: -1501980031
+      Equipment_63: -1326499527
+      Equipment_64: -1581312651
+      Equipment_65: 1564252801
+      Equipment_66: 1189165037
+      Equipment_67: -1384296034
+      Equipment_68: -377181017
+      Equipment_69: 165488488
+      Equipment_7: -1935860006
+      Equipment_70: -1572220895
+      Equipment_71: 674338079
+      Equipment_72: -2086343735
+      Equipment_73: -1044843821
+      Equipment_74: 505940555
+      Equipment_75: 1130300957
+      Equipment_76: -411760483
+      Equipment_77: 1218023910
+      Equipment_78: 1087607552
+      Equipment_79: -1767264757
+      Equipment_8: 380255949
+      Equipment_80: 115305428
+      Equipment_81: -405421912
+      Equipment_82: -1818917843
+      Equipment_83: 984616462
+      Equipment_84: 981051562
+      Equipment_85: -1091900980
+      Equipment_86: -842054229
+      Equipment_87: 868805286
+      Equipment_88: 1755811877
+      Equipment_89: -1950721602
+      Equipment_9: 1663180389
+      Equipment_90: -455087294
+      Equipment_91: 1960515076
+      Equipment_92: 2025238803
+      Equipment_93: 1218711644
+      Equipment_94: -1468318
+      Equipment_95: 876745041
+      Equipment_96: -1593530891
+      Equipment_97: 21297710
+      Equipment_98: 392854148
+      Equipment_99: 1580981893
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
