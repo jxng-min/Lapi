@@ -1,4 +1,6 @@
+using InventoryService;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Animator), typeof(Rigidbody2D), typeof(CircleCollider2D))]
 public class EnemyCtrl : MonoBehaviour
@@ -16,11 +18,14 @@ public class EnemyCtrl : MonoBehaviour
     public EnemyMovement Movement { get; private set; }
     public EnemyStatus Status { get; private set; }
     public EnemyAttack Attack { get; private set; }
+    public EnemyDrop Drop { get; private set; }
     public Pathfinder Pathfinder { get; private set; }
 
     public SpawnerManager Spawner { get; private set; }
     public int SpawnerID { get; private set; }
     public Enemy SO { get; private set; }
+
+    public IInventoryService InventoryService { get; private set; }
 
     public Animator Animator { get; private set; }
     public Rigidbody2D Rigidbody { get; private set; }
@@ -41,6 +46,8 @@ public class EnemyCtrl : MonoBehaviour
         Movement = GetComponent<EnemyMovement>();
         Status = GetComponent<EnemyStatus>();
         Attack = GetComponent<EnemyAttack>();
+        Drop = GetComponent<EnemyDrop>();
+        
         Pathfinder = GetComponent<Pathfinder>();
 
         Animator = GetComponent<Animator>();
@@ -76,17 +83,20 @@ public class EnemyCtrl : MonoBehaviour
         m_state_context?.ExecuteUpdate();
     }
 
-    public void Initialize(Enemy so, SpawnerManager spawner_manager, int spawner_id)
+    public void Initialize(Enemy so, SpawnerManager spawner_manager, int spawner_id, IInventoryService inventory_service)
     {
         SO = so;
         Spawner = spawner_manager;
         SpawnerID = spawner_id;
+
+        InventoryService = inventory_service;
 
         Animator.runtimeAnimatorController = SO.Animator;
 
         Movement.Initialize(SO.SPD);
         Status.Initialize(SO.HP);
         Attack.Initialize(SO.ATK);
+        Drop.Initialize(SO.EXP, SO.EXP_DEV, SO.GOLD, SO.GOLD_DEV, SO.DropList, SO.DropRate);
 
         IsInit = true;
     }

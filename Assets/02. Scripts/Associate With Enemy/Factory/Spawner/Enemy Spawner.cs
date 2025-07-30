@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using InventoryService;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
@@ -7,6 +8,7 @@ public class EnemySpawner : MonoBehaviour
     [Header("팩토리 매니저")]
     [SerializeField] private FactoryManager m_factory_manager;
     private SpawnerManager m_spawner_manager;
+    private IInventoryService m_inventory_service;
 
     [Header("스포너의 고유한 ID")]
     [SerializeField] private int m_id;
@@ -95,6 +97,6 @@ public class EnemySpawner : MonoBehaviour
 
         var enemy_ctrl = m_factory_manager.CreateEnemy(so.Code);
         enemy_ctrl.transform.position = GetRandomPosition();
-        enemy_ctrl.Initialize(so, m_spawner_manager, ID);
+        enemy_ctrl.Initialize(so, m_spawner_manager, ID, ServiceLocator.Get<IInventoryService>());
     }   
 }

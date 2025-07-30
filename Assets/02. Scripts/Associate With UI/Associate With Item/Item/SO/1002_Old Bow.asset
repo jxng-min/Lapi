@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0448a20cf728be646be154e9beca9642, type: 3}
+  m_Name: 1002_Old Bow
+  m_EditorClassIdentifier: 
+  m_code: 1002
+  m_type: 32
+  m_name: "\uB0A1\uC740 \uD65C"
+  m_stackable: 0
+  m_cool: 4
+  m_sprite: {fileID: 1757063274, guid: 1a48cd015dff8db40ade1b9cf13c8a5e, type: 3}
+  m_effect:
+    m_hp: 0
+    m_mp: 30
+    m_atk: 15
+    m_spd: 20
+  m_weapon_type: 2

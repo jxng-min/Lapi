@@ -59,6 +59,10 @@ public abstract class Weapon : MonoBehaviour
 
         var di = di_obj.GetComponent<DamageIndicator>();
         di.Initialize(amount);
+
+        var damage = ObjectManager.Instance.GetObject(ObjectType.DAMAGE);
+        damage.transform.SetParent(target);
+        damage.transform.localPosition = Vector3.zero;
     }
     #endregion Methods
 }

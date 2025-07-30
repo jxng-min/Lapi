@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0448a20cf728be646be154e9beca9642, type: 3}
+  m_Name: 1011_Senior Sword
+  m_EditorClassIdentifier: 
+  m_code: 1011
+  m_type: 32
+  m_name: "\uC911\uAE09\uC790\uC758 \uAC80"
+  m_stackable: 0
+  m_cool: 3
+  m_sprite: {fileID: 1745980663, guid: 1a48cd015dff8db40ade1b9cf13c8a5e, type: 3}
+  m_effect:
+    m_hp: 0
+    m_mp: 80
+    m_atk: 40
+    m_spd: 0
+  m_weapon_type: 1

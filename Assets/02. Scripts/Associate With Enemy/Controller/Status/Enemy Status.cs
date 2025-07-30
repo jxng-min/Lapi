@@ -154,6 +154,7 @@ public class EnemyStatus : MonoBehaviour
         }
 
         SetAlpha(0f);
+        m_controller.Drop.Drop();
 
         Return();
     }

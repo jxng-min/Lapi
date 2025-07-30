@@ -1,0 +1,109 @@
+{
+  "Data": [
+    {
+      "Code": 1,
+      "Name": "작은 체력 포션",
+      "Description": "아이들을 위한 작은 체력 포션이다.\n체력 +<color=green>50</color>"
+    },
+    {
+      "Code": 2,
+      "Name": "작은 마나 포션",
+      "Description": "아이들을 위한 작은 마나 포션이다.\n마나 +<color=green>30</color>"
+    },
+    {
+      "Code": 3,
+      "Name": "작은 만능 포션",
+      "Description": "귀해서 구하기 힘든 만능 포션이다.\n체력 +<color=green>50</color>\n마나 <color=green>30</color>"
+    },
+    {
+      "Code": 4,
+      "Name": "중급 체력 포션",
+      "Description": "새싹 모험가를 위한 체력 포션이다.\n체력 +<color=green>120</color>"
+    },
+    {
+      "Code": 5,
+      "Name": "중급 마나 포션",
+      "Description": "새싹 모험가를 위한 마나 포션이다.\n마나 +<color=green>80</color>"
+    },
+    {
+      "Code": 6,
+      "Name": "중급 만능 포션",
+      "Description": "새싹 모험가에겐 과분한 만능 포션이다.\n체력 +<color=green>120</color>\n마나 +<color=green>80</color>"
+    },
+    {
+      "Code": 1001,
+      "Name": "낡은 검",
+      "Description": "낡았지만 견고한 검이다.\n마나 +<color=green>30</color>\n공격력 +<color=green>10</color>"
+    },
+    {
+      "Code": 1002,
+      "Name": "낡은 활",
+      "Description": "언제 현이 끊어질 지 모르는 활이다.\n마나 +<color=green>30</color>\n공격력 +<color=green>15</color>\n이동 속도 +<color=green>20</color>%"
+    },
+    {
+      "Code": 1003,
+      "Name": "낡은 방패",
+      "Description": "무엇을 막을 수 있을지 의문인 방패다.\n체력 +<color=green>20</color>\n마나 +<color=green>20</color>\n이동 속도 -<color=green>5</color>%"
+    },
+    {
+      "Code": 1004,
+      "Name": "낡은 투구",
+      "Description": "녹이 많은 슬은 투구다.\n체력 +<color=green>30</color>\n마나 +<color=green>30</color>\n이동 속도 -<color=green>5</color>%"
+    },
+    {
+      "Code": 1005,
+      "Name": "낡은 갑옷",
+      "Description": "구멍이 듬성듬성 있는 갑옷이다.\n체력 +<color=green>40</color>\n마나 +<color=green>40</color>\n이동 속도 -<color=green>10</color>%"
+    },
+    {
+      "Code": 1006,
+      "Name": "니나의 검",
+      "Description": "니나가 특별히 제작해준 검이다.\n마나 +<color=green>50</color>\n공격력 +<color=green>25</color>"
+    },
+    {
+      "Code": 1007,
+      "Name": "니나의 활",
+      "Description": "니나가 특별히 제작해준 활이다.\n마나 +<color=green>50</color>\n공격력 +<color=green>35</color>\n이동 속도 +<color=green>30</color>%"
+    },
+    {
+      "Code": 1008,
+      "Name": "니나의 방패",
+      "Description": "니나가 특별히 제작해준 방패다.\n체력 +<color=green>40</color>\n마나 +<color=green>40</color>\n이동 속도 -<color=green>3</color>%"
+    },
+    {
+      "Code": 1009,
+      "Name": "니나의 투구",
+      "Description": "니나가 특별히 제작해준 투구다.\n체력 +<color=green>60</color>\n마나 +<color=green>60</color>\n이동 속도 -<color=green>3</color>%"
+    },
+    {
+      "Code": 1010,
+      "Name": "니나의 갑옷",
+      "Description": "니나가 특별히 제작해준 갑옷이다.\n체력 +<color=green>80</color>\n마나 +<color=green>80</color>\n이동 속도 -<color=green>5</color>%"
+    },
+    {
+      "Code": 1011,
+      "Name": "중급자의 검",
+      "Description": "튼튼하고 곧게 잘 제련된 검이다.\n마나 +<color=green>80</color>\n 공격력 +<color=green>40</color>"
+    },
+    {
+      "Code": 1012,
+      "Name": "중급자의 활",
+      "Description": "장력이 좋아 부러지지 않을 것 같은 활이다.\n마나 +<color=green>80</color>\n공격력 +<color=green>60</color>\n이동 속도 +<color=green>40</color>%"
+    },
+    {
+      "Code": 1013,
+      "Name": "중급자의 방패",
+      "Description": "철이 섞인 단단한 방패다.\n체력 +<color=green>60</color>\n마나 +<color=green>60</color>"
+    },
+    {
+      "Code": 1014,
+      "Name": "중급자의 투구",
+      "Description": "철이 섞인 단단한 투구다.\n체력 +<color=green>90</color>\n마나 +<color=green>90</color>"
+    },
+    {
+      "Code": 1015,
+      "Name": "중급자의 갑옷",
+      "Description": "철이 섞인 단단한 갑옷이다.\n체력 +<color=green>120</color>\n마나 +<color=green>120</color>"
+    }
+  ]
+}
