@@ -68,6 +68,7 @@ public class PlayerStatus : MonoBehaviour, IStatus
 
     public void UpdateMaxStatus()
     {
+        OnUpdatedHP?.Invoke(m_user_service.Status.HP, MaxHP);
         OnUpdatedMP?.Invoke(m_user_service.Status.MP, MaxMP);
     }
 

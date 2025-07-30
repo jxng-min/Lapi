@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: b0c043630da9cdb408a83d7015a98518
+guid: e5b511b0fefae5f499a7bb497b3c6aac
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7614371663214842022
-    second: Equipment UI_0
+      213: 5920876855586286905
+    second: Equipment UI1_0
   - first:
-      213: 5479981704302668475
-    second: Equipment UI_1
+      213: -7758776177460796500
+    second: Equipment UI1_1
   - first:
-      213: -6382434533617718112
-    second: Equipment UI_2
+      213: -8719964343464272802
+    second: Equipment UI1_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -124,18 +124,18 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 495
-        height: 248
+        width: 2401
+        height: 1201
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bbaa99c635ecc0c40800000000000000
-      internalID: 5479981704302668475
+      spriteID: ca3afa2ac2a435490800000000000000
+      internalID: -7758776177460796500
       vertices: []
       indices: 
       edges: []
@@ -144,20 +144,20 @@ TextureImporter:
       name: Back Button
       rect:
         serializedVersion: 2
-        x: 526
-        y: 216
-        width: 21
-        height: 22
+        x: 2550
+        y: 1051
+        width: 102
+        height: 102
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0aca7857b990d67a0800000000000000
-      internalID: -6382434533617718112
+      spriteID: e5c5db541a67cf680800000000000000
+      internalID: -8719964343464272802
       vertices: []
       indices: 
       edges: []
@@ -166,7 +166,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6b9c3f457a1a6824d8a7cb12c1b99c4b
+    spriteID: 45c2898f38108de41aaf2810511ed699
     internalID: 0
     vertices: []
     indices: 
@@ -174,13 +174,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Back Button: -6382434533617718112
-      Equipment Panel: 5479981704302668475
-      Equipment UI_0: 7614371663214842022
+      Back Button: -8719964343464272802
+      Equipment Panel: -7758776177460796500
+      Equipment UI1_0: 5920876855586286905
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
