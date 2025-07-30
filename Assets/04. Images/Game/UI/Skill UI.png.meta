@@ -1,28 +1,31 @@
 fileFormatVersion: 2
-guid: cdfadb934511dda49b6ec48e6cc93c58
+guid: 5bb93fe81c5621442a5623771b31f521
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4730804404488211994
-    second: Skill UI1_0
+      213: 8573213447512853211
+    second: Skill UI_0
   - first:
-      213: 3097142181894940977
-    second: Skill UI1_1
+      213: 6079730605070179574
+    second: Skill UI_1
   - first:
-      213: 8218987792149930171
-    second: Skill UI1_2
+      213: 7079776248175609267
+    second: Skill UI_2
   - first:
-      213: -6384677918467304976
-    second: Skill UI1_3
+      213: 599227487307637056
+    second: Skill UI_3
   - first:
-      213: -8428396573648313835
-    second: Skill UI1_4
+      213: -4790990471650644371
+    second: Skill UI_4
   - first:
-      213: -8222726673466329241
-    second: Skill UI1_5
+      213: 6549908144399632025
+    second: Skill UI_5
   - first:
-      213: -1875987996081759571
-    second: Skill UI1_6
+      213: -5328065362331033598
+    second: Skill UI_6
+  - first:
+      213: -5791751755228856536
+    second: Skill UI_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -131,29 +134,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Skill UI1_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1495
-        width: 2401
-        height: 2001
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a1e8f5f7a8137a140800000000000000
-      internalID: 4730804404488211994
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skill UI1_1
+      name: Skill UI Panel
       rect:
         serializedVersion: 2
         x: 2655
@@ -161,21 +142,21 @@ TextureImporter:
         width: 2401
         height: 1881
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 139e9b2b7624bfa20800000000000000
-      internalID: 3097142181894940977
+      spriteID: 6fc574506ca8f5450800000000000000
+      internalID: 6079730605070179574
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skill UI1_2
+      name: Skill Slot Frame
       rect:
         serializedVersion: 2
         x: 19
@@ -183,21 +164,43 @@ TextureImporter:
         width: 1142
         height: 442
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bb06e54d9d5bf0270800000000000000
-      internalID: 8218987792149930171
+      spriteID: 3b541c9ccfa604260800000000000000
+      internalID: 7079776248175609267
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skill UI1_3
+      name: Lock Frame
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 851
+        width: 1142
+        height: 442
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0412f909932e05800800000000000000
+      internalID: 599227487307637056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grid Panel
       rect:
         serializedVersion: 2
         x: 2751
@@ -205,43 +208,21 @@ TextureImporter:
         width: 2305
         height: 1346
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0f1d978b2411567a0800000000000000
-      internalID: -6384677918467304976
+      spriteID: d6e6bfebc8bf28db0800000000000000
+      internalID: -4790990471650644371
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skill UI1_4
-      rect:
-        serializedVersion: 2
-        x: 19
-        y: 375
-        width: 402
-        height: 402
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 512a299c8f1580b80800000000000000
-      internalID: -8428396573648313835
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skill UI1_5
+      name: Upgrade Button
       rect:
         serializedVersion: 2
         x: 479
@@ -249,21 +230,21 @@ TextureImporter:
         width: 182
         height: 182
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 767f8e608a103ed80800000000000000
-      internalID: -8222726673466329241
+      spriteID: 200223248c8ee06b0800000000000000
+      internalID: -5328065362331033598
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skill UI1_6
+      name: Back Button
       rect:
         serializedVersion: 2
         x: 747
@@ -271,15 +252,15 @@ TextureImporter:
         width: 102
         height: 102
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: daa56a26bd627f5e0800000000000000
-      internalID: -1875987996081759571
+      spriteID: 82fb652f6709f9fa0800000000000000
+      internalID: -5791751755228856536
       vertices: []
       indices: 
       edges: []
@@ -288,7 +269,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9617e73051701634bbbacc16e3919b71
     internalID: 0
     vertices: []
     indices: 
@@ -298,13 +279,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Skill UI1_0: 4730804404488211994
-      Skill UI1_1: 3097142181894940977
-      Skill UI1_2: 8218987792149930171
-      Skill UI1_3: -6384677918467304976
-      Skill UI1_4: -8428396573648313835
-      Skill UI1_5: -8222726673466329241
-      Skill UI1_6: -1875987996081759571
+      Back Button: -5791751755228856536
+      Grid Panel: -4790990471650644371
+      Lock Frame: 599227487307637056
+      Skill Slot Frame: 7079776248175609267
+      Skill UI Panel: 6079730605070179574
+      Skill UI_0: 8573213447512853211
+      Skill UI_5: 6549908144399632025
+      Upgrade Button: -5328065362331033598
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
