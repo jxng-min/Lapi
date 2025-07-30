@@ -404,7 +404,6 @@ public class ItemSlotPresenter
         var item = m_drag_slot_presenter.GetItem();
         if (item.Code == ItemCode.NONE)
         {
-            UnityEngine.Debug.Log("여기1");
             return;
         }
 
@@ -415,14 +414,12 @@ public class ItemSlotPresenter
 
             if (current_item_data.Code != ItemCode.NONE && current_item_data.Code != draged_item_data.Code)
             {
-                UnityEngine.Debug.Log("여기2");
                 return;
             }
         }
 
         if (!m_view.IsMask(item.Type))
         {
-            UnityEngine.Debug.Log("여기3");
             return;
         }
 

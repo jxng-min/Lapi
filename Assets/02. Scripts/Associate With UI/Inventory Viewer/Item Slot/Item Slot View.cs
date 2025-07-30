@@ -58,7 +58,7 @@ public class ItemSlotView : MonoBehaviour, IItemSlotView
             m_count_label.gameObject.SetActive(false);
         }
 
-        m_cooldown_image.gameObject.SetActive(false);
+        m_cooldown_image.fillAmount = 0f;
     }
 
     public bool IsMask(ItemType type)
