@@ -46,7 +46,7 @@ namespace InventoryService
 
     public class LocalInventoryService : ISaveable, IInventoryService
     {
-        private ItemDataBase m_item_db;
+        private IItemDataBase m_item_db;
 
         private int m_money;
         private ItemData[] m_items;
@@ -62,11 +62,11 @@ namespace InventoryService
             {
                 if (i == 0)
                 {
-                    m_items[i] = new ItemData(ItemCode.SMALL_HP_POTION, 3);
+                    m_items[i] = new ItemData(ItemCode.NINA_ARMOR, 1);
                 }
                 else if (i == 3)
                 {
-                    m_items[i] = new ItemData(ItemCode.SMALL_MP_POTION, 5);
+                    m_items[i] = new ItemData(ItemCode.NINA_SWORD, 1);
                 }
                 else
                 {
@@ -90,7 +90,7 @@ namespace InventoryService
             }
         }
 
-        public void Inject(ItemDataBase item_db)
+        public void Inject(IItemDataBase item_db)
         {
             m_item_db = item_db;
         }
@@ -102,7 +102,7 @@ namespace InventoryService
 
         public void InitializeGold()
         {
-            OnUpdatedGold(0);
+            UpdateGold(0);
         }
 
         public void UpdateGold(int amount)

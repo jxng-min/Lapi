@@ -1,10 +1,12 @@
 using System.Numerics;
+using EquipmentService;
 using InventoryService;
 
 public class ItemSlotPresenter
 {
     private readonly IItemSlotView m_view;
     private readonly IInventoryService m_inventory_service;
+    private readonly IEquipmentService m_equipment_service;
     private ItemDataBase m_item_db;
 
     private ToolTipPresenter m_tooltip_presenter;
@@ -15,6 +17,7 @@ public class ItemSlotPresenter
 
     public ItemSlotPresenter(IItemSlotView view,
                              IInventoryService inventory_service,
+                             IEquipmentService equipment_service,
                              ItemDataBase item_db,
                              ToolTipPresenter tooltip_presenter,
                              DragSlotPresenter drag_slot_presenter,
@@ -23,6 +26,7 @@ public class ItemSlotPresenter
     {
         m_view = view;
         m_inventory_service = inventory_service;
+        m_equipment_service = equipment_service;
         m_item_db = item_db;
 
         m_offset = offset;
@@ -35,6 +39,10 @@ public class ItemSlotPresenter
         if (m_slot_type == SlotType.Inventory)
         {
             m_inventory_service.OnUpdatedSlot += UpdateSlot;
+        }
+        else if (m_slot_type == SlotType.Equipment)
+        {
+            m_equipment_service.OnUpdatedSlot += UpdateSlot;
         }
 
         m_view.Inject(this);
@@ -63,6 +71,9 @@ public class ItemSlotPresenter
         {
             case SlotType.Inventory:
                 return m_inventory_service.GetItem(offset);
+
+            case SlotType.Equipment:
+                return m_equipment_service.GetItem(offset);
 
             default:
                 return null;
@@ -211,7 +222,7 @@ public class ItemSlotPresenter
     {
         var temp_data = new ItemData(current_item_data.Code, current_item_data.Count);
 
-        m_inventory_service.SetItem(m_offset, draged_item_data.Code, draged_item_data.Count);
+        SetItem(m_offset, draged_item_data.Code, draged_item_data.Count);
 
         if (temp_data.Code != ItemCode.NONE)
         {
@@ -235,6 +246,20 @@ public class ItemSlotPresenter
                 break;
 
             case SlotType.Shortcut:
+                break;
+        }
+    }
+
+    private void SetItem(int offset, ItemCode code, int count)
+    {
+        switch (m_slot_type)
+        {
+            case SlotType.Inventory:
+                m_inventory_service.SetItem(offset, code, count);
+                break;
+
+            case SlotType.Equipment:
+                m_equipment_service.SetItem(offset, code);
                 break;
         }
     }

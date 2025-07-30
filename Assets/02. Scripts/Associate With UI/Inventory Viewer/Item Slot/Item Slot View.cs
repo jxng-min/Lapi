@@ -45,6 +45,10 @@ public class ItemSlotView : MonoBehaviour, IItemSlotView
             m_count_label.gameObject.SetActive(true);
             m_count_label.text = NumberFormatter.FormatNumber(count);
         }
+        else
+        {
+            m_count_label.gameObject.SetActive(false);
+        }
 
         m_cooldown_image.gameObject.SetActive(false);
     }

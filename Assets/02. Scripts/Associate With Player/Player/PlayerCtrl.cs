@@ -9,6 +9,7 @@ public class PlayerCtrl : MonoBehaviour
 
     public DefaultStatus DefaultStatus { get; private set; }
     public GrowthStatus GrowthStatus { get; private set; }
+    public EquipmentEffect EquipmentEffect { get; set; }
 
     public Rigidbody2D Rigidbody { get; private set; }
     public Animator Animator { get; private set; }

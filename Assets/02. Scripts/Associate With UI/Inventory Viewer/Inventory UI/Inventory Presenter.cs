@@ -15,6 +15,7 @@ public class InventoryPresenter
         m_model = model;
 
         m_model.OnUpdatedGold += m_view.UpdateMoney;
+        m_view.Inject(this);
     }
 
     public void ToggleUI()

@@ -3,12 +3,12 @@
     {
       "Code": 1,
       "Name": "작은 체력 포션",
-      "Description": "어린이들을 위한 작은 체력 포션이다.\n체력 +<color=green>50</color>"
+      "Description": "아이들을 위한 작은 체력 포션이다.\n체력 +<color=green>50</color>"
     },
     {
       "Code": 2,
       "Name": "작은 마나 포션",
-      "Description": "어린이들을 위한 작은 마나 포션이다.\n마나 +<color=green>30</color>"
+      "Description": "아이들을 위한 작은 마나 포션이다.\n마나 +<color=green>30</color>"
     },
     {
       "Code": 3,

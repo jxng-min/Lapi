@@ -1,3 +1,4 @@
+using EquipmentService;
 using InventoryService;
 using ItemDataService;
 using UnityEngine;
@@ -33,10 +34,13 @@ public class InventoryUIInstaller : MonoBehaviour, IInstaller
         var tooltip_presenter = new ToolTipPresenter(m_tooltip_view,
                                                      ServiceLocator.Get<IItemDataService>(),
                                                      m_item_db);
+        DIContainer.Register<ToolTipPresenter>(tooltip_presenter);
 
         var drag_slot_presenter = new DragSlotPresenter(m_drag_slot_view,
                                                         m_item_db,
-                                                        ServiceLocator.Get<IInventoryService>());
+                                                        ServiceLocator.Get<IInventoryService>(),
+                                                        ServiceLocator.Get<IEquipmentService>());
+        DIContainer.Register<DragSlotPresenter>(drag_slot_presenter);
 
         var slot_views = m_item_slot_root.GetComponentsInChildren<IItemSlotView>();
 
@@ -45,10 +49,21 @@ public class InventoryUIInstaller : MonoBehaviour, IInstaller
         {
             slot_presenters[i] = new ItemSlotPresenter(slot_views[i],
                                                        ServiceLocator.Get<IInventoryService>(),
+                                                       ServiceLocator.Get<IEquipmentService>(),
                                                        m_item_db,
                                                        tooltip_presenter,
                                                        drag_slot_presenter,
                                                        i);
         }
+
+        Inject();
+    }
+
+    private void Inject()
+    {
+        var item_db = DIContainer.Resolve<ItemDataBase>();
+
+        var inventory_model = DIContainer.Resolve<IInventoryService>();
+        inventory_model.Inject(item_db);
     }
 }

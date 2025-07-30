@@ -4,7 +4,8 @@ public class PlayerMovement : MonoBehaviour, IMovement
 {
     private PlayerCtrl m_controller;
 
-    public float SPD => m_controller.DefaultStatus.SPD;
+    public float SPD => m_controller.DefaultStatus.SPD
+                        + m_controller.DefaultStatus.SPD * (m_controller.EquipmentEffect.SPD / 100f);
     public Vector2 Direction { get; set; }
 
     private void Awake()

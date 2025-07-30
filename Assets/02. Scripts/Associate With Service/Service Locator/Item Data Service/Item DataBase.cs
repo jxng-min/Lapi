@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Item DataBase", menuName = "SO/DB/Create Item DataBase")]
-public class ItemDataBase : ScriptableObject
+public class ItemDataBase : ScriptableObject, IItemDataBase
 {
     [Header("아이템 목록")]
     [SerializeField] private Item[] m_item_list;

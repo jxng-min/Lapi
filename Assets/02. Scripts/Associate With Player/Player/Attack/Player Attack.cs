@@ -9,7 +9,8 @@ public class PlayerAttack : MonoBehaviour, IAttack
     private Weapon m_weapon;
 
     public float ATK => m_controller.DefaultStatus.ATK
-                            + (m_user_service.Status.Level - 1) * m_controller.GrowthStatus.ATK;
+                            + (m_user_service.Status.Level - 1) * m_controller.GrowthStatus.ATK
+                            + m_controller.EquipmentEffect.ATK;
 
     private void Awake()
     {

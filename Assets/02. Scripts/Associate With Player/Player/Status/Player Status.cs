@@ -14,10 +14,12 @@ public class PlayerStatus : MonoBehaviour, IStatus
     private bool m_is_dead;
 
     public float MaxHP => m_controller.DefaultStatus.HP
-                                + (m_user_service.Status.Level - 1) * m_controller.GrowthStatus.HP;
+                                + (m_user_service.Status.Level - 1) * m_controller.GrowthStatus.HP
+                                + m_controller.EquipmentEffect.HP;
 
     public float MaxMP => m_controller.DefaultStatus.MP
-                                + (m_user_service.Status.Level - 1) * m_controller.GrowthStatus.MP;
+                                + (m_user_service.Status.Level - 1) * m_controller.GrowthStatus.MP
+                                + m_controller.EquipmentEffect.MP;
 
     private void Awake()
     {
@@ -61,6 +63,11 @@ public class PlayerStatus : MonoBehaviour, IStatus
         m_user_service.Status.MP += amount;
         m_user_service.Status.MP = Mathf.Clamp(m_user_service.Status.MP, 0f, MaxMP);
 
+        OnUpdatedMP?.Invoke(m_user_service.Status.MP, MaxMP);
+    }
+
+    public void UpdateMaxStatus()
+    {
         OnUpdatedMP?.Invoke(m_user_service.Status.MP, MaxMP);
     }
 

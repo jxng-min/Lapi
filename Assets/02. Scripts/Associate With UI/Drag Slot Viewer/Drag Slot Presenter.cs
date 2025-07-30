@@ -1,4 +1,5 @@
 using System.Numerics;
+using EquipmentService;
 using InventoryService;
 
 public class DragSlotPresenter
@@ -6,6 +7,7 @@ public class DragSlotPresenter
     private readonly IDragSlotView m_view;
     private ItemDataBase m_item_db;
     private readonly IInventoryService m_inventory_service;
+    private readonly IEquipmentService m_equipment_service;
 
     private SlotType m_slot_type;
     private int m_offset;
@@ -13,11 +15,12 @@ public class DragSlotPresenter
 
     public DragMode Mode => m_mode;
 
-    public DragSlotPresenter(IDragSlotView view, ItemDataBase item_db, IInventoryService inventory_service)
+    public DragSlotPresenter(IDragSlotView view, ItemDataBase item_db, IInventoryService inventory_service, IEquipmentService equipment_service)
     {
         m_view = view;
         m_item_db = item_db;
         m_inventory_service = inventory_service;
+        m_equipment_service = equipment_service;
     }
 
     public void OpenUI(SlotType slot_type, int offset, DragMode mode)
@@ -46,6 +49,7 @@ public class DragSlotPresenter
                 break;
 
             case SlotType.Equipment:
+                m_equipment_service.Clear(m_offset);
                 break;
 
             case SlotType.Shortcut:
@@ -59,9 +63,6 @@ public class DragSlotPresenter
         {
             case SlotType.Inventory:
                 m_inventory_service.UpdateItem(m_offset, amount);
-                break;
-
-            case SlotType.Equipment:
                 break;
 
             case SlotType.Shortcut:
@@ -78,6 +79,7 @@ public class DragSlotPresenter
                 break;
 
             case SlotType.Equipment:
+                m_equipment_service.SetItem(m_offset, code);
                 break;
 
             case SlotType.Shortcut:
@@ -109,6 +111,9 @@ public class DragSlotPresenter
         {
             case SlotType.Inventory:
                 return m_inventory_service.GetItem(offset);
+
+            case SlotType.Equipment:
+                return m_equipment_service.GetItem(offset);
 
             default:
                 return null;
