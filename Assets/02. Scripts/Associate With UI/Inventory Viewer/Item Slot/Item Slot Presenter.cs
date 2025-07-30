@@ -264,9 +264,26 @@ public class ItemSlotPresenter
         }
     }
 
+    private ItemData GetItem(int offset)
+    {
+        switch (m_slot_type)
+        {
+            case SlotType.Inventory:
+                return m_inventory_service.GetItem(offset);
+
+            case SlotType.Equipment:
+                return m_equipment_service.GetItem(offset);
+
+            case SlotType.Shortcut:
+                break;
+        }
+
+        return null;
+    }
+
     public void OnPointerEnter()
     {
-        var code = m_inventory_service.GetItem(m_offset).Code;
+        var code = GetItem(m_offset).Code;
         if (code == ItemCode.NONE)
         {
             return;

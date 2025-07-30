@@ -16,6 +16,8 @@ public class EquipmentPresenter
         m_model.OnUpdatedEffect += UpdateEffect;
 
         m_view.Inject(this);
+        
+        Initialize();
     }
 
     public void ToggleUI()

@@ -1,3 +1,4 @@
+using EquipmentService;
 using UnityEngine;
 using UserService;
 
@@ -24,8 +25,8 @@ public class PlayerInstaller : MonoBehaviour, IInstaller
     [SerializeField] private GrowthStatus m_growth_status;
 
     [Space(30f)]
-    [Header("기본 무기")]
-    [SerializeField] private Weapon m_weapon;
+    [Header("무기 목록")]
+    [SerializeField] private AttackUI[] m_weapons;
 
     public void Install()
     {
@@ -38,8 +39,6 @@ public class PlayerInstaller : MonoBehaviour, IInstaller
         DIContainer.Register<DefaultStatus>(m_default_status);
         DIContainer.Register<GrowthStatus>(m_growth_status);
 
-        DIContainer.Register<Weapon>(m_weapon);
-
         Inject();
     }
 
@@ -51,8 +50,9 @@ public class PlayerInstaller : MonoBehaviour, IInstaller
         var movement = DIContainer.Resolve<IMovement>();
 
         var attack = DIContainer.Resolve<IAttack>();
-        var weapon = DIContainer.Resolve<Weapon>();
-        (attack as PlayerAttack).Inject(ServiceLocator.Get<IUserService>(), weapon);
+        (attack as PlayerAttack).Inject(ServiceLocator.Get<IUserService>(),
+                                        ServiceLocator.Get<IEquipmentService>(),
+                                        m_weapons);
 
         var status = DIContainer.Resolve<IStatus>();
         (status as PlayerStatus).Inject(ServiceLocator.Get<IUserService>());

@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 702fe48d496eefe44a29ff60545336db, type: 3}
+  m_Script: {fileID: 11500000, guid: 0448a20cf728be646be154e9beca9642, type: 3}
   m_Name: 1007_Nina Bow
   m_EditorClassIdentifier: 
   m_code: 1007
@@ -23,3 +23,4 @@ MonoBehaviour:
     m_mp: 50
     m_atk: 45
     m_spd: 30
+  m_weapon_type: 2

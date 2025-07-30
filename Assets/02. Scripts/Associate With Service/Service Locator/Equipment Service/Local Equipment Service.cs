@@ -33,6 +33,7 @@ namespace EquipmentService
         private ItemData[] m_equipments;
         private EquipmentEffect m_current_effect;
 
+        public event Action<WeaponType> OnUpdatedWeapon;
         public event Action<int, ItemData> OnUpdatedSlot;
         public event Action<EquipmentEffect> OnUpdatedEffect;
 
@@ -49,6 +50,20 @@ namespace EquipmentService
 
         public void InitializeSlot(int offset)
         {
+            if (offset == 2)
+            {
+                var code = m_equipments[offset].Code;
+                if (code == ItemCode.NONE)
+                {
+                    OnUpdatedWeapon?.Invoke(WeaponType.NONE);
+                }
+                else
+                {
+                    var item = m_item_db.GetItem(code) as WeaponItem;
+                    OnUpdatedWeapon?.Invoke(item.WeaponType);
+                }
+            }
+
             OnUpdatedSlot?.Invoke(offset, m_equipments[offset]);
             Calculation();
         }
@@ -65,6 +80,19 @@ namespace EquipmentService
         {
             m_equipments[offset].Code = code;
             m_equipments[offset].Count = 1;
+
+            if (offset == 2)
+            {
+                if (code == ItemCode.NONE)
+                {
+                    OnUpdatedWeapon?.Invoke(WeaponType.NONE);
+                }
+                else
+                {
+                    var item = m_item_db.GetItem(code) as WeaponItem;
+                    OnUpdatedWeapon?.Invoke(item.WeaponType);
+                }
+            }
 
             Calculation();
 
@@ -100,6 +128,20 @@ namespace EquipmentService
         {
             m_equipments[offset].Code = ItemCode.NONE;
             m_equipments[offset].Count = 0;
+
+            if (offset == 2)
+            {
+                var code = m_equipments[offset].Code;
+                if (code == ItemCode.NONE)
+                {
+                    OnUpdatedWeapon?.Invoke(WeaponType.NONE);
+                }
+                else
+                {
+                    var item = m_item_db.GetItem(code) as WeaponItem;
+                    OnUpdatedWeapon?.Invoke(item.WeaponType);
+                }
+            }
 
             Calculation();
 
