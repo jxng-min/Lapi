@@ -38,7 +38,7 @@
     {
       "Code": 1002,
       "Name": "낡은 활",
-      "Description": "언제 현이 끊어질 지 모르는 활이다.\n마나 +<color=green>30</color>\n공격력 +<color=green>20</color>\n이동 속도 +<color=green>20</color>%"
+      "Description": "언제 현이 끊어질 지 모르는 활이다.\n마나 +<color=green>30</color>\n공격력 +<color=green>15</color>\n이동 속도 +<color=green>20</color>%"
     },
     {
       "Code": 1003,
@@ -63,7 +63,7 @@
     {
       "Code": 1007,
       "Name": "니나의 활",
-      "Description": "니나가 특별히 제작해준 활이다.\n마나 +<color=green>50</color>\n공격력 +<color=green>45</color>\n이동 속도 +<color=green>30</color>%"
+      "Description": "니나가 특별히 제작해준 활이다.\n마나 +<color=green>50</color>\n공격력 +<color=green>35</color>\n이동 속도 +<color=green>30</color>%"
     },
     {
       "Code": 1008,
@@ -88,7 +88,7 @@
     {
       "Code": 1012,
       "Name": "중급자의 활",
-      "Description": "장력이 좋아 부러지지 않을 것 같은 활이다.\n마나 +<color=green>80</color>\n공격력 +<color=green>70</color>\n이동 속도 +<color=green>40</color>%"
+      "Description": "장력이 좋아 부러지지 않을 것 같은 활이다.\n마나 +<color=green>80</color>\n공격력 +<color=green>60</color>\n이동 속도 +<color=green>40</color>%"
     },
     {
       "Code": 1013,

@@ -66,7 +66,7 @@ namespace InventoryService
                 }
                 else if (i == 3)
                 {
-                    m_items[i] = new ItemData(ItemCode.NINA_SWORD, 1);
+                    m_items[i] = new ItemData(ItemCode.NINA_BOW, 1);
                 }
                 else
                 {

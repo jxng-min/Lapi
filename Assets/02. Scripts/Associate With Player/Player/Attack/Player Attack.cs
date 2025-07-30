@@ -41,7 +41,6 @@ public class PlayerAttack : MonoBehaviour, IAttack
 
     private void SwapWeapon(WeaponType type)
     {
-        Debug.Log("들어옴");
         foreach (var weapon in m_weapons)
         {
             if (weapon.Type == type)

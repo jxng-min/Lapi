@@ -21,6 +21,6 @@ MonoBehaviour:
   m_effect:
     m_hp: 0
     m_mp: 30
-    m_atk: 20
+    m_atk: 15
     m_spd: 20
   m_weapon_type: 2
