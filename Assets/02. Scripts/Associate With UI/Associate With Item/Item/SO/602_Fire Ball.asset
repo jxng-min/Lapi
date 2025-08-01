@@ -18,11 +18,11 @@ MonoBehaviour:
   m_stackable: 0
   m_cool: 6
   m_sprite: {fileID: 21300000, guid: 1d1a5960d59c4ea498749ed9d9c74e1a, type: 3}
-  m_constraint: 0
+  m_constraint: 1
   m_main_rate: 120
   m_sub_rate: 0
   m_mp: 75
-  m_growth_cool: -1.5
+  m_growth_cool: -0.15
   m_growth_main_rate: 5
   m_growth_sub_rate: 0
   m_growth_mp: -2

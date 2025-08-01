@@ -7,5 +7,5 @@ public abstract class ItemStrategy
         m_player_ctrl = player_ctrl;
     }
 
-    public abstract void Activate(Item item);
+    public abstract bool Activate(Item item);
 }

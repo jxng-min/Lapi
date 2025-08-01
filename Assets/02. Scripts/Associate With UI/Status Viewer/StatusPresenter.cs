@@ -33,6 +33,7 @@ public class StatusPresenter
             m_user_service.UpdateLevel(-max_exp);
             m_user_service.Status.Level++;
             m_skill_service.UpdatePoint(3);
+            m_model.Initialize();
         }
 
         m_view.UpdateLV(m_user_service.Status.Level, (float)current_exp / (float)max_exp);

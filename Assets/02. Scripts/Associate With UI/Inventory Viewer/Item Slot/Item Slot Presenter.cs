@@ -91,6 +91,9 @@ public class ItemSlotPresenter
             case SlotType.Equipment:
                 return m_equipment_service.GetItem(offset);
 
+            case SlotType.Skill:
+                return m_skill_service.GetSkill(offset);
+
             default:
                 return null;
         }
@@ -327,7 +330,7 @@ public class ItemSlotPresenter
             return;
         }
 
-        if (m_slot_type == SlotType.Shortcut)
+        if (m_slot_type == SlotType.Skill)
         {
             var item_data = GetItemData(m_slot_type, m_offset);
             if (item_data.Count <= 0)
@@ -346,7 +349,18 @@ public class ItemSlotPresenter
 
         if (item.Cool > 0f)
         {
-            m_item_cooler.Push(code, item.Cool);
+            if (m_slot_type == SlotType.Skill)
+            {
+                var skill_level = m_skill_service.GetSkillLevel(code);
+
+                var final_cool = item.Cool + ((skill_level - 1) * (item as SkillItem).GrowthCool);
+
+                 m_item_cooler.Push(code, final_cool);
+            }
+            else
+            {
+                m_item_cooler.Push(code, item.Cool);
+            }
         }
 
         if (item.Type == ItemType.Consumable)

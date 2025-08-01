@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour, IMovement
     public float SPD => m_controller.DefaultStatus.SPD
                         + m_controller.DefaultStatus.SPD * (m_controller.EquipmentEffect.SPD / 100f);
     public Vector2 Direction { get; set; }
+    public bool Controll { get; set; } = true;
 
     private void Awake()
     {
@@ -20,6 +21,11 @@ public class PlayerMovement : MonoBehaviour, IMovement
 
     private void FixedUpdate()
     {
+        if (!Controll)
+        {
+            return;
+        }
+
         Move();
     }
 

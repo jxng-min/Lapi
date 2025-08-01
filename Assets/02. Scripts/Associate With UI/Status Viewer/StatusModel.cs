@@ -20,4 +20,9 @@ public class StatusModel
     {
         m_player_status = player_status;
     }
+
+    public void Initialize()
+    {
+        m_player_status.Initialize();
+    }
 }

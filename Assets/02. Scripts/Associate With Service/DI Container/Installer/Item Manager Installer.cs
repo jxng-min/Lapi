@@ -1,5 +1,6 @@
 using EquipmentService;
 using InventoryService;
+using SkillService;
 using UnityEngine;
 
 public class ItemManagerInstaller : MonoBehaviour, IInstaller
@@ -24,6 +25,7 @@ public class ItemManagerInstaller : MonoBehaviour, IInstaller
 
         m_item_activator.Inject(player_ctrl,
                                 ServiceLocator.Get<IInventoryService>(),
-                                ServiceLocator.Get<IEquipmentService>());
+                                ServiceLocator.Get<IEquipmentService>(),
+                                ServiceLocator.Get<ISkillService>());
     }
 }
