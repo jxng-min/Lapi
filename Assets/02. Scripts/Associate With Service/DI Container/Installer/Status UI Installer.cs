@@ -1,4 +1,7 @@
+using EXPService;
+using SkillService;
 using UnityEngine;
+using UserService;
 
 public class StatusUIInstaller : MonoBehaviour, IInstaller
 {
@@ -16,7 +19,11 @@ public class StatusUIInstaller : MonoBehaviour, IInstaller
         var status_model = new StatusModel(m_player_status);
         DIContainer.Register<StatusModel>(status_model);
 
-        var status_presenter = new StatusPresenter(m_status_view, status_model);
+        var status_presenter = new StatusPresenter(m_status_view,
+                                                   status_model,
+                                                   ServiceLocator.Get<IEXPService>(),
+                                                   ServiceLocator.Get<IUserService>(),
+                                                   ServiceLocator.Get<ISkillService>());
         DIContainer.Register<StatusPresenter>(status_presenter);
     }
 }

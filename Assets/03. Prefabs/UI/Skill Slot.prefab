@@ -337,7 +337,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uB05D\uC5C6\uB294 \uC808\uB9DD"
+  m_text: "\uC2A4\uD0AC \uC774\uB984"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9d818ca1f553e444aa3bfb871a5f833e, type: 2}
   m_sharedMaterial: {fileID: 8226050668606987737, guid: 9d818ca1f553e444aa3bfb871a5f833e, type: 2}
@@ -539,6 +539,7 @@ GameObject:
   - component: {fileID: 8384906561507248992}
   - component: {fileID: 4877362556712622713}
   - component: {fileID: 8396186135319960437}
+  - component: {fileID: 4788020603720082598}
   m_Layer: 5
   m_Name: Skill Slot
   m_TagString: Untagged
@@ -608,6 +609,24 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4788020603720082598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7206538461078641926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9940a8fd55263a47a924e2697d9c396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_item_image: {fileID: 0}
+  m_name_label: {fileID: 2591079560738824347}
+  m_level_label: {fileID: 8368882951943258652}
+  m_upgrade_button: {fileID: 1442407276233889808}
+  m_lock_panel: {fileID: 8200993071946062156}
+  m_lock_label: {fileID: 748086667969603483}
 --- !u!1 &8200993071946062156
 GameObject:
   m_ObjectHideFlags: 0

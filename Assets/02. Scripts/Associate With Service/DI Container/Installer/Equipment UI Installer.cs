@@ -1,5 +1,6 @@
 using EquipmentService;
 using InventoryService;
+using SkillService;
 using UnityEngine;
 
 public class EquipmentUIInstaller : MonoBehaviour, IInstaller
@@ -41,6 +42,7 @@ public class EquipmentUIInstaller : MonoBehaviour, IInstaller
             slot_presenters[i] = new ItemSlotPresenter(slot_views[i],
                                                        ServiceLocator.Get<IInventoryService>(),
                                                        ServiceLocator.Get<IEquipmentService>(),
+                                                       ServiceLocator.Get<ISkillService>(),
                                                        m_item_db,
                                                        tooltip_presenter,
                                                        drag_slot_presenter,
@@ -55,7 +57,7 @@ public class EquipmentUIInstaller : MonoBehaviour, IInstaller
 
     private void Inject()
     {
-        var item_db = DIContainer.Resolve<ItemDataBase>();
+        var item_db = DIContainer.Resolve<IItemDataBase>();
 
         var equipment_model = DIContainer.Resolve<IEquipmentService>();
         equipment_model.Inject(item_db);

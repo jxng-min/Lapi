@@ -34,15 +34,13 @@ public class ItemActivator : MonoBehaviour, IItemActivator
         switch (item.Type)
         {
             case ItemType.Consumable:
+            case ItemType.Skill:
                 ActivateItem(item);
                 break;
 
             case ItemType.Quest:
             case ItemType.ETC:
                 return false;
-
-            case ItemType.Skill:
-                break;
 
             case ItemType.Equipment_Helmet:
             case ItemType.Equipment_Armor:
