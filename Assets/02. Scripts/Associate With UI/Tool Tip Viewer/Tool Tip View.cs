@@ -99,7 +99,7 @@ public class ToolTipView : MonoBehaviour, IToolTipView
             local_position.x += rect_transform.sizeDelta.x / 2;
         }
 
-        if (mouse_position.y < Screen.height * 0.2f)
+        if (mouse_position.y < Screen.height * 0.5f)
         {
             local_position.y += rect_transform.sizeDelta.y / 2;
         }

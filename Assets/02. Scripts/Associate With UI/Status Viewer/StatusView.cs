@@ -19,20 +19,43 @@ public class StatusView : MonoBehaviour, IStatusView
     [Header("마나")]
     [SerializeField] private Slider m_mp_slider;
 
+    private Coroutine m_exp_coroutine;
+    private Coroutine m_hp_coroutine;
+    private Coroutine m_mp_coroutine;
+
     public void UpdateLV(int level, float exp_rate)
     {
         m_level_label.text = $"LV.{level}";
-        StartCoroutine(UpdateSlider(m_exp_slider, exp_rate));
+
+        if (m_exp_coroutine != null)
+        {
+            StopCoroutine(m_exp_coroutine);
+            m_exp_coroutine = null;
+        }
+
+        m_exp_coroutine = StartCoroutine(UpdateSlider(m_exp_slider, exp_rate));
     }
 
     public void UpdateHP(float hp_rate)
     {
-        StartCoroutine(UpdateSlider(m_hp_slider, hp_rate));
+        if (m_hp_coroutine != null)
+        {
+            StopCoroutine(m_hp_coroutine);
+            m_hp_coroutine = null;
+        }
+
+        m_hp_coroutine = StartCoroutine(UpdateSlider(m_hp_slider, hp_rate));
     }
 
     public void UpdateMP(float mp_rate)
     {
-        StartCoroutine(UpdateSlider(m_mp_slider, mp_rate));
+        if (m_mp_coroutine != null)
+        {
+            StopCoroutine(m_mp_coroutine);
+            m_mp_coroutine = null;
+        }
+
+        m_mp_coroutine = StartCoroutine(UpdateSlider(m_mp_slider, mp_rate));
     }
 
     private IEnumerator UpdateSlider(Slider slider, float rate)

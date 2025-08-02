@@ -47,6 +47,10 @@ public class ToolTipPresenter
         {
             return "기타 아이템";
         }
+        else if ((int)(type & ItemType.Skill) != 0)
+        {
+            return "스킬 아이템";
+        }
         else
         {
             return "장비 아이템";

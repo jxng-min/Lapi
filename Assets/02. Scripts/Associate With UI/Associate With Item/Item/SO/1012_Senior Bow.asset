@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 1012_Senior Bow
   m_EditorClassIdentifier: 
   m_code: 1012
-  m_type: 32
+  m_type: 64
   m_name: "\uC911\uAE09\uC790\uC758 \uD65C"
   m_stackable: 0
   m_cool: 4

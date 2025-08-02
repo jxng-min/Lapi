@@ -1,6 +1,7 @@
 using EquipmentService;
 using InventoryService;
 using ItemDataService;
+using SkillService;
 using UnityEngine;
 
 public class InventoryUIInstaller : MonoBehaviour, IInstaller
@@ -22,7 +23,7 @@ public class InventoryUIInstaller : MonoBehaviour, IInstaller
 
     public void Install()
     {
-        DIContainer.Register<ItemDataBase>(m_item_db);
+        DIContainer.Register<IItemDataBase>(m_item_db);
         DIContainer.Register<IInventoryView>(m_inventory_view);
 
         var m_inventory_presenter = new InventoryPresenter(m_inventory_view,
@@ -42,6 +43,9 @@ public class InventoryUIInstaller : MonoBehaviour, IInstaller
                                                         ServiceLocator.Get<IEquipmentService>());
         DIContainer.Register<DragSlotPresenter>(drag_slot_presenter);
 
+        var item_activator = DIContainer.Resolve<IItemActivator>();
+        var item_cooler = DIContainer.Resolve<IItemCooler>();
+
         var slot_views = m_item_slot_root.GetComponentsInChildren<IItemSlotView>();
 
         var slot_presenters = new ItemSlotPresenter[slot_views.Length];
@@ -50,9 +54,12 @@ public class InventoryUIInstaller : MonoBehaviour, IInstaller
             slot_presenters[i] = new ItemSlotPresenter(slot_views[i],
                                                        ServiceLocator.Get<IInventoryService>(),
                                                        ServiceLocator.Get<IEquipmentService>(),
+                                                       ServiceLocator.Get<ISkillService>(),
                                                        m_item_db,
                                                        tooltip_presenter,
                                                        drag_slot_presenter,
+                                                       item_activator,
+                                                       item_cooler,
                                                        i);
         }
 
@@ -61,7 +68,7 @@ public class InventoryUIInstaller : MonoBehaviour, IInstaller
 
     private void Inject()
     {
-        var item_db = DIContainer.Resolve<ItemDataBase>();
+        var item_db = DIContainer.Resolve<IItemDataBase>();
 
         var inventory_model = DIContainer.Resolve<IInventoryService>();
         inventory_model.Inject(item_db);

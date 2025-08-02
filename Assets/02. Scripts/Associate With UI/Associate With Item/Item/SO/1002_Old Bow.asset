@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 1002_Old Bow
   m_EditorClassIdentifier: 
   m_code: 1002
-  m_type: 32
+  m_type: 64
   m_name: "\uB0A1\uC740 \uD65C"
   m_stackable: 0
   m_cool: 4

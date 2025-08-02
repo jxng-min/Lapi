@@ -41,6 +41,21 @@ namespace EquipmentService
         {
             var equipment_data = new EquipmentData();
             m_equipments = equipment_data.Equipments;
+
+            CreateDirectory();
+        }
+
+        private void CreateDirectory()
+        {
+            var local_directory_path = Path.Combine(Application.persistentDataPath, "Equipment");
+
+            if (!Directory.Exists(local_directory_path))
+            {
+                Directory.CreateDirectory(local_directory_path);
+#if UNITY_EDITOR
+                Debug.Log($"<color=cyan>Equipment 디렉터리를 새롭게 생성합니다.</color>");
+#endif
+            }
         }
 
         public void Inject(IItemDataBase item_db)

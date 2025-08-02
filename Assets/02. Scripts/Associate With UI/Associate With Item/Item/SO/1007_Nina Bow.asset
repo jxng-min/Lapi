@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 1007_Nina Bow
   m_EditorClassIdentifier: 
   m_code: 1007
-  m_type: 32
+  m_type: 64
   m_name: "\uB2C8\uB098\uC758 \uD65C"
   m_stackable: 0
   m_cool: 4

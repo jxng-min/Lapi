@@ -10,6 +10,9 @@ public enum ItemCode
 
     // 기타 아이템(401 ~ 600)
 
+    // 스킬 (601 ~ 700)
+    DASH = 601, FIRE_BALL = 602, THUNDER = 603,
+
     // 장비(1001 ~ 1100)
     OLD_SWORD = 1001, OLD_BOW = 1002, OLD_SHIELD = 1003, OLD_HELMET = 1004, OLD_ARMOR = 1005,
     NINA_SWORD = 1006, NINA_BOW = 1007, NINA_SHILD = 1008, NINA_HELMET = 1009, NINA_ARMOR = 1010,

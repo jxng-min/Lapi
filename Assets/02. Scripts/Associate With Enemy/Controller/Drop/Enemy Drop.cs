@@ -41,6 +41,8 @@ public class EnemyDrop : MonoBehaviour
     private void GetEXP()
     {
         var final_amount = Random.Range(m_exp_amount - m_exp_deviation, m_exp_amount + m_exp_deviation);
+        
+        m_controller.UserService.UpdateLevel(final_amount);
     }
 
     private void InstantiateCoin()

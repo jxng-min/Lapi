@@ -1,12 +1,14 @@
+using System;
 using System.IO;
 using UnityEngine;
 using UserService;
 
-public class LocalUserService : IUserService
+public class LocalUserService : ISaveable, IUserService
 {
-    private int m_offset;
     private Vector3 m_position;
     private StatusData m_status;
+
+    public event Action<int, int> OnUpdatedLevel;
 
     public Vector3 Position
     {
@@ -39,14 +41,16 @@ public class LocalUserService : IUserService
         }
     }
 
-    public void Inject(int offset)
+    public void UpdateLevel(int exp)
     {
-        m_offset = offset;
+        m_status.EXP += exp;
+
+        OnUpdatedLevel?.Invoke(m_status.Level, m_status.EXP);
     }
 
-    public bool Load()
+    public bool Load(int offset)
     {
-        var local_data_path = Path.Combine(Application.persistentDataPath, "User", $"UserData{m_offset}.json");
+        var local_data_path = Path.Combine(Application.persistentDataPath, "User", $"UserData{offset}.json");
 
         if (File.Exists(local_data_path))
         {
@@ -62,9 +66,9 @@ public class LocalUserService : IUserService
         return false;
     }
 
-    public void Save()
+    public void Save(int offset)
     {
-        var local_data_path = Path.Combine(Application.persistentDataPath, "User", $"UserData{m_offset}.json");
+        var local_data_path = Path.Combine(Application.persistentDataPath, "User", $"UserData{offset}.json");
 
         var user_data = new UserData(m_position, m_status);
         var json_data = JsonUtility.ToJson(user_data, true);

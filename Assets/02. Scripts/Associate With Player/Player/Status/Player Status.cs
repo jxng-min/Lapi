@@ -13,6 +13,8 @@ public class PlayerStatus : MonoBehaviour, IStatus
 
     private bool m_is_dead;
 
+    public float HP => m_user_service.Status.HP;
+    public float MP => m_user_service.Status.MP;
     public float MaxHP => m_controller.DefaultStatus.HP
                                 + (m_user_service.Status.Level - 1) * m_controller.GrowthStatus.HP
                                 + m_controller.EquipmentEffect.HP;
@@ -68,6 +70,7 @@ public class PlayerStatus : MonoBehaviour, IStatus
 
     public void UpdateMaxStatus()
     {
+        OnUpdatedHP?.Invoke(m_user_service.Status.HP, MaxHP);
         OnUpdatedMP?.Invoke(m_user_service.Status.MP, MaxMP);
     }
 

@@ -31,6 +31,21 @@
       "Description": "새싹 모험가에겐 과분한 만능 포션이다.\n체력 +<color=green>120</color>\n마나 +<color=green>80</color>"
     },
     {
+      "Code": 601,
+      "Name": "돌진",
+      "Description": "라피가 전방을 향해 돌진한다.\n<size=16>마나/성장 마나: <color=green>-50/+1</color>\n대기 시간/성장 대기 시간: <color=green>3초/-0.1초</color></size>"
+    },
+    {
+      "Code": 602,
+      "Name": "파이어 볼",
+      "Description": "전방을 향해 파이어 볼을 던진다.\n<size=16>마나/성장마나: <color=green>-75/+2</color>\n대기 시간/성장 대기 시간: <color=green>6초/-0.15초</color>\n주 데미지/성장 주 데미지: <color=green>120%/5%</color></size>"
+    },
+    {
+      "Code": 603,
+      "Name": "낙뢰",
+      "Description": "라피가 구름의 힘으로 번개를 떨어트린다.\n<size=16>마나/성장마나: <color=green>-75/+2</color>\n대기 시간/성장 대기 시간: <color=green>6초/-0.15초</color>\n주 데미지/성장 주 데미지: <color=green>120%/5%</color>\n부 데미지/성장 부 데미지: <color=green>20%/1%</color></size>"
+    },
+    {
       "Code": 1001,
       "Name": "낡은 검",
       "Description": "낡았지만 견고한 검이다.\n마나 +<color=green>30</color>\n공격력 +<color=green>10</color>"

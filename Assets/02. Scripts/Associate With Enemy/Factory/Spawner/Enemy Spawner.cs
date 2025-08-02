@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using InventoryService;
 using UnityEngine;
+using UserService;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -97,6 +98,10 @@ public class EnemySpawner : MonoBehaviour
 
         var enemy_ctrl = m_factory_manager.CreateEnemy(so.Code);
         enemy_ctrl.transform.position = GetRandomPosition();
-        enemy_ctrl.Initialize(so, m_spawner_manager, ID, ServiceLocator.Get<IInventoryService>());
+        enemy_ctrl.Initialize(so,
+                              m_spawner_manager,
+                              ID,
+                              ServiceLocator.Get<IInventoryService>(),
+                              ServiceLocator.Get<IUserService>());
     }   
 }

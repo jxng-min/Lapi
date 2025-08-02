@@ -1,14 +1,15 @@
+using System;
 using UnityEngine;
 
 namespace UserService
 {
     public interface IUserService
     {
-        public Vector3 Position { get; set; }
-        public StatusData Status { get; set; }
+        Vector3 Position { get; set; }
+        StatusData Status { get; set; }
 
-        public void Inject(int offset);
-        public bool Load();
-        public void Save();
+        event Action<int, int> OnUpdatedLevel;
+
+        void UpdateLevel(int exp);
     }
 }

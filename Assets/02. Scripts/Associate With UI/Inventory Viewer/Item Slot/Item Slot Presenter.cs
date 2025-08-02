@@ -1,16 +1,21 @@
 using System.Numerics;
 using EquipmentService;
 using InventoryService;
+using SkillService;
 
 public class ItemSlotPresenter
 {
     private readonly IItemSlotView m_view;
     private readonly IInventoryService m_inventory_service;
     private readonly IEquipmentService m_equipment_service;
-    private ItemDataBase m_item_db;
+    private readonly ISkillService m_skill_service;
+    private IItemDataBase m_item_db;
 
     private ToolTipPresenter m_tooltip_presenter;
     private DragSlotPresenter m_drag_slot_presenter;
+
+    private IItemActivator m_item_activator;
+    private IItemCooler m_item_cooler;
 
     private int m_offset;
     private SlotType m_slot_type;
@@ -18,21 +23,28 @@ public class ItemSlotPresenter
     public ItemSlotPresenter(IItemSlotView view,
                              IInventoryService inventory_service,
                              IEquipmentService equipment_service,
-                             ItemDataBase item_db,
+                             ISkillService skill_service,
+                             IItemDataBase item_db,
                              ToolTipPresenter tooltip_presenter,
                              DragSlotPresenter drag_slot_presenter,
+                             IItemActivator item_activator,
+                             IItemCooler item_cooler,
                              int offset,
                              SlotType slot_type = SlotType.Inventory)
     {
         m_view = view;
         m_inventory_service = inventory_service;
         m_equipment_service = equipment_service;
+        m_skill_service = skill_service;
         m_item_db = item_db;
 
         m_offset = offset;
 
         m_tooltip_presenter = tooltip_presenter;
         m_drag_slot_presenter = drag_slot_presenter;
+
+        m_item_activator = item_activator;
+        m_item_cooler = item_cooler;
 
         m_slot_type = slot_type;
 
@@ -43,6 +55,10 @@ public class ItemSlotPresenter
         else if (m_slot_type == SlotType.Equipment)
         {
             m_equipment_service.OnUpdatedSlot += UpdateSlot;
+        }
+        else if (m_slot_type == SlotType.Skill)
+        {
+            m_skill_service.OnUpdatedSlot += UpdateSlot;
         }
 
         m_view.Inject(this);
@@ -74,6 +90,9 @@ public class ItemSlotPresenter
 
             case SlotType.Equipment:
                 return m_equipment_service.GetItem(offset);
+
+            case SlotType.Skill:
+                return m_skill_service.GetSkill(offset);
 
             default:
                 return null;
@@ -276,9 +295,99 @@ public class ItemSlotPresenter
 
             case SlotType.Shortcut:
                 break;
+
+            case SlotType.Skill:
+                return m_skill_service.GetSkill(offset);
         }
 
         return null;
+    }
+
+    private void Clear(int offset)
+    {
+        switch (m_slot_type)
+        {
+            case SlotType.Inventory:
+                m_inventory_service.Clear(offset);
+                break;
+
+            case SlotType.Equipment:
+                m_equipment_service.Clear(offset);
+                break;
+        }        
+    }
+
+    public void UseItem()
+    {
+        var code = GetItem(m_offset).Code;
+        if (code == ItemCode.NONE)
+        {
+            return;
+        }
+
+        if (m_item_cooler.GetCool(code) > 0f)
+        {
+            return;
+        }
+
+        if (m_slot_type == SlotType.Skill)
+        {
+            var item_data = GetItemData(m_slot_type, m_offset);
+            if (item_data.Count <= 0)
+            {
+                return;
+            }
+        }
+
+        m_tooltip_presenter.CloseUI();
+
+        var item = m_item_db.GetItem(code);
+        if (!m_item_activator.UseItem(item, m_offset, m_slot_type))
+        {
+            return;
+        }
+
+        if (item.Cool > 0f)
+        {
+            if (m_slot_type == SlotType.Skill)
+            {
+                var skill_level = m_skill_service.GetSkillLevel(code);
+
+                var final_cool = item.Cool + ((skill_level - 1) * (item as SkillItem).GrowthCool);
+
+                 m_item_cooler.Push(code, final_cool);
+            }
+            else
+            {
+                m_item_cooler.Push(code, item.Cool);
+            }
+        }
+
+        if (item.Type == ItemType.Consumable)
+        {
+            var count = GetItem(m_offset).Count;
+            if (count > 1)
+            {
+                UpdateItem(m_offset, -1);
+            }
+            else
+            {
+                Clear(m_offset);
+            }
+        }
+    }
+
+    public bool IsEmpty()
+    {
+        return GetItem(m_offset).Code == ItemCode.NONE;
+    }
+
+    public float GetCool()
+    {
+        var code = GetItem(m_offset).Code;
+        var item = m_item_db.GetItem(code);
+
+        return m_item_cooler.GetCool(code) / item.Cool;
     }
 
     public void OnPointerEnter()
@@ -305,6 +414,15 @@ public class ItemSlotPresenter
             return;
         }
 
+        if (m_slot_type == SlotType.Skill)
+        {
+            var count = GetItemData(m_slot_type, m_offset).Count;
+            if (count <= 0)
+            {
+                return;
+            }
+        }
+
         m_tooltip_presenter.CloseUI();
         m_drag_slot_presenter.OpenUI(m_slot_type, m_offset, drag_mode);
         m_drag_slot_presenter.SetPosition(mouse_position);
@@ -316,6 +434,15 @@ public class ItemSlotPresenter
         if (item_data == null || item_data.Code == ItemCode.NONE)
         {
             return;
+        }
+
+        if (m_slot_type == SlotType.Skill)
+        {
+            var count = GetItemData(m_slot_type, m_offset).Count;
+            if (count <= 0)
+            {
+                return;
+            }
         }
 
         m_drag_slot_presenter.SetPosition(mouse_position);

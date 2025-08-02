@@ -10,5 +10,5 @@ public enum ObjectType
     MELEE_ENEMY = 1000, RANGED_ENEMY = 1001,
 
     // 스킬 타입(2000 ~)
-    ARROW = 2000,
+    ARROW = 2000, DASH = 2001, FIRE_BALL = 2002, THUNDER = 2003,
 }

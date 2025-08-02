@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 1011_Senior Sword
   m_EditorClassIdentifier: 
   m_code: 1011
-  m_type: 32
+  m_type: 64
   m_name: "\uC911\uAE09\uC790\uC758 \uAC80"
   m_stackable: 0
   m_cool: 3

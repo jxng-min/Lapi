@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: c47f64781f1a1214b935773a76840ae0
+guid: dd1490d22e0e1504ca01428801c8e5bf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6945321831648613733
-    second: Inventory UI_0
+      213: -1368719331745588629
+    second: Inventory UI 1_0
   - first:
-      213: 9097338801133244466
-    second: Inventory UI_1
+      213: 3630869341673875878
+    second: Inventory UI 1_1
   - first:
-      213: 7460288814081512604
-    second: Inventory UI_2
+      213: 4566884815163497300
+    second: Inventory UI 1_2
   - first:
-      213: 1453115868473888415
-    second: Inventory UI_3
+      213: 2591365264420786704
+    second: Inventory UI 1_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -125,32 +125,10 @@ TextureImporter:
       name: Inventory Panel
       rect:
         serializedVersion: 2
-        x: 382
-        y: 76
-        width: 344
-        height: 436
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 87, y: 41, z: 82, w: 40}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 230dcea907d304e70800000000000000
-      internalID: 9097338801133244466
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Back Button
-      rect:
-        serializedVersion: 2
-        x: 402
-        y: 43
-        width: 15
-        height: 15
+        x: 2667
+        y: 535
+        width: 2401
+        height: 3041
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,30 +137,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c94162d6625488760800000000000000
-      internalID: 7460288814081512604
+      spriteID: 6a9e358dd60736230800000000000000
+      internalID: 3630869341673875878
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Item Slot
+      name: Back Button
       rect:
         serializedVersion: 2
-        x: 462
-        y: 0
-        width: 58
-        height: 58
+        x: 2811
+        y: 299
+        width: 102
+        height: 102
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 12, y: 11, z: 11, w: 13}
+      border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f9e8ed5fe218a2410800000000000000
-      internalID: 1453115868473888415
+      spriteID: 45b12f10b85d06f30800000000000000
+      internalID: 4566884815163497300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Item Slot Frame
+      rect:
+        serializedVersion: 2
+        x: 2995
+        y: 0
+        width: 402
+        height: 402
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01256157af066f320800000000000000
+      internalID: 2591365264420786704
       vertices: []
       indices: 
       edges: []
@@ -191,7 +191,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 171770775584c3d48b73205ff2c74bcc
+    spriteID: 10cb4bb34fbf487438a1902b22310b48
     internalID: 0
     vertices: []
     indices: 
@@ -199,14 +199,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Back Button: 7460288814081512604
-      Inventory Panel: 9097338801133244466
-      Inventory UI_0: 6945321831648613733
-      Item Slot: 1453115868473888415
+      Back Button: 4566884815163497300
+      Inventory Panel: 3630869341673875878
+      Inventory UI 1_0: -1368719331745588629
+      Item Slot Frame: 2591365264420786704
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
