@@ -18,14 +18,14 @@ public class DashStrategy : ItemStrategy, ISkillStrategy
 
     public override bool Activate(Item item)
     {
+        m_dash_skill = item as SkillItem;
+
+        Calculation();
+
         if (m_player_ctrl.Status.MP < m_mp_usage)
         {
             return false;
         }
-
-        m_dash_skill = item as SkillItem;
-
-        Calculation();
 
         var mouse_position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         var player_position = m_player_ctrl.transform.position;
