@@ -120,6 +120,19 @@ namespace SkillService
             return 0;
         }
 
+        public int GetOffset(ItemCode code)
+        {
+            for (int offset = 0; offset < m_skills.Length; offset++)
+            {
+                if (m_skills[offset].Code == code)
+                {
+                    return offset;
+                }
+            }
+
+            return -1;
+        }
+
         public bool Load(int offset)
         {
             var local_data_path = Path.Combine(Application.persistentDataPath, "Skill", $"SkillData{offset}.json");

@@ -17,5 +17,6 @@ namespace SkillService
         void UpdateSkill(int offset, int count, int point = -1);
         int GetSkillLevel(ItemCode code);
         ItemData GetSkill(int offset);
+        int GetOffset(ItemCode code);
     }
 }

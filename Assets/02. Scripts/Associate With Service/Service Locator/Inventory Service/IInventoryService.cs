@@ -15,10 +15,11 @@ namespace InventoryService
         event Action<int, ItemData> OnUpdatedSlot;
         void AddItem(ItemCode code, int count);
         void SetItem(int offset, ItemCode code, int count);
-        bool UpdateItem(int offset, int count);
+        int UpdateItem(int offset, int count);
         void Clear(int offset);
         int GetItemCount(ItemCode code);
         int GetValidOffset(ItemCode code);
+        int GetPriorityOffset(ItemCode code);
         bool HasItem(ItemCode code);
         ItemData GetItem(int offset);
     }

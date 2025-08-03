@@ -7,6 +7,7 @@ namespace KeyService
     {
         event Action<KeyCode, string> OnUpdatedKey;
 
+        void Initialize();
         void Reset();
         KeyCode GetKeyCode(string key_name);
         bool Check(KeyCode key, KeyCode current_key);

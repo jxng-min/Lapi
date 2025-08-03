@@ -1,5 +1,6 @@
 using EquipmentService;
 using InventoryService;
+using ShortcutService;
 using SkillService;
 using UnityEngine;
 
@@ -43,6 +44,7 @@ public class EquipmentUIInstaller : MonoBehaviour, IInstaller
                                                        ServiceLocator.Get<IInventoryService>(),
                                                        ServiceLocator.Get<IEquipmentService>(),
                                                        ServiceLocator.Get<ISkillService>(),
+                                                       ServiceLocator.Get<IShortcutService>(),
                                                        m_item_db,
                                                        tooltip_presenter,
                                                        drag_slot_presenter,

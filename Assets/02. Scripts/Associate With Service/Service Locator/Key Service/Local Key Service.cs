@@ -51,6 +51,18 @@ namespace KeyService
             if (!Directory.Exists(local_directory_path))
             {
                 Directory.CreateDirectory(local_directory_path);
+
+#if UNITY_EDITOR
+                Debug.Log($"<color=cyan>Key 디렉터리를 새롭게 생성합니다.</color>");
+#endif
+            }
+        }
+
+        public void Initialize()
+        {
+            foreach (var pair in m_key_dict)
+            {
+                OnUpdatedKey?.Invoke(pair.Value, pair.Key);
             }
         }
 
@@ -63,6 +75,7 @@ namespace KeyService
             Register(KeyCode.K, "Skill");
             Register(KeyCode.T, "Quest");
             Register(KeyCode.P, "Binder");
+            Register(KeyCode.H, "Shortcut");
 
             Register(KeyCode.Alpha1, "Shortcut0");
             Register(KeyCode.Alpha2, "Shortcut1");
