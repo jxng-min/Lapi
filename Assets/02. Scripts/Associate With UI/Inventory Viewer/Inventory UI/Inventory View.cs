@@ -1,4 +1,5 @@
 using InventoryService;
+using KeyService;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,6 +16,7 @@ public class InventoryView : MonoBehaviour, IInventoryView
 
     private Animator m_animator;
     private InventoryPresenter m_presenter;
+    private IKeyService m_key_service;
 
     private void Awake()
     {
@@ -23,7 +25,7 @@ public class InventoryView : MonoBehaviour, IInventoryView
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(m_key_service.GetKeyCode("Inventory")))
         {
             m_presenter.ToggleUI();
         }
@@ -32,6 +34,7 @@ public class InventoryView : MonoBehaviour, IInventoryView
     public void Inject(InventoryPresenter inventory_presenter)
     {
         m_presenter = inventory_presenter;
+        m_key_service = ServiceLocator.Get<IKeyService>();
 
         m_close_button.onClick.AddListener(m_presenter.CloseUI);
     }
