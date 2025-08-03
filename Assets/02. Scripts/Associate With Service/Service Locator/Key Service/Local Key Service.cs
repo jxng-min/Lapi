@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -33,6 +34,8 @@ namespace KeyService
     {
         private Dictionary<string, KeyCode> m_key_dict;
 
+        public event Action<KeyCode, string> OnUpdatedKey;
+
         public LocalKeyService()
         {
             m_key_dict = new();
@@ -55,23 +58,23 @@ namespace KeyService
         {
             m_key_dict.Clear();
 
-            m_key_dict.Add("Inventory", KeyCode.I);
-            m_key_dict.Add("Equipment", KeyCode.U);
-            m_key_dict.Add("Skill", KeyCode.K);
-            m_key_dict.Add("Quest", KeyCode.T);
-            m_key_dict.Add("Binder", KeyCode.P);
+            Register(KeyCode.I, "Inventory");
+            Register(KeyCode.U, "Equipment");
+            Register(KeyCode.K, "Skill");
+            Register(KeyCode.T, "Quest");
+            Register(KeyCode.P, "Binder");
 
-            m_key_dict.Add("Shortcut0", KeyCode.Alpha1);
-            m_key_dict.Add("Shortcut1", KeyCode.Alpha2);
-            m_key_dict.Add("Shortcut2", KeyCode.Alpha3);
-            m_key_dict.Add("Shortcut3", KeyCode.Alpha4);
-            m_key_dict.Add("Shortcut4", KeyCode.Alpha5);
+            Register(KeyCode.Alpha1, "Shortcut0");
+            Register(KeyCode.Alpha2, "Shortcut1");
+            Register(KeyCode.Alpha3, "Shortcut2");
+            Register(KeyCode.Alpha4, "Shortcut3");
+            Register(KeyCode.Alpha5, "Shortcut4");
 
-            m_key_dict.Add("Shortcut5", KeyCode.Z);
-            m_key_dict.Add("Shortcut6", KeyCode.X);
-            m_key_dict.Add("Shortcut7", KeyCode.C);
-            m_key_dict.Add("Shortcut8", KeyCode.V);
-            m_key_dict.Add("Shortcut9", KeyCode.B);
+            Register(KeyCode.Z, "Shortcut5");
+            Register(KeyCode.X, "Shortcut6");
+            Register(KeyCode.C, "Shortcut7");
+            Register(KeyCode.V, "Shortcut8");
+            Register(KeyCode.B, "Shortcut9");
         }
 
         public bool Check(KeyCode key, KeyCode current_key)
@@ -110,6 +113,8 @@ namespace KeyService
         public void Register(KeyCode key, string key_name)
         {
             m_key_dict[key_name] = key;
+
+            OnUpdatedKey?.Invoke(key, key_name);
         }
 
         public KeyCode GetKeyCode(string key_name)
@@ -130,7 +135,7 @@ namespace KeyService
 
                 foreach (var key_data in wrapped_data.Data)
                 {
-                    m_key_dict.TryAdd(key_data.Name, key_data.Code);
+                    Register(key_data.Code, key_data.Name);
                 }
             }
             else
