@@ -59,6 +59,7 @@ namespace KeyService
             m_key_dict.Add("Equipment", KeyCode.U);
             m_key_dict.Add("Skill", KeyCode.K);
             m_key_dict.Add("Quest", KeyCode.T);
+            m_key_dict.Add("Binder", KeyCode.P);
 
             m_key_dict.Add("Shortcut0", KeyCode.Alpha1);
             m_key_dict.Add("Shortcut1", KeyCode.Alpha2);
