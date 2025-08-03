@@ -1,3 +1,4 @@
+using KeyService;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,6 +14,7 @@ public class SkillView : MonoBehaviour, ISkillView
 
     private Animator m_animator;
     private SkillPresenter m_presenter;
+    private IKeyService m_key_service;
 
     private void Awake()
     {
@@ -21,7 +23,7 @@ public class SkillView : MonoBehaviour, ISkillView
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKeyDown(m_key_service.GetKeyCode("Skill")))
         {
             m_presenter.ToggleUI();
         }
@@ -30,6 +32,7 @@ public class SkillView : MonoBehaviour, ISkillView
     public void Inject(SkillPresenter presenter)
     {
         m_presenter = presenter;
+        m_key_service = ServiceLocator.Get<IKeyService>();
 
         m_close_button.onClick.AddListener(m_presenter.CloseUI);
     }

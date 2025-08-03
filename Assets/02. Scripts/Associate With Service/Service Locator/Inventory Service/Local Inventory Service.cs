@@ -62,11 +62,15 @@ namespace InventoryService
             {
                 if (i == 0)
                 {
-                    m_items[i] = new ItemData(ItemCode.NINA_ARMOR, 1);
+                    m_items[i] = new ItemData(ItemCode.OLD_SWORD, 1);
+                }
+                else if (i == 2)
+                {
+                    m_items[i] = new ItemData(ItemCode.MIDDLE_HP_POTION, 40);
                 }
                 else if (i == 3)
                 {
-                    m_items[i] = new ItemData(ItemCode.NINA_BOW, 1);
+                    m_items[i] = new ItemData(ItemCode.MIDDLE_MP_POTION, 24);
                 }
                 else
                 {
@@ -152,17 +156,24 @@ namespace InventoryService
             OnUpdatedSlot?.Invoke(offset, m_items[offset]);
         }
 
-        public bool UpdateItem(int offset, int count)
+        public int UpdateItem(int offset, int count)
         {
             if (m_items[offset].Count + count <= 99)
             {
                 m_items[offset].Count += count;
                 OnUpdatedSlot?.Invoke(offset, m_items[offset]);
 
-                return true;
+                return -1;
             }
+            else
+            {
+                var remain_count = 99 - m_items[offset].Count;
 
-            return false;
+                m_items[offset].Count = 99;
+                OnUpdatedSlot?.Invoke(offset, m_items[offset]);
+
+                return remain_count;
+            }
         }
 
         public void Clear(int offset)
@@ -202,6 +213,19 @@ namespace InventoryService
                 }
 
                 if (m_items[offset].Code == ItemCode.NONE)
+                {
+                    return offset;
+                }
+            }
+
+            return -1;
+        }
+
+        public int GetPriorityOffset(ItemCode code)
+        {
+            for (int offset = m_items.Length - 1; offset >= 0; offset--)
+            {
+                if (m_items[offset].Code == code)
                 {
                     return offset;
                 }

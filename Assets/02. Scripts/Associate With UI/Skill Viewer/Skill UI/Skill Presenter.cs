@@ -5,12 +5,16 @@ public class SkillPresenter
     private readonly ISkillView m_view;
     private readonly ISkillService m_model;
 
+    private ItemSlotPresenter[] m_slot_presenters;
+
     private bool m_is_open;
 
-    public SkillPresenter(ISkillView view, ISkillService model)
+    public SkillPresenter(ISkillView view, ISkillService model, ItemSlotPresenter[] slot_presenters)
     {
         m_view = view;
         m_model = model;
+
+        m_slot_presenters = slot_presenters;
 
         m_model.OnUpdatedPoint += m_view.UpdatePoint;
         m_view.Inject(this);
@@ -52,5 +56,12 @@ public class SkillPresenter
         {
             m_model.InitializeSlot(i);
         }
+    }
+
+    public ItemSlotPresenter GetPresenter(ItemCode code)
+    {
+        var offset = m_model.GetOffset(code);
+
+        return offset != -1 ? m_slot_presenters[offset] : null;
     }
 }

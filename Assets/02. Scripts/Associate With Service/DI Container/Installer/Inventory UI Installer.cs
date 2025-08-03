@@ -1,6 +1,7 @@
 using EquipmentService;
 using InventoryService;
 using ItemDataService;
+using ShortcutService;
 using SkillService;
 using UnityEngine;
 
@@ -26,10 +27,6 @@ public class InventoryUIInstaller : MonoBehaviour, IInstaller
         DIContainer.Register<IItemDataBase>(m_item_db);
         DIContainer.Register<IInventoryView>(m_inventory_view);
 
-        var m_inventory_presenter = new InventoryPresenter(m_inventory_view,
-                                                           ServiceLocator.Get<IInventoryService>());
-        DIContainer.Register<InventoryPresenter>(m_inventory_presenter);
-
         DIContainer.Register<IInventoryService>(ServiceLocator.Get<IInventoryService>());
 
         var tooltip_presenter = new ToolTipPresenter(m_tooltip_view,
@@ -40,7 +37,9 @@ public class InventoryUIInstaller : MonoBehaviour, IInstaller
         var drag_slot_presenter = new DragSlotPresenter(m_drag_slot_view,
                                                         m_item_db,
                                                         ServiceLocator.Get<IInventoryService>(),
-                                                        ServiceLocator.Get<IEquipmentService>());
+                                                        ServiceLocator.Get<IEquipmentService>(),
+                                                        ServiceLocator.Get<ISkillService>(),
+                                                        ServiceLocator.Get<IShortcutService>());
         DIContainer.Register<DragSlotPresenter>(drag_slot_presenter);
 
         var item_activator = DIContainer.Resolve<IItemActivator>();
@@ -55,6 +54,7 @@ public class InventoryUIInstaller : MonoBehaviour, IInstaller
                                                        ServiceLocator.Get<IInventoryService>(),
                                                        ServiceLocator.Get<IEquipmentService>(),
                                                        ServiceLocator.Get<ISkillService>(),
+                                                       ServiceLocator.Get<IShortcutService>(),
                                                        m_item_db,
                                                        tooltip_presenter,
                                                        drag_slot_presenter,
@@ -62,6 +62,11 @@ public class InventoryUIInstaller : MonoBehaviour, IInstaller
                                                        item_cooler,
                                                        i);
         }
+
+        var m_inventory_presenter = new InventoryPresenter(m_inventory_view,
+                                                           ServiceLocator.Get<IInventoryService>(),
+                                                           slot_presenters);
+        DIContainer.Register<InventoryPresenter>(m_inventory_presenter);
 
         Inject();
     }

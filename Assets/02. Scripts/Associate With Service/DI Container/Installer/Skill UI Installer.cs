@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using EquipmentService;
 using InventoryService;
+using ShortcutService;
 using SkillService;
 using UnityEngine;
 using UserService;
@@ -15,10 +16,6 @@ public class SkillUIInstaller : MonoBehaviour, IInstaller
 
     public void Install()
     {
-        var skill_presenter = new SkillPresenter(m_skill_view,
-                                                 ServiceLocator.Get<ISkillService>());
-        DIContainer.Register<SkillPresenter>(skill_presenter);
-
         var skill_slots = m_skill_root.GetComponentsInChildren<SkillSlotView>();
 
         List<IItemSlotView> item_slot_view_list = new();
@@ -34,6 +31,7 @@ public class SkillUIInstaller : MonoBehaviour, IInstaller
                                                        ServiceLocator.Get<IInventoryService>(),
                                                        ServiceLocator.Get<IEquipmentService>(),
                                                        ServiceLocator.Get<ISkillService>(),
+                                                       ServiceLocator.Get<IShortcutService>(),
                                                        DIContainer.Resolve<IItemDataBase>(),
                                                        DIContainer.Resolve<ToolTipPresenter>(),
                                                        DIContainer.Resolve<DragSlotPresenter>(),
@@ -53,5 +51,10 @@ public class SkillUIInstaller : MonoBehaviour, IInstaller
                                                               item_slot_presenters[i],
                                                               i);
         }
+
+        var skill_presenter = new SkillPresenter(m_skill_view,
+                                                 ServiceLocator.Get<ISkillService>(),
+                                                 item_slot_presenters);
+        DIContainer.Register<SkillPresenter>(skill_presenter);
     }
 }
