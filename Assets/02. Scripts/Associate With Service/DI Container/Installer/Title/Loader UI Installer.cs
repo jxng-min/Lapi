@@ -14,6 +14,9 @@ public class LoaderUIInstaller : MonoBehaviour, IInstaller
     [Header("로더 슬롯의 부모 트랜스폼")]
     [SerializeField] private Transform m_loader_slot_root;
 
+    [Header("로더 = true, 세이버 = false")]
+    [SerializeField] private bool m_is_loader;
+
     public void Install()
     {
         var loader_slot_views = m_loader_slot_root.GetComponentsInChildren<ILoaderSlotView>();
@@ -31,7 +34,7 @@ public class LoaderUIInstaller : MonoBehaviour, IInstaller
                                                                     ServiceLocator.Get<IKeyService>(),
                                                                     ServiceLocator.Get<IShortcutService>(),
                                                                     i,
-                                                                    true);
+                                                                    m_is_loader);
             }
             else
             {
@@ -43,7 +46,7 @@ public class LoaderUIInstaller : MonoBehaviour, IInstaller
                                                                     ServiceLocator.Get<IKeyService>(),
                                                                     ServiceLocator.Get<IShortcutService>(),
                                                                     i,
-                                                                    true);
+                                                                    m_is_loader);
             }
         }
 

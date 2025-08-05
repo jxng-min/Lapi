@@ -22,6 +22,8 @@ public class EquipmentUIInstaller : MonoBehaviour, IInstaller
     {
         DIContainer.Register<IEquipmentView>(m_equipment_view);
 
+        ServiceLocator.Get<IEquipmentService>().Inject(m_item_db);
+
         var equipment_presenter = new EquipmentPresenter(m_equipment_view,
                                                          ServiceLocator.Get<IEquipmentService>(),
                                                          m_player_ctrl);
@@ -53,15 +55,5 @@ public class EquipmentUIInstaller : MonoBehaviour, IInstaller
                                                        i,
                                                        SlotType.Equipment);
         }
-
-        Inject();
-    }
-
-    private void Inject()
-    {
-        var item_db = DIContainer.Resolve<IItemDataBase>();
-
-        var equipment_model = DIContainer.Resolve<IEquipmentService>();
-        equipment_model.Inject(item_db);
     }
 }

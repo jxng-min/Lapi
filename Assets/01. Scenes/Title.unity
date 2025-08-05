@@ -1747,6 +1747,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_loader_view: {fileID: 191586988}
   m_loader_slot_root: {fileID: 579794890}
+  m_is_loader: 1
 --- !u!1 &1137538436
 GameObject:
   m_ObjectHideFlags: 0

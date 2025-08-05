@@ -61,7 +61,7 @@ public class LoaderSlotPresenter
            !(m_key_service as ISaveable).Load(m_offset) ||
            !(m_shortcut_service as ISaveable).Load(m_offset))
         {
-            m_view?.UpdateUI(!m_is_loader, m_is_loader);
+            m_view?.UpdateUI(false, m_is_loader);
         }
         else
         {
