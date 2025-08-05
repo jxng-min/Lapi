@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95ef440546708254a941aa239be37424, type: 3}
+  m_Name: Cursor DataBase
+  m_EditorClassIdentifier: 
+  m_cursor_datas:
+  - Mode: 0
+    Cursor: {fileID: 2800000, guid: 3754a50dc39c7c34aa803e74930e57ff, type: 3}
+    Hotspot: {x: 0.5, y: 0.5}
+  - Mode: 1
+    Cursor: {fileID: 2800000, guid: cbb27ce85a4e36f49be79be765ebf090, type: 3}
+    Hotspot: {x: 0.5, y: 0.5}
+  - Mode: 2
+    Cursor: {fileID: 2800000, guid: 3ecd39574392f7940ad9f95f7cc14809, type: 3}
+    Hotspot: {x: 0.5, y: 0.5}
+  - Mode: 3
+    Cursor: {fileID: 2800000, guid: 5f0001a0c27439347bf6d43f938e4b41, type: 3}
+    Hotspot: {x: 0.5, y: 0.5}
+  - Mode: 4
+    Cursor: {fileID: 2800000, guid: 985103e121a51784e8527861c86ef35e, type: 3}
+    Hotspot: {x: 0.5, y: 0.5}
+  - Mode: 5
+    Cursor: {fileID: 2800000, guid: f8c94b52b9c9b7a4fafc90aca4661d17, type: 3}
+    Hotspot: {x: 0.5, y: 0.5}

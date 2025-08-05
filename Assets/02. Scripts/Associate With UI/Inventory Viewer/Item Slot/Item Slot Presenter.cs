@@ -379,6 +379,8 @@ public class ItemSlotPresenter
 
     public void UseItem()
     {
+        m_view.SetCursor(CursorMode.DEFAULT);
+
         var code = GetItem(m_offset).Code;
         if (code == ItemCode.NONE)
         {
@@ -392,6 +394,7 @@ public class ItemSlotPresenter
 
         if (m_slot_type == SlotType.Skill)
         {
+            m_view.SetCursor(CursorMode.CAN_GRAB);
             var item_data = GetItemData(m_slot_type, m_offset);
             if (item_data.Count <= 0)
             {
@@ -420,7 +423,7 @@ public class ItemSlotPresenter
 
                 var final_cool = item.Cool + ((skill_level - 1) * (item as SkillItem).GrowthCool);
 
-                 m_item_cooler.Push(code, final_cool);
+                m_item_cooler.Push(code, final_cool);
             }
             else
             {
@@ -434,10 +437,12 @@ public class ItemSlotPresenter
             if (count > 1)
             {
                 UpdateItem(m_offset, -1);
+                m_view.SetCursor(CursorMode.CAN_GRAB);
             }
             else
             {
                 Clear(m_offset);
+                m_view.SetCursor(CursorMode.DEFAULT);
             }
         }
     }
@@ -464,11 +469,15 @@ public class ItemSlotPresenter
         }
 
         m_tooltip_presenter.OpenUI(code);
+
+        m_view.SetCursor(CursorMode.CAN_GRAB);
     }
 
     public void OnPointerExit()
     {
         m_tooltip_presenter.CloseUI();
+
+        m_view.SetCursor(CursorMode.DEFAULT);
     }
 
     public void OnBeginDrag(Vector2 mouse_position, DragMode drag_mode)
@@ -491,6 +500,8 @@ public class ItemSlotPresenter
         m_tooltip_presenter.CloseUI();
         m_drag_slot_presenter.OpenUI(m_slot_type, m_offset, drag_mode);
         m_drag_slot_presenter.SetPosition(mouse_position);
+
+        m_view.SetCursor(CursorMode.GRAB);
     }
 
     public void OnDrag(Vector2 mouse_position)
@@ -511,6 +522,8 @@ public class ItemSlotPresenter
         }
 
         m_drag_slot_presenter.SetPosition(mouse_position);
+
+        m_view.SetCursor(CursorMode.GRAB);
     }
 
     public void OnEndDrag()
@@ -521,14 +534,22 @@ public class ItemSlotPresenter
             {
                 m_drag_slot_presenter.Clear();
             }
-            
+            m_view.SetCursor(CursorMode.DEFAULT);
+        }
+        else
+        {
+            m_view.SetCursor(CursorMode.CAN_GRAB);
         }
 
         m_drag_slot_presenter.CloseUI();
+        
+        
     }
 
     public void OnDrop()
     {
+        m_view.SetCursor(CursorMode.DEFAULT);
+
         var item = m_drag_slot_presenter.GetItem();
         if (item.Code == ItemCode.NONE)
         {

@@ -1342,6 +1342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a4e79e728f50914fa653faf895f2781, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_cursor_db: {fileID: 11400000, guid: c8d60381f94e9c342a27ac5bb5b57a79, type: 2}
   m_start_button: {fileID: 2070054273}
   m_exit_button: {fileID: 2004058606}
 --- !u!1 &752421345
