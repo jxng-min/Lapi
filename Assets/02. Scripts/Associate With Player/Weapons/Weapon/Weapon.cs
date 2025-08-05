@@ -8,6 +8,7 @@ public abstract class Weapon : MonoBehaviour
     private float m_cooltime;
     private Animator m_animator;
     private PlayerAttack m_player_attack;
+    private Coroutine m_cool_coroutine;
 
     protected bool CanUse
     {
@@ -24,6 +25,17 @@ public abstract class Weapon : MonoBehaviour
         m_player_attack = transform.parent.parent.GetComponent<PlayerAttack>();
     }
 
+    private void OnDisable()
+    {
+        m_can_use = true;
+        
+        if (m_cool_coroutine != null)
+        {
+            StopCoroutine(m_cool_coroutine);
+            m_cool_coroutine = null;
+        }
+    }
+
     #region Methods
     public void Initialize(float cooltime)
     {
@@ -34,7 +46,7 @@ public abstract class Weapon : MonoBehaviour
 
     protected void Cool()
     {
-        StartCoroutine(SetCooling());
+        m_cool_coroutine = StartCoroutine(SetCooling());
     }
 
     private IEnumerator SetCooling()
@@ -49,6 +61,7 @@ public abstract class Weapon : MonoBehaviour
         }
 
         m_can_use = true;
+        m_cool_coroutine = null;
     }
 
     protected void InstantiateIndicator(Transform target, float amount)

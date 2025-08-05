@@ -5,7 +5,7 @@ namespace EquipmentService
 {
     public interface IEquipmentService
     {
-        event Action<WeaponType> OnUpdatedWeapon;
+        event Action<WeaponType, float> OnUpdatedWeapon;
         event Action<int, ItemData> OnUpdatedSlot;
         event Action<EquipmentEffect> OnUpdatedEffect;
 
