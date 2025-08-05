@@ -29,8 +29,8 @@ namespace UserService
 
         public UserData()
         {
-            Position = new Vector3(-20f, 50.5f, 0f);
-            Camera = new Vector3(-37.5f, 58f, -10f);
+            Position = new Vector3(23f, -27f, 0f);
+            Camera = new Vector3(5.5f, -19.5f, -10f);
             PlayTime = 0f;
             Status = new StatusData();
         }
