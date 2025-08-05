@@ -61,7 +61,6 @@ namespace EquipmentService
         public void Inject(IItemDataBase item_db)
         {
             m_item_db = item_db;
-            Debug.Log("주입함");
         }
 
         public void InitializeSlot(int offset)
@@ -175,7 +174,6 @@ namespace EquipmentService
                     continue;
                 }
 
-                Debug.Log(m_item_db);
                 var item = m_item_db.GetItem(slot.Code) as EquipmentItem;
                 calculated_effect += item.EquipmentEffect;
             }

@@ -14,10 +14,8 @@ public abstract class Bootstrapper : MonoBehaviour
 
     protected virtual void Start()
     {
-        int i = 0;
         foreach (var installer in m_installers)
         {
-            Debug.Log(i++);
             installer.Install();
         }
     }

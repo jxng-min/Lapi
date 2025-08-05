@@ -18,9 +18,6 @@ public class ShortcutUIInstaller : MonoBehaviour, IInstaller
     {
         DIContainer.Register<IShortcutView>(m_shortcut_view);
 
-        var shortcut_presenter = new ShortcutPresenter(m_shortcut_view,
-                                                       ServiceLocator.Get<IShortcutService>());
-
         var shortcut_slot_view = m_shortcut_slot_root.GetComponentsInChildren<ShortcutSlotView>();
 
         var shortcut_slot_presenters = new ShortcutSlotPresenter[shortcut_slot_view.Length];
@@ -57,5 +54,10 @@ public class ShortcutUIInstaller : MonoBehaviour, IInstaller
                                                             i,
                                                             SlotType.Shortcut));
         }
+
+        var shortcut_presenter = new ShortcutPresenter(m_shortcut_view,
+                                                       ServiceLocator.Get<IShortcutService>(),
+                                                       DIContainer.Resolve<InventoryPresenter>(),
+                                                       DIContainer.Resolve<SkillPresenter>());
     }
 }
