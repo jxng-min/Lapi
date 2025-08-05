@@ -6,6 +6,7 @@ using UserService;
 public class LocalUserService : ISaveable, IUserService
 {
     private Vector3 m_position;
+    private Vector3 m_camera;
     private float m_playtime;
     private StatusData m_status;
 
@@ -15,6 +16,12 @@ public class LocalUserService : ISaveable, IUserService
     {
         get => m_position;
         set => m_position = value;
+    }
+
+    public Vector3 Camera
+    {
+        get => m_camera;
+        set => m_camera = value;
     }
 
     public float PlayTime
@@ -34,6 +41,7 @@ public class LocalUserService : ISaveable, IUserService
         var user_data = new UserData();
 
         m_position = user_data.Position;
+        m_camera = user_data.Camera;
         m_playtime = user_data.PlayTime;
         m_status = user_data.Status;
 
@@ -67,6 +75,7 @@ public class LocalUserService : ISaveable, IUserService
             var user_data = JsonUtility.FromJson<UserData>(json_data);
 
             m_position = user_data.Position;
+            m_camera = user_data.Camera;
             m_playtime = user_data.PlayTime;
             m_status = user_data.Status;
 
@@ -80,7 +89,7 @@ public class LocalUserService : ISaveable, IUserService
     {
         var local_data_path = Path.Combine(Application.persistentDataPath, "User", $"UserData{offset}.json");
 
-        var user_data = new UserData(m_position, m_status);
+        var user_data = new UserData(m_position, m_camera, m_playtime, m_status);
         var json_data = JsonUtility.ToJson(user_data, true);
 
         File.WriteAllText(local_data_path, json_data);

@@ -33,7 +33,7 @@ namespace EquipmentService
         private ItemData[] m_equipments;
         private EquipmentEffect m_current_effect;
 
-        public event Action<WeaponType> OnUpdatedWeapon;
+        public event Action<WeaponType, float> OnUpdatedWeapon;
         public event Action<int, ItemData> OnUpdatedSlot;
         public event Action<EquipmentEffect> OnUpdatedEffect;
 
@@ -70,12 +70,12 @@ namespace EquipmentService
                 var code = m_equipments[offset].Code;
                 if (code == ItemCode.NONE)
                 {
-                    OnUpdatedWeapon?.Invoke(WeaponType.NONE);
+                    OnUpdatedWeapon?.Invoke(WeaponType.NONE, 3f);
                 }
                 else
                 {
                     var item = m_item_db.GetItem(code) as WeaponItem;
-                    OnUpdatedWeapon?.Invoke(item.WeaponType);
+                    OnUpdatedWeapon?.Invoke(item.WeaponType, item.Cool);
                 }
             }
 
@@ -100,12 +100,12 @@ namespace EquipmentService
             {
                 if (code == ItemCode.NONE)
                 {
-                    OnUpdatedWeapon?.Invoke(WeaponType.NONE);
+                    OnUpdatedWeapon?.Invoke(WeaponType.NONE, 3f);
                 }
                 else
                 {
                     var item = m_item_db.GetItem(code) as WeaponItem;
-                    OnUpdatedWeapon?.Invoke(item.WeaponType);
+                    OnUpdatedWeapon?.Invoke(item.WeaponType, item.Cool);
                 }
             }
 
@@ -149,12 +149,12 @@ namespace EquipmentService
                 var code = m_equipments[offset].Code;
                 if (code == ItemCode.NONE)
                 {
-                    OnUpdatedWeapon?.Invoke(WeaponType.NONE);
+                    OnUpdatedWeapon?.Invoke(WeaponType.NONE, 3f);
                 }
                 else
                 {
                     var item = m_item_db.GetItem(code) as WeaponItem;
-                    OnUpdatedWeapon?.Invoke(item.WeaponType);
+                    OnUpdatedWeapon?.Invoke(item.WeaponType, item.Cool);
                 }
             }
 

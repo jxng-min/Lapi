@@ -39,7 +39,7 @@ public class PlayerAttack : MonoBehaviour, IAttack
         m_equipment_service.OnUpdatedWeapon += SwapWeapon;
     }
 
-    private void SwapWeapon(WeaponType type)
+    private void SwapWeapon(WeaponType type, float cooltime)
     {
         foreach (var weapon in m_weapons)
         {
@@ -47,6 +47,7 @@ public class PlayerAttack : MonoBehaviour, IAttack
             {
                 weapon.Interface.gameObject.SetActive(true);
                 m_weapon = weapon.Interface;
+                m_weapon.Initialize(cooltime);
             }
             else
             {
