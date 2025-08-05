@@ -23,6 +23,7 @@ namespace UserService
     public class UserData
     {
         public Vector3 Position;
+        public float PlayTime;
         public StatusData Status;
 
         public UserData()
@@ -34,6 +35,7 @@ namespace UserService
         public UserData(Vector3 position, StatusData status)
         {
             Position = position;
+            PlayTime = 0f;
             Status = status;
         }
     }
