@@ -44,6 +44,10 @@ public class PlayerInstaller : MonoBehaviour, IInstaller
 
     private void Inject()
     {
+        var user_service = ServiceLocator.Get<IUserService>();
+        m_controller.transform.position = user_service.Position;
+        Camera.main.transform.position = user_service.Camera; 
+
         var player_ctrl = DIContainer.Resolve<PlayerCtrl>();
         player_ctrl.EquipmentEffect = new EquipmentEffect();
 

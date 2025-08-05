@@ -23,19 +23,23 @@ namespace UserService
     public class UserData
     {
         public Vector3 Position;
+        public Vector3 Camera;
         public float PlayTime;
         public StatusData Status;
 
         public UserData()
         {
-            Position = new Vector3();
+            Position = new Vector3(-20f, 50.5f, 0f);
+            Camera = new Vector3(-37.5f, 58f, -10f);
+            PlayTime = 0f;
             Status = new StatusData();
         }
 
-        public UserData(Vector3 position, StatusData status)
+        public UserData(Vector3 position, Vector3 camera, float playtime, StatusData status)
         {
             Position = position;
-            PlayTime = 0f;
+            Camera = camera;
+            PlayTime = playtime;
             Status = status;
         }
     }
