@@ -5,6 +5,7 @@ using EXPService;
 using InventoryService;
 using ItemDataService;
 using KeyService;
+using NPCService;
 using ShortcutService;
 using SkillService;
 using UserService;
@@ -25,6 +26,7 @@ public static class ServiceLocator
         Register<ISkillService>(new LocalSkillService());
         Register<IKeyService>(new LocalKeyService());
         Register<IShortcutService>(new LocalShortcutService());
+        Register<INPCService>(new LocalNPCService());
     }
 
     public static void Register<T>(T service)
