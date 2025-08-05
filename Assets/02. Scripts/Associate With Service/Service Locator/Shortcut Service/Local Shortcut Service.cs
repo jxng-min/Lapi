@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using InventoryService;
+using SkillService;
 using UnityEngine;
 
 namespace ShortcutService
@@ -26,6 +27,7 @@ namespace ShortcutService
     public class LocalShortcutService : ISaveable, IShortcutService
     {
         private IInventoryService m_inventory_service;
+        private ISkillService m_skill_service;
         private ItemCode[] m_shortcuts;
 
         public event Action<int, ItemData> OnUpdatedSlot;
@@ -34,6 +36,9 @@ namespace ShortcutService
         {
             m_inventory_service = ServiceLocator.Get<IInventoryService>();
             m_inventory_service.OnUpdatedSlot += UpdateSlot;
+
+            m_skill_service = ServiceLocator.Get<ISkillService>();
+            m_skill_service.OnUpdatedSlot += UpdateSlot;
 
             var shortcut_data = new ShortcutData();
             m_shortcuts = shortcut_data.Shortcuts;

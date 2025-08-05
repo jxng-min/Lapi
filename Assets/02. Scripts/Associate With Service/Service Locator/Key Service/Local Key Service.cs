@@ -88,6 +88,8 @@ namespace KeyService
             Register(KeyCode.C, "Shortcut7");
             Register(KeyCode.V, "Shortcut8");
             Register(KeyCode.B, "Shortcut9");
+
+            Register(KeyCode.Escape, "Pause");
         }
 
         public bool Check(KeyCode key, KeyCode current_key)

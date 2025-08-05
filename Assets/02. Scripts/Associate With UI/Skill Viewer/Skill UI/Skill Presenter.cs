@@ -49,7 +49,7 @@ public class SkillPresenter
         m_view.CloseUI();
     }
 
-    private void Initialize()
+    public void Initialize()
     {
         m_model.InitializePoint();
         for (int i = 0; i < 3; i++)

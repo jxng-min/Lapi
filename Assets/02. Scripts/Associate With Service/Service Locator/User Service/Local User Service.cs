@@ -6,6 +6,7 @@ using UserService;
 public class LocalUserService : ISaveable, IUserService
 {
     private Vector3 m_position;
+    private float m_playtime;
     private StatusData m_status;
 
     public event Action<int, int> OnUpdatedLevel;
@@ -15,6 +16,13 @@ public class LocalUserService : ISaveable, IUserService
         get => m_position;
         set => m_position = value;
     }
+
+    public float PlayTime
+    {
+        get => m_playtime;
+        set => m_playtime = value;
+    }
+    
     public StatusData Status
     {
         get => m_status;
@@ -26,6 +34,7 @@ public class LocalUserService : ISaveable, IUserService
         var user_data = new UserData();
 
         m_position = user_data.Position;
+        m_playtime = user_data.PlayTime;
         m_status = user_data.Status;
 
         CreateDirectory();
@@ -58,6 +67,7 @@ public class LocalUserService : ISaveable, IUserService
             var user_data = JsonUtility.FromJson<UserData>(json_data);
 
             m_position = user_data.Position;
+            m_playtime = user_data.PlayTime;
             m_status = user_data.Status;
 
             return true;

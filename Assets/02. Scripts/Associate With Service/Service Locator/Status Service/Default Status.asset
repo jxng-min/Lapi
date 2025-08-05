@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 53332cc09025fc346ab2f89020eeeb27, type: 3}
   m_Name: Default Status
-  m_EditorClassIdentifier: Assembly-CSharp::DefaultStatus
+  m_EditorClassIdentifier: 
   <HP>k__BackingField: 500
   <MP>k__BackingField: 300
   <ATK>k__BackingField: 50

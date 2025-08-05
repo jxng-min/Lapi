@@ -45,7 +45,7 @@ public class InventoryPresenter
         m_view.CloseUI();
     }
 
-    private void Initialize()
+    public void Initialize()
     {
         m_model.InitializeGold();
         for (int i = 0; i < 30; i++)

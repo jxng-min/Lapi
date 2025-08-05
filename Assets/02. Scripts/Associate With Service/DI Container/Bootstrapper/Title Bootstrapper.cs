@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class TitleBootstrapper : Bootstrapper
 {
     protected override void Start()
@@ -8,6 +6,4 @@ public class TitleBootstrapper : Bootstrapper
 
         base.Start();
     }
-
-
 }

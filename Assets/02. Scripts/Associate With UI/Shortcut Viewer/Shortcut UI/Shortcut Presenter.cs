@@ -7,10 +7,13 @@ public class ShortcutPresenter
 
     private bool m_is_open;
 
-    public ShortcutPresenter(IShortcutView view, IShortcutService shortcut_service)
+    public ShortcutPresenter(IShortcutView view, IShortcutService shortcut_service, InventoryPresenter inventory_presenter, SkillPresenter skill_presenter)
     {
         m_view = view;
         m_shortcut_service = shortcut_service;
+
+        inventory_presenter.Initialize();
+        skill_presenter.Initialize();
 
         m_view.Inject(this);
     }
