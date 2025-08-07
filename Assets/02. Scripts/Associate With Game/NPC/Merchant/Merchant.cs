@@ -17,8 +17,14 @@ public class Merchant : NPC
 
     public override void Interaction()
     {
+        if (m_dialogue_presenter.IsOpen)
+        {
+            return;
+        }
+
         m_shop_presenter.Inject(m_sale_list);
 
-        base.Interaction();
+        Rotation();
+        OpenDialogue();
     }
 }

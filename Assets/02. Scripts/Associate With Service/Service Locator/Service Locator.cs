@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using DialogueService;
 using EquipmentService;
 using EXPService;
 using InventoryService;
@@ -27,6 +28,7 @@ public static class ServiceLocator
         Register<IKeyService>(new LocalKeyService());
         Register<IShortcutService>(new LocalShortcutService());
         Register<INPCService>(new LocalNPCService());
+        Register<IDialogueService>(new LocalDialogueService());
     }
 
     public static void Register<T>(T service)

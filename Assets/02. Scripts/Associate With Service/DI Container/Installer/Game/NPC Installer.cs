@@ -23,6 +23,7 @@ public class NPCInstaller : MonoBehaviour, IInstaller
         foreach (var npc in npcs)
         {
             npc.Inject(name_tag_presenter);
+            npc.GetComponent<NPC>().Inject(DIContainer.Resolve<DialoguePresenter>());
         }
 
         InstallMerchant();
