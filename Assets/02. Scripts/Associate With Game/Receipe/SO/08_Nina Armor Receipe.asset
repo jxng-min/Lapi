@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1bfed551ea51cc4d993c2bf867e305b, type: 3}
+  m_Name: 08_Nina Armor Receipe
+  m_EditorClassIdentifier: 
+  m_ingredient_item_list:
+  - Item: {fileID: 11400000, guid: 2dade82777c8dfc418dd03dcda28970b, type: 2}
+    Count: 10
+  - Item: {fileID: 11400000, guid: 736ddb1a838599d4887126b5dbf30377, type: 2}
+    Count: 5
+  - Item: {fileID: 11400000, guid: f1d9fe48f10267d4f956fc255e7cf941, type: 2}
+    Count: 3
+  - Item: {fileID: 11400000, guid: 3a0a65a35c060ed4aa829e7c33d662f4, type: 2}
+    Count: 1
+  m_target_item: {fileID: 11400000, guid: 415828d0bad86324ab25a0c66ddf91c7, type: 2}
+  m_item_count: 1
+  m_crafting_time: 45
+  m_constraint_level: 10

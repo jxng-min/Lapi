@@ -1,0 +1,596 @@
+fileFormatVersion: 2
+guid: a8f933a0a68f14f48bdd9d4cb8074299
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9113077231352420937
+    second: Potions with Outline_0
+  - first:
+      213: 4310074363455526709
+    second: Potions with Outline_1
+  - first:
+      213: 962348909569720402
+    second: Potions with Outline_2
+  - first:
+      213: -2773376836267815973
+    second: Potions with Outline_3
+  - first:
+      213: 3526845255133004883
+    second: Potions with Outline_4
+  - first:
+      213: 4746204902165694633
+    second: Potions with Outline_5
+  - first:
+      213: -4210774996561031429
+    second: Potions with Outline_6
+  - first:
+      213: 4425885924734813226
+    second: Potions with Outline_7
+  - first:
+      213: -3121000154339229434
+    second: Potions with Outline_8
+  - first:
+      213: 3425691855549466821
+    second: Potions with Outline_9
+  - first:
+      213: 9162840270026404688
+    second: Potions with Outline_10
+  - first:
+      213: -2198815070501164886
+    second: Potions with Outline_11
+  - first:
+      213: 4304660821153745357
+    second: Potions with Outline_12
+  - first:
+      213: 6423255953970405655
+    second: Potions with Outline_13
+  - first:
+      213: -1191573664452047169
+    second: Potions with Outline_14
+  - first:
+      213: -4330784715841490405
+    second: Potions with Outline_15
+  - first:
+      213: -331603434574922782
+    second: Potions with Outline_16
+  - first:
+      213: -6494713152580240634
+    second: Potions with Outline_17
+  - first:
+      213: -3146033590063147993
+    second: Potions with Outline_18
+  - first:
+      213: -3505251316482598528
+    second: Potions with Outline_19
+  - first:
+      213: 7729075126301891381
+    second: Potions with Outline_20
+  - first:
+      213: 3818948317733185736
+    second: Potions with Outline_21
+  - first:
+      213: 7973926223865793127
+    second: Potions with Outline_22
+  - first:
+      213: 1782057769484096833
+    second: Potions with Outline_23
+  - first:
+      213: 2565676993913967544
+    second: Potions with Outline_24
+  - first:
+      213: -5967463443290481930
+    second: Potions with Outline_25
+  - first:
+      213: -6482050375155146634
+    second: Potions with Outline_26
+  - first:
+      213: 2221724180582681088
+    second: Potions with Outline_27
+  - first:
+      213: -1781538017491250423
+    second: Potions with Outline_28
+  - first:
+      213: 2109051065851595406
+    second: Potions with Outline_29
+  - first:
+      213: -4710257022368409526
+    second: Potions with Outline_30
+  - first:
+      213: 6679134169512226507
+    second: Potions with Outline_31
+  - first:
+      213: 7685130286460895448
+    second: Potions with Outline_32
+  - first:
+      213: -5675806744425298236
+    second: Potions with Outline_33
+  - first:
+      213: 5954283460676841310
+    second: Potions with Outline_34
+  - first:
+      213: 3908907391894263321
+    second: Potions with Outline_35
+  - first:
+      213: -2975239847238478515
+    second: Potions with Outline_36
+  - first:
+      213: 3683404598169809668
+    second: Potions with Outline_37
+  - first:
+      213: 1852971850868537352
+    second: Potions with Outline_38
+  - first:
+      213: -6262839829844835866
+    second: Potions with Outline_39
+  - first:
+      213: -7842719284024621913
+    second: Potions with Outline_40
+  - first:
+      213: 8990734536738473439
+    second: Potions with Outline_41
+  - first:
+      213: -9169939865161767756
+    second: Potions with Outline_42
+  - first:
+      213: -545736240261346119
+    second: Potions with Outline_43
+  - first:
+      213: 3236908702775563003
+    second: Potions with Outline_44
+  - first:
+      213: -7943655540700897340
+    second: Potions with Outline_45
+  - first:
+      213: -4436073744732006822
+    second: Potions with Outline_46
+  - first:
+      213: 6084249059992768025
+    second: Potions with Outline_47
+  - first:
+      213: 1426247346090746960
+    second: Potions with Outline_48
+  - first:
+      213: -448235854535437031
+    second: Potions with Outline_49
+  - first:
+      213: -2577580851323299461
+    second: Potions with Outline_50
+  - first:
+      213: 8252214730975248850
+    second: Potions with Outline_51
+  - first:
+      213: 4549755243164692824
+    second: Potions with Outline_52
+  - first:
+      213: -3028470747622158331
+    second: Potions with Outline_53
+  - first:
+      213: -4183492354557386688
+    second: Potions with Outline_54
+  - first:
+      213: 2079999117754176347
+    second: Potions with Outline_55
+  - first:
+      213: 9005679656221224020
+    second: Potions with Outline_56
+  - first:
+      213: -1178103631602678629
+    second: Potions with Outline_57
+  - first:
+      213: 4265765882872912216
+    second: Potions with Outline_58
+  - first:
+      213: -7613137480903668231
+    second: Potions with Outline_59
+  - first:
+      213: 1219701840383321350
+    second: Potions with Outline_60
+  - first:
+      213: -6577264953566218698
+    second: Potions with Outline_61
+  - first:
+      213: -2168442533644528441
+    second: Potions with Outline_62
+  - first:
+      213: 3068330876875803586
+    second: Potions with Outline_63
+  - first:
+      213: -2764369053216565335
+    second: Potions with Outline_64
+  - first:
+      213: -2426744390319299551
+    second: Potions with Outline_65
+  - first:
+      213: 6968028603102331453
+    second: Potions with Outline_66
+  - first:
+      213: -4632863083495554066
+    second: Potions with Outline_67
+  - first:
+      213: -3214730325189266358
+    second: Potions with Outline_68
+  - first:
+      213: -1890488387277992003
+    second: Potions with Outline_69
+  - first:
+      213: 8958608212504979242
+    second: Potions with Outline_70
+  - first:
+      213: -894583675001943015
+    second: Potions with Outline_71
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Potions with Outline_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 86
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 724d6d44e1b0754d0800000000000000
+      internalID: -3146033590063147993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Potions with Outline_20
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 86
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53b188180e0334b60800000000000000
+      internalID: 7729075126301891381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Potions with Outline_22
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 86
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76a41b627a319ae60800000000000000
+      internalID: 7973926223865793127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Potions with Outline_23
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 86
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 145135f79142bb810800000000000000
+      internalID: 1782057769484096833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Potions with Outline_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 69
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00ac68cfe5625de10800000000000000
+      internalID: 2221724180582681088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Potions with Outline_29
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 69
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8a4e3925cad44d10800000000000000
+      internalID: 2109051065851595406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Potions with Outline_31
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 69
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bce23fcb32d01bc50800000000000000
+      internalID: 6679134169512226507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Potions with Outline_32
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 69
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d00919274117aa60800000000000000
+      internalID: 7685130286460895448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 16cacb9423268844798ced3a64f9cb7d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":1.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Potions with Outline_0: -9113077231352420937
+      Potions with Outline_1: 4310074363455526709
+      Potions with Outline_10: 9162840270026404688
+      Potions with Outline_11: -2198815070501164886
+      Potions with Outline_12: 4304660821153745357
+      Potions with Outline_13: 6423255953970405655
+      Potions with Outline_14: -1191573664452047169
+      Potions with Outline_15: -4330784715841490405
+      Potions with Outline_16: -331603434574922782
+      Potions with Outline_17: -6494713152580240634
+      Potions with Outline_18: -3146033590063147993
+      Potions with Outline_19: -3505251316482598528
+      Potions with Outline_2: 962348909569720402
+      Potions with Outline_20: 7729075126301891381
+      Potions with Outline_21: 3818948317733185736
+      Potions with Outline_22: 7973926223865793127
+      Potions with Outline_23: 1782057769484096833
+      Potions with Outline_24: 2565676993913967544
+      Potions with Outline_25: -5967463443290481930
+      Potions with Outline_26: -6482050375155146634
+      Potions with Outline_27: 2221724180582681088
+      Potions with Outline_28: -1781538017491250423
+      Potions with Outline_29: 2109051065851595406
+      Potions with Outline_3: -2773376836267815973
+      Potions with Outline_30: -4710257022368409526
+      Potions with Outline_31: 6679134169512226507
+      Potions with Outline_32: 7685130286460895448
+      Potions with Outline_33: -5675806744425298236
+      Potions with Outline_34: 5954283460676841310
+      Potions with Outline_35: 3908907391894263321
+      Potions with Outline_36: -2975239847238478515
+      Potions with Outline_37: 3683404598169809668
+      Potions with Outline_38: 1852971850868537352
+      Potions with Outline_39: -6262839829844835866
+      Potions with Outline_4: 3526845255133004883
+      Potions with Outline_40: -7842719284024621913
+      Potions with Outline_41: 8990734536738473439
+      Potions with Outline_42: -9169939865161767756
+      Potions with Outline_43: -545736240261346119
+      Potions with Outline_44: 3236908702775563003
+      Potions with Outline_45: -7943655540700897340
+      Potions with Outline_46: -4436073744732006822
+      Potions with Outline_47: 6084249059992768025
+      Potions with Outline_48: 1426247346090746960
+      Potions with Outline_49: -448235854535437031
+      Potions with Outline_5: 4746204902165694633
+      Potions with Outline_50: -2577580851323299461
+      Potions with Outline_51: 8252214730975248850
+      Potions with Outline_52: 4549755243164692824
+      Potions with Outline_53: -3028470747622158331
+      Potions with Outline_54: -4183492354557386688
+      Potions with Outline_55: 2079999117754176347
+      Potions with Outline_56: 9005679656221224020
+      Potions with Outline_57: -1178103631602678629
+      Potions with Outline_58: 4265765882872912216
+      Potions with Outline_59: -7613137480903668231
+      Potions with Outline_6: -4210774996561031429
+      Potions with Outline_60: 1219701840383321350
+      Potions with Outline_61: -6577264953566218698
+      Potions with Outline_62: -2168442533644528441
+      Potions with Outline_63: 3068330876875803586
+      Potions with Outline_64: -2764369053216565335
+      Potions with Outline_65: -2426744390319299551
+      Potions with Outline_66: 6968028603102331453
+      Potions with Outline_67: -4632863083495554066
+      Potions with Outline_68: -3214730325189266358
+      Potions with Outline_69: -1890488387277992003
+      Potions with Outline_7: 4425885924734813226
+      Potions with Outline_70: 8958608212504979242
+      Potions with Outline_71: -894583675001943015
+      Potions with Outline_8: -3121000154339229434
+      Potions with Outline_9: 3425691855549466821
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
