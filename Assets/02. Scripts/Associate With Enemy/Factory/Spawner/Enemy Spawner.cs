@@ -9,7 +9,6 @@ public class EnemySpawner : MonoBehaviour
     [Header("팩토리 매니저")]
     [SerializeField] private FactoryManager m_factory_manager;
     private SpawnerManager m_spawner_manager;
-    private IInventoryService m_inventory_service;
 
     [Header("스포너의 고유한 ID")]
     [SerializeField] private int m_id;
@@ -103,5 +102,7 @@ public class EnemySpawner : MonoBehaviour
                               ID,
                               ServiceLocator.Get<IInventoryService>(),
                               ServiceLocator.Get<IUserService>());
+
+        enemy_ctrl.GetComponent<EnemyMouseDetector>().Inject(DIContainer.Resolve<ICursorDataBase>());
     }   
 }
