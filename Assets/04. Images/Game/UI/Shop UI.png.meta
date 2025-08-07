@@ -26,6 +26,9 @@ TextureImporter:
   - first:
       213: -7624035473875395556
     second: Shop UI_7
+  - first:
+      213: -8763235061844908922
+    second: Shop UI_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -244,7 +247,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Toggle Checker
+      name: Toggle Chekcer
       rect:
         serializedVersion: 2
         x: 3531
@@ -287,11 +290,33 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Disabled Shop Slot
+      rect:
+        serializedVersion: 2
+        x: 2591
+        y: 859
+        width: 2098
+        height: 482
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6846c7f042cb26680800000000000000
+      internalID: -8763235061844908922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: df455baea74129644a729dc2d845dd92
+    spriteID: a6e87af06bcfd454a9b71d3421d559d8
     internalID: 0
     vertices: []
     indices: 
@@ -302,13 +327,14 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       Back Button: -6537622889787914843
+      Disabled Shop Slot: -8763235061844908922
       Grid Panel: -7158017831315144304
       Purchase Button: 8916536635396986705
       Shop Panel: 3289035122612901174
       Shop Slot: -7624035473875395556
       Shop UI_0: 4119195609337314329
       Toggle: 8862550450194857795
-      Toggle Checker: 491284303609944198
+      Toggle Chekcer: 491284303609944198
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

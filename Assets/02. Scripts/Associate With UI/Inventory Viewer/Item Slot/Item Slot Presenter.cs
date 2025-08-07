@@ -23,6 +23,8 @@ public class ItemSlotPresenter
     private int m_offset;
     private SlotType m_slot_type;
 
+    public SlotType Type => m_slot_type;
+
     public ItemSlotPresenter(IItemSlotView view,
                              IInventoryService inventory_service,
                              IEquipmentService equipment_service,
@@ -65,12 +67,22 @@ public class ItemSlotPresenter
         {
             m_skill_service.OnUpdatedSlot += UpdateSlot;
         }
-        else
+        else if (m_slot_type == SlotType.Shortcut)
         {
             m_shortcut_service.OnUpdatedSlot += UpdateSlot;
         }
+        else
+        {
+            InitializeShopCraftSlot();
+        }
 
         m_view.Inject(this);
+    }
+
+    private void InitializeShopCraftSlot()
+    {
+        var item = m_item_db.GetItem((ItemCode)m_offset);
+        m_view.UpdateUI(item.Sprite, item.Stackable, 1);
     }
 
     public void UpdateSlot(int offset, ItemData item_data)
@@ -105,6 +117,10 @@ public class ItemSlotPresenter
 
             case SlotType.Shortcut:
                 return m_shortcut_service.GetItem(offset);
+
+            case SlotType.Shop:
+            case SlotType.Craft:
+                return new ItemData(m_item_db.GetItem((ItemCode)offset).Code, 1);
 
             default:
                 return null;
@@ -358,6 +374,10 @@ public class ItemSlotPresenter
 
             case SlotType.Skill:
                 return m_skill_service.GetSkill(offset);
+
+            case SlotType.Shop:
+            case SlotType.Craft:
+                return new ItemData(m_item_db.GetItem((ItemCode)offset).Code, 1);
         }
 
         return null;
@@ -488,14 +508,19 @@ public class ItemSlotPresenter
             return;
         }
 
-        if (m_slot_type == SlotType.Skill)
+        if (m_slot_type == SlotType.Shop || m_slot_type == SlotType.Craft)
         {
-            var count = GetItemData(m_slot_type, m_offset).Count;
-            if (count <= 0)
-            {
-                return;
-            }
+            return;
         }
+
+        if (m_slot_type == SlotType.Skill)
+            {
+                var count = GetItemData(m_slot_type, m_offset).Count;
+                if (count <= 0)
+                {
+                    return;
+                }
+            }
 
         m_tooltip_presenter.CloseUI();
         m_drag_slot_presenter.OpenUI(m_slot_type, m_offset, drag_mode);
@@ -508,6 +533,11 @@ public class ItemSlotPresenter
     {
         var item_data = GetItemData(m_slot_type, m_offset);
         if (item_data == null || item_data.Code == ItemCode.NONE)
+        {
+            return;
+        }
+
+        if (m_slot_type == SlotType.Shop || m_slot_type == SlotType.Craft)
         {
             return;
         }
@@ -552,6 +582,11 @@ public class ItemSlotPresenter
 
         var item = m_drag_slot_presenter.GetItem();
         if (item.Code == ItemCode.NONE)
+        {
+            return;
+        }
+
+        if (m_slot_type == SlotType.Shop || m_slot_type == SlotType.Craft)
         {
             return;
         }

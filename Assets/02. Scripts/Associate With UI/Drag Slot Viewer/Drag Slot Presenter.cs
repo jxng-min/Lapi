@@ -7,7 +7,7 @@ using SkillService;
 public class DragSlotPresenter
 {
     private readonly IDragSlotView m_view;
-    private ItemDataBase m_item_db;
+    private IItemDataBase m_item_db;
     private readonly IInventoryService m_inventory_service;
     private readonly IEquipmentService m_equipment_service;
     private readonly ISkillService m_skill_service;
@@ -21,7 +21,7 @@ public class DragSlotPresenter
     public SlotType Type => m_slot_type;
 
     public DragSlotPresenter(IDragSlotView view,
-                             ItemDataBase item_db,
+                             IItemDataBase item_db,
                              IInventoryService inventory_service,
                              IEquipmentService equipment_service,
                              ISkillService skill_service,

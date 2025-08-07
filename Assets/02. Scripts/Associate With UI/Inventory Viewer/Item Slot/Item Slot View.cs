@@ -26,6 +26,11 @@ public class ItemSlotView : MonoBehaviour, IItemSlotView
 
     private void Update()
     {
+        if (m_presenter.Type == SlotType.Shop || m_presenter.Type == SlotType.Craft)
+        {
+            return;
+        }
+        
         if (!m_presenter.IsEmpty())
         {
             m_cooldown_image.fillAmount = m_presenter.GetCool();

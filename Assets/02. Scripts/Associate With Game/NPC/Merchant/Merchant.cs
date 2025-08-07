@@ -7,12 +7,18 @@ public class Merchant : NPC
     [Header("상점에서 판매할 아이템의 목록")]
     [SerializeField] protected Sale[] m_sale_list;
 
-    // private ShopPresenter m_shop_presenter;
+    private ShopPresenter m_shop_presenter;
 
-    protected override void Start()
+    public void Inject(ShopPresenter shop_presenter)
     {
-        base.Start();
+        m_shop_presenter = shop_presenter;
+        OnCompletedDialogue += m_shop_presenter.OpenUI;
+    }
 
-        // OnCompletedDialogue += m_shop_presenter.OpenUI;
+    public override void Interaction()
+    {
+        m_shop_presenter.Inject(m_sale_list);
+
+        base.Interaction();
     }
 }

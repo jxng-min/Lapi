@@ -1,7 +1,7 @@
 public enum ObjectType
 {
     // UI 타입(0 ~ 199)
-    DAMAGE_INDICATOR = 0, DAMAGE = 1,
+    DAMAGE_INDICATOR = 0, DAMAGE = 1, SHOP_SLOT = 2,
 
     // 아이템 타입(200 ~ )
     ITEM = 200, BRONZE_COIN = 201, SILVER_COIN = 202, GOLD_COIN = 203,

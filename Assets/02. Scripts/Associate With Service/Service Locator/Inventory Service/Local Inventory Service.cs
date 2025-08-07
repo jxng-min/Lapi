@@ -54,6 +54,8 @@ namespace InventoryService
         public event Action<int> OnUpdatedGold;
         public event Action<int, ItemData> OnUpdatedSlot;
 
+        public int Gold => m_money;
+
         public LocalInventoryService()
         {
             m_money = 0;

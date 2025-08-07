@@ -150,6 +150,7 @@ Transform:
   m_Children:
   - {fileID: 1628492569}
   - {fileID: 1469922675}
+  - {fileID: 565707617}
   m_Father: {fileID: 347607111}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &14580002
@@ -789,6 +790,10 @@ MonoBehaviour:
     Count: 10
     Prefab: {fileID: 2334454609231200155, guid: 8ad67afbadd1cb646a6ab595565fb2df, type: 3}
     Container: {fileID: 1469922675}
+  - Type: 2
+    Count: 10
+    Prefab: {fileID: 1546194518947125810, guid: e0945cdabc703514ca7c343b34de5487, type: 3}
+    Container: {fileID: 565707617}
   m_item_pool_list:
   - Type: 200
     Count: 5
@@ -1110,6 +1115,37 @@ MonoBehaviour:
   m_CropFrameX: 0
   m_CropFrameY: 0
   m_StretchFill: 0
+--- !u!1 &565707616
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 565707617}
+  m_Layer: 0
+  m_Name: Shop Slot Container
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &565707617
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565707616}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9408813}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &579794889
 GameObject:
   m_ObjectHideFlags: 0

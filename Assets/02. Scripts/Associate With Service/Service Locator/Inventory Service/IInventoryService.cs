@@ -4,6 +4,8 @@ namespace InventoryService
 {
     public interface IInventoryService
     {
+        int Gold { get; }
+        
         void Inject(IItemDataBase item_db);
 
         void InitializeSlot(int offset);

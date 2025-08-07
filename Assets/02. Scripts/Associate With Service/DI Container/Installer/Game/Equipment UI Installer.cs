@@ -1,7 +1,4 @@
 using EquipmentService;
-using InventoryService;
-using ShortcutService;
-using SkillService;
 using UnityEngine;
 
 public class EquipmentUIInstaller : MonoBehaviour, IInstaller
@@ -31,29 +28,14 @@ public class EquipmentUIInstaller : MonoBehaviour, IInstaller
 
         DIContainer.Register<IEquipmentService>(ServiceLocator.Get<IEquipmentService>());
 
-        var tooltip_presenter = DIContainer.Resolve<ToolTipPresenter>();
-        var drag_slot_presenter = DIContainer.Resolve<DragSlotPresenter>();
-
         var slot_views = m_item_slot_root.GetComponentsInChildren<IItemSlotView>();
 
-        var item_activator = DIContainer.Resolve<IItemActivator>();
-        var item_cooler = DIContainer.Resolve<IItemCooler>();
+        var item_slot_factory = DIContainer.Resolve<ItemSlotFactory>();
 
         var slot_presenters = new ItemSlotPresenter[slot_views.Length];
         for (int i = 0; i < slot_presenters.Length; i++)
         {
-            slot_presenters[i] = new ItemSlotPresenter(slot_views[i],
-                                                       ServiceLocator.Get<IInventoryService>(),
-                                                       ServiceLocator.Get<IEquipmentService>(),
-                                                       ServiceLocator.Get<ISkillService>(),
-                                                       ServiceLocator.Get<IShortcutService>(),
-                                                       m_item_db,
-                                                       tooltip_presenter,
-                                                       drag_slot_presenter,
-                                                       item_activator,
-                                                       item_cooler,
-                                                       i,
-                                                       SlotType.Equipment);
+            slot_presenters[i] = item_slot_factory.Instantiate(slot_views[i], i, SlotType.Equipment);
         }
     }
 }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class NPCMouseDetector : MouseDetector
 {
@@ -17,6 +18,11 @@ public class NPCMouseDetector : MouseDetector
 
     protected override void OnMouseEnter()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+        
         SetCursor(CursorMode.CAN_TALK);
 
         var target_position = (Vector2)transform.position + Vector2.up * 3f;
