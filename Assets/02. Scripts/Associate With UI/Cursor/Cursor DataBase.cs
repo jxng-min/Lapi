@@ -8,12 +8,25 @@ public class CursorDataBase : ScriptableObject, ICursorDataBase
     [SerializeField] private List<CursorData> m_cursor_datas;
 
     private Dictionary<CursorMode, CursorData> m_cursor_dict;
+    private CursorMode m_current_mode;
 
+#if UNITY_EDITOR
     private void OnEnable()
     {
+        Initialize();
+    }
+#endif
+
+    private void Initialize()
+    {
+        if (m_cursor_dict != null)
+        {
+            return;
+        }
+
         m_cursor_dict = new();
 
-        if (m_cursor_datas == null)
+        if (m_cursor_datas == null || m_cursor_datas.Count.Equals(0))
         {
             return;
         }
@@ -26,10 +39,22 @@ public class CursorDataBase : ScriptableObject, ICursorDataBase
 
     public void SetCursor(CursorMode mode)
     {
+        if (m_cursor_dict == null)
+        {
+            Initialize();
+        }
+
+        if (m_current_mode.Equals(mode))
+        {
+            return;
+        }
+
         if (m_cursor_dict.TryGetValue(mode, out var data))
         {
             var pivot = new Vector2(data.Cursor.width * data.Hotspot.x, data.Cursor.height * data.Hotspot.y);
             Cursor.SetCursor(data.Cursor, pivot, UnityEngine.CursorMode.Auto);
+
+            m_current_mode = mode;
         }
     }
 }
