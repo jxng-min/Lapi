@@ -22,8 +22,6 @@ public class EnemyCtrl : MonoBehaviour
     public EnemyDrop Drop { get; private set; }
     public Pathfinder Pathfinder { get; private set; }
 
-    public SpawnerManager Spawner { get; private set; }
-    public int SpawnerID { get; private set; }
     public Enemy SO { get; private set; }
 
     public IInventoryService InventoryService { get; private set; }
@@ -86,14 +84,10 @@ public class EnemyCtrl : MonoBehaviour
     }
 
     public void Initialize(Enemy so,
-                           SpawnerManager spawner_manager,
-                           int spawner_id,
                            IInventoryService inventory_service,
                            IUserService m_user_service)
     {
         SO = so;
-        Spawner = spawner_manager;
-        SpawnerID = spawner_id;
 
         InventoryService = inventory_service;
         UserService = m_user_service;

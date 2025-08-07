@@ -19,15 +19,4 @@ public class SpawnerManager : MonoBehaviour
             m_spawner_dict.Add(spawner.ID, spawner);
         }
     }
-
-    public EnemySpawner GetSpawner(int id)
-    {
-        return m_spawner_dict.TryGetValue(id, out var spawner) ? spawner : null;
-    }
-
-    public void UpdateCount(int id, int count)
-    {
-        var spawner = GetSpawner(id);
-        spawner.UpdateCount(count);
-    }
 }
