@@ -11,6 +11,9 @@ public class NPCInstaller : MonoBehaviour, IInstaller
     [Header("상점 뷰")]
     [SerializeField] private ShopView m_shop_view;
 
+    [Header("제작소 뷰")]
+    [SerializeField] private WorkshopView m_workshop_view;
+
     [Header("NPC 부모 트랜스폼")]
     [SerializeField] private Transform m_npc_root;
 
@@ -27,6 +30,7 @@ public class NPCInstaller : MonoBehaviour, IInstaller
         }
 
         InstallMerchant();
+        InstallCraftman();
     }
 
     public void InstallMerchant()
@@ -40,6 +44,20 @@ public class NPCInstaller : MonoBehaviour, IInstaller
         foreach (var merchant in merchants)
         {
             merchant.Inject(shop_presenter);
+        }
+    }
+
+    public void InstallCraftman()
+    {
+        var workshop_presenter = new WorkshopPresenter(m_workshop_view,
+                                                       ServiceLocator.Get<IInventoryService>(),
+                                                       ServiceLocator.Get<IUserService>(),
+                                                       DIContainer.Resolve<ItemSlotFactory>());
+
+        var craftmen = m_npc_root.GetComponentsInChildren<Craftman>();
+        foreach (var craftman in craftmen)
+        {
+            craftman.Inject(workshop_presenter);
         }
     }
 }

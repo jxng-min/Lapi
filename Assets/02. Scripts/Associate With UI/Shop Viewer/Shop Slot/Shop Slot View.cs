@@ -37,7 +37,7 @@ public class ShopSlotView : MonoBehaviour, IShopSlotView
         m_disabled_panel.SetActive(is_constraint);
         if (is_constraint)
         {
-            m_disabled_panel_text.text = $"LV.{constraint_level} 해금";
+            m_disabled_panel_text.text = $"LV.{constraint_level}";
         }
     }
 

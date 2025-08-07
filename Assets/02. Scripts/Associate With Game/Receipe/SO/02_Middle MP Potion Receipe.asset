@@ -18,3 +18,4 @@ MonoBehaviour:
   m_target_item: {fileID: 11400000, guid: 72ed76dc75dcb6142aebd864080a36b6, type: 2}
   m_item_count: 1
   m_crafting_time: 3
+  m_constraint_level: 3

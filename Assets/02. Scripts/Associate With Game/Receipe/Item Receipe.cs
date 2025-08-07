@@ -18,4 +18,8 @@ public class ItemReceipe : ScriptableObject
     [Header("제작에 걸리는 시간")]
     [SerializeField] private float m_crafting_time;
     public float Time => m_crafting_time;
+
+    [Header("해금 레벨")]
+    [SerializeField] private int m_constraint_level;
+    public int Constraint => m_constraint_level;
 }

@@ -22,6 +22,7 @@ public class ItemSlotPresenter
 
     private int m_offset;
     private SlotType m_slot_type;
+    private int m_item_count;
 
     public SlotType Type => m_slot_type;
 
@@ -36,7 +37,8 @@ public class ItemSlotPresenter
                              IItemActivator item_activator,
                              IItemCooler item_cooler,
                              int offset,
-                             SlotType slot_type = SlotType.Inventory)
+                             SlotType slot_type = SlotType.Inventory,
+                             int item_count = 1)
     {
         m_view = view;
         m_inventory_service = inventory_service;
@@ -54,6 +56,8 @@ public class ItemSlotPresenter
         m_item_cooler = item_cooler;
 
         m_slot_type = slot_type;
+
+        m_item_count = item_count;
 
         if (m_slot_type == SlotType.Inventory)
         {
@@ -82,7 +86,7 @@ public class ItemSlotPresenter
     private void InitializeShopCraftSlot()
     {
         var item = m_item_db.GetItem((ItemCode)m_offset);
-        m_view.UpdateUI(item.Sprite, item.Stackable, 1);
+        m_view.UpdateUI(item.Sprite, item.Stackable, m_item_count);
     }
 
     public void UpdateSlot(int offset, ItemData item_data)
@@ -120,7 +124,7 @@ public class ItemSlotPresenter
 
             case SlotType.Shop:
             case SlotType.Craft:
-                return new ItemData(m_item_db.GetItem((ItemCode)offset).Code, 1);
+                return new ItemData(m_item_db.GetItem((ItemCode)offset).Code, m_item_count);
 
             default:
                 return null;
@@ -332,12 +336,6 @@ public class ItemSlotPresenter
             case SlotType.Inventory:
                 m_inventory_service.UpdateItem(offset, count);
                 break;
-
-            case SlotType.Equipment:
-                break;
-
-            case SlotType.Shortcut:
-                break;
         }
     }
 
@@ -377,7 +375,7 @@ public class ItemSlotPresenter
 
             case SlotType.Shop:
             case SlotType.Craft:
-                return new ItemData(m_item_db.GetItem((ItemCode)offset).Code, 1);
+                return new ItemData(m_item_db.GetItem((ItemCode)offset).Code, m_item_count);
         }
 
         return null;

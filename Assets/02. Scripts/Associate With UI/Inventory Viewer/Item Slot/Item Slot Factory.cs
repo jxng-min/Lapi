@@ -42,7 +42,7 @@ public class ItemSlotFactory
         m_item_cooler = item_cooler;
     }
 
-    public ItemSlotPresenter Instantiate(IItemSlotView view, int offset, SlotType slot_type)
+    public ItemSlotPresenter Instantiate(IItemSlotView view, int offset, SlotType slot_type, int count = 1)
     {
         return new ItemSlotPresenter(view,
                                      m_inventory_service,
@@ -55,6 +55,7 @@ public class ItemSlotFactory
                                      m_item_activator,
                                      m_item_cooler,
                                      offset,
-                                     slot_type);
+                                     slot_type,
+                                     count);
     }
 }

@@ -201,7 +201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "LV.0 \uD574\uBC29"
+  m_text: LV.0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9d818ca1f553e444aa3bfb871a5f833e, type: 2}
   m_sharedMaterial: {fileID: 8226050668606987737, guid: 9d818ca1f553e444aa3bfb871a5f833e, type: 2}
@@ -621,7 +621,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9940a8fd55263a47a924e2697d9c396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_item_image: {fileID: 0}
   m_name_label: {fileID: 2591079560738824347}
   m_level_label: {fileID: 8368882951943258652}
   m_upgrade_button: {fileID: 1442407276233889808}

@@ -16,6 +16,7 @@ namespace InventoryService
 
         event Action<int, ItemData> OnUpdatedSlot;
         void AddItem(ItemCode code, int count);
+        void RemoveItem(ItemCode code, int count);
         void SetItem(int offset, ItemCode code, int count);
         int UpdateItem(int offset, int count);
         void Clear(int offset);

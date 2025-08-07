@@ -39,6 +39,11 @@ public class NPCMouseDetector : MouseDetector
 
     protected virtual void OnMouseDown()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+        
         m_npc.Interaction();
     }
 }

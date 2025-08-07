@@ -150,6 +150,49 @@ namespace InventoryService
             }
         }
 
+        public void RemoveItem(ItemCode code, int count)
+        {
+            var item = m_item_db.GetItem(code);
+
+            if (item.Stackable)
+            {
+                for (int i = m_items.Length - 1; i >= 0; i--)
+                {
+                    if (m_items[i].Code == code)
+                    {
+                        if (m_items[i].Count >= count)
+                        {
+                            m_items[i].Count -= count;
+
+                            if (m_items[i].Count == 0)
+                            {
+                                Clear(i);
+                            }
+
+                            OnUpdatedSlot?.Invoke(i, m_items[i]);
+                            return;
+                        }
+                        else
+                        {
+                            count -= m_items[i].Count;
+                            Clear(i);
+                        }
+                    }
+                }
+            }
+
+            for (int i = 0; i < m_items.Length; i++)
+            {
+                if (m_items[i].Code == code)
+                {
+                    Clear(i);
+
+                    OnUpdatedSlot?.Invoke(i, m_items[i]);
+                    return;
+                }
+            }
+        }
+
         public void SetItem(int offset, ItemCode code, int count)
         {
             m_items[offset].Code = code;
