@@ -23,8 +23,14 @@ MonoBehaviour:
   m_gold: 55
   m_gold_dev: 10
   m_item_list:
-  - Item: {fileID: 11400000, guid: 2b13d1bb5f4e43649a4aad590dab211f, type: 2}
-    Weight: 1
-  - Item: {fileID: 11400000, guid: 0f3254b614cf6d94f8ddd37194bc55bf, type: 2}
-    Weight: 1
+  - Item: {fileID: 11400000, guid: 07f9a2efe06103d43a6afbe2eebd299f, type: 2}
+    Weight: 20
+  - Item: {fileID: 11400000, guid: 8b23caf5f459aca49a7e2bbd9c10a88f, type: 2}
+    Weight: 30
+  - Item: {fileID: 11400000, guid: 2dade82777c8dfc418dd03dcda28970b, type: 2}
+    Weight: 20
+  - Item: {fileID: 11400000, guid: 736ddb1a838599d4887126b5dbf30377, type: 2}
+    Weight: 20
+  - Item: {fileID: 11400000, guid: f1d9fe48f10267d4f956fc255e7cf941, type: 2}
+    Weight: 10
   m_drop_rate: 20

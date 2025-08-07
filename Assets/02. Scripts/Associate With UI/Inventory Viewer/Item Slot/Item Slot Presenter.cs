@@ -412,7 +412,15 @@ public class ItemSlotPresenter
 
         if (m_slot_type == SlotType.Skill)
         {
-            m_view.SetCursor(CursorMode.CAN_GRAB);
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                m_view.SetCursor(CursorMode.CAN_GRAB);
+            }
+            else
+            {
+                m_view.SetCursor(CursorMode.DEFAULT);
+            }
+
             var item_data = GetItemData(m_slot_type, m_offset);
             if (item_data.Count <= 0)
             {
@@ -455,7 +463,14 @@ public class ItemSlotPresenter
             if (count > 1)
             {
                 UpdateItem(m_offset, -1);
-                m_view.SetCursor(CursorMode.CAN_GRAB);
+                if (EventSystem.current.IsPointerOverGameObject())
+                {
+                    m_view.SetCursor(CursorMode.CAN_GRAB);
+                }
+                else
+                {
+                    m_view.SetCursor(CursorMode.DEFAULT);
+                }
             }
             else
             {
