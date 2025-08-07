@@ -14,12 +14,10 @@ public class ItemActivator : MonoBehaviour, IItemActivator
     private Dictionary<ItemCode, ItemStrategy> m_activate_dict;
     private Dictionary<ItemCode, ISkillStrategy> m_skill_dict;
 
-    private void Awake()
-    {
-        RegisterActivateStrategy();
-    }
-
-    public void Inject(PlayerCtrl player_ctrl, IInventoryService inventory_service, IEquipmentService equipment_service, ISkillService skill_service)
+    public void Inject(PlayerCtrl player_ctrl,
+                       IInventoryService inventory_service,
+                       IEquipmentService equipment_service,
+                       ISkillService skill_service)
     {
         m_player_ctrl = player_ctrl;
 
@@ -61,31 +59,11 @@ public class ItemActivator : MonoBehaviour, IItemActivator
         return true;
     }
 
-    private void RegisterActivateStrategy()
+    public void RegisterActivateStrategy(Dictionary<ItemCode, ItemStrategy> item_strategies,
+                                         Dictionary<ItemCode, ISkillStrategy> skill_strategies)
     {
-        var dash_strategy = new DashStrategy();
-        var fire_ball_strategy = new FireBallStrategy();
-        var thunder_strategy = new ThunderStrategy();
-
-        m_activate_dict = new()
-        {
-            { ItemCode.SMALL_HP_POTION, new SmallHPPotionStrategy() },
-            { ItemCode.SMALL_MP_POTION, new SmallMPPotionStrategy() },
-            { ItemCode.SMALL_POTION, new SmallPotionStrategy() },
-            { ItemCode.MIDDLE_HP_POTION, new MiddleHPPotionStrategy() },
-            { ItemCode.MIDDLE_MP_POTION, new MiddleMPPotionStrategy() },
-            { ItemCode.MIDDLE_POTION, new MiddlePotionStrategy() },
-            { ItemCode.DASH, dash_strategy },
-            { ItemCode.FIRE_BALL, fire_ball_strategy },
-            { ItemCode.THUNDER, thunder_strategy },
-        };
-        
-        m_skill_dict = new()
-        {
-            { ItemCode.DASH, dash_strategy },
-            { ItemCode.FIRE_BALL, fire_ball_strategy },
-            { ItemCode.THUNDER, thunder_strategy },
-        };
+        m_activate_dict = item_strategies;
+        m_skill_dict = skill_strategies;
     }
 
     private bool ActivateItem(Item item)

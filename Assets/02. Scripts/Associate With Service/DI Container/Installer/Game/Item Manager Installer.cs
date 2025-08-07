@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using EquipmentService;
 using InventoryService;
 using ItemDataService;
@@ -9,7 +10,7 @@ public class ItemManagerInstaller : MonoBehaviour, IInstaller
 {
     [Header("아이템 데이터베이스")]
     [SerializeField] private ItemDataBase m_item_db;
-    
+
     [Header("아이템 활성자")]
     [SerializeField] private ItemActivator m_item_activator;
 
@@ -26,7 +27,8 @@ public class ItemManagerInstaller : MonoBehaviour, IInstaller
     {
         DIContainer.Register<IItemDataBase>(m_item_db);
 
-        DIContainer.Register<IItemActivator>(m_item_activator);
+        InstallActivator();
+
         DIContainer.Register<IItemCooler>(m_item_cooler);
 
         var tooltip_presenter = new ToolTipPresenter(m_tooltip_view,
@@ -53,5 +55,35 @@ public class ItemManagerInstaller : MonoBehaviour, IInstaller
                                 ServiceLocator.Get<IInventoryService>(),
                                 ServiceLocator.Get<IEquipmentService>(),
                                 ServiceLocator.Get<ISkillService>());
+    }
+
+    private void InstallActivator()
+    {
+        var dash_strategy = new DashStrategy();
+        var fire_ball_strategy = new FireBallStrategy();
+        var thunder_strategy = new ThunderStrategy();
+
+        var item_dict = new Dictionary<ItemCode, ItemStrategy>()
+        {
+            { ItemCode.SMALL_HP_POTION, new SmallHPPotionStrategy() },
+            { ItemCode.SMALL_MP_POTION, new SmallMPPotionStrategy() },
+            { ItemCode.SMALL_POTION, new SmallPotionStrategy() },
+            { ItemCode.MIDDLE_HP_POTION, new MiddleHPPotionStrategy() },
+            { ItemCode.MIDDLE_MP_POTION, new MiddleMPPotionStrategy() },
+            { ItemCode.MIDDLE_POTION, new MiddlePotionStrategy() },
+            { ItemCode.DASH, dash_strategy },
+            { ItemCode.FIRE_BALL, fire_ball_strategy },
+            { ItemCode.THUNDER, thunder_strategy },
+        };
+        
+        var skill_dict = new Dictionary<ItemCode, ISkillStrategy>()
+        {
+            { ItemCode.DASH, dash_strategy },
+            { ItemCode.FIRE_BALL, fire_ball_strategy },
+            { ItemCode.THUNDER, thunder_strategy },
+        };
+
+        m_item_activator.RegisterActivateStrategy(item_dict, skill_dict);
+        DIContainer.Register<IItemActivator>(m_item_activator);
     }
 }
