@@ -8,4 +8,5 @@ public interface IItemSlotView : IPointerEnterHandler, IPointerExitHandler, IBeg
     void ClearUI();
     void UpdateUI(Sprite item_image, bool stackable, int count);
     bool IsMask(ItemType type);
+    void SetCursor(CursorMode mode);
 }

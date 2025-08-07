@@ -54,6 +54,8 @@ namespace InventoryService
         public event Action<int> OnUpdatedGold;
         public event Action<int, ItemData> OnUpdatedSlot;
 
+        public int Gold => m_money;
+
         public LocalInventoryService()
         {
             m_money = 0;
@@ -141,6 +143,49 @@ namespace InventoryService
                 {
                     m_items[i].Code = code;
                     m_items[i].Count = count;
+
+                    OnUpdatedSlot?.Invoke(i, m_items[i]);
+                    return;
+                }
+            }
+        }
+
+        public void RemoveItem(ItemCode code, int count)
+        {
+            var item = m_item_db.GetItem(code);
+
+            if (item.Stackable)
+            {
+                for (int i = m_items.Length - 1; i >= 0; i--)
+                {
+                    if (m_items[i].Code == code)
+                    {
+                        if (m_items[i].Count >= count)
+                        {
+                            m_items[i].Count -= count;
+
+                            if (m_items[i].Count == 0)
+                            {
+                                Clear(i);
+                            }
+
+                            OnUpdatedSlot?.Invoke(i, m_items[i]);
+                            return;
+                        }
+                        else
+                        {
+                            count -= m_items[i].Count;
+                            Clear(i);
+                        }
+                    }
+                }
+            }
+
+            for (int i = 0; i < m_items.Length; i++)
+            {
+                if (m_items[i].Code == code)
+                {
+                    Clear(i);
 
                     OnUpdatedSlot?.Invoke(i, m_items[i]);
                     return;

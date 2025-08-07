@@ -377,6 +377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 576b228a4b787c64c98e32be259fafcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_cursor_db: {fileID: 11400000, guid: c8d60381f94e9c342a27ac5bb5b57a79, type: 2}
   m_item_image: {fileID: 1841846468071762094}
   m_count_label: {fileID: 6851222926478730727}
   m_cooldown_image: {fileID: 1272934198848726795}

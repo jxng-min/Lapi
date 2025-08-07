@@ -4,9 +4,9 @@ public class ToolTipPresenter
 {
     private readonly IToolTipView m_view;
     private readonly IItemDataService m_item_data_service;
-    private readonly ItemDataBase m_item_db;
+    private readonly IItemDataBase m_item_db;
 
-    public ToolTipPresenter(IToolTipView view, IItemDataService item_data_service, ItemDataBase item_db)
+    public ToolTipPresenter(IToolTipView view, IItemDataService item_data_service, IItemDataBase item_db)
     {
         m_view = view;
         m_item_data_service = item_data_service;

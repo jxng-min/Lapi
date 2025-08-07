@@ -1,9 +1,6 @@
 using System.Collections.Generic;
-using EquipmentService;
-using InventoryService;
 using KeyService;
 using ShortcutService;
-using SkillService;
 using UnityEngine;
 
 public class ShortcutUIInstaller : MonoBehaviour, IInstaller
@@ -38,21 +35,12 @@ public class ShortcutUIInstaller : MonoBehaviour, IInstaller
             item_slot_views.Add(shortcut_slot_view[i].GetComponentInChildren<IItemSlotView>());
         }
 
+        var item_slot_factory = DIContainer.Resolve<ItemSlotFactory>();
+
         var item_slot_presenters = new List<ItemSlotPresenter>();
         for (int i = 0; i < item_slot_views.Count; i++)
         {
-            item_slot_presenters.Add(new ItemSlotPresenter(item_slot_views[i],
-                                                            ServiceLocator.Get<IInventoryService>(),
-                                                            ServiceLocator.Get<IEquipmentService>(),
-                                                            ServiceLocator.Get<ISkillService>(),
-                                                            ServiceLocator.Get<IShortcutService>(),
-                                                            DIContainer.Resolve<IItemDataBase>(),
-                                                            DIContainer.Resolve<ToolTipPresenter>(),
-                                                            DIContainer.Resolve<DragSlotPresenter>(),
-                                                            DIContainer.Resolve<IItemActivator>(),
-                                                            DIContainer.Resolve<IItemCooler>(),
-                                                            i,
-                                                            SlotType.Shortcut));
+            item_slot_presenters.Add(item_slot_factory.Instantiate(item_slot_views[i], i, SlotType.Shortcut));
         }
 
         var shortcut_presenter = new ShortcutPresenter(m_shortcut_view,

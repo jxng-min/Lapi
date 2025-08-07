@@ -5,6 +5,11 @@ using UnityEngine.UI;
 
 public class ItemSlotView : MonoBehaviour, IItemSlotView
 {
+    [Header("커서 데이터베이스")]
+    [SerializeField] private CursorDataBase m_cursor_db;
+
+    [Space(30f)]
+    [Header("UI 관련 트랜스폼")]
     [Header("아이템 이미지")]
     [SerializeField] private Image m_item_image;
 
@@ -21,6 +26,11 @@ public class ItemSlotView : MonoBehaviour, IItemSlotView
 
     private void Update()
     {
+        if (m_presenter.Type == SlotType.Shop || m_presenter.Type == SlotType.Craft)
+        {
+            return;
+        }
+        
         if (!m_presenter.IsEmpty())
         {
             m_cooldown_image.fillAmount = m_presenter.GetCool();
@@ -71,6 +81,11 @@ public class ItemSlotView : MonoBehaviour, IItemSlotView
         var color = m_item_image.color;
         color.a = alpha;
         m_item_image.color = color;
+    }
+
+    public void SetCursor(CursorMode mode)
+    {
+        m_cursor_db.SetCursor(mode);
     }
 
     public void OnPointerEnter(PointerEventData eventData)

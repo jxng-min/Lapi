@@ -44,7 +44,7 @@ public class SkillSlotView : MonoBehaviour, ISkillSlotView
         else
         {
             m_lock_panel.SetActive(true);
-            m_lock_label.text = $"LV.{constraint} 해금";
+            m_lock_label.text = $"LV.{constraint}";
         }
     }
 }

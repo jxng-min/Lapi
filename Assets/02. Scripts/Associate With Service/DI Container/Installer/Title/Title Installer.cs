@@ -3,6 +3,9 @@ using UnityEngine.UI;
 
 public class TitleInstaller : MonoBehaviour, IInstaller
 {
+    [Header("커서 데이터베이스")]
+    [SerializeField] private CursorDataBase m_cursor_db;
+
     [Header("시작 버튼")]
     [SerializeField] private Button m_start_button;
 
@@ -11,6 +14,8 @@ public class TitleInstaller : MonoBehaviour, IInstaller
 
     public void Install()
     {
+        m_cursor_db.SetCursor(CursorMode.DEFAULT);
+        
         m_start_button.onClick.AddListener(OnClickedStart);
         m_exit_button.onClick.AddListener(OnClickedExit);
     }

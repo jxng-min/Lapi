@@ -1,7 +1,4 @@
 using System.Collections.Generic;
-using EquipmentService;
-using InventoryService;
-using ShortcutService;
 using SkillService;
 using UnityEngine;
 using UserService;
@@ -24,21 +21,12 @@ public class SkillUIInstaller : MonoBehaviour, IInstaller
             item_slot_view_list.Add(skill_slot.GetComponentInChildren<IItemSlotView>());
         }
 
+        var item_slot_factory = DIContainer.Resolve<ItemSlotFactory>();
+
         var item_slot_presenters = new ItemSlotPresenter[skill_slots.Length];
         for (int i = 0; i < item_slot_view_list.Count; i++)
         {
-            item_slot_presenters[i] = new ItemSlotPresenter(item_slot_view_list[i],
-                                                       ServiceLocator.Get<IInventoryService>(),
-                                                       ServiceLocator.Get<IEquipmentService>(),
-                                                       ServiceLocator.Get<ISkillService>(),
-                                                       ServiceLocator.Get<IShortcutService>(),
-                                                       DIContainer.Resolve<IItemDataBase>(),
-                                                       DIContainer.Resolve<ToolTipPresenter>(),
-                                                       DIContainer.Resolve<DragSlotPresenter>(),
-                                                       DIContainer.Resolve<IItemActivator>(),
-                                                       DIContainer.Resolve<IItemCooler>(),
-                                                       i,
-                                                       SlotType.Skill);
+            item_slot_presenters[i] = item_slot_factory.Instantiate(item_slot_view_list[i], i, SlotType.Skill);
         }
 
         var skill_slot_presenters = new SkillSlotPresenter[skill_slots.Length];
