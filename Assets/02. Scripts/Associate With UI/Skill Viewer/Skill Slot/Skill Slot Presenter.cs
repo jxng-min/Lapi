@@ -1,9 +1,10 @@
+using System;
 using InventoryService;
 using SkillService;
 using UnityEngine;
 using UserService;
 
-public class SkillSlotPresenter
+public class SkillSlotPresenter : IDisposable
 {
     private readonly ISkillSlotView m_view;
     private readonly ISkillService m_skill_service;
@@ -32,6 +33,11 @@ public class SkillSlotPresenter
         m_skill_service.OnUpdatedSlot += UpdateSlot;
 
         m_view.Inject(this);
+    }
+
+    public void Dispose()
+    {
+        m_skill_service.OnUpdatedSlot -= UpdateSlot;
     }
 
     public void UpdateSlot(int offset, ItemData item_data)
