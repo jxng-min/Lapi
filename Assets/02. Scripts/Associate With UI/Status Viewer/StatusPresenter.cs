@@ -21,6 +21,8 @@ public class StatusPresenter
         m_user_service.OnUpdatedLevel += UpdateLV;
         m_model.OnUpdatedHP += UpdateHP;
         m_model.OnUpdateMP += UpdateMP;
+
+        m_user_service.InitializeLevel();
     }
 
     public void UpdateLV(int level, int current_exp)

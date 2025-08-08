@@ -58,6 +58,11 @@ public class LocalUserService : ISaveable, IUserService
         }
     }
 
+    public void InitializeLevel()
+    {
+        OnUpdatedLevel?.Invoke(m_status.Level, m_status.EXP);
+    }
+
     public void UpdateLevel(int exp)
     {
         m_status.EXP += exp;
