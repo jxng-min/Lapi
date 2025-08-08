@@ -43,7 +43,7 @@ public class FireBallStrategy : ItemStrategy, ISkillStrategy
 
         m_main_damage = m_player_ctrl.Attack.ATK * ((m_fireball_skill.MainDMG + (skill_level - 1) * m_fireball_skill.GrowthMainDMG) / 100f);
         m_sub_damage = m_player_ctrl.Attack.ATK * ((m_fireball_skill.SubDMG + (skill_level - 1) * m_fireball_skill.GrowthSubDMG) / 100f);
-        m_mp_usage = m_fireball_skill.MP - (m_fireball_skill.GrowthMP * (skill_level - 1));
+        m_mp_usage = m_fireball_skill.MP + (m_fireball_skill.GrowthMP * (skill_level - 1));
     }
 
     private void InstantiateFireBallEffect(Vector2 fire_ball_direction)

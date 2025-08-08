@@ -57,6 +57,6 @@ public class ShortcutSlotPresenter
             presenter = m_skill_presenter.GetPresenter(code);
         }
 
-        presenter?.UseItem();
+        presenter?.OnPointerClick();
     }
 }

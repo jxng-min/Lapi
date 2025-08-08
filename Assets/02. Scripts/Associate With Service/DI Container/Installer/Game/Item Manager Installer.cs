@@ -37,11 +37,8 @@ public class ItemManagerInstaller : MonoBehaviour, IInstaller
         DIContainer.Register<ToolTipPresenter>(tooltip_presenter);
 
         var drag_slot_presenter = new DragSlotPresenter(m_drag_slot_view,
-                                                        DIContainer.Resolve<IItemDataBase>(),
-                                                        ServiceLocator.Get<IInventoryService>(),
-                                                        ServiceLocator.Get<IEquipmentService>(),
-                                                        ServiceLocator.Get<ISkillService>(),
-                                                        ServiceLocator.Get<IShortcutService>());
+                                                        DIContainer.Resolve<IItemSlotContext>(),
+                                                        DIContainer.Resolve<IItemDataBase>());
         DIContainer.Register<DragSlotPresenter>(drag_slot_presenter);
 
         Inject();

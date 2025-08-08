@@ -26,12 +26,12 @@ public class ItemSlotView : MonoBehaviour, IItemSlotView
 
     private void Update()
     {
-        if (m_presenter.Type == SlotType.Shop || m_presenter.Type == SlotType.Craft)
+        if (m_presenter.IsShopOrCraft)
         {
             return;
         }
         
-        if (!m_presenter.IsEmpty())
+        if (!m_presenter.IsEmpty)
         {
             m_cooldown_image.fillAmount = m_presenter.GetCool();
         }
@@ -138,7 +138,7 @@ public class ItemSlotView : MonoBehaviour, IItemSlotView
     {
         if (eventData.button == PointerEventData.InputButton.Right)
         {
-            m_presenter.UseItem();
+            m_presenter.OnPointerClick();
         }
     }
 }
