@@ -24,9 +24,10 @@ public class CursorDataBase : ScriptableObject, ICursorDataBase
             return;
         }
 
+        m_current_mode = CursorMode.NONE;
         m_cursor_dict = new();
 
-        if (m_cursor_datas == null || m_cursor_datas.Count.Equals(0))
+        if (m_cursor_datas == null || m_cursor_datas.Count == 0)
         {
             return;
         }
