@@ -7,4 +7,5 @@ public interface IWorkshopSlotView
     IItemSlotView GetIngredientItemSlotView();
     IItemSlotView GetTargetItemSlotView();
     void ReturnItemSlots();
+    void DisableObject(bool disable);
 }

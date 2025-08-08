@@ -109,4 +109,9 @@ public class WorkshopSlotView : MonoBehaviour, IWorkshopSlotView
 
         m_item_slot_list.Clear();
     }
+
+    public void DisableObject(bool disable)
+    {
+        gameObject.SetActive(!disable);
+    }
 }

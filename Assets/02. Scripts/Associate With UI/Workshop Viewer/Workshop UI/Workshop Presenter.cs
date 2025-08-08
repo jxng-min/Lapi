@@ -67,7 +67,10 @@ public class WorkshopPresenter
 
     public void OnChangedToggle(bool isOn)
     {
-
+        foreach (var shop_slot_presenter in m_workshop_slot_presenters)
+        {
+            shop_slot_presenter.OnChangedToggle(isOn);
+        }
     }
 
     public bool IsCrafting()

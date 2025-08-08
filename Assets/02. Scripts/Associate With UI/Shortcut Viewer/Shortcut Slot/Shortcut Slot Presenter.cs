@@ -47,7 +47,7 @@ public class ShortcutSlotPresenter
 
         var item = m_item_db.GetItem(code);
 
-        ItemSlotPresenter presenter; 
+        ItemSlotPresenter presenter;
         if (item.Stackable)
         {
             presenter = m_inventory_presenter.GetPrioritySlotPresenter(code);

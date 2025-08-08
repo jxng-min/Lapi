@@ -105,4 +105,23 @@ public class WorkshopSlotPresenter
     {
         m_view.ReturnItemSlots();
     }
+
+    public void OnChangedToggle(bool check)
+    {
+        if (check)
+        {
+            if (CheckCanCraft() && m_user_service.Status.Level >= m_receipe.Constraint)
+            {
+                m_view.DisableObject(false);
+            }
+            else
+            {
+                m_view.DisableObject(true);
+            }
+        }
+        else
+        {
+            m_view.DisableObject(false);
+        }
+    }
 }
