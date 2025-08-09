@@ -1,7 +1,8 @@
+using System;
 using KeyService;
 using ShortcutService;
 
-public class ShortcutSlotPresenter
+public class ShortcutSlotPresenter : IDisposable
 {
     private IShortcutSlotView m_view;
     private IItemDataBase m_item_db;
@@ -35,6 +36,11 @@ public class ShortcutSlotPresenter
         m_key_service.Initialize();
 
         m_view.Inject(this);
+    }
+
+    public void Dispose()
+    {
+        m_key_service.OnUpdatedKey -= m_view.UpdateUI;
     }
 
     public void UseShortcut()

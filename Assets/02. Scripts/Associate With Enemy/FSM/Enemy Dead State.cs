@@ -15,11 +15,6 @@ public class EnemyDeadState : MonoBehaviour, IState<EnemyCtrl>
         m_controller.Status.Death();
     }
 
-    public void Execute()
-    {
-
-    }
-
     public void ExecuteExit()
     {
 

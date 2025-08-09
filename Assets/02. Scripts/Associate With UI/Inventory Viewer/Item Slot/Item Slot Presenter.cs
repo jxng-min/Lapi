@@ -1,7 +1,8 @@
+using System;
 using System.Numerics;
 using InventoryService;
 
-public class ItemSlotPresenter
+public class ItemSlotPresenter : IDisposable
 {
     private readonly IItemSlotView m_view;
     private readonly IItemDataBase m_item_db;
@@ -101,5 +102,10 @@ public class ItemSlotPresenter
     public void OnPointerClick()
     {
         m_interaction_handler.OnPointerClick(m_slot_type, m_offset);
+    }
+
+    public void Dispose()
+    {
+        m_slot_context.Discard(m_slot_type, UpdateSlot);
     }
 }

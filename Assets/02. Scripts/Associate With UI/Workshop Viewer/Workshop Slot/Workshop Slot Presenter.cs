@@ -1,8 +1,8 @@
+using System;
 using InventoryService;
-using UnityEngine;
 using UserService;
 
-public class WorkshopSlotPresenter
+public class WorkshopSlotPresenter : IDisposable
 {
     private readonly IWorkshopSlotView m_view;
     private readonly IInventoryService m_inventory_service;
@@ -123,5 +123,10 @@ public class WorkshopSlotPresenter
         {
             m_view.DisableObject(false);
         }
+    }
+
+    public void Dispose()
+    {
+        m_inventory_service.OnUpdatedSlot -= UpdateUI;
     }
 }

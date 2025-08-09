@@ -9,6 +9,7 @@ public class EnemySpawner : MonoBehaviour
     private IInventoryService m_inventory_service;
     private IUserService m_user_service;
     private ICursorDataBase m_cursor_db;
+    private PlayerCtrl m_player_ctrl;
 
     [Header("팩토리 매니저")]
     [SerializeField] private FactoryManager m_factory_manager;
@@ -47,11 +48,13 @@ public class EnemySpawner : MonoBehaviour
 
     public void Inject(IInventoryService inventory_service,
                        IUserService user_service,
-                       ICursorDataBase cursor_db)
+                       ICursorDataBase cursor_db,
+                       PlayerCtrl player_ctrl)
     {
         m_inventory_service = inventory_service;
         m_user_service = user_service;
         m_cursor_db = cursor_db;
+        m_player_ctrl = player_ctrl;
     }
 
     private IEnumerator Co_SpawnEnemy()
@@ -99,7 +102,8 @@ public class EnemySpawner : MonoBehaviour
         enemy_ctrl.transform.position = GetRandomPosition();
         enemy_ctrl.Initialize(so,
                               m_inventory_service,
-                              m_user_service);
+                              m_user_service,
+                              m_player_ctrl);
 
         enemy_ctrl.GetComponent<EnemyMouseDetector>().Inject(m_cursor_db);
 

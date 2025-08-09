@@ -1,8 +1,9 @@
+using System;
 using EXPService;
 using SkillService;
 using UserService;
 
-public class StatusPresenter
+public class StatusPresenter : IDisposable
 {
     private readonly IStatusView m_view;
     private readonly StatusModel m_model;
@@ -23,6 +24,8 @@ public class StatusPresenter
         m_model.OnUpdateMP += UpdateMP;
 
         m_user_service.InitializeLevel();
+
+        m_view.Inject(this);
     }
 
     public void UpdateLV(int level, int current_exp)
@@ -49,5 +52,12 @@ public class StatusPresenter
     public void UpdateMP(float current_mp, float max_mp)
     {
         m_view.UpdateMP(current_mp / max_mp);
+    }
+
+    public void Dispose()
+    {
+        m_user_service.OnUpdatedLevel -= UpdateLV;
+        m_model.OnUpdatedHP -= UpdateHP;
+        m_model.OnUpdateMP -= UpdateMP;
     }
 }

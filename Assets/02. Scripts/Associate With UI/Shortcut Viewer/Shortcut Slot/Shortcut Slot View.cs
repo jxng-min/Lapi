@@ -21,6 +21,11 @@ public class ShortcutSlotView : MonoBehaviour, IShortcutSlotView
         }
     }
 
+    private void OnDestroy()
+    {
+        m_presenter.Dispose();
+    }
+
     public void Inject(ShortcutSlotPresenter presenter)
     {
         m_presenter = presenter;

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using InventoryService;
+using Unity.VisualScripting;
 using UserService;
 
 public class ShopPresenter
@@ -60,6 +61,7 @@ public class ShopPresenter
     public void CloseUI()
     {
         m_view.CloseUI();
+        Dispose();
     }
 
     public void OnChangedToggle(bool isOn)
@@ -67,6 +69,14 @@ public class ShopPresenter
         foreach (var shop_slot_presenter in m_shop_slot_presenters)
         {
             shop_slot_presenter.OnChangedToggle(isOn);
+        }
+    }
+
+    public void Dispose()
+    {
+        foreach (var shop_slot_presenter in m_shop_slot_presenters)
+        {
+            shop_slot_presenter.Dispose();
         }
     }
 }

@@ -31,6 +31,11 @@ public class InventoryView : MonoBehaviour, IInventoryView
         }
     }
 
+    private void OnDestroy()
+    {
+        m_presenter.Dispose();
+    }
+
     public void Inject(InventoryPresenter inventory_presenter)
     {
         m_presenter = inventory_presenter;

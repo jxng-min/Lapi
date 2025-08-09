@@ -37,6 +37,11 @@ public class ItemSlotView : MonoBehaviour, IItemSlotView
         }
     }
 
+    private void OnDestroy()
+    {
+        m_presenter?.Dispose();
+    }
+
     public void Inject(ItemSlotPresenter presenter)
     {
         m_presenter = presenter;

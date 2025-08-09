@@ -1,6 +1,5 @@
 using System.Collections;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,6 +21,18 @@ public class StatusView : MonoBehaviour, IStatusView
     private Coroutine m_exp_coroutine;
     private Coroutine m_hp_coroutine;
     private Coroutine m_mp_coroutine;
+
+    private StatusPresenter m_presenter;
+
+    private void OnDestroy()
+    {
+        m_presenter.Dispose();
+    }
+
+    public void Inject(StatusPresenter presenter)
+    {
+        m_presenter = presenter;
+    }
 
     public void UpdateLV(int level, float exp_rate)
     {

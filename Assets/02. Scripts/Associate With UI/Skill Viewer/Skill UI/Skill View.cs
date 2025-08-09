@@ -21,6 +21,11 @@ public class SkillView : MonoBehaviour, ISkillView
         m_animator = GetComponent<Animator>();
     }
 
+    private void OnDestroy()
+    {
+        m_presenter.Dispose();
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(m_key_service.GetKeyCode("Skill")))

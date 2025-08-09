@@ -22,6 +22,11 @@ public class SkillSlotView : MonoBehaviour, ISkillSlotView
 
     private SkillSlotPresenter m_presenter;
 
+    private void OnDestroy()
+    {
+        m_presenter.Dispose();
+    }
+
     public void Inject(SkillSlotPresenter presenter)
     {
         m_presenter = presenter;

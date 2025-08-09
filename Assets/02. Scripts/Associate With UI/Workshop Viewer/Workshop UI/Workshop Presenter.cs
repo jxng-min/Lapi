@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using InventoryService;
-using UnityEngine;
 using UserService;
 
 public class WorkshopPresenter
@@ -90,7 +89,8 @@ public class WorkshopPresenter
     {
         foreach (var presenter in m_workshop_slot_presenters)
         {
-            presenter.ReturnSlots();
+            presenter?.ReturnSlots();
+            presenter.Dispose();
         }
     }
 }

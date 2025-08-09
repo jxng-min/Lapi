@@ -4,7 +4,7 @@ public class EnemyAttack : MonoBehaviour
 {
     private EnemyCtrl m_controller;
 
-    private float m_radius = 8f;
+    private float m_trace_distance = 8f;
 
     [Header("플레이어의 레이어")]
     [SerializeField] private LayerMask m_player_layer;
@@ -19,7 +19,7 @@ public class EnemyAttack : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, m_radius);
+        Gizmos.DrawWireSphere(transform.position, m_trace_distance);
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
@@ -38,15 +38,11 @@ public class EnemyAttack : MonoBehaviour
         ATK = atk;
     }
 
-    public Collider2D SearchTarget()
+    public bool CanTrace()
     {
-        var hit = Physics2D.OverlapCircle(transform.position, m_radius, m_player_layer);
-        if (hit)
-        {
-            m_controller.ChangeState(EnemyState.TRACE);
-        }
+        var target_vector = (Vector2)(m_controller.Player.transform.position - transform.position);
 
-        return hit;
+        return Vector2.SqrMagnitude(target_vector) <= (m_trace_distance * m_trace_distance);
     }
 
     private void InstantiateIndicator(Transform target, float damage)

@@ -13,7 +13,8 @@ public class EnemySpawnerInstaller : MonoBehaviour, IInstaller
         {
             spawners[i].Inject(ServiceLocator.Get<IInventoryService>(),
                                ServiceLocator.Get<IUserService>(),
-                               DIContainer.Resolve<ICursorDataBase>());
+                               DIContainer.Resolve<ICursorDataBase>(),
+                               DIContainer.Resolve<PlayerCtrl>());
         }
     }
 }

@@ -29,46 +29,21 @@ public class EnemyMovement : MonoBehaviour
         SPD = spd;
     }
 
-    public void Move()
+    public void MoveAlongPath(List<Node> path)
     {
-        m_current_path = m_controller.Pathfinder.Pathfind(transform.position, GetRandomDestination());
-        if (m_current_path == null)
+        if (path == null || path.Count == 0)
         {
             return;
         }
-
-        MoveToDestination();
-    }
-
-    public void Trace(Vector3 target_position)
-    {
-        m_current_path = m_controller.Pathfinder.Pathfind(transform.position, target_position);
-        if (m_current_path == null)
-        {
-            return;
-        }
-
-        MoveToDestination();
-    }
-
-    private void MoveToDestination()
-    {
-        IsMove = true;
-        m_controller.Animator.SetBool("Move", true);
+        m_current_path = path;
 
         if (m_move_coroutine != null)
         {
             StopCoroutine(m_move_coroutine);
             m_move_coroutine = null;
         }
-        m_move_coroutine = StartCoroutine(Co_Move());
-    }
 
-    private Vector3 GetRandomDestination()
-    {
-        var offset = Random.insideUnitCircle * 4f;
-
-        return transform.position + (Vector3)offset;
+        m_move_coroutine = StartCoroutine(Co_MoveAlongPath());
     }
 
     public void Reset()
@@ -85,48 +60,55 @@ public class EnemyMovement : MonoBehaviour
         m_controller.Rigidbody.angularVelocity = 0f;
     }
 
-    private IEnumerator Co_Move()
+    public Vector3 GetRandomDestination()
     {
-        var index = 0;
+        List<Node> current_path;
+        Vector2 offset;
+        Vector3 destination;
 
         while (true)
         {
-            if (m_current_path == null || m_current_path.Count == 0)
+            offset = Random.insideUnitCircle * 4f;
+            destination = transform.position + (Vector3)offset;
+
+            current_path = m_controller.Pathfinder.Pathfind(transform.position, destination);
+            if (current_path != null)
             {
-                IsMove = false;
-                m_move_coroutine = null;
-
-                yield break;
+                break;
             }
-
-            if (index >= m_current_path.Count)
-            {
-                IsMove = false;
-                m_move_coroutine = null;
-
-                m_controller.ChangeState(EnemyState.IDLE);
-
-                yield break;                
-            }
-
-            m_current_node = m_current_path[index];
-
-            if (Vector2.Distance(transform.position, m_current_node.World) <= 0.1f)
-            {
-                index++;
-                continue;
-            }
-
-            Direction = (m_current_node.World - (Vector2)transform.position).normalized;
-            m_controller.Animator.SetFloat("DirX", Direction.x);
-            m_controller.Animator.SetFloat("DirY", Direction.y);
-
-            if (!m_controller.Status.IsKnockback)
-            {
-                transform.position = Vector2.MoveTowards(transform.position, m_current_node.World, Time.deltaTime * SPD);
-            }
-
-            yield return null;
         }
+
+        return destination;
+    }
+
+    private IEnumerator Co_MoveAlongPath()
+    {
+        IsMove = true;
+        m_controller.Animator.SetBool("Move", true);
+
+        var index = 0;
+        while (index < m_current_path.Count)
+        {
+            var node = m_current_path[index];
+            while (Vector2.Distance(transform.position, node.World) > 0.1f)
+            {
+                Direction = (node.World - (Vector2)transform.position).normalized;
+                m_controller.Animator.SetFloat("DirX", Direction.x);
+                m_controller.Animator.SetFloat("DirY", Direction.y);
+
+                if (!m_controller.Status.IsKnockback)
+                {
+                    transform.position = Vector2.MoveTowards(transform.position, node.World, Time.deltaTime * SPD);
+                }
+
+                yield return null;
+            }
+
+            index++;
+        }
+
+        IsMove = false;
+        m_controller.Animator.SetBool("Move", false);
+        m_move_coroutine = null;
     }
 }
