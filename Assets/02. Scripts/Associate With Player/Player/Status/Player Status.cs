@@ -108,6 +108,8 @@ public class PlayerStatus : MonoBehaviour, IStatus
 
         while (elapsed_time <= target_time)
         {
+            yield return new WaitUntil(() => GameManager.Instance.Event != GameEventType.SETTING);
+
             elapsed_time += Time.deltaTime;
 
             yield return null;
@@ -126,6 +128,8 @@ public class PlayerStatus : MonoBehaviour, IStatus
 
         while (elapsed_time <= target_time)
         {
+            yield return new WaitUntil(() => GameManager.Instance.Event != GameEventType.SETTING);
+            
             elapsed_time += Time.deltaTime;
 
             var delta = 1f - (elapsed_time / target_time);

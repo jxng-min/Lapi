@@ -6,6 +6,9 @@ using UnityEngine.UI;
 public class WorkshopView : MonoBehaviour, IWorkshopView
 {
     [Header("UI 관련 컴포넌트")]
+    [Header("팝업 UI 매니저")]
+    [SerializeField] private PopupUIManager m_ui_manager;
+    
     [Header("제작 슬롯의 부모 트랜스폼")]
     [SerializeField] private Transform m_slot_root;
 
@@ -31,6 +34,7 @@ public class WorkshopView : MonoBehaviour, IWorkshopView
 
         m_toggle.onValueChanged.AddListener((isOn) => m_presenter.OnChangedToggle(isOn));
         m_close_button.onClick.AddListener(m_presenter.CloseUI);
+        m_close_button.onClick.AddListener(PopupCloseUI);
     }
 
     public void OpenUI()
@@ -72,5 +76,10 @@ public class WorkshopView : MonoBehaviour, IWorkshopView
     public void SetDepth()
     {
         (transform as RectTransform).SetAsFirstSibling();
+    }
+
+    public void PopupCloseUI()
+    {
+        m_ui_manager.RemovePresenter(m_presenter);
     }
 }

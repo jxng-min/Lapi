@@ -28,6 +28,7 @@ public class LoaderView : MonoBehaviour, ILoaderView
 
         m_open_button.onClick.AddListener(m_presenter.OpenUI);
         m_close_button.onClick.AddListener(m_presenter.CloseUI);
+        m_close_button.onClick.AddListener(PopupCloseUI);
 
         m_presenter.Initialize();
     }
@@ -44,15 +45,19 @@ public class LoaderView : MonoBehaviour, ILoaderView
     public void CloseUI()
     {
         m_animator.SetBool("Open", false);
-
-        if (m_ui_manager)
-        {
-            m_ui_manager.RemovePresenter(m_presenter);
-        }
+        PopupCloseUI();
     }
 
     public void SetDepth()
     {
         (transform as RectTransform).SetAsFirstSibling();
+    }
+
+    public void PopupCloseUI()
+    {
+        if (m_ui_manager)
+        {
+            m_ui_manager.RemovePresenter(m_presenter);
+        }
     }
 }

@@ -32,6 +32,8 @@ public class EnemyIdleState : MonoBehaviour, IState<EnemyCtrl>
 
         while (duration > 0f)
         {
+            yield return new WaitUntil(() => GameManager.Instance.Event != GameEventType.SETTING);
+            
             duration -= Time.deltaTime;
             trace_timer -= Time.deltaTime;
 

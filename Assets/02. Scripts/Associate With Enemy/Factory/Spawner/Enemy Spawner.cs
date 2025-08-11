@@ -63,12 +63,14 @@ public class EnemySpawner : MonoBehaviour
 
         while (true)
         {
+            yield return new WaitUntil(() => GameManager.Instance.Event != GameEventType.SETTING);
             yield return new WaitUntil(() => m_spawned_enemies.Count < m_max_count);
 
             elapsed_time = 0f;
 
             while (elapsed_time <= m_spawn_interval)
             {
+                yield return new WaitUntil(() => GameManager.Instance.Event != GameEventType.SETTING);
                 elapsed_time += Time.deltaTime;
                 yield return null;
             }

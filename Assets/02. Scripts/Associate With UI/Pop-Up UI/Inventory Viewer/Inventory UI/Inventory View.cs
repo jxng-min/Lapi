@@ -6,6 +6,9 @@ using UnityEngine.UI;
 public class InventoryView : MonoBehaviour, IInventoryView
 {
     [Header("UI 관련 컴포넌트")]
+    [Header("팝업 UI 매니저")]
+    [SerializeField] private PopupUIManager m_ui_manager;
+    
     [Header("골드")]
     [SerializeField] private TMP_Text m_gold_label;
 
@@ -30,6 +33,7 @@ public class InventoryView : MonoBehaviour, IInventoryView
         m_presenter = inventory_presenter;
 
         m_close_button.onClick.AddListener(m_presenter.CloseUI);
+        m_close_button.onClick.AddListener(PopupCloseUI);
     }
 
     public void OpenUI()
@@ -50,5 +54,10 @@ public class InventoryView : MonoBehaviour, IInventoryView
     public void SetDepth()
     {
         (transform as RectTransform).SetAsFirstSibling();
+    }
+
+    public void PopupCloseUI()
+    {
+        m_ui_manager.RemovePresenter(m_presenter);
     }
 }

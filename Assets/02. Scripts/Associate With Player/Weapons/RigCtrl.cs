@@ -7,6 +7,11 @@ public class RigCtrl : MonoBehaviour
 
     private void LateUpdate()
     {
+        if (GameManager.Instance.Event != GameEventType.PLAYING)
+        {
+            return;
+        }
+
         Rotation();
     }
 

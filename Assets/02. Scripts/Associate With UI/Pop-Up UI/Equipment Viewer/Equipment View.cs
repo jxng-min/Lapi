@@ -6,6 +6,9 @@ using UnityEngine.UI;
 public class EquipmentView : MonoBehaviour, IEquipmentView
 {
     [Header("UI 관련 컴포넌트")]
+    [Header("팝업 UI 매니저")]
+    [SerializeField] private PopupUIManager m_ui_manager;
+
     [Header("체력")]
     [SerializeField] private TMP_Text m_hp_label;
 
@@ -34,6 +37,7 @@ public class EquipmentView : MonoBehaviour, IEquipmentView
         m_presenter = presenter;
 
         m_close_button.onClick.AddListener(m_presenter.CloseUI);
+        m_close_button.onClick.AddListener(PopupCloseUI);
     }
 
     public void OpenUI()
@@ -57,5 +61,10 @@ public class EquipmentView : MonoBehaviour, IEquipmentView
     public void SetDepth()
     {
         (transform as RectTransform).SetAsFirstSibling();
+    }
+
+    public void PopupCloseUI()
+    {
+        m_ui_manager.RemovePresenter(m_presenter);
     }
 }

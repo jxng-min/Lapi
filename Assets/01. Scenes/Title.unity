@@ -503,6 +503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0718fd4d2abe2249be8fd7eb49ad1d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_ui_manager: {fileID: 0}
   m_open_button: {fileID: 164955634}
   m_close_button: {fileID: 824404716}
 --- !u!95 &191586989

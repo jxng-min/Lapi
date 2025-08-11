@@ -5,6 +5,9 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Animator))]
 public class SkillView : MonoBehaviour, ISkillView
 {
+    [Header("팝업 UI 매니저")]
+    [SerializeField] private PopupUIManager m_ui_manager;
+    
     [Header("스킬 포인트")]
     [SerializeField] private TMP_Text m_skill_point_label;
 
@@ -29,6 +32,7 @@ public class SkillView : MonoBehaviour, ISkillView
         m_presenter = presenter;
 
         m_close_button.onClick.AddListener(m_presenter.CloseUI);
+        m_close_button.onClick.AddListener(PopupCloseUI);
     }
 
     public void OpenUI()
@@ -49,5 +53,10 @@ public class SkillView : MonoBehaviour, ISkillView
     public void SetDepth()
     {
         (transform as RectTransform).SetAsFirstSibling();
+    }
+
+    public void PopupCloseUI()
+    {
+        m_ui_manager.RemovePresenter(m_presenter);
     }
 }

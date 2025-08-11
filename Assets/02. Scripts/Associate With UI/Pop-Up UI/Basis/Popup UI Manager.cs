@@ -28,15 +28,19 @@ public class PopupUIManager : MonoBehaviour
                 if (m_presenter_dict.TryGetValue("Pause", out var presenter))
                 {
                     OpenUI(presenter);
+                    GameEventBus.Publish(GameEventType.SETTING);
                 }
             }
         }
 
-        InputToggleKey("Inventory");
-        InputToggleKey("Equipment");
-        InputToggleKey("Skill");
-        InputToggleKey("Binder");
-        InputToggleKey("Shortcut");
+        if (GameManager.Instance.Event != GameEventType.SETTING)
+        {
+            InputToggleKey("Inventory");
+            InputToggleKey("Equipment");
+            InputToggleKey("Skill");
+            InputToggleKey("Binder");
+            InputToggleKey("Shortcut");
+        }
     }
 
     public void Inject(List<PopupData> popup_data_list)
@@ -98,12 +102,19 @@ public class PopupUIManager : MonoBehaviour
     {
         m_active_popup_list.AddFirst(presenter);
         presenter.OpenUI();
+
+        GameEventBus.Publish(GameEventType.INTERACTING);
     }
 
     public void CloseUI(IPopupPresenter presenter)
     {
         m_active_popup_list.Remove(presenter);
         presenter.CloseUI();
+
+        if (m_active_popup_list.Count == 0)
+        {
+            GameEventBus.Publish(GameEventType.PLAYING);
+        }
     }
 
     private void SortDepth()

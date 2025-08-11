@@ -42,11 +42,16 @@ public class DialogueView : MonoBehaviour, IDialogueView
     public void CloseUI()
     {
         m_canvas_group.alpha = 0f;
-        m_ui_manager.RemovePresenter(m_presenter);
+        PopupCloseUI();
     }
 
     public void SetDepth()
     {
         (transform as RectTransform).SetAsFirstSibling();
+    }
+
+    public void PopupCloseUI()
+    {
+        m_ui_manager.RemovePresenter(m_presenter);
     }
 }

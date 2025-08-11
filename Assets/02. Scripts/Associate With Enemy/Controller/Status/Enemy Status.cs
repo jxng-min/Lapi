@@ -101,6 +101,8 @@ public class EnemyStatus : MonoBehaviour
 
         while (elapsed_time <= target_time)
         {
+            yield return new WaitUntil(() => GameManager.Instance.Event != GameEventType.SETTING);
+
             elapsed_time += Time.deltaTime;
 
             yield return null;
@@ -125,6 +127,8 @@ public class EnemyStatus : MonoBehaviour
 
         while (elapsed_time <= target_time)
         {
+            yield return new WaitUntil(() => GameManager.Instance.Event != GameEventType.SETTING);
+
             elapsed_time += Time.deltaTime;
 
             var delta = elapsed_time / target_time;
@@ -147,6 +151,8 @@ public class EnemyStatus : MonoBehaviour
 
         while (elapsed_time <= target_time)
         {
+            yield return new WaitUntil(() => GameManager.Instance.Event != GameEventType.SETTING);
+            
             elapsed_time += Time.deltaTime;
 
             var delta = elapsed_time / target_time;

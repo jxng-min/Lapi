@@ -1,6 +1,5 @@
 using InventoryService;
 using UnityEngine;
-using UnityEngine.UI;
 using UserService;
 
 [RequireComponent(typeof(Animator), typeof(Rigidbody2D), typeof(CircleCollider2D))]

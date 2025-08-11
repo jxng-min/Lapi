@@ -31,11 +31,15 @@ public class GameManager : Singleton<GameManager>
     {
         m_current_event = GameEventType.LOADING;
         m_cursor_db.SetCursor(CursorMode.WAITING);
+        
+        Time.timeScale = 1f;
     }
 
     public void Playing()
     {
         m_current_event = GameEventType.PLAYING;
+
+        Time.timeScale = 1f;
     }
 
     public void Interacting()
@@ -52,5 +56,7 @@ public class GameManager : Singleton<GameManager>
     {
         m_current_event = GameEventType.SETTING;
         m_cursor_db.SetCursor(CursorMode.DEFAULT);
+
+        Time.timeScale = 0f;
     }
 }

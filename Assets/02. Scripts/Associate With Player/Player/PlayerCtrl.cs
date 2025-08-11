@@ -22,9 +22,32 @@ public class PlayerCtrl : MonoBehaviour
         Renderer = GetComponent<SpriteRenderer>();
     }
 
+    private void OnEnable()
+    {
+        GameEventBus.Subscribe(GameEventType.PLAYING, GameManager.Instance.Playing);
+        GameEventBus.Subscribe(GameEventType.INTERACTING, GameManager.Instance.Interacting);
+        GameEventBus.Subscribe(GameEventType.EVENT, GameManager.Instance.Events);
+        GameEventBus.Subscribe(GameEventType.SETTING, GameManager.Instance.Setting);
+
+        GameEventBus.Publish(GameEventType.PLAYING);
+    }
+
+    private void OnDisable()
+    {
+        GameEventBus.Unsubscribe(GameEventType.PLAYING, GameManager.Instance.Playing);
+        GameEventBus.Unsubscribe(GameEventType.INTERACTING, GameManager.Instance.Interacting);
+        GameEventBus.Unsubscribe(GameEventType.EVENT, GameManager.Instance.Events);
+        GameEventBus.Unsubscribe(GameEventType.SETTING, GameManager.Instance.Setting);        
+    }
+
     private void Update()
     {
-        SetAnime();   
+        if (GameManager.Instance.Event != GameEventType.PLAYING)
+        {
+            return;
+        }
+
+        SetAnime();
     }
 
     public void Inject(IMovement movement, IAttack attack, IStatus status, DefaultStatus default_status, GrowthStatus growth_status)

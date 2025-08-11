@@ -1,10 +1,12 @@
-using KeyService;
 using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Animator))]
 public class KeyBinderView : MonoBehaviour, IKeyBinderView
 {
+    [Header("팝업 UI 매니저")]
+    [SerializeField] private PopupUIManager m_ui_manager;
+
     [Header("UI 닫기 버튼")]
     [SerializeField] private Button m_close_button;
 
@@ -21,6 +23,7 @@ public class KeyBinderView : MonoBehaviour, IKeyBinderView
         m_presenter = presenter;
 
         m_close_button.onClick.AddListener(m_presenter.CloseUI);
+        m_close_button.onClick.AddListener(PopupCloseUI);
     }
 
     public void OpenUI()
@@ -36,5 +39,10 @@ public class KeyBinderView : MonoBehaviour, IKeyBinderView
     public void SetDepth()
     {
         (transform as RectTransform).SetAsFirstSibling();
+    }
+
+    public void PopupCloseUI()
+    {
+        m_ui_manager.RemovePresenter(m_presenter);
     }
 }
