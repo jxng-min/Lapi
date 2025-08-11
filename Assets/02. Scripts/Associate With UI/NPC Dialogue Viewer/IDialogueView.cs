@@ -1,4 +1,4 @@
-public interface IDialogueView
+public interface IDialogueView : IPopupView
 {
     void Inject(DialoguePresenter presenter);
     

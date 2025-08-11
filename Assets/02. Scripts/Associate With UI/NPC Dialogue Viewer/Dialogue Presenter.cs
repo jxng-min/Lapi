@@ -1,7 +1,7 @@
 using System.Numerics;
 using DialogueService;
 
-public class DialoguePresenter
+public class DialoguePresenter : IPopupPresenter
 {
     private readonly IDialogueView m_view;
     private readonly IDialogueService m_dialogue_service;
@@ -32,7 +32,7 @@ public class DialoguePresenter
         m_context_index = 0;
 
         m_view.OpenUI(position);
-        SetUI();
+        OpenUI();
     }
 
     public void UpdateUI()
@@ -45,19 +45,29 @@ public class DialoguePresenter
         if (m_context_index < m_dialogue_data.Contexts.Length - 1)
         {
             m_context_index++;
-            SetUI();
+            OpenUI();
         }
         else
         {
-            m_is_open = false;
-
-            m_view.CloseUI();
+            CloseUI();
             m_npc.OnCompletedDialogue?.Invoke();
         }
     }
 
-    private void SetUI()
+    public void OpenUI()
     {
         m_view.UpdateUI(m_dialogue_data.Contexts[m_context_index].Context);
+    }
+
+    public void CloseUI()
+    {
+        m_is_open = false;
+
+        m_view.CloseUI();
+    }
+
+    public void SortDepth()
+    {
+        m_view.SetDepth();
     }
 }

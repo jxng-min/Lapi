@@ -3,6 +3,8 @@ using UnityEngine;
 public class DialogueView : MonoBehaviour, IDialogueView
 {
     [Header("UI 관련 컴포넌트")]
+    [Header("팝업 UI 매니저")]
+    [SerializeField] private PopupUIManager m_ui_manager;
     [Header("캔버스 그룹")]
     [SerializeField] private CanvasGroup m_canvas_group;
 
@@ -27,8 +29,9 @@ public class DialogueView : MonoBehaviour, IDialogueView
     public void OpenUI(System.Numerics.Vector2 position)
     {
         transform.position = new Vector2(position.X, position.Y);
-        
+
         m_canvas_group.alpha = 1f;
+        m_ui_manager.AddPresenter(m_presenter);
     }
 
     public void UpdateUI(string context)
@@ -39,5 +42,11 @@ public class DialogueView : MonoBehaviour, IDialogueView
     public void CloseUI()
     {
         m_canvas_group.alpha = 0f;
+        m_ui_manager.RemovePresenter(m_presenter);
+    }
+
+    public void SetDepth()
+    {
+        (transform as RectTransform).SetAsFirstSibling();
     }
 }
