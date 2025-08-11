@@ -1,40 +1,37 @@
 fileFormatVersion: 2
-guid: 42ca54ebaaa4a58449008cefa0a3e12b
+guid: 6ba88114476390343a267f4fa74b36ec
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3993624787583399033
-    second: Workshop UI_0
+      213: -311225850257369732
+    second: Workshop UI 1_0
   - first:
-      213: -8092062549303572482
-    second: Workshop UI_1
+      213: -131646055189862727
+    second: Workshop UI 1_1
   - first:
-      213: -3685297673147135917
-    second: Workshop UI_2
+      213: -8983277447358896536
+    second: Workshop UI 1_2
   - first:
-      213: -6625293353210675166
-    second: Workshop UI_3
+      213: 4159823467548563670
+    second: Workshop UI 1_3
   - first:
-      213: -4429834147182106850
-    second: Workshop UI_4
+      213: -5219507518640973973
+    second: Workshop UI 1_4
   - first:
-      213: -8024239709685397037
-    second: Workshop UI_5
+      213: -8160483842302611431
+    second: Workshop UI 1_5
   - first:
-      213: -896358419837784232
-    second: Workshop UI_6
+      213: -4347757141623858655
+    second: Workshop UI 1_6
   - first:
-      213: -2685618322841345691
-    second: Workshop UI_7
+      213: -3589793880972328050
+    second: Workshop UI 1_7
   - first:
-      213: 6831571566009546273
-    second: Workshop UI_8
+      213: -2796806808740880922
+    second: Workshop UI 1_8
   - first:
-      213: 8650397820667318822
-    second: Workshop UI_9
-  - first:
-      213: 1753504925344578402
-    second: Workshop UI_10
+      213: -6351406801594278071
+    second: Workshop UI 1_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -143,35 +140,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Workshop UI_0
-      rect:
-        serializedVersion: 2
-        x: 39
-        y: 0
-        width: 3098
-        height: 481
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9747a1ec5943c6730800000000000000
-      internalID: 3993624787583399033
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Workshop Panel
       rect:
         serializedVersion: 2
-        x: 3515
-        y: 2487
-        width: 3202
-        height: 2801
+        x: 863
+        y: 621
+        width: 806
+        height: 701
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,8 +155,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ef7c4882cf733bf80800000000000000
-      internalID: -8092062549303572482
+      spriteID: c759d76fcbd4eabf0800000000000000
+      internalID: -311225850257369732
       vertices: []
       indices: 
       edges: []
@@ -190,9 +165,97 @@ TextureImporter:
       name: Back Button
       rect:
         serializedVersion: 2
-        x: 1851
-        y: 1627
-        width: 102
+        x: 452
+        y: 406
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b6a35c3c9c4c2ef0800000000000000
+      internalID: -131646055189862727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toggle
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 401
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 866256fc1ccf45380800000000000000
+      internalID: -8983277447358896536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toggle Checker
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 405
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d8d09f6769aab930800000000000000
+      internalID: 4159823467548563670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grid Panel
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 0
+        width: 782
+        height: 531
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b679ce0e0959097b0800000000000000
+      internalID: -5219507518640973973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredient Grid
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 292
+        width: 417
         height: 102
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -202,19 +265,63 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 358cd74ba413bdcc0800000000000000
-      internalID: -3685297673147135917
+      spriteID: 910fc387e2320ce80800000000000000
+      internalID: -8160483842302611431
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Toggle
+      name: Rate Checker
       rect:
         serializedVersion: 2
-        x: 2075
-        y: 1607
-        width: 122
+        x: 458
+        y: 324
+        width: 82
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12a97d34ae9a9a3c0800000000000000
+      internalID: -4347757141623858655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Craft Button
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 312
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8306cb1c7d7e2ec0800000000000000
+      internalID: -3589793880972328050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Workshop Slot Panel
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 158
+        width: 775
         height: 122
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -224,140 +331,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2200f1d2cca3e04a0800000000000000
-      internalID: -6625293353210675166
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Toggle Checker
-      rect:
-        serializedVersion: 2
-        x: 2319
-        y: 1623
-        width: 82
-        height: 82
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e17a05b30511682c0800000000000000
-      internalID: -4429834147182106850
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grid Panel
-      rect:
-        serializedVersion: 2
-        x: 3555
-        y: 0
-        width: 3122
-        height: 2121
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3d94e9f8f7c24a090800000000000000
-      internalID: -8024239709685397037
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Workshop Slot Grid Panel
-      rect:
-        serializedVersion: 2
-        x: 75
-        y: 1171
-        width: 1662
-        height: 402
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 85f632a24ce7f83f0800000000000000
-      internalID: -896358419837784232
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Workshop Rate
-      rect:
-        serializedVersion: 2
-        x: 1875
-        y: 1301
-        width: 322
-        height: 142
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 561e2c84d54cabad0800000000000000
-      internalID: -2685618322841345691
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Craft Button
-      rect:
-        serializedVersion: 2
-        x: 2419
-        y: 1251
-        width: 242
-        height: 242
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 12678a1e42e9ece50800000000000000
-      internalID: 6831571566009546273
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Workshop Slot
-      rect:
-        serializedVersion: 2
-        x: 39
-        y: 635
-        width: 3098
-        height: 482
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 62250b27cf26c0870800000000000000
-      internalID: 8650397820667318822
+      spriteID: 6ed1b9b860fbf29d0800000000000000
+      internalID: -2796806808740880922
       vertices: []
       indices: 
       edges: []
@@ -366,10 +341,10 @@ TextureImporter:
       name: Workshop Slot Disabled Panel
       rect:
         serializedVersion: 2
-        x: 39
+        x: 0
         y: 0
-        width: 3098
-        height: 481
+        width: 775
+        height: 121
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -378,8 +353,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 26bbf0b6073b55810800000000000000
-      internalID: 1753504925344578402
+      spriteID: 94f19f64a254bd7a0800000000000000
+      internalID: -6351406801594278071
       vertices: []
       indices: 
       edges: []
@@ -388,7 +363,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 4285b7d049cce874695410ff538f6900
+    spriteID: e96b911eb7769df4d9fab844e42a288e
     internalID: 0
     vertices: []
     indices: 
@@ -398,17 +373,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Back Button: -3685297673147135917
-      Craft Button: 6831571566009546273
-      Grid Panel: -8024239709685397037
-      Toggle: -6625293353210675166
-      Toggle Checker: -4429834147182106850
-      Workshop Panel: -8092062549303572482
-      Workshop Rate: -2685618322841345691
-      Workshop Slot: 8650397820667318822
-      Workshop Slot Disabled Panel: 1753504925344578402
-      Workshop Slot Grid Panel: -896358419837784232
-      Workshop UI_0: 3993624787583399033
+      Back Button: -131646055189862727
+      Craft Button: -3589793880972328050
+      Grid Panel: -5219507518640973973
+      Ingredient Grid: -8160483842302611431
+      Rate Checker: -4347757141623858655
+      Toggle: -8983277447358896536
+      Toggle Checker: 4159823467548563670
+      Workshop Panel: -311225850257369732
+      Workshop Slot Disabled Panel: -6351406801594278071
+      Workshop Slot Panel: -2796806808740880922
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

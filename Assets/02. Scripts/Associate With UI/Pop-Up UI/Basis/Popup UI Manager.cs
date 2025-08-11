@@ -84,7 +84,9 @@ public class PopupUIManager : MonoBehaviour
         {
             m_active_popup_list.Remove(presenter);
         }
+        
         m_active_popup_list.AddFirst(presenter);
+        GameEventBus.Publish(GameEventType.INTERACTING);
 
         SortDepth();
     }

@@ -38,6 +38,7 @@ public class GameManager : Singleton<GameManager>
     public void Playing()
     {
         m_current_event = GameEventType.PLAYING;
+        m_cursor_db.SetCursor(CursorMode.DEFAULT);
 
         Time.timeScale = 1f;
     }

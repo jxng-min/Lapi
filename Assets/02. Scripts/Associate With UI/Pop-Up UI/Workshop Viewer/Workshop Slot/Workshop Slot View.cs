@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class WorkshopSlotView : MonoBehaviour, IWorkshopSlotView
 {
+    [Header("재료 아이템 스크롤 바")]
+    [SerializeField] private Scrollbar m_ingredient_scroll_bar;
+
     [Header("재료 아이템 슬롯의 부모 트랜스폼")]
     [SerializeField] private Transform m_ingredient_slot_root;
 
@@ -30,6 +33,12 @@ public class WorkshopSlotView : MonoBehaviour, IWorkshopSlotView
     private void Awake()
     {
         m_item_slot_list = new();
+    }
+
+    private void Update()
+    {
+        float speed = 2f;
+        m_ingredient_scroll_bar.value = (Mathf.Sin(Time.time * speed) + 1f) / 2f;
     }
 
     public void Inject(WorkshopSlotPresenter presenter)
