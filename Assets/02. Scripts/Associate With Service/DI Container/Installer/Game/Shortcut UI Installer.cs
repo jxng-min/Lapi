@@ -44,8 +44,8 @@ public class ShortcutUIInstaller : MonoBehaviour, IInstaller
         }
 
         var shortcut_presenter = new ShortcutPresenter(m_shortcut_view,
-                                                       ServiceLocator.Get<IShortcutService>(),
                                                        DIContainer.Resolve<InventoryPresenter>(),
                                                        DIContainer.Resolve<SkillPresenter>());
+        DIContainer.Register<ShortcutPresenter>(shortcut_presenter);
     }
 }

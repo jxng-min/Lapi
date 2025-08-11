@@ -1,11 +1,10 @@
 using EquipmentService;
 
-public class EquipmentPresenter
+public class EquipmentPresenter : IPopupPresenter
 {
     private IEquipmentView m_view;
     private IEquipmentService m_model;
     private PlayerCtrl m_player_ctrl;
-    private bool m_is_open;
 
     public EquipmentPresenter(IEquipmentView view, IEquipmentService model, PlayerCtrl player_ctrl)
     {
@@ -20,30 +19,14 @@ public class EquipmentPresenter
         Initialize();
     }
 
-    public void ToggleUI()
-    {
-        if (m_is_open)
-        {
-            CloseUI();
-        }
-        else
-        {
-            OpenUI();
-        }
-    }
-
     public void OpenUI()
     {
-        m_is_open = true;
-
         Initialize();
         m_view.OpenUI();
     }
 
     public void CloseUI()
     {
-        m_is_open = false;
-
         m_view.CloseUI();
     }
 
@@ -67,5 +50,10 @@ public class EquipmentPresenter
         m_player_ctrl.Status.UpdateMaxStatus();
 
         m_view.UpdateEffect(max_hp, max_mp, atk, spd);
+    }
+
+    public void SortDepth()
+    {
+        m_view.SetDepth();
     }
 }

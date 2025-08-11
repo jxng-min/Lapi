@@ -1,4 +1,4 @@
-public interface IShortcutView
+public interface IShortcutView : IPopupView
 {
     void Inject(ShortcutPresenter presenter);
     void OpenUI();

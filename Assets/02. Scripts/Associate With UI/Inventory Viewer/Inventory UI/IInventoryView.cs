@@ -1,4 +1,4 @@
-public interface IInventoryView
+public interface IInventoryView : IPopupView
 {
     void Inject(InventoryPresenter inventory_presenter);
 

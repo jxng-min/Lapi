@@ -1,5 +1,3 @@
-using KeyService;
-using ShortcutService;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,25 +9,15 @@ public class ShortcutView : MonoBehaviour, IShortcutView
 
     private Animator m_animator;
     private ShortcutPresenter m_presenter;
-    private IKeyService m_key_service;
 
     private void Awake()
     {
         m_animator = GetComponent<Animator>();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(m_key_service.GetKeyCode("Shortcut")))
-        {
-            m_presenter.ToggleUI();
-        }
-    }
-
     public void Inject(ShortcutPresenter presenter)
     {
         m_presenter = presenter;
-        m_key_service = ServiceLocator.Get<IKeyService>();
 
         m_close_button.onClick.AddListener(m_presenter.CloseUI);
     }
@@ -42,5 +30,10 @@ public class ShortcutView : MonoBehaviour, IShortcutView
     public void CloseUI()
     {
         m_animator.SetBool("Open", false);
+    }
+
+    public void SetDepth()
+    {
+        (transform as RectTransform).SetAsFirstSibling();
     }
 }

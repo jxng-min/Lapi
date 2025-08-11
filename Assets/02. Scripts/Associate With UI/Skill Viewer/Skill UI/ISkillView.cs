@@ -1,4 +1,4 @@
-public interface ISkillView
+public interface ISkillView : IPopupView
 {
     void Inject(SkillPresenter presenter);
 

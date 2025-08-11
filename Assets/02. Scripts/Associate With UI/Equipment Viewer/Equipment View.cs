@@ -1,4 +1,3 @@
-using KeyService;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -24,25 +23,15 @@ public class EquipmentView : MonoBehaviour, IEquipmentView
 
     private Animator m_animator;
     private EquipmentPresenter m_presenter;
-    private IKeyService m_key_service;
 
     private void Awake()
     {
         m_animator = GetComponent<Animator>();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(m_key_service.GetKeyCode("Equipment")))
-        {
-            m_presenter.ToggleUI();
-        }
-    }
-
     public void Inject(EquipmentPresenter presenter)
     {
         m_presenter = presenter;
-        m_key_service = ServiceLocator.Get<IKeyService>();
 
         m_close_button.onClick.AddListener(m_presenter.CloseUI);
     }
@@ -63,5 +52,10 @@ public class EquipmentView : MonoBehaviour, IEquipmentView
         m_mp_label.text = NumberFormatter.FormatNumber(max_mp);
         m_atk_label.text = NumberFormatter.FormatNumber(atk);
         m_spd_label.text = NumberFormatter.FormatNumber(spd);
+    }
+
+    public void SetDepth()
+    {
+        (transform as RectTransform).SetAsFirstSibling();
     }
 }

@@ -1,4 +1,4 @@
-public interface IPauseView
+public interface IPauseView : IPopupView
 {
     void Inject(PausePresenter presenter);
 

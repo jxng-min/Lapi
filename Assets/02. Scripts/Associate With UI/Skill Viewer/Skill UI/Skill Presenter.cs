@@ -1,15 +1,12 @@
 using System;
 using SkillService;
 
-public class SkillPresenter : IDisposable
+public class SkillPresenter : IDisposable, IPopupPresenter
 {
     private readonly ISkillView m_view;
     private readonly ISkillService m_model;
 
     private ItemSlotPresenter[] m_slot_presenters;
-
-    private bool m_is_open;
-
     public SkillPresenter(ISkillView view, ISkillService model, ItemSlotPresenter[] slot_presenters)
     {
         m_view = view;
@@ -23,30 +20,14 @@ public class SkillPresenter : IDisposable
         Initialize();
     }
 
-    public void ToggleUI()
-    {
-        if (m_is_open)
-        {
-            CloseUI();
-        }
-        else
-        {
-            OpenUI();
-        }
-    }
-
     public void OpenUI()
     {
-        m_is_open = true;
-
         Initialize();
         m_view.OpenUI();
     }
 
     public void CloseUI()
     {
-        m_is_open = false;
-
         m_view.CloseUI();
     }
 
@@ -69,5 +50,10 @@ public class SkillPresenter : IDisposable
     public void Dispose()
     {
         m_model.OnUpdatedPoint -= m_view.UpdatePoint;
+    }
+
+    public void SortDepth()
+    {
+        m_view.SetDepth();
     }
 }

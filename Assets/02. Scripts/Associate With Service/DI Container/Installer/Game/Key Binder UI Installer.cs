@@ -13,8 +13,8 @@ public class KeyBinderUIInstaller : MonoBehaviour, IInstaller
     {
         DIContainer.Register<IKeyBinderView>(m_key_binder_view);
 
-        var key_binder_presenter = new KeyBinderPresenter(m_key_binder_view,
-                                                          ServiceLocator.Get<IKeyService>());
+        var key_binder_presenter = new KeyBinderPresenter(m_key_binder_view);
+        DIContainer.Register<KeyBinderPresenter>(key_binder_presenter);
 
         var key_binder_slots = m_key_binder_slot_root.GetComponentsInChildren<KeyBinderSlotView>();
         foreach (var slot in key_binder_slots)

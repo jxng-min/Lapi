@@ -1,4 +1,4 @@
-public interface IEquipmentView
+public interface IEquipmentView : IPopupView
 {
     void Inject(EquipmentPresenter presenter);
 

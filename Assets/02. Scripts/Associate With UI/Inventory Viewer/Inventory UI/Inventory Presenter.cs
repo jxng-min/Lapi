@@ -1,14 +1,12 @@
 using System;
 using InventoryService;
 
-public class InventoryPresenter : IDisposable
+public class InventoryPresenter : IDisposable, IPopupPresenter
 {
     private readonly IInventoryView m_view;
     private readonly IInventoryService m_model;
 
     private ItemSlotPresenter[] m_slot_presenters;
-
-    private bool m_is_open;
 
     public InventoryPresenter(IInventoryView view, IInventoryService model, ItemSlotPresenter[] slot_presenters)
     {
@@ -20,29 +18,14 @@ public class InventoryPresenter : IDisposable
         m_view.Inject(this);
     }
 
-    public void ToggleUI()
-    {
-        if (m_is_open)
-        {
-            CloseUI();
-        }
-        else
-        {
-            OpenUI();
-        }
-    }
-
     public void OpenUI()
     {
-        m_is_open = true;
-
         Initialize();
         m_view.OpenUI();
     }
 
     public void CloseUI()
     {
-        m_is_open = false;
         m_view.CloseUI();
     }
 
@@ -65,5 +48,10 @@ public class InventoryPresenter : IDisposable
     public void Dispose()
     {
         m_model.OnUpdatedGold -= m_view.UpdateMoney;
+    }
+
+    public void SortDepth()
+    {
+        m_view.SetDepth();
     }
 }
