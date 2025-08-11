@@ -1,4 +1,4 @@
-public interface ILoaderView
+public interface ILoaderView : IPopupView
 {
     void Inject(LoaderPresenter presenter);
     void OpenUI();

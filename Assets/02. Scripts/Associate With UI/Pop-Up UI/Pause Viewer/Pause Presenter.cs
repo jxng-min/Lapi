@@ -19,6 +19,6 @@ public class PausePresenter : IPopupPresenter
 
     public void SortDepth()
     {
-        throw new System.NotImplementedException();
+        m_view.SetDepth();
     }
 }

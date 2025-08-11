@@ -1,4 +1,4 @@
-public class LoaderPresenter
+public class LoaderPresenter : IPopupPresenter
 {
     private readonly ILoaderView m_view;
     private LoaderSlotPresenter[] m_loader_slot_presenters;
@@ -31,5 +31,10 @@ public class LoaderPresenter
     public void CloseUI()
     {
         m_view.CloseUI();
+    }
+
+    public void SortDepth()
+    {
+        m_view.SetDepth();
     }
 }

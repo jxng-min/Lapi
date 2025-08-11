@@ -5,6 +5,9 @@ using UnityEngine.UI;
 public class LoaderView : MonoBehaviour, ILoaderView
 {
     [Header("UI 관련 컴포넌트")]
+    [Header("팝업 UI 매니저")]
+    [SerializeField] private PopupUIManager m_ui_manager;
+
     [Header("UI 열기 버튼")]
     [SerializeField] private Button m_open_button;
 
@@ -32,9 +35,24 @@ public class LoaderView : MonoBehaviour, ILoaderView
     public void OpenUI()
     {
         m_animator.SetBool("Open", true);
+
+        if (m_ui_manager)
+        {
+            m_ui_manager.AddPresenter(m_presenter);
+        }
     }
     public void CloseUI()
     {
         m_animator.SetBool("Open", false);
+
+        if (m_ui_manager)
+        {
+            m_ui_manager.RemovePresenter(m_presenter);
+        }
+    }
+
+    public void SetDepth()
+    {
+        (transform as RectTransform).SetAsFirstSibling();
     }
 }

@@ -13,7 +13,7 @@ public class PopupUIManagerInstaller : MonoBehaviour, IInstaller
             new("Skill", DIContainer.Resolve<SkillPresenter>()),
             new("Binder", DIContainer.Resolve<KeyBinderPresenter>()),
             new("Shortcut", DIContainer.Resolve<ShortcutPresenter>()),
-            new("Pause", DIContainer.Resolve<PausePresenter>())
+            new("Pause", DIContainer.Resolve<PausePresenter>()),
         };
 
         m_popup_manager.Inject(popup_data_list);
