@@ -95,6 +95,11 @@ public class PopupUIManager : MonoBehaviour
         {
             m_active_popup_list.Remove(presenter);
             SortDepth();
+
+            if (m_active_popup_list.Count == 0)
+            {
+                GameEventBus.Publish(GameEventType.PLAYING);
+            }
         }        
     }
 

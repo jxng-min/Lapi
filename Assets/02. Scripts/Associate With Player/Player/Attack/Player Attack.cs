@@ -28,6 +28,11 @@ public class PlayerAttack : MonoBehaviour, IAttack
         }
     }
 
+    private void OnDestroy()
+    {
+        m_equipment_service.OnUpdatedWeapon -= SwapWeapon;
+    }
+    
     #region Methods
     public void Inject(IUserService user_service, IEquipmentService equipment_service, AttackUI[] weapons)
     {
