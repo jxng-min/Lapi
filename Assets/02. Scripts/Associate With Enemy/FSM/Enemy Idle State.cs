@@ -1,9 +1,13 @@
+using System.Collections;
 using UnityEngine;
 
 public class EnemyIdleState : MonoBehaviour, IState<EnemyCtrl>
 {
     private EnemyCtrl m_controller;
-    private float m_idle_time;
+    private Coroutine m_idle_coroutine;
+
+    private const float m_min_idle_time = 0f;
+    private const float m_max_idle_time = 2f;
 
     public void ExecuteEnter(EnemyCtrl sender)
     {
@@ -15,20 +19,45 @@ public class EnemyIdleState : MonoBehaviour, IState<EnemyCtrl>
         if (m_controller.IsInit)
         {
             m_controller.Animator.SetBool("Move", false);
-            m_idle_time = Random.Range(0f, 1f);
+
+            var idle_duration = Random.Range(m_min_idle_time, m_max_idle_time);
+            m_idle_coroutine = StartCoroutine(Co_Idle(idle_duration));
         }
     }
 
-    public void Execute()
+    private IEnumerator Co_Idle(float duration)
     {
-        m_controller.Attack.SearchTarget();
+        float trace_check_interval = 0.3f;
+        float trace_timer = trace_check_interval;
 
-        m_idle_time -= Time.deltaTime;
-        if (m_idle_time <= 0f)
+        while (duration > 0f)
         {
-            m_controller.ChangeState(EnemyState.MOVE);
+            duration -= Time.deltaTime;
+            trace_timer -= Time.deltaTime;
+
+            if (trace_timer <= 0f)
+            {
+                trace_timer = trace_check_interval;
+
+                if (m_controller.Attack.CanTrace())
+                {
+                    m_controller.ChangeState(EnemyState.TRACE);
+                    yield break;
+                }
+            }
+
+            yield return null;
         }
+
+        m_controller.ChangeState(EnemyState.MOVE);
     }
 
-    public void ExecuteExit() {}
+    public void ExecuteExit()
+    {
+        if (m_idle_coroutine != null)
+        {
+            StopCoroutine(m_idle_coroutine);
+            m_idle_coroutine = null;
+        }
+    }
 }

@@ -1,13 +1,11 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyTraceState : MonoBehaviour, IState<EnemyCtrl>
 {
     private EnemyCtrl m_controller;
-
-    private void OnDisable()
-    {
-        CancelInvoke(nameof(UpdateTrace));
-    }
+    private Coroutine m_trace_coroutine;
 
     public void ExecuteEnter(EnemyCtrl sender)
     {
@@ -16,29 +14,58 @@ public class EnemyTraceState : MonoBehaviour, IState<EnemyCtrl>
             m_controller = sender;
         }
 
-        InvokeRepeating(nameof(UpdateTrace), 0f, 0.5f);
+        m_trace_coroutine = StartCoroutine(Co_Trace());
     }
 
-    public void Execute() {}
+    private IEnumerator Co_Trace()
+    {
+        var trace_check_interval = 0.5f;
+        var trace_timer = trace_check_interval;
+
+        List<Node> current_path = null;
+
+        while (true)
+        {
+            trace_timer -= Time.deltaTime;
+            if (trace_timer <= 0f)
+            {
+                trace_timer = trace_check_interval;
+
+                if (!m_controller.Attack.CanTrace())
+                {
+                    m_controller.ChangeState(EnemyState.IDLE);
+                    yield break;
+                }
+
+                var player_position = m_controller.Player.transform.position;
+                current_path = m_controller.Pathfinder.Pathfind(transform.position, player_position);
+
+                if (current_path == null || current_path.Count == 0)
+                {
+                    m_controller.ChangeState(EnemyState.IDLE);
+                    yield break;
+                }
+
+                m_controller.Movement.MoveAlongPath(current_path);
+            }
+
+            // while (m_controller.Movement.IsMove)
+            // {
+            //     yield return null;
+            // }
+
+            yield return null;
+        }
+    }
 
     public void ExecuteExit()
     {
-        CancelInvoke(nameof(UpdateTrace));
+        if (m_trace_coroutine != null)
+        {
+            StopCoroutine(m_trace_coroutine);
+            m_trace_coroutine = null;
+        }
+
         m_controller.Movement.Reset();
     }
-
-    #region Helper Methods
-    private void UpdateTrace()
-    {
-        var player = m_controller.Attack.SearchTarget();
-        if (player == null)
-        {
-            m_controller.ChangeState(EnemyState.IDLE);
-        }
-        else
-        {
-            m_controller.Movement.Trace(player.transform.position);
-        }
-    }
-    #endregion Helper Methods
 }

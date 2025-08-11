@@ -1,7 +1,8 @@
+using System;
 using KeyService;
 using ShortcutService;
 
-public class ShortcutSlotPresenter
+public class ShortcutSlotPresenter : IDisposable
 {
     private IShortcutSlotView m_view;
     private IItemDataBase m_item_db;
@@ -37,6 +38,11 @@ public class ShortcutSlotPresenter
         m_view.Inject(this);
     }
 
+    public void Dispose()
+    {
+        m_key_service.OnUpdatedKey -= m_view.UpdateUI;
+    }
+
     public void UseShortcut()
     {
         var code = m_shortcut_service.GetItem(m_offset).Code;
@@ -47,7 +53,7 @@ public class ShortcutSlotPresenter
 
         var item = m_item_db.GetItem(code);
 
-        ItemSlotPresenter presenter; 
+        ItemSlotPresenter presenter;
         if (item.Stackable)
         {
             presenter = m_inventory_presenter.GetPrioritySlotPresenter(code);
@@ -57,6 +63,6 @@ public class ShortcutSlotPresenter
             presenter = m_skill_presenter.GetPresenter(code);
         }
 
-        presenter?.UseItem();
+        presenter?.OnPointerClick();
     }
 }

@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using InventoryService;
-using UnityEngine;
 using UserService;
 
 public class WorkshopPresenter
@@ -67,7 +66,10 @@ public class WorkshopPresenter
 
     public void OnChangedToggle(bool isOn)
     {
-
+        foreach (var shop_slot_presenter in m_workshop_slot_presenters)
+        {
+            shop_slot_presenter.OnChangedToggle(isOn);
+        }
     }
 
     public bool IsCrafting()
@@ -87,7 +89,8 @@ public class WorkshopPresenter
     {
         foreach (var presenter in m_workshop_slot_presenters)
         {
-            presenter.ReturnSlots();
+            presenter?.ReturnSlots();
+            presenter.Dispose();
         }
     }
 }

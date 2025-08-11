@@ -12,6 +12,7 @@ namespace UserService
 
         event Action<int, int> OnUpdatedLevel;
 
+        void InitializeLevel();
         void UpdateLevel(int exp);
     }
 }

@@ -2,8 +2,12 @@ using UnityEngine;
 
 public abstract class MouseDetector : MonoBehaviour
 {
-    [Header("커서 데이터베이스")]
-    [SerializeField] private CursorDataBase m_cursor_db;
+    private ICursorDataBase m_cursor_db;
+
+    public void Inject(ICursorDataBase cursor_db)
+    {
+        m_cursor_db = cursor_db;
+    }
 
     protected void SetCursor(CursorMode mode)
     {

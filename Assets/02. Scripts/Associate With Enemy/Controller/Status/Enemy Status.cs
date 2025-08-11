@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -11,6 +12,8 @@ public class EnemyStatus : MonoBehaviour
     public float HP { get; private set; }
     public bool IsDead { get; set; }
     public bool IsKnockback { get; private set; }
+
+    public event Action<EnemyCtrl> OnDead;
 
     private void Awake()
     {
@@ -71,6 +74,8 @@ public class EnemyStatus : MonoBehaviour
         m_controller.Collider.enabled = false;
 
         StartCoroutine(SetDeath());
+
+        OnDead?.Invoke(m_controller);
     }
 
     private void SetAlpha(float alpha)
@@ -82,8 +87,6 @@ public class EnemyStatus : MonoBehaviour
 
     private void Return()
     {
-        m_controller.Spawner.UpdateCount(m_controller.SpawnerID, -1);
-
         ObjectManager.Instance.ReturnObject(gameObject,
                                             m_controller.SO.Type == EnemyType.MELEE ?
                                             ObjectType.MELEE_ENEMY : ObjectType.RANGED_ENEMY);

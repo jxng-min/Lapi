@@ -23,14 +23,4 @@ public class EnemyStateContext
         m_current_state = state;
         State?.ExecuteEnter(m_controller);
     }
-
-    public void ExecuteUpdate()
-    {
-        if (!m_controller)
-        {
-            return;
-        }
-
-        State?.Execute();
-    }
 }

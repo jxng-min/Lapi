@@ -1,7 +1,8 @@
+using System;
 using InventoryService;
 using UserService;
 
-public class ShopSlotPresenter
+public class ShopSlotPresenter : IDisposable
 {
     private readonly IShopSlotView m_view;
     private readonly IInventoryService m_inventory_service;
@@ -61,5 +62,10 @@ public class ShopSlotPresenter
         {
             m_view.DisableObject(false);
         }
+    }
+
+    public void Dispose()
+    {
+        m_inventory_service.OnUpdatedGold -= UpdateUI;
     }
 }

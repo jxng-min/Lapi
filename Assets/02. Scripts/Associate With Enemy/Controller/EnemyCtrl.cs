@@ -21,9 +21,8 @@ public class EnemyCtrl : MonoBehaviour
     public EnemyAttack Attack { get; private set; }
     public EnemyDrop Drop { get; private set; }
     public Pathfinder Pathfinder { get; private set; }
+    public PlayerCtrl Player { get; private set; }
 
-    public SpawnerManager Spawner { get; private set; }
-    public int SpawnerID { get; private set; }
     public Enemy SO { get; private set; }
 
     public IInventoryService InventoryService { get; private set; }
@@ -71,32 +70,18 @@ public class EnemyCtrl : MonoBehaviour
 
         var grid = FindFirstObjectByType<GridMap>();
         Pathfinder.Inject(grid);
-
-        ChangeState(EnemyState.IDLE);
-    }
-
-    private void Update()
-    {
-        if (!IsInit)
-        {
-            return;
-        }
-
-        m_state_context?.ExecuteUpdate();
     }
 
     public void Initialize(Enemy so,
-                           SpawnerManager spawner_manager,
-                           int spawner_id,
                            IInventoryService inventory_service,
-                           IUserService m_user_service)
+                           IUserService user_service,
+                           PlayerCtrl player_ctrl)
     {
         SO = so;
-        Spawner = spawner_manager;
-        SpawnerID = spawner_id;
 
         InventoryService = inventory_service;
-        UserService = m_user_service;
+        UserService = user_service;
+        Player = player_ctrl;
 
         Animator.runtimeAnimatorController = SO.Animator;
 
@@ -106,6 +91,7 @@ public class EnemyCtrl : MonoBehaviour
         Drop.Initialize(SO.EXP, SO.EXP_DEV, SO.GOLD, SO.GOLD_DEV, SO.DropList, SO.DropRate);
 
         IsInit = true;
+        ChangeState(EnemyState.IDLE);
     }
 
     public void ChangeState(EnemyState state)

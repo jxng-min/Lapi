@@ -1,8 +1,8 @@
+using System;
 using InventoryService;
-using UnityEngine;
 using UserService;
 
-public class WorkshopSlotPresenter
+public class WorkshopSlotPresenter : IDisposable
 {
     private readonly IWorkshopSlotView m_view;
     private readonly IInventoryService m_inventory_service;
@@ -104,5 +104,29 @@ public class WorkshopSlotPresenter
     public void ReturnSlots()
     {
         m_view.ReturnItemSlots();
+    }
+
+    public void OnChangedToggle(bool check)
+    {
+        if (check)
+        {
+            if (CheckCanCraft() && m_user_service.Status.Level >= m_receipe.Constraint)
+            {
+                m_view.DisableObject(false);
+            }
+            else
+            {
+                m_view.DisableObject(true);
+            }
+        }
+        else
+        {
+            m_view.DisableObject(false);
+        }
+    }
+
+    public void Dispose()
+    {
+        m_inventory_service.OnUpdatedSlot -= UpdateUI;
     }
 }

@@ -6,10 +6,13 @@ using UserService;
 
 public class EnemySpawner : MonoBehaviour
 {
+    private IInventoryService m_inventory_service;
+    private IUserService m_user_service;
+    private ICursorDataBase m_cursor_db;
+    private PlayerCtrl m_player_ctrl;
+
     [Header("팩토리 매니저")]
     [SerializeField] private FactoryManager m_factory_manager;
-    private SpawnerManager m_spawner_manager;
-    private IInventoryService m_inventory_service;
 
     [Header("스포너의 고유한 ID")]
     [SerializeField] private int m_id;
@@ -26,19 +29,13 @@ public class EnemySpawner : MonoBehaviour
     [Header("스폰 범위")]
     [SerializeField] private float m_spawn_radius;
 
-    private int m_current_count;
-
-    public int Count
-    {
-        get => m_current_count;
-        set => m_current_count = value;
-    }
+    private List<EnemyCtrl> m_spawned_enemies;
 
     public int ID => m_id;
 
     private void Awake()
     {
-        m_spawner_manager = transform.parent.GetComponent<SpawnerManager>();
+        m_spawned_enemies = new();
 
         StartCoroutine(Co_SpawnEnemy());
     }
@@ -46,34 +43,38 @@ public class EnemySpawner : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, m_spawn_radius);       
+        Gizmos.DrawWireSphere(transform.position, m_spawn_radius);
+    }
+
+    public void Inject(IInventoryService inventory_service,
+                       IUserService user_service,
+                       ICursorDataBase cursor_db,
+                       PlayerCtrl player_ctrl)
+    {
+        m_inventory_service = inventory_service;
+        m_user_service = user_service;
+        m_cursor_db = cursor_db;
+        m_player_ctrl = player_ctrl;
     }
 
     private IEnumerator Co_SpawnEnemy()
     {
-        float elasped_time = 0f;
+        float elapsed_time = 0f;
 
         while (true)
         {
-            yield return new WaitUntil(() => m_current_count < m_max_count);
+            yield return new WaitUntil(() => m_spawned_enemies.Count < m_max_count);
 
-            while (elasped_time <= m_spawn_interval)
+            elapsed_time = 0f;
+
+            while (elapsed_time <= m_spawn_interval)
             {
-                elasped_time += Time.deltaTime;
+                elapsed_time += Time.deltaTime;
                 yield return null;
             }
 
             CreateEnemy();
-
-            m_current_count++;
-
-            elasped_time = 0f;
         }
-    }
-
-    public void UpdateCount(int count)
-    {
-        m_current_count += count;
     }
 
     private Enemy SelectRandomEnemy()
@@ -82,6 +83,7 @@ public class EnemySpawner : MonoBehaviour
         {
             return m_enemy_list[0];
         }
+
         return m_enemy_list[Random.Range(0, m_enemy_list.Count)];
     }
 
@@ -99,9 +101,22 @@ public class EnemySpawner : MonoBehaviour
         var enemy_ctrl = m_factory_manager.CreateEnemy(so.Code);
         enemy_ctrl.transform.position = GetRandomPosition();
         enemy_ctrl.Initialize(so,
-                              m_spawner_manager,
-                              ID,
-                              ServiceLocator.Get<IInventoryService>(),
-                              ServiceLocator.Get<IUserService>());
-    }   
+                              m_inventory_service,
+                              m_user_service,
+                              m_player_ctrl);
+
+        enemy_ctrl.GetComponent<EnemyMouseDetector>().Inject(m_cursor_db);
+
+        m_spawned_enemies.Add(enemy_ctrl);
+
+        enemy_ctrl.Status.OnDead -= OnEnemyDeadHandler;
+        enemy_ctrl.Status.OnDead += OnEnemyDeadHandler;
+    }
+
+    private void OnEnemyDeadHandler(EnemyCtrl enemy_ctrl)
+    {
+        m_spawned_enemies.Remove(enemy_ctrl);
+
+        enemy_ctrl.Status.OnDead -= OnEnemyDeadHandler;
+    }
 }

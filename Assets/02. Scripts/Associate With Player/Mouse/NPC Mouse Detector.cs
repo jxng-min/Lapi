@@ -37,7 +37,7 @@ public class NPCMouseDetector : MouseDetector
         m_name_tag_presenter.CloseUI();
     }
 
-    protected virtual void OnMouseDown()
+    private void OnMouseDown()
     {
         if (EventSystem.current.IsPointerOverGameObject())
         {

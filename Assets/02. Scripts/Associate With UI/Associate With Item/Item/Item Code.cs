@@ -9,6 +9,7 @@ public enum ItemCode
     // 퀘스트 아이템(201 ~ 400)
 
     // 기타 아이템(401 ~ 600)
+    BRANCH = 401, STONE = 402, IRON = 403, SILVER = 404, GOLD = 405, RUBY = 406,
 
     // 스킬 (601 ~ 700)
     DASH = 601, FIRE_BALL = 602, THUNDER = 603,

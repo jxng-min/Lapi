@@ -1,6 +1,7 @@
+using System;
 using SkillService;
 
-public class SkillPresenter
+public class SkillPresenter : IDisposable
 {
     private readonly ISkillView m_view;
     private readonly ISkillService m_model;
@@ -63,5 +64,10 @@ public class SkillPresenter
         var offset = m_model.GetOffset(code);
 
         return offset != -1 ? m_slot_presenters[offset] : null;
+    }
+
+    public void Dispose()
+    {
+        m_model.OnUpdatedPoint -= m_view.UpdatePoint;
     }
 }

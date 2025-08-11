@@ -1,6 +1,7 @@
+using System;
 using InventoryService;
 
-public class InventoryPresenter
+public class InventoryPresenter : IDisposable
 {
     private readonly IInventoryView m_view;
     private readonly IInventoryService m_model;
@@ -59,5 +60,10 @@ public class InventoryPresenter
         var offset = m_model.GetPriorityOffset(code);
 
         return offset != -1 ? m_slot_presenters[offset] : null;
+    }
+
+    public void Dispose()
+    {
+        m_model.OnUpdatedGold -= m_view.UpdateMoney;
     }
 }
