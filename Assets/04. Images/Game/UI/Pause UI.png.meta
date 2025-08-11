@@ -17,9 +17,6 @@ TextureImporter:
   - first:
       213: -4581454988137293292
     second: Pause UI_4
-  - first:
-      213: -6160897094233655239
-    second: Pause UI_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -87,7 +84,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -128,13 +125,35 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pause UI_1
+      name: Pause Panel
       rect:
         serializedVersion: 2
-        x: 1331
-        y: 1351
-        width: 1201
-        height: 1601
+        x: 307
+        y: 337
+        width: 301
+        height: 401
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fd9abea3e4179800800000000000000
+      internalID: 618986441908329972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Save
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 211
+        width: 251
+        height: 92
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,13 +169,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pause UI_2
+      name: Back Button
       rect:
         serializedVersion: 2
-        x: 99
-        y: 847
-        width: 1002
-        height: 362
+        x: 318
+        y: 269
+        width: 27
+        height: 27
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,13 +191,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pause UI_3
+      name: Setting
       rect:
         serializedVersion: 2
-        x: 1375
-        y: 1079
-        width: 102
-        height: 102
+        x: 0
+        y: 105
+        width: 251
+        height: 92
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,13 +213,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pause UI_4
+      name: Title
       rect:
         serializedVersion: 2
-        x: 99
-        y: 423
-        width: 1002
-        height: 362
+        x: 0
+        y: 0
+        width: 251
+        height: 91
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,33 +234,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Pause UI_5
-      rect:
-        serializedVersion: 2
-        x: 99
-        y: 0
-        width: 1002
-        height: 361
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 93877701cb8108aa0800000000000000
-      internalID: -6160897094233655239
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2938cbf132d08da40b4f84f374e05080
+    spriteID: 2b4285512e7e7394c8419dc76e3269f0
     internalID: 0
     vertices: []
     indices: 
@@ -251,12 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Pause UI_0: 618986441908329972
-      Pause UI_1: 5841360170512240814
-      Pause UI_2: -1466730270245162509
-      Pause UI_3: -8360997857305887166
-      Pause UI_4: -4581454988137293292
-      Pause UI_5: -6160897094233655239
+      Back Button: -1466730270245162509
+      Pause Panel: 618986441908329972
+      Save: 5841360170512240814
+      Setting: -8360997857305887166
+      Title: -4581454988137293292
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

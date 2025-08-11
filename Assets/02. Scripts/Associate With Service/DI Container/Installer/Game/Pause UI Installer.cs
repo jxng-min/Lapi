@@ -8,5 +8,11 @@ public class PauseUIInstaller : MonoBehaviour, IInstaller
     public void Install()
     {
         var pause_presenter = new PausePresenter(m_pause_view);
+        DIContainer.Register<PausePresenter>(pause_presenter);
+    }
+
+    public void Button_Title()
+    {
+        LoadingManager.Instance.LoadScene("Title");
     }
 }

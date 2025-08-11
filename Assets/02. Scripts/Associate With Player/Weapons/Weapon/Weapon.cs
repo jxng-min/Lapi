@@ -55,6 +55,8 @@ public abstract class Weapon : MonoBehaviour
 
         while (elapsed_time <= m_cooltime)
         {
+            yield return new WaitUntil(() => GameManager.Instance.Event != GameEventType.SETTING);
+            
             elapsed_time += Time.deltaTime;
 
             yield return null;

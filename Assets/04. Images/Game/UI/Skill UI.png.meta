@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5bb93fe81c5621442a5623771b31f521
+guid: d0208f9277281114c9a2d10564265f32
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -23,9 +23,6 @@ TextureImporter:
   - first:
       213: -5328065362331033598
     second: Skill UI_6
-  - first:
-      213: -5791751755228856536
-    second: Skill UI_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -93,7 +90,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -134,13 +131,35 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Skill UI Panel
+      name: Skill Panel
       rect:
         serializedVersion: 2
-        x: 2655
-        y: 1615
-        width: 2401
-        height: 1881
+        x: 658
+        y: 396
+        width: 601
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bda0b9a253c2af670800000000000000
+      internalID: 8573213447512853211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill Slot Frame
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 205
+        width: 286
+        height: 112
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,13 +175,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skill Slot Frame
+      name: Skill Slot Disabled
       rect:
         serializedVersion: 2
-        x: 19
-        y: 851
-        width: 1142
-        height: 442
+        x: 309
+        y: 205
+        width: 287
+        height: 112
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,13 +197,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lock Frame
+      name: Grid Panel
       rect:
         serializedVersion: 2
-        x: 1259
-        y: 851
-        width: 1142
-        height: 442
+        x: 682
+        y: 0
+        width: 577
+        height: 337
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,13 +219,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grid Panel
+      name: Skill UI_4
       rect:
         serializedVersion: 2
-        x: 2751
-        y: 27
-        width: 2305
-        height: 1346
+        x: 0
+        y: 86
+        width: 101
+        height: 102
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,10 +244,32 @@ TextureImporter:
       name: Upgrade Button
       rect:
         serializedVersion: 2
-        x: 479
-        y: 595
-        width: 182
-        height: 182
+        x: 114
+        y: 141
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 996c06221c2f5ea50800000000000000
+      internalID: 6549908144399632025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back Button
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 160
+        width: 27
+        height: 27
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -243,33 +284,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Back Button
-      rect:
-        serializedVersion: 2
-        x: 747
-        y: 671
-        width: 102
-        height: 102
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 82fb652f6709f9fa0800000000000000
-      internalID: -5791751755228856536
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 9617e73051701634bbbacc16e3919b71
+    spriteID: 9c5a6bf0930fb7248a601e0015b1fada
     internalID: 0
     vertices: []
     indices: 
@@ -279,14 +298,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Back Button: -5791751755228856536
-      Grid Panel: -4790990471650644371
-      Lock Frame: 599227487307637056
-      Skill Slot Frame: 7079776248175609267
-      Skill UI Panel: 6079730605070179574
-      Skill UI_0: 8573213447512853211
-      Skill UI_5: 6549908144399632025
-      Upgrade Button: -5328065362331033598
+      Back Button: -5328065362331033598
+      Grid Panel: 599227487307637056
+      Skill Panel: 8573213447512853211
+      Skill Slot Disabled: 7079776248175609267
+      Skill Slot Frame: 6079730605070179574
+      Skill UI_4: -4790990471650644371
+      Upgrade Button: 6549908144399632025
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

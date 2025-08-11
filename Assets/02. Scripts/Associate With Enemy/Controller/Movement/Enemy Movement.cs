@@ -89,9 +89,13 @@ public class EnemyMovement : MonoBehaviour
         var index = 0;
         while (index < m_current_path.Count)
         {
+            yield return new WaitUntil(() => GameManager.Instance.Event != GameEventType.SETTING);
+
             var node = m_current_path[index];
             while (Vector2.Distance(transform.position, node.World) > 0.1f)
             {
+                yield return new WaitUntil(() => GameManager.Instance.Event != GameEventType.SETTING);
+                
                 Direction = (node.World - (Vector2)transform.position).normalized;
                 m_controller.Animator.SetFloat("DirX", Direction.x);
                 m_controller.Animator.SetFloat("DirY", Direction.y);

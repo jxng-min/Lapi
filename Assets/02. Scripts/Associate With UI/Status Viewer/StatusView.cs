@@ -76,6 +76,8 @@ public class StatusView : MonoBehaviour, IStatusView
 
         while (elapsed_time <= target_time)
         {
+            yield return new WaitUntil(() => GameManager.Instance.Event != GameEventType.SETTING);
+            
             elapsed_time += Time.deltaTime;
 
             var delta = elapsed_time / target_time;

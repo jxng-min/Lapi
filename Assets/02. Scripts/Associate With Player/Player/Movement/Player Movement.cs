@@ -16,11 +16,23 @@ public class PlayerMovement : MonoBehaviour, IMovement
 
     private void Update()
     {
+        if (GameManager.Instance.Event != GameEventType.PLAYING)
+        {
+            return;
+        }
+
         InputMove();
     }
 
     private void FixedUpdate()
     {
+        if (GameManager.Instance.Event != GameEventType.PLAYING)
+        {
+            m_controller.Rigidbody.linearVelocity = Vector2.zero;
+            m_controller.Animator.SetBool("Move", false);
+            return;
+        }
+
         if (!Controll)
         {
             return;

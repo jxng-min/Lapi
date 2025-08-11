@@ -31,6 +31,31 @@
       "Description": "새싹 모험가에겐 과분한 만능 포션이다.\n체력 +<color=green>120</color>\n마나 +<color=green>80</color>"
     },
     {
+      "Code": 401,
+      "Name": "나뭇가지",
+      "Description": "매우 단단한 나뭇가지다. 나무 밑을 잘 살펴보면 꽤나 자주 볼 수 있다."
+    },
+    {
+      "Code": 402,
+      "Name": "조약돌",
+      "Description": "정돈된 모양으로 떨어져 나온 조약돌이다. 적당한 곳에 사용할 수 있을 법하다."
+    },
+    {
+      "Code": 403,
+      "Name": "철",
+      "Description": "가공되지 않은 철이다. 무기와 장비를 제작할 때 사용할 수 있다."
+    },
+    {
+      "Code": 404,
+      "Name": "금",
+      "Description": "가공되지 않은 금이다. 희귀하기 때문에 장비에 포인트를 줄 때 사용할 수 있다."
+    },
+    {
+      "Code": 405,
+      "Name": "루비",
+      "Description": "가공되지 않은 루비다. 희귀하기 때문에 장비에 포인트를 줄 때 사용할 수 있다."
+    },
+    {
       "Code": 601,
       "Name": "돌진",
       "Description": "라피가 전방을 향해 돌진한다.\n<size=16>마나/성장 마나: <color=green>-50/+1</color>\n대기 시간/성장 대기 시간: <color=green>3초/-0.1초</color></size>"

@@ -1,16 +1,13 @@
 fileFormatVersion: 2
-guid: e5b511b0fefae5f499a7bb497b3c6aac
+guid: f9259bf23c2ef3a45b541dde5633e89b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5920876855586286905
-    second: Equipment UI1_0
+      213: -6491100467464652782
+    second: Equipment UI 1_0
   - first:
-      213: -7758776177460796500
-    second: Equipment UI1_1
-  - first:
-      213: -8719964343464272802
-    second: Equipment UI1_2
+      213: 3801138631366896225
+    second: Equipment UI 1_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -78,7 +75,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -124,8 +121,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 2401
-        height: 1201
+        width: 601
+        height: 300
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ca3afa2ac2a435490800000000000000
-      internalID: -7758776177460796500
+      spriteID: 218b563248afae5a0800000000000000
+      internalID: -6491100467464652782
       vertices: []
       indices: 
       edges: []
@@ -144,10 +141,10 @@ TextureImporter:
       name: Back Button
       rect:
         serializedVersion: 2
-        x: 2550
-        y: 1051
-        width: 102
-        height: 102
+        x: 637
+        y: 262
+        width: 26
+        height: 27
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e5c5db541a67cf680800000000000000
-      internalID: -8719964343464272802
+      spriteID: 16a63a8227b50c430800000000000000
+      internalID: 3801138631366896225
       vertices: []
       indices: 
       edges: []
@@ -166,7 +163,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 45c2898f38108de41aaf2810511ed699
+    spriteID: aa13753ef44e8c74eafc377054f49594
     internalID: 0
     vertices: []
     indices: 
@@ -176,9 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Back Button: -8719964343464272802
-      Equipment Panel: -7758776177460796500
-      Equipment UI1_0: 5920876855586286905
+      Back Button: 3801138631366896225
+      Equipment Panel: -6491100467464652782
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,34 +1,31 @@
 fileFormatVersion: 2
-guid: 046c19b0584cb3c4f8846840f4835783
+guid: 72519bf833f4f754aad413f7374f29bc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4119195609337314329
-    second: Shop UI_0
+      213: -8874558504130110332
+    second: Shop UI 1_0
   - first:
-      213: 3289035122612901174
-    second: Shop UI_1
+      213: 8644809670694906072
+    second: Shop UI 1_1
   - first:
-      213: -7158017831315144304
-    second: Shop UI_2
+      213: -8158854382857262440
+    second: Shop UI 1_2
   - first:
-      213: -6537622889787914843
-    second: Shop UI_3
+      213: 1668823095468743817
+    second: Shop UI 1_3
   - first:
-      213: 8916536635396986705
-    second: Shop UI_4
+      213: 6140749976734937078
+    second: Shop UI 1_4
   - first:
-      213: 8862550450194857795
-    second: Shop UI_5
+      213: 6957983930819145997
+    second: Shop UI 1_5
   - first:
-      213: 491284303609944198
-    second: Shop UI_6
+      213: 1893006945977020002
+    second: Shop UI 1_6
   - first:
-      213: -7624035473875395556
-    second: Shop UI_7
-  - first:
-      213: -8763235061844908922
-    second: Shop UI_8
+      213: 1384021893735678248
+    second: Shop UI 1_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,7 +93,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -140,10 +137,10 @@ TextureImporter:
       name: Shop Panel
       rect:
         serializedVersion: 2
-        x: 2539
-        y: 2619
-        width: 2202
-        height: 2801
+        x: 621
+        y: 604
+        width: 552
+        height: 701
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,8 +149,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6351029940005ad20800000000000000
-      internalID: 3289035122612901174
+      spriteID: 48c17e65f0c37d480800000000000000
+      internalID: -8874558504130110332
       vertices: []
       indices: 
       edges: []
@@ -162,10 +159,10 @@ TextureImporter:
       name: Grid Panel
       rect:
         serializedVersion: 2
-        x: 51
-        y: 199
-        width: 2122
-        height: 2122
+        x: 0
+        y: 0
+        width: 531
+        height: 531
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,8 +171,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0918c8c05bc99ac90800000000000000
-      internalID: -7158017831315144304
+      spriteID: 8d8a1a4e79888f770800000000000000
+      internalID: 8644809670694906072
       vertices: []
       indices: 
       edges: []
@@ -184,10 +181,10 @@ TextureImporter:
       name: Back Button
       rect:
         serializedVersion: 2
-        x: 2583
-        y: 2159
-        width: 102
-        height: 102
+        x: 632
+        y: 489
+        width: 27
+        height: 27
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,8 +193,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5a58aba9e92b545a0800000000000000
-      internalID: -6537622889787914843
+      spriteID: 89a67af8a2de5ce80800000000000000
+      internalID: -8158854382857262440
       vertices: []
       indices: 
       edges: []
@@ -206,10 +203,10 @@ TextureImporter:
       name: Purchase Button
       rect:
         serializedVersion: 2
-        x: 2911
-        y: 2139
-        width: 242
-        height: 242
+        x: 714
+        y: 484
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,8 +215,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 157189bf3d6edbb70800000000000000
-      internalID: 8916536635396986705
+      spriteID: 98cd16673c9d82710800000000000000
+      internalID: 1668823095468743817
       vertices: []
       indices: 
       edges: []
@@ -228,9 +225,53 @@ TextureImporter:
       name: Toggle
       rect:
         serializedVersion: 2
-        x: 3311
-        y: 2139
-        width: 122
+        x: 814
+        y: 484
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ff26c99193583550800000000000000
+      internalID: 6140749976734937078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toggle Checker
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 488
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d01f9552589bf8060800000000000000
+      internalID: 6957983930819145997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop Slot Frame
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 336
+        width: 526
         height: 122
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -240,20 +281,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 34fb7dbbdaa1efa70800000000000000
-      internalID: 8862550450194857795
+      spriteID: 26eae4ca9cf454a10800000000000000
+      internalID: 1893006945977020002
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Toggle Chekcer
+      name: Shop Disabled Frame
       rect:
         serializedVersion: 2
-        x: 3531
-        y: 2155
-        width: 82
-        height: 82
+        x: 634
+        y: 164
+        width: 526
+        height: 122
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -262,52 +303,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6885560a87461d600800000000000000
-      internalID: 491284303609944198
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shop Slot
-      rect:
-        serializedVersion: 2
-        x: 2591
-        y: 1547
-        width: 2098
-        height: 482
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c1c1ea0612cf13690800000000000000
-      internalID: -7624035473875395556
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Disabled Shop Slot
-      rect:
-        serializedVersion: 2
-        x: 2591
-        y: 859
-        width: 2098
-        height: 482
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6846c7f042cb26680800000000000000
-      internalID: -8763235061844908922
+      spriteID: 8218a795498053310800000000000000
+      internalID: 1384021893735678248
       vertices: []
       indices: 
       edges: []
@@ -316,7 +313,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a6e87af06bcfd454a9b71d3421d559d8
+    spriteID: d772e088ae7aa204fb63f479e3992539
     internalID: 0
     vertices: []
     indices: 
@@ -326,15 +323,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Back Button: -6537622889787914843
-      Disabled Shop Slot: -8763235061844908922
-      Grid Panel: -7158017831315144304
-      Purchase Button: 8916536635396986705
-      Shop Panel: 3289035122612901174
-      Shop Slot: -7624035473875395556
-      Shop UI_0: 4119195609337314329
-      Toggle: 8862550450194857795
-      Toggle Chekcer: 491284303609944198
+      Back Button: -8158854382857262440
+      Grid Panel: 8644809670694906072
+      Purchase Button: 1668823095468743817
+      Shop Disabled Frame: 1384021893735678248
+      Shop Panel: -8874558504130110332
+      Shop Slot Frame: 1893006945977020002
+      Toggle: 6140749976734937078
+      Toggle Checker: 6957983930819145997
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-guid: dd1490d22e0e1504ca01428801c8e5bf
+guid: 076fe6f7690322a44845b4f7e99ffcec
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1368719331745588629
-    second: Inventory UI 1_0
+      213: 6945321831648613733
+    second: Inventory UI_0
   - first:
-      213: 3630869341673875878
-    second: Inventory UI 1_1
+      213: 9097338801133244466
+    second: Inventory UI_1
   - first:
-      213: 4566884815163497300
-    second: Inventory UI 1_2
-  - first:
-      213: 2591365264420786704
-    second: Inventory UI 1_3
+      213: 7460288814081512604
+    second: Inventory UI_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -81,7 +78,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -125,10 +122,10 @@ TextureImporter:
       name: Inventory Panel
       rect:
         serializedVersion: 2
-        x: 2667
-        y: 535
-        width: 2401
-        height: 3041
+        x: 0
+        y: 108
+        width: 600
+        height: 761
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,8 +134,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6a9e358dd60736230800000000000000
-      internalID: 3630869341673875878
+      spriteID: 5655e22786db26060800000000000000
+      internalID: 6945321831648613733
       vertices: []
       indices: 
       edges: []
@@ -147,10 +144,10 @@ TextureImporter:
       name: Back Button
       rect:
         serializedVersion: 2
-        x: 2811
-        y: 299
-        width: 102
-        height: 102
+        x: 35
+        y: 49
+        width: 27
+        height: 27
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,8 +156,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 45b12f10b85d06f30800000000000000
-      internalID: 4566884815163497300
+      spriteID: 230dcea907d304e70800000000000000
+      internalID: 9097338801133244466
       vertices: []
       indices: 
       edges: []
@@ -169,10 +166,10 @@ TextureImporter:
       name: Item Slot Frame
       rect:
         serializedVersion: 2
-        x: 2995
+        x: 113
         y: 0
-        width: 402
-        height: 402
+        width: 102
+        height: 101
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,8 +178,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 01256157af066f320800000000000000
-      internalID: 2591365264420786704
+      spriteID: c94162d6625488760800000000000000
+      internalID: 7460288814081512604
       vertices: []
       indices: 
       edges: []
@@ -191,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 10cb4bb34fbf487438a1902b22310b48
+    spriteID: a20066855df13c3498b87c3e460f7679
     internalID: 0
     vertices: []
     indices: 
@@ -201,10 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Back Button: 4566884815163497300
-      Inventory Panel: 3630869341673875878
-      Inventory UI 1_0: -1368719331745588629
-      Item Slot Frame: 2591365264420786704
+      Back Button: 9097338801133244466
+      Inventory Panel: 6945321831648613733
+      Item Slot Frame: 7460288814081512604
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

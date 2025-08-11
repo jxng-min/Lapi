@@ -22,12 +22,17 @@ public class PlayerAttack : MonoBehaviour, IAttack
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (GameManager.Instance.Event == GameEventType.PLAYING && Input.GetKeyDown(KeyCode.Mouse0))
         {
             Attack();
         }
     }
 
+    private void OnDestroy()
+    {
+        m_equipment_service.OnUpdatedWeapon -= SwapWeapon;
+    }
+    
     #region Methods
     public void Inject(IUserService user_service, IEquipmentService equipment_service, AttackUI[] weapons)
     {
