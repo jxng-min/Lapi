@@ -14,10 +14,10 @@ public class TitleInstaller : MonoBehaviour, IInstaller
 
     public void Install()
     {
-        m_cursor_db.SetCursor(CursorMode.DEFAULT);
-        
         m_start_button.onClick.AddListener(OnClickedStart);
         m_exit_button.onClick.AddListener(OnClickedExit);
+        
+        GameEventBus.Publish(GameEventType.LOGIN);
     }
 
     public void OnClickedStart()

@@ -23,10 +23,9 @@ public class LoadingManager : Singleton<LoadingManager>
     {
         gameObject.SetActive(true);
 
+        GameEventBus.Publish(GameEventType.LOADING);
         SceneManager.sceneLoaded += OnSceneLoaded;
-
         m_target_scene = scene_name;
-
         DIContainer.Clear();
 
         StartCoroutine(LoadSceneProcess());
