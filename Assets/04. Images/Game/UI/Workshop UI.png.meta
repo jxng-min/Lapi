@@ -3,35 +3,35 @@ guid: 6ba88114476390343a267f4fa74b36ec
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -311225850257369732
-    second: Workshop UI 1_0
+      213: 3993624787583399033
+    second: Workshop UI_0
   - first:
-      213: -131646055189862727
-    second: Workshop UI 1_1
+      213: -8092062549303572482
+    second: Workshop UI_1
   - first:
-      213: -8983277447358896536
-    second: Workshop UI 1_2
+      213: -3685297673147135917
+    second: Workshop UI_2
   - first:
-      213: 4159823467548563670
-    second: Workshop UI 1_3
+      213: -6625293353210675166
+    second: Workshop UI_3
   - first:
-      213: -5219507518640973973
-    second: Workshop UI 1_4
+      213: -4429834147182106850
+    second: Workshop UI_4
   - first:
-      213: -8160483842302611431
-    second: Workshop UI 1_5
+      213: -8024239709685397037
+    second: Workshop UI_5
   - first:
-      213: -4347757141623858655
-    second: Workshop UI 1_6
+      213: -896358419837784232
+    second: Workshop UI_6
   - first:
-      213: -3589793880972328050
-    second: Workshop UI 1_7
+      213: -2685618322841345691
+    second: Workshop UI_7
   - first:
-      213: -2796806808740880922
-    second: Workshop UI 1_8
+      213: 6831571566009546273
+    second: Workshop UI_8
   - first:
-      213: -6351406801594278071
-    second: Workshop UI 1_9
+      213: 8650397820667318822
+    second: Workshop UI_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -99,7 +99,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -145,7 +145,7 @@ TextureImporter:
         serializedVersion: 2
         x: 863
         y: 621
-        width: 806
+        width: 801
         height: 701
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -155,8 +155,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c759d76fcbd4eabf0800000000000000
-      internalID: -311225850257369732
+      spriteID: 9747a1ec5943c6730800000000000000
+      internalID: 3993624787583399033
       vertices: []
       indices: 
       edges: []
@@ -177,8 +177,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9b6a35c3c9c4c2ef0800000000000000
-      internalID: -131646055189862727
+      spriteID: ef7c4882cf733bf80800000000000000
+      internalID: -8092062549303572482
       vertices: []
       indices: 
       edges: []
@@ -199,8 +199,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 866256fc1ccf45380800000000000000
-      internalID: -8983277447358896536
+      spriteID: 358cd74ba413bdcc0800000000000000
+      internalID: -3685297673147135917
       vertices: []
       indices: 
       edges: []
@@ -221,8 +221,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6d8d09f6769aab930800000000000000
-      internalID: 4159823467548563670
+      spriteID: 2200f1d2cca3e04a0800000000000000
+      internalID: -6625293353210675166
       vertices: []
       indices: 
       edges: []
@@ -243,8 +243,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b679ce0e0959097b0800000000000000
-      internalID: -5219507518640973973
+      spriteID: e17a05b30511682c0800000000000000
+      internalID: -4429834147182106850
       vertices: []
       indices: 
       edges: []
@@ -265,8 +265,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 910fc387e2320ce80800000000000000
-      internalID: -8160483842302611431
+      spriteID: 3d94e9f8f7c24a090800000000000000
+      internalID: -8024239709685397037
       vertices: []
       indices: 
       edges: []
@@ -287,14 +287,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 12a97d34ae9a9a3c0800000000000000
-      internalID: -4347757141623858655
+      spriteID: 85f632a24ce7f83f0800000000000000
+      internalID: -896358419837784232
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Craft Button
+      name: Purchase Button
       rect:
         serializedVersion: 2
         x: 594
@@ -309,8 +309,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e8306cb1c7d7e2ec0800000000000000
-      internalID: -3589793880972328050
+      spriteID: 561e2c84d54cabad0800000000000000
+      internalID: -2685618322841345691
       vertices: []
       indices: 
       edges: []
@@ -331,14 +331,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6ed1b9b860fbf29d0800000000000000
-      internalID: -2796806808740880922
+      spriteID: 12678a1e42e9ece50800000000000000
+      internalID: 6831571566009546273
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Workshop Slot Disabled Panel
+      name: Workshop Slot Panel Disabled
       rect:
         serializedVersion: 2
         x: 0
@@ -353,8 +353,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 94f19f64a254bd7a0800000000000000
-      internalID: -6351406801594278071
+      spriteID: 62250b27cf26c0870800000000000000
+      internalID: 8650397820667318822
       vertices: []
       indices: 
       edges: []
@@ -363,7 +363,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e96b911eb7769df4d9fab844e42a288e
+    spriteID: 05a88c53e2bbc4f4e8528ade7dbf6370
     internalID: 0
     vertices: []
     indices: 
@@ -373,16 +373,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Back Button: -131646055189862727
-      Craft Button: -3589793880972328050
-      Grid Panel: -5219507518640973973
-      Ingredient Grid: -8160483842302611431
-      Rate Checker: -4347757141623858655
-      Toggle: -8983277447358896536
-      Toggle Checker: 4159823467548563670
-      Workshop Panel: -311225850257369732
-      Workshop Slot Disabled Panel: -6351406801594278071
-      Workshop Slot Panel: -2796806808740880922
+      Back Button: -8092062549303572482
+      Grid Panel: -4429834147182106850
+      Ingredient Grid: -8024239709685397037
+      Purchase Button: -2685618322841345691
+      Rate Checker: -896358419837784232
+      Toggle: -3685297673147135917
+      Toggle Checker: -6625293353210675166
+      Workshop Panel: 3993624787583399033
+      Workshop Slot Panel: 6831571566009546273
+      Workshop Slot Panel Disabled: 8650397820667318822
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

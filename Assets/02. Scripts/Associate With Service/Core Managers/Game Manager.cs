@@ -31,8 +31,10 @@ public class GameManager : Singleton<GameManager>
     {
         m_current_event = GameEventType.LOADING;
         m_cursor_db.SetCursor(CursorMode.WAITING);
-        
+
         Time.timeScale = 1f;
+        
+        ObjectManager.Instance.ReturnObjectsAll();
     }
 
     public void Playing()
