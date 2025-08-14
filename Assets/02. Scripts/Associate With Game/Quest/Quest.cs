@@ -20,6 +20,20 @@ public class Quest : ScriptableObject
     public DialogueQuest[] DialogueQuest => m_dialogue_quest_list;
 
     [Space(10f)]
+    [Header("퀘스트와 관련된 대화")]
+    [Header("퀘스트 시작")]
+    [SerializeField] private int m_start_diaglogue_id;
+    public int StartDialogue => m_start_diaglogue_id;
+
+    [Header("퀘스트 중")]
+    [SerializeField] private int m_progress_dialogue_id;
+    public int ProgressDialogue => m_progress_dialogue_id;
+
+    [Header("퀘스트 완료 가능")]
+    [SerializeField] private int m_can_clear_dialogue_id;
+    public int CanClearDialogue => m_can_clear_dialogue_id;
+
+    [Space(10f)]
     [Header("퀘스트 해금")]
     [Header("퀘스트 해금 레벨")]
     [SerializeField] private int m_quest_level;

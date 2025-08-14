@@ -6,7 +6,7 @@ namespace NPCService
 {
     #region Serialization
     [System.Serializable]
-    public class NPCData
+    public struct NPCData
     {
         public NPCCode Code;
         public string Name;

@@ -70,7 +70,7 @@ namespace EquipmentService
                 var code = m_equipments[offset].Code;
                 if (code == ItemCode.NONE)
                 {
-                    OnUpdatedWeapon?.Invoke(WeaponType.NONE, 3f);
+                    OnUpdatedWeapon?.Invoke(WeaponType.NONE, 2f);
                 }
                 else
                 {

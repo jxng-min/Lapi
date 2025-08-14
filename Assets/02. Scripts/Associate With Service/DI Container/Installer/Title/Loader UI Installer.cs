@@ -1,6 +1,7 @@
 using EquipmentService;
 using InventoryService;
 using KeyService;
+using QuestService;
 using ShortcutService;
 using SkillService;
 using UnityEngine;
@@ -24,30 +25,16 @@ public class LoaderUIInstaller : MonoBehaviour, IInstaller
         var loader_slot_presenters = new LoaderSlotPresenter[loader_slot_views.Length + 1];
         for (int i = 0; i < loader_slot_presenters.Length; i++)
         {
-            if (i == 4)
-            {
-                loader_slot_presenters[i] = new LoaderSlotPresenter(null,
+                loader_slot_presenters[i] = new LoaderSlotPresenter(i == 4 ? null : loader_slot_views[i],
                                                                     ServiceLocator.Get<IUserService>(),
                                                                     ServiceLocator.Get<IInventoryService>(),
                                                                     ServiceLocator.Get<IEquipmentService>(),
                                                                     ServiceLocator.Get<ISkillService>(),
                                                                     ServiceLocator.Get<IKeyService>(),
                                                                     ServiceLocator.Get<IShortcutService>(),
+                                                                    ServiceLocator.Get<IQuestService>(),
                                                                     i,
                                                                     m_is_loader);
-            }
-            else
-            {
-                loader_slot_presenters[i] = new LoaderSlotPresenter(loader_slot_views[i],
-                                                                    ServiceLocator.Get<IUserService>(),
-                                                                    ServiceLocator.Get<IInventoryService>(),
-                                                                    ServiceLocator.Get<IEquipmentService>(),
-                                                                    ServiceLocator.Get<ISkillService>(),
-                                                                    ServiceLocator.Get<IKeyService>(),
-                                                                    ServiceLocator.Get<IShortcutService>(),
-                                                                    i,
-                                                                    m_is_loader);
-            }
         }
 
         var loader_presenter = new LoaderPresenter(m_loader_view, loader_slot_presenters);

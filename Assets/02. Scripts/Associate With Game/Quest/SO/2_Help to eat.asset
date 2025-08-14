@@ -19,6 +19,9 @@ MonoBehaviour:
     m_total_kill_count: 10
   m_item_quest_list: []
   m_dialogue_quest_list: []
+  m_start_diaglogue_id: 8
+  m_progress_dialogue_id: 9
+  m_can_clear_dialogue_id: 10
   m_quest_level: 1
   m_previous_quest_list:
   - {fileID: 11400000, guid: db5850c92b57cbe4bb7daf7924305ebb, type: 2}

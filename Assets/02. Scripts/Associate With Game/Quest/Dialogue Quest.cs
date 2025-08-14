@@ -11,11 +11,12 @@ public class DialogueQuest : BaseQuest
 
     private int m_current_dialogue_count;
 
+    public NPCCode Code => m_npc_code;
     public int Total => m_total_dialogue_count;
     public int Current => m_current_dialogue_count;
 
     public override string GetFormatText()
     {
-        return $"{Mathf.Clamp(Current, 0, Total)}/{Total}";
+        return "";
     }
 }

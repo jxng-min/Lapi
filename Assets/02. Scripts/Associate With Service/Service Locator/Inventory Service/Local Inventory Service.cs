@@ -11,13 +11,7 @@ namespace InventoryService
         public ItemCode Code;
         public int Count;
 
-        public ItemData()
-        {
-            Code = ItemCode.NONE;
-            Count = 0;
-        }
-
-        public ItemData(ItemCode code, int count)
+        public ItemData(ItemCode code = ItemCode.NONE, int count = 0)
         {
             Code = code;
             Count = count;

@@ -19,6 +19,9 @@ MonoBehaviour:
   - m_subquest_id: 0
     m_npc_code: 2
     m_total_dialogue_count: 1
+  m_start_diaglogue_id: 2
+  m_progress_dialogue_id: -1
+  m_can_clear_dialogue_id: 3
   m_quest_level: 1
   m_previous_quest_list: []
   m_gold: 0

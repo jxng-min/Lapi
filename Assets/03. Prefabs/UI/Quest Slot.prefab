@@ -267,6 +267,7 @@ GameObject:
   - component: {fileID: 1291820119117752230}
   - component: {fileID: 3269922093859840226}
   - component: {fileID: 3863234739024182468}
+  - component: {fileID: 3188451707765277754}
   m_Layer: 5
   m_Name: Quest Slot
   m_TagString: Untagged
@@ -336,6 +337,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3188451707765277754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5284621832123066758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37918991b432700438024aa9867a1007, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_quest_title_label: {fileID: 3141487317271736501}
+  m_quest_state_label: {fileID: 615209075636117972}
+  m_compact_button: {fileID: 288061994602717993}
+  m_info_button: {fileID: 1056716435506457043}
+  m_nav_button: {fileID: 6624494929125458262}
 --- !u!1 &5423376071148208568
 GameObject:
   m_ObjectHideFlags: 0

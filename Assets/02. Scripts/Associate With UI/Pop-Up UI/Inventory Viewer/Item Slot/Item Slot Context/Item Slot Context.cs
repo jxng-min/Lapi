@@ -84,7 +84,7 @@ public class ItemSlotContext : IItemSlotContext
             SlotType.Skill                  => m_skill_service.GetSkill(offset),
             SlotType.Shortcut               => m_shortcut_service.GetItem(offset),
             SlotType.Shop or SlotType.Craft => new ItemData(m_item_db.GetItem((ItemCode)offset).Code, count),
-            _                               => null
+            _                               => null,
         };
     }
 

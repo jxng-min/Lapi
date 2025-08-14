@@ -11,11 +11,12 @@ public class ItemQuest : BaseQuest
 
     private int m_current_item_count;
 
+    public ItemCode Code => m_item_code;
     public int Total => m_current_item_count;
     public int Current => m_current_item_count;
 
     public override string GetFormatText()
     {
-        return $"{Mathf.Clamp(Current, 0, Total)}/{Total}";
+        return $"[{Mathf.Clamp(Current, 0, Total)}/{Total}]";
     }
 }

@@ -6,7 +6,7 @@ namespace EXPService
 {
     #region Serialization
     [System.Serializable]
-    public class EXPData
+    public struct EXPData
     {
         public int Level;
         public int EXP;
