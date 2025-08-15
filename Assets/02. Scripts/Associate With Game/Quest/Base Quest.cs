@@ -9,5 +9,5 @@ public abstract class BaseQuest
     public int ID => m_subquest_id;
     public bool Clear { get; set; }
 
-    public abstract string GetFormatText();
+    public abstract string GetFormatText(int count);
 }

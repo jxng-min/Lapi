@@ -73,6 +73,8 @@ public class EnemyStatus : MonoBehaviour
         m_controller.Rigidbody.simulated = false;
         m_controller.Collider.enabled = false;
 
+        m_controller.QuestService.UpdateKillCount(m_controller.SO.Code, 1);
+
         StartCoroutine(SetDeath());
 
         OnDead?.Invoke(m_controller);

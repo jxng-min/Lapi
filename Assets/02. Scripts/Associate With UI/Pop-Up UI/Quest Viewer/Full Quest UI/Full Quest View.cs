@@ -35,6 +35,11 @@ public class FullQuestView : MonoBehaviour, IFullQuestView
         m_full_quest_slot_views = new();
     }
 
+    private void OnDestroy()
+    {
+        m_presenter.Dispose();
+    }
+
     public void Inject(FullQuestPresenter presenter)
     {
         m_presenter = presenter;
@@ -55,22 +60,19 @@ public class FullQuestView : MonoBehaviour, IFullQuestView
         m_animator.SetBool("Open", false);
     }
 
-    public void AddSlot()
+    public IFullQuestSlotView AddSlot()
     {
         var slot_obj = Instantiate(m_slot_prefab, m_slot_root);
 
         var slot_view = slot_obj.GetComponent<FullQuestSlotView>();
         m_full_quest_slot_views.Add(slot_view);
+
+        return slot_view;
     }
 
     public void UpdateInfo(string info)
     {
         m_view_label.text = info;
-    }
-
-    public IFullQuestSlotView GetSlot(int offset)
-    {
-        return m_full_quest_slot_views[offset];
     }
 
     public void PopupCloseUI()

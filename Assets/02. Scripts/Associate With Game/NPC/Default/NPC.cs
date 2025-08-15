@@ -185,6 +185,7 @@ public class NPC : MonoBehaviour
                 case QuestState.CAN_CLEAR:
                     m_quest_service.UpdateQuestState(quest.ID, QuestState.CLEARED);
                     m_quest_service.ClaimReward(quest);
+                    m_quest_service.ClaimSubmit(quest);
                     break;
             }
         }

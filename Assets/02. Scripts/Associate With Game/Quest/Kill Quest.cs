@@ -9,14 +9,11 @@ public class KillQuest : BaseQuest
     [Header("총 처치 횟수")]
     [SerializeField] private int m_total_kill_count;
 
-    private int m_current_kill_count;
-
     public EnemyCode Code => m_enemy_code;
     public int Total => m_total_kill_count;
-    public int Current => m_current_kill_count;
 
-    public override string GetFormatText()
+    public override string GetFormatText(int count)
     {
-        return $"[{Mathf.Clamp(Current, 0, Total)}/{Total}]";
+        return $"[{Mathf.Clamp(count, 0, Total)}/{Total}]";
     }
 }

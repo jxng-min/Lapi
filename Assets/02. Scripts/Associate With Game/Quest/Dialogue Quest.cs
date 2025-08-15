@@ -9,13 +9,10 @@ public class DialogueQuest : BaseQuest
     [Header("총 대화 횟수")]
     [SerializeField] private int m_total_dialogue_count;
 
-    private int m_current_dialogue_count;
-
     public NPCCode Code => m_npc_code;
     public int Total => m_total_dialogue_count;
-    public int Current => m_current_dialogue_count;
 
-    public override string GetFormatText()
+    public override string GetFormatText(int count)
     {
         return "";
     }

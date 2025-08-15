@@ -1,4 +1,5 @@
 using InventoryService;
+using QuestService;
 using UnityEngine;
 
 public class FieldItem : FieldObject
@@ -7,21 +8,26 @@ public class FieldItem : FieldObject
     [Header("아이템 이미지")]
     [SerializeField] private SpriteRenderer m_item_image;
     private IInventoryService m_inventory_service;
+    private IQuestService m_quest_service;
 
     public Item Item { get; set; }
 
-    public void Initialize(Item item, IInventoryService inventory_service)
+    public void Initialize(Item item,
+                           IInventoryService inventory_service,
+                           IQuestService quest_service)
     {
         Item = item;
         m_item_image.sprite = item.Sprite;
 
         m_inventory_service = inventory_service;
+        m_quest_service = quest_service;
     }
 
     protected override void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.CompareTag("Player"))
         {
+            m_quest_service.UpdateItemCount(Item.Code);
             m_inventory_service.AddItem(Item.Code, 1);
             ObjectManager.Instance.ReturnObject(gameObject, ObjectType.ITEM);
         }

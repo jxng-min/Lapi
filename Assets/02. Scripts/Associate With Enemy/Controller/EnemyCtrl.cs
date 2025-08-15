@@ -1,4 +1,5 @@
 using InventoryService;
+using QuestService;
 using UnityEngine;
 using UserService;
 
@@ -26,6 +27,7 @@ public class EnemyCtrl : MonoBehaviour
 
     public IInventoryService InventoryService { get; private set; }
     public IUserService UserService { get; private set; }
+    public IQuestService QuestService { get; private set; }
 
     public Animator Animator { get; private set; }
     public Rigidbody2D Rigidbody { get; private set; }
@@ -74,12 +76,14 @@ public class EnemyCtrl : MonoBehaviour
     public void Initialize(Enemy so,
                            IInventoryService inventory_service,
                            IUserService user_service,
+                           IQuestService quest_service,
                            PlayerCtrl player_ctrl)
     {
         SO = so;
 
         InventoryService = inventory_service;
         UserService = user_service;
+        QuestService = quest_service;
         Player = player_ctrl;
 
         Animator.runtimeAnimatorController = SO.Animator;

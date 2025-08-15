@@ -1,5 +1,5 @@
 public interface ICompactQuestView
 {
-    void AddSlot();
-    //ICompactSlotView GetSlot(int offset);
+    void Inject(CompactQuestPresenter presenter);
+    ICompactQuestSlotView AddSlot();
 }

@@ -12,12 +12,15 @@ public class FullQuestSlotPresenter : IDisposable
     private readonly Quest m_quest;
     private readonly QuestData m_quest_data;
 
+    private readonly CompactQuestSlotPresenter m_compact_quest_slot_presenter;
+
     public QuestState State => m_quest_service.GetQuestState(m_quest.ID);
 
     public FullQuestSlotPresenter(IFullQuestView quest_view,
                                   IFullQuestSlotView view,
                                   IQuestService quest_service,
                                   IQuestDataService quest_data_service,
+                                  CompactQuestPresenter compact_quest_presenter,
                                   Quest quest,
                                   QuestData quest_data)
     {
@@ -31,6 +34,8 @@ public class FullQuestSlotPresenter : IDisposable
 
         m_quest = quest;
         m_quest_data = quest_data;
+
+        m_compact_quest_slot_presenter = compact_quest_presenter.GetCompactSlotPresenter(m_quest.ID);
 
         m_quest_service.InitializeQuest(m_quest.ID);
         m_quest_service.UpdateQuest(m_quest.ID);
@@ -71,7 +76,7 @@ public class FullQuestSlotPresenter : IDisposable
 
     public void OnClickedCompact()
     {
-        m_quest_service.OnUpdatedState -= Updates;
+        m_compact_quest_slot_presenter.Toggle();
     }
 
     public void OnClickedInfo()
@@ -81,7 +86,7 @@ public class FullQuestSlotPresenter : IDisposable
 
     public void OnCLickedNavigation()
     {
-
+        
     }
 
     public void ToggleSlot(bool active)

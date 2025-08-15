@@ -1,4 +1,5 @@
 using InventoryService;
+using QuestService;
 using UnityEngine;
 using UserService;
 
@@ -13,6 +14,7 @@ public class EnemySpawnerInstaller : MonoBehaviour, IInstaller
         {
             spawners[i].Inject(ServiceLocator.Get<IInventoryService>(),
                                ServiceLocator.Get<IUserService>(),
+                               ServiceLocator.Get<IQuestService>(),
                                DIContainer.Resolve<ICursorDataBase>(),
                                DIContainer.Resolve<PlayerCtrl>());
         }

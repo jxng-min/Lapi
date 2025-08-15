@@ -159,6 +159,16 @@ namespace QuestService
             m_user_service.UpdateLevel(quest.RewardEXP);
         }
 
+        public void ClaimSubmit(Quest quest)
+        {
+            var item_quests = quest.ItemQuest;
+
+            for (int i = 0; i < item_quests.Length; i++)
+            {
+                m_inventory_service.RemoveItem(item_quests[i].Code, item_quests[i].Total); 
+            }
+        }
+
         public void AddQuest(Quest quest)
         {
             var temp_kill_subquests = new List<KillQuestData>();
@@ -278,6 +288,8 @@ namespace QuestService
                         {
                             kill_quest_data.Clear = true;
                         }
+
+                        UpdateQuest(quest_data.ID);
                     }
                 }
             }
@@ -309,6 +321,8 @@ namespace QuestService
                         var item_quest_data = GetItemQuestData(quest_data.ID, item_quest.ID);
                         item_quest_data.Clear = true;
                     }
+
+                    UpdateQuest(quest_data.ID);
                 }
             }
         }

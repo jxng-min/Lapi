@@ -4,7 +4,6 @@ public interface IFullQuestView : IPopupView
     void OpenUI();
     void CloseUI();
 
-    void AddSlot();
-    IFullQuestSlotView GetSlot(int offset);
+    IFullQuestSlotView AddSlot();
     void UpdateInfo(string info);
 }

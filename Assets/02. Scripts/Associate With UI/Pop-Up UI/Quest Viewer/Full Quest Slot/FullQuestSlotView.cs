@@ -21,6 +21,11 @@ public class FullQuestSlotView : MonoBehaviour, IFullQuestSlotView
 
     private FullQuestSlotPresenter m_presenter;
 
+    private void OnDestroy()
+    {
+        m_presenter.Dispose();
+    }
+
     public void Inject(FullQuestSlotPresenter presenter)
     {
         m_presenter = presenter;

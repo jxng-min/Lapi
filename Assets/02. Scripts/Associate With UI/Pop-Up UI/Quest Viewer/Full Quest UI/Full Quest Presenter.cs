@@ -8,16 +8,20 @@ public class FullQuestPresenter : IDisposable, IPopupPresenter
     private readonly IFullQuestView m_view;
     private readonly IQuestService m_quest_service;
     private readonly IQuestDataService m_quest_data_service;
+    private readonly CompactQuestPresenter m_compact_quest_presenter;
 
     private List<FullQuestSlotPresenter> m_full_quest_slot_presenters;
 
     public FullQuestPresenter(IFullQuestView view,
                               IQuestService quest_service,
-                              IQuestDataService quest_data_service)
+                              IQuestDataService quest_data_service,
+                              CompactQuestPresenter compact_quest_presenter)
     {
         m_view = view;
         m_quest_service = quest_service;
         m_quest_data_service = quest_data_service;
+        m_compact_quest_presenter = compact_quest_presenter;
+        
         m_full_quest_slot_presenters = new();
 
         m_quest_service.OnAddedQuest += AddQuest;
@@ -39,13 +43,13 @@ public class FullQuestPresenter : IDisposable, IPopupPresenter
 
     public void AddQuest(Quest quest, QuestData quest_data)
     {
-        m_view.AddSlot();
-        var full_quest_slot_view = m_view.GetSlot(m_full_quest_slot_presenters.Count);
+        var full_quest_slot_view = m_view.AddSlot();
 
         var full_quest_slot_presenter = new FullQuestSlotPresenter(m_view,
                                                                    full_quest_slot_view,
                                                                    m_quest_service,
                                                                    m_quest_data_service,
+                                                                   m_compact_quest_presenter,
                                                                    quest,
                                                                    quest_data);
         full_quest_slot_presenter.Initialize();
@@ -78,9 +82,5 @@ public class FullQuestPresenter : IDisposable, IPopupPresenter
     public void Dispose()
     {
         m_quest_service.OnAddedQuest -= AddQuest;
-        foreach (var presenter in m_full_quest_slot_presenters)
-        {
-            presenter.Dispose();
-        }
     }
 }

@@ -9,14 +9,11 @@ public class ItemQuest : BaseQuest
     [Header("총 획득 횟수")]
     [SerializeField] private int m_total_item_count;
 
-    private int m_current_item_count;
-
     public ItemCode Code => m_item_code;
-    public int Total => m_current_item_count;
-    public int Current => m_current_item_count;
+    public int Total => m_total_item_count;
 
-    public override string GetFormatText()
+    public override string GetFormatText(int count)
     {
-        return $"[{Mathf.Clamp(Current, 0, Total)}/{Total}]";
+        return $"[{Mathf.Clamp(count, 0, Total)}/{Total}]";
     }
 }

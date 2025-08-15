@@ -14,6 +14,7 @@ namespace QuestService
         void Inject(IQuestDataBase quest_db);
 
         void ClaimReward(Quest quest);
+        void ClaimSubmit(Quest quest);
         void InitializeQuest(int quest_id);
 
         void AddQuest(Quest quest);
