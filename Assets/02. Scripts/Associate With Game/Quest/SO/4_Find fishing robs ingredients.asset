@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a51ba9a1dc3196d458d78a21c9f99d0e, type: 3}
+  m_Name: 4_Find fishing robs ingredients
+  m_EditorClassIdentifier: 
+  m_quest_id: 4
+  m_kill_quest_list:
+  - m_subquest_id: 0
+    m_enemy_code: 1
+    m_total_kill_count: 15
+  m_item_quest_list:
+  - m_subquest_id: 1
+    m_item_code: 401
+    m_total_item_count: 10
+  - m_subquest_id: 2
+    m_item_code: 403
+    m_total_item_count: 5
+  m_dialogue_quest_list: []
+  m_start_diaglogue_id: 16
+  m_progress_dialogue_id: 17
+  m_can_clear_dialogue_id: 18
+  m_quest_level: 3
+  m_previous_quest_list:
+  - {fileID: 11400000, guid: 2cf20de22f7284347b9a7ca3cd040888, type: 2}
+  m_gold: 700
+  m_exp: 500
+  m_item_list:
+  - Code: 1
+    Count: 10

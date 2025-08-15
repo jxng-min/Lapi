@@ -71,8 +71,8 @@ public class WorkshopSlotView : MonoBehaviour, IWorkshopSlotView
 
     private IEnumerator Co_Crafting(float craft_time)
     {
-        m_craft_button.interactable = false;
         m_presenter.ConsumeIngredient();
+        m_craft_button.interactable = false;
 
         float elapsed_time = 0f;
 
