@@ -7,6 +7,8 @@ using InventoryService;
 using ItemDataService;
 using KeyService;
 using NPCService;
+using QuestDataService;
+using QuestService;
 using ShortcutService;
 using SkillService;
 using UserService;
@@ -29,6 +31,8 @@ public static class ServiceLocator
         Register<IShortcutService>(new LocalShortcutService());
         Register<INPCService>(new LocalNPCService());
         Register<IDialogueService>(new LocalDialogueService());
+        Register<IQuestDataService>(new LocalQuestDataService());
+        Register<IQuestService>(new LocalQuestService());
     }
 
     public static void Register<T>(T service)

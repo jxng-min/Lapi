@@ -13,17 +13,15 @@ public class Merchant : NPC, IDisposable
 
     private ShopPresenter m_shop_presenter;
 
-    private void OnDestroy()
+    protected override void OnDestroy()
     {
+        base.OnDestroy();
         Dispose();
     }
 
     public void Inject(ShopPresenter shop_presenter)
     {
         m_shop_presenter = shop_presenter;
-
-        OnCompletedDialogue += InjectToShop;
-        OnCompletedDialogue += OpenShop;
     }
 
     public override void Interaction()
@@ -35,6 +33,23 @@ public class Merchant : NPC, IDisposable
 
         Rotation();
         OpenDialogue();
+    }
+
+    protected override void OpenDialogue()
+    {
+        if (IsExistQuest(out var quest))
+        {
+            DialogueAboutQuest(quest);
+        }
+        else
+        {
+            OnCompletedDialogue -= InjectToShop;
+            OnCompletedDialogue += InjectToShop;
+
+            OnCompletedDialogue -= OpenShop;
+            OnCompletedDialogue += OpenShop;
+            Dialogue(m_dialogue_id);
+        }
     }
 
     private void InjectToShop()

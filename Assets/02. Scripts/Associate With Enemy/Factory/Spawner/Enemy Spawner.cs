@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using InventoryService;
+using QuestService;
 using UnityEngine;
 using UserService;
 
@@ -8,6 +9,7 @@ public class EnemySpawner : MonoBehaviour
 {
     private IInventoryService m_inventory_service;
     private IUserService m_user_service;
+    private IQuestService m_quest_service;
     private ICursorDataBase m_cursor_db;
     private PlayerCtrl m_player_ctrl;
 
@@ -48,11 +50,13 @@ public class EnemySpawner : MonoBehaviour
 
     public void Inject(IInventoryService inventory_service,
                        IUserService user_service,
+                       IQuestService quest_service,
                        ICursorDataBase cursor_db,
                        PlayerCtrl player_ctrl)
     {
         m_inventory_service = inventory_service;
         m_user_service = user_service;
+        m_quest_service = quest_service;
         m_cursor_db = cursor_db;
         m_player_ctrl = player_ctrl;
     }
@@ -105,6 +109,7 @@ public class EnemySpawner : MonoBehaviour
         enemy_ctrl.Initialize(so,
                               m_inventory_service,
                               m_user_service,
+                              m_quest_service,
                               m_player_ctrl);
 
         enemy_ctrl.GetComponent<EnemyMouseDetector>().Inject(m_cursor_db);

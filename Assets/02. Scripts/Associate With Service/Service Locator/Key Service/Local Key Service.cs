@@ -7,7 +7,7 @@ namespace KeyService
 {
     #region Serialization
     [System.Serializable]
-    public class KeyData
+    public struct KeyData
     {
         public string Name;
         public KeyCode Code;

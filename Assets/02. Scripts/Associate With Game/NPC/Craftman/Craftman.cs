@@ -17,8 +17,6 @@ public class Craftman : NPC, IDisposable
     {
         m_workshop_presenter = workshop_presenter;
 
-        OnCompletedDialogue += InjectToWorkshop;
-        OnCompletedDialogue += OpenWorkshop;
     }
 
     public override void Interaction()
@@ -28,10 +26,25 @@ public class Craftman : NPC, IDisposable
             return;
         }
 
-        
-
         Rotation();
         OpenDialogue();
+    }
+
+    protected override void OpenDialogue()
+    {
+        if (IsExistQuest(out var quest))
+        {
+            DialogueAboutQuest(quest);
+        }
+        else
+        {
+            OnCompletedDialogue -= InjectToWorkshop;
+            OnCompletedDialogue += InjectToWorkshop;
+
+            OnCompletedDialogue -= OpenWorkshop;
+            OnCompletedDialogue += OpenWorkshop;
+            Dialogue(m_dialogue_id);
+        }
     }
 
     private void InjectToWorkshop()

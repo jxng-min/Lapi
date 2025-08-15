@@ -10,12 +10,12 @@ namespace UserService
         public float HP;
         public float MP;
 
-        public StatusData()
+        public StatusData(int level = 1, int exp = 0, float hp = 500f, float mp = 300f)
         {
-            Level = 1;
-            EXP = 0;
-            HP = 500f;
-            MP = 300f;
+            Level = level;
+            EXP = exp;
+            HP = hp;
+            MP = mp;
         }
     }
 

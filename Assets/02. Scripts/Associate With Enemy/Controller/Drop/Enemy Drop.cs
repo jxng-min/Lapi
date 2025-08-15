@@ -109,7 +109,7 @@ public class EnemyDrop : MonoBehaviour
                 item_obj.transform.position = transform.position;
 
                 var field_item = item_obj.GetComponent<FieldItem>();
-                field_item.Initialize(item.Item, m_controller.InventoryService);
+                field_item.Initialize(item.Item, m_controller.InventoryService, m_controller.QuestService);
             }
         }
     }

@@ -72,6 +72,8 @@ public class KeyBinderSlotView : MonoBehaviour
                             }
                             m_wrong_key_coroutine = StartCoroutine(Co_WrongKey());
                         }
+
+                        break;
                     }
                 }
 

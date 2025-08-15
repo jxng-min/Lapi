@@ -1,5 +1,6 @@
 using InventoryService;
 using NPCService;
+using QuestService;
 using UnityEngine;
 using UserService;
 
@@ -26,7 +27,9 @@ public class NPCInstaller : MonoBehaviour, IInstaller
         foreach (var npc in npcs)
         {
             npc.Inject(name_tag_presenter);
-            npc.GetComponent<NPC>().Inject(DIContainer.Resolve<DialoguePresenter>());
+            npc.GetComponent<NPC>().Inject(DIContainer.Resolve<DialoguePresenter>(),
+                                           ServiceLocator.Get<IUserService>(),
+                                           ServiceLocator.Get<IQuestService>());
         }
 
         InstallMerchant();

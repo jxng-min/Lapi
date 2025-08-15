@@ -6,7 +6,7 @@ namespace ItemDataService
 {
     #region Serialization
     [System.Serializable]
-    public class ItemData
+    public struct ItemData
     {
         public ItemCode Code;
         public string Name;

@@ -1,0 +1,19 @@
+using UnityEngine;
+
+[System.Serializable]
+public class DialogueQuest : BaseQuest
+{
+    [Header("NPC 코드")]
+    [SerializeField] private NPCCode m_npc_code;
+
+    [Header("총 대화 횟수")]
+    [SerializeField] private int m_total_dialogue_count;
+
+    public NPCCode Code => m_npc_code;
+    public int Total => m_total_dialogue_count;
+
+    public override string GetFormatText(int count)
+    {
+        return "";
+    }
+}
