@@ -23,6 +23,9 @@ public class NPC : MonoBehaviour
     [Header("NPC가 가지는 퀘스트 목록")]
     [SerializeField] private Quest[] m_quests;
 
+    [Header("퀘스트 버블")]
+    [SerializeField] private Animator m_quest_bubble;
+
     public Action OnCompletedDialogue;
     private Animator m_animator;
     protected DialoguePresenter m_dialogue_presenter;
@@ -46,8 +49,11 @@ public class NPC : MonoBehaviour
 
     protected virtual void OnDestroy()
     {
+        m_user_service.OnUpdatedLevel -= UpdateBubble;
+        m_quest_service.OnUpdatedState -= UpdateBubble;
+
         OnCompletedDialogue -= ResetDirection;
-        OnCompletedDialogue -= UpdateQuestProgress;        
+        OnCompletedDialogue -= UpdateQuestProgress;
     }
 
     public void Inject(DialoguePresenter dialogue_presenter,
@@ -57,6 +63,10 @@ public class NPC : MonoBehaviour
         m_dialogue_presenter = dialogue_presenter;
         m_user_service = user_service;
         m_quest_service = quest_service;
+
+        m_user_service.OnUpdatedLevel += UpdateBubble;
+        m_quest_service.OnUpdatedState += UpdateBubble;
+        UpdateBubble(0, QuestState.NONE);
     }
 
     public virtual void Interaction()
@@ -147,7 +157,7 @@ public class NPC : MonoBehaviour
                 {
                     continue;
                 }
-                
+
                 for (int j = 0; j < m_quests[i].Previous.Length; j++)
                 {
                     if (m_quest_service.GetQuestState(m_quests[i].Previous[j].ID) != QuestState.CLEARED)
@@ -188,6 +198,24 @@ public class NPC : MonoBehaviour
                     m_quest_service.ClaimSubmit(quest);
                     break;
             }
+        }
+    }
+
+    private void UpdateBubble(int no_used_arg1, int no_used_arg2)
+    {
+        UpdateBubble(no_used_arg1, QuestState.NONE);
+    }
+
+    private void UpdateBubble(int no_used_arg1, QuestState no_used_arg2)
+    {
+        if (IsExistQuest(out var temp_quest))
+        {
+            var state = m_quest_service.GetQuestState(temp_quest.ID);
+            m_quest_bubble.SetFloat("State", (int)state + 1);
+        }
+        else
+        {
+            m_quest_bubble.SetFloat("State", 0);
         }
     }
 }
