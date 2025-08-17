@@ -21,8 +21,7 @@ public class FullQuestSlotPresenter : IDisposable
                                   IQuestService quest_service,
                                   IQuestDataService quest_data_service,
                                   CompactQuestPresenter compact_quest_presenter,
-                                  Quest quest,
-                                  QuestData quest_data)
+                                  Quest quest)
     {
         m_quest_view = quest_view;
         m_view = view;
@@ -33,7 +32,7 @@ public class FullQuestSlotPresenter : IDisposable
         m_quest_data_service = quest_data_service;
 
         m_quest = quest;
-        m_quest_data = quest_data;
+        m_quest_data = m_quest_service.GetQuest(m_quest.ID);
 
         m_compact_quest_slot_presenter = compact_quest_presenter.GetCompactSlotPresenter(m_quest.ID);
 

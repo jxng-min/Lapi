@@ -1,5 +1,3 @@
-using ShortcutService;
-
 public class ShortcutPresenter : IPopupPresenter
 {
     private readonly IShortcutView m_view;

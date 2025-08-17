@@ -28,8 +28,10 @@ public class CompactQuestPresenter : IDisposable
         m_view.Inject(this);
     }
 
-    public void AddQuest(Quest quest, QuestData quest_data)
+    public void AddQuest(Quest quest)
     {
+        var quest_data = m_quest_service.GetQuest(quest.ID);
+
         if (quest_data.State == QuestState.CLEARED)
         {
             return;
@@ -41,8 +43,7 @@ public class CompactQuestPresenter : IDisposable
                                                                    m_quest_service,
                                                                    m_quest_data_service,
                                                                    m_quest_db,
-                                                                   quest,
-                                                                   quest_data);
+                                                                   quest);
         compact_slot_presenter.Initialize();
         m_compact_slot_presenters.Add(compact_slot_presenter);
     }

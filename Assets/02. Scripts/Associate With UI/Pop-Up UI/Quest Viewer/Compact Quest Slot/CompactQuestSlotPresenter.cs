@@ -21,8 +21,7 @@ public class CompactQuestSlotPresenter: IDisposable
                                      IQuestService quest_service,
                                      IQuestDataService quest_data_service,
                                      IQuestDataBase quest_db,
-                                     Quest quest,
-                                     QuestData quest_data)
+                                     Quest quest)
     {
         m_view = view;
 
@@ -31,7 +30,7 @@ public class CompactQuestSlotPresenter: IDisposable
         m_quest_db = quest_db;
 
         m_quest = quest;
-        m_quest_data = quest_data;
+        m_quest_data = m_quest_service.GetQuest(m_quest.ID);
 
         m_quest_service.OnUpdatedState += Updates;
 

@@ -96,7 +96,7 @@ namespace QuestService
         private IUserService m_user_service;
         private IQuestDataBase m_quest_db;
 
-        public event Action<Quest, QuestData> OnAddedQuest;
+        public event Action<Quest> OnAddedQuest;
         public event Action<int, QuestState> OnUpdatedState;
 
 
@@ -133,7 +133,7 @@ namespace QuestService
             foreach (var quest_data in m_quest_dict.Values)
             {
                 var quest = m_quest_db.GetQuest(quest_data.ID);
-                OnAddedQuest?.Invoke(quest, quest_data);
+                OnAddedQuest?.Invoke(quest);
             }
         }
 
@@ -195,7 +195,7 @@ namespace QuestService
             var new_quest_data = new QuestData(quest.ID, QuestState.IN_PROGRESS, kill_subquests, item_subquests, dialogue_subquests);
             m_quest_dict.TryAdd(new_quest_data.ID, new_quest_data);
 
-            OnAddedQuest?.Invoke(quest, new_quest_data);
+            OnAddedQuest?.Invoke(quest);
         }
 
         public void RemoveQuest(int quest_id)

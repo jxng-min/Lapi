@@ -6,4 +6,5 @@ public enum NPCCode
     LUCY = 3,
     BELL = 4,
     MIO = 5,
+    NICK = 6,
 }

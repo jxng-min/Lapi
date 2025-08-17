@@ -4,7 +4,7 @@ namespace QuestService
 {
     public interface IQuestService
     {
-        event Action<Quest, QuestData> OnAddedQuest;
+        event Action<Quest> OnAddedQuest;
         event Action<int, QuestState> OnUpdatedState;
 
         QuestData GetQuest(int quest_id);

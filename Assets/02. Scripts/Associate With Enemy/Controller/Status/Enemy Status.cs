@@ -149,7 +149,7 @@ public class EnemyStatus : MonoBehaviour
     private IEnumerator SetDeath()
     {
         float elapsed_time = 0f;
-        float target_time = 1.5f;
+        float target_time = 0.5f;
 
         while (elapsed_time <= target_time)
         {

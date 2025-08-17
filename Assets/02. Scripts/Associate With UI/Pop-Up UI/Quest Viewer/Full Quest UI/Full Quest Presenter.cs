@@ -41,7 +41,7 @@ public class FullQuestPresenter : IDisposable, IPopupPresenter
         m_view.CloseUI();
     }
 
-    public void AddQuest(Quest quest, QuestData quest_data)
+    public void AddQuest(Quest quest)
     {
         var full_quest_slot_view = m_view.AddSlot();
 
@@ -50,8 +50,7 @@ public class FullQuestPresenter : IDisposable, IPopupPresenter
                                                                    m_quest_service,
                                                                    m_quest_data_service,
                                                                    m_compact_quest_presenter,
-                                                                   quest,
-                                                                   quest_data);
+                                                                   quest);
         full_quest_slot_presenter.Initialize();
         m_full_quest_slot_presenters.Add(full_quest_slot_presenter);
     }

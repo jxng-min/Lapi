@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using QuestService;
 using UnityEngine;
 
 namespace InventoryService
@@ -41,6 +42,7 @@ namespace InventoryService
     public class LocalInventoryService : ISaveable, IInventoryService
     {
         private IItemDataBase m_item_db;
+        private IQuestService m_quest_service;
 
         private int m_money;
         private ItemData[] m_items;
@@ -93,6 +95,7 @@ namespace InventoryService
         public void Inject(IItemDataBase item_db)
         {
             m_item_db = item_db;
+            m_quest_service = ServiceLocator.Get<IQuestService>();
         }
 
         public void InitializeSlot(int offset)
@@ -126,6 +129,7 @@ namespace InventoryService
                         m_items[i].Count += count;
 
                         OnUpdatedSlot?.Invoke(i, m_items[i]);
+                        m_quest_service.UpdateItemCount(code);
                         return;
                     }
                 }
@@ -139,6 +143,7 @@ namespace InventoryService
                     m_items[i].Count = count;
 
                     OnUpdatedSlot?.Invoke(i, m_items[i]);
+                    m_quest_service.UpdateItemCount(code);
                     return;
                 }
             }

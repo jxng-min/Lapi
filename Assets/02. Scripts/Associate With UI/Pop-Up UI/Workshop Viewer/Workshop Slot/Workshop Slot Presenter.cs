@@ -61,6 +61,11 @@ public class WorkshopSlotPresenter : IDisposable
 
     public void UpdateUI(int offset, ItemData item_data)
     {
+        if (m_is_crafting)
+        {
+            return;
+        }
+        
         m_view.UpdateUI(CheckCanCraft(), m_user_service.Status.Level < m_receipe.Constraint, m_receipe.Constraint);
     }
 
