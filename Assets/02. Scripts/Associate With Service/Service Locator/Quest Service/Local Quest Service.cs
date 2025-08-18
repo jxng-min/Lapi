@@ -364,7 +364,7 @@ namespace QuestService
             }
         }
 
-        private KillQuestData GetKillQuestData(int quest_id, int subquest_id)
+        public KillQuestData GetKillQuestData(int quest_id, int subquest_id)
         {
             if (m_quest_dict.TryGetValue(quest_id, out var quest_data))
             {
@@ -382,7 +382,7 @@ namespace QuestService
             return null;
         }
 
-        private ItemQuestData GetItemQuestData(int quest_id, int subquest_id)
+        public ItemQuestData GetItemQuestData(int quest_id, int subquest_id)
         {
             if (m_quest_dict.TryGetValue(quest_id, out var quest_data))
             {

@@ -103,6 +103,7 @@ public class CompactQuestSlotPresenter: IDisposable
         {
             if (subquests[i].ID == format_id)
             {
+                UnityEngine.Debug.Log($"{format_id}, {GetCurrentProcess(subquests[i].ID)}");
                 return subquests[i].GetFormatText(GetCurrentProcess(subquests[i].ID));
             }
         }
@@ -112,20 +113,14 @@ public class CompactQuestSlotPresenter: IDisposable
 
     private int GetCurrentProcess(int subquest_id)
     {
-        for (int i = 0; i < m_quest_data.KillQuests.Length; i++)
+        if (m_quest_service.GetKillQuestData(m_quest.ID, subquest_id) != null)
         {
-            if (m_quest_data.KillQuests[i].ID == subquest_id)
-            {
-                return m_quest_data.KillQuests[i].Count;
-            }
+            return m_quest_service.GetKillQuestData(m_quest.ID, subquest_id).Count;
         }
 
-        for (int i = 0; i < m_quest_data.ItemQuests.Length; i++)
+        if (m_quest_service.GetItemQuestData(m_quest.ID, subquest_id) != null)
         {
-            if (m_quest_data.ItemQuests[i].ID == subquest_id)
-            {
-                return m_quest_data.ItemQuests[i].Count;
-            }
+            return m_quest_service.GetItemQuestData(m_quest.ID, subquest_id).Count;
         }
 
         return 1;
