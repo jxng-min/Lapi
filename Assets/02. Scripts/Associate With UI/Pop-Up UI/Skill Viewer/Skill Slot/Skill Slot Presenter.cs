@@ -50,7 +50,7 @@ public class SkillSlotPresenter : IDisposable
 
             m_view.UpdateUI(item.Name,
                             item_data.Count,
-                            m_skill_service.SkillPoint > 0,
+                            0 < m_skill_service.SkillPoint && item_data.Count < 20,
                             item.Constraint <= player_level,
                             item.Constraint);
         }
