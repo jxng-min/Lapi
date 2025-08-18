@@ -4,7 +4,7 @@ namespace QuestService
 {
     public interface IQuestService
     {
-        event Action<Quest, QuestData> OnAddedQuest;
+        event Action<Quest> OnAddedQuest;
         event Action<int, QuestState> OnUpdatedState;
 
         QuestData GetQuest(int quest_id);
@@ -26,5 +26,8 @@ namespace QuestService
         void UpdateKillCount(EnemyCode enemy_code, int count);
         void UpdateItemCount(ItemCode item_code);
         void UpdateDialogueCount(NPCCode npc_code);
+
+        KillQuestData GetKillQuestData(int quest_id, int subquest_id);
+        ItemQuestData GetItemQuestData(int quest_id, int subquest_id);
     }
 }

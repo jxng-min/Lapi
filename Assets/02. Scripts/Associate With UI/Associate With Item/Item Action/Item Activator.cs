@@ -92,9 +92,8 @@ public class ItemActivator : MonoBehaviour, IItemActivator
         {
             var target_offset = m_equipment_service.GetOffset(item.Type);
 
-            var temp_item_data = new ItemData();
-            temp_item_data.Code = m_equipment_service.GetItem(target_offset).Code;
-            temp_item_data.Count = m_equipment_service.GetItem(target_offset).Count;
+            var temp_item_data = new ItemData(m_equipment_service.GetItem(target_offset).Code,
+                                              m_equipment_service.GetItem(target_offset).Count);
 
             m_equipment_service.AddItem(item.Code);
 
@@ -104,7 +103,7 @@ public class ItemActivator : MonoBehaviour, IItemActivator
             }
             else
             {
-                m_inventory_service.AddItem(temp_item_data.Code, temp_item_data.Count);
+                m_inventory_service.SetItem(offset, temp_item_data.Code, temp_item_data.Count);
             }
         }
     }

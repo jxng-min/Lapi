@@ -105,12 +105,12 @@ public class EnemySpawner : MonoBehaviour
         var so = SelectRandomEnemy();
 
         var enemy_ctrl = m_factory_manager.CreateEnemy(so.Code);
-        enemy_ctrl.transform.position = GetRandomPosition();
         enemy_ctrl.Initialize(so,
                               m_inventory_service,
                               m_user_service,
                               m_quest_service,
                               m_player_ctrl);
+        enemy_ctrl.transform.position = GetRandomPosition();
 
         enemy_ctrl.GetComponent<EnemyMouseDetector>().Inject(m_cursor_db);
 

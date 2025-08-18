@@ -73,6 +73,11 @@ public class EnemyCtrl : MonoBehaviour
         Pathfinder.Inject(grid);
     }
 
+    private void OnDisable()
+    {
+        IsInit = false;
+    }
+
     public void Initialize(Enemy so,
                            IInventoryService inventory_service,
                            IUserService user_service,

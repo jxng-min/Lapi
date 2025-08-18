@@ -38,7 +38,7 @@ public class EnemyStatus : MonoBehaviour
         {
             if (HP <= 0f)
             {
-                Death();
+                m_controller.ChangeState(EnemyState.DEAD);
             }
             else
             {
@@ -89,6 +89,10 @@ public class EnemyStatus : MonoBehaviour
 
     private void Return()
     {
+        var container = ObjectManager.Instance.GetPool(m_controller.SO.Type == EnemyType.MELEE ?
+                                                       ObjectType.MELEE_ENEMY : ObjectType.RANGED_ENEMY).Container;
+        transform.position = container.transform.position;
+
         ObjectManager.Instance.ReturnObject(gameObject,
                                             m_controller.SO.Type == EnemyType.MELEE ?
                                             ObjectType.MELEE_ENEMY : ObjectType.RANGED_ENEMY);
@@ -149,7 +153,7 @@ public class EnemyStatus : MonoBehaviour
     private IEnumerator SetDeath()
     {
         float elapsed_time = 0f;
-        float target_time = 1.5f;
+        float target_time = 1f;
 
         while (elapsed_time <= target_time)
         {
