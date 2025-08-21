@@ -3,11 +3,7 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {
     private EnemyCtrl m_controller;
-
     private float m_trace_distance = 8f;
-
-    [Header("플레이어의 레이어")]
-    [SerializeField] private LayerMask m_player_layer;
 
     public float ATK { get; private set; }
 
@@ -33,9 +29,10 @@ public class EnemyAttack : MonoBehaviour
         }
     }
 
-    public void Initialize(float atk)
+    public void Initialize(float atk, float trace_distance)
     {
         ATK = atk;
+        m_trace_distance = trace_distance;
     }
 
     public bool CanTrace()

@@ -19,9 +19,14 @@ public class Hand : Weapon
 
             var enemy = collider.GetComponent<EnemyStatus>();
             enemy.UpdateHP(-ATK, knockback_direction);
-
-            InstantiateIndicator(collider.transform, -ATK);
         }
+        else if (collider.CompareTag("BOSS"))
+        {
+            var boss = collider.GetComponent<BossStatus>();
+            boss.UpdateHP(-ATK);
+        }
+
+        InstantiateIndicator(collider.transform, -ATK);
     }
 
     #region Methods

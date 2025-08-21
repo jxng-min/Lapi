@@ -34,6 +34,13 @@ public class Arrow : MonoBehaviour
 
             Return();
         }
+        else if (collider.CompareTag("BOSS"))
+        {
+            var boss = collider.GetComponent<BossStatus>();
+            boss.UpdateHP(-m_atk);
+
+            InstantiateIndicator(collider.transform, -m_atk);
+        }
     }
 
     #region Helper Methods

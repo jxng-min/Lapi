@@ -16,9 +16,6 @@ public class EnemySpawner : MonoBehaviour
     [Header("팩토리 매니저")]
     [SerializeField] private FactoryManager m_factory_manager;
 
-    [Header("스포너의 고유한 ID")]
-    [SerializeField] private int m_id;
-
     [Header("스폰될 몬스터의 목록")]
     [SerializeField] private List<Enemy> m_enemy_list;
 
@@ -32,8 +29,6 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private float m_spawn_radius;
 
     private List<EnemyCtrl> m_spawned_enemies;
-
-    public int ID => m_id;
 
     private void Awake()
     {

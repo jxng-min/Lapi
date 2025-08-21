@@ -16,25 +16,25 @@ public class EnemyCtrl : MonoBehaviour
     private IState<EnemyCtrl> m_dead_state;
     #endregion States
 
-    public EnemyMovement Movement { get; private set; }
-    public EnemyStatus Status { get; private set; }
-    public EnemyAttack Attack { get; private set; }
-    public EnemyDrop Drop { get; private set; }
-    public Pathfinder Pathfinder { get; private set; }
-    public PlayerCtrl Player { get; private set; }
+    public EnemyMovement Movement { get; protected set; }
+    public EnemyStatus Status { get; protected set; }
+    public EnemyAttack Attack { get; protected set; }
+    public EnemyDrop Drop { get; protected set; }
+    public Pathfinder Pathfinder { get; protected set; }
+    public PlayerCtrl Player { get; protected set; }
 
-    public Enemy SO { get; private set; }
+    public Enemy SO { get; protected set; }
 
-    public IInventoryService InventoryService { get; private set; }
-    public IUserService UserService { get; private set; }
-    public IQuestService QuestService { get; private set; }
+    public IInventoryService InventoryService { get; protected set; }
+    public IUserService UserService { get; protected set; }
+    public IQuestService QuestService { get; protected set; }
 
-    public Animator Animator { get; private set; }
-    public Rigidbody2D Rigidbody { get; private set; }
-    public CircleCollider2D Collider { get; private set; }
-    public SpriteRenderer Renderer { get; private set; }
+    public Animator Animator { get; protected set; }
+    public Rigidbody2D Rigidbody { get; protected set; }
+    public CircleCollider2D Collider { get; protected set; }
+    public SpriteRenderer Renderer { get; protected set; }
 
-    public bool IsInit { get; private set; }
+    public bool IsInit { get; protected set; }
 
     protected virtual void Awake()
     {
@@ -95,7 +95,7 @@ public class EnemyCtrl : MonoBehaviour
 
         Movement.Initialize(SO.SPD);
         Status.Initialize(SO.HP);
-        Attack.Initialize(SO.ATK);
+        Attack.Initialize(SO.ATK, 8f);
         Drop.Initialize(SO.EXP, SO.EXP_DEV, SO.GOLD, SO.GOLD_DEV, SO.DropList, SO.DropRate);
 
         IsInit = true;
