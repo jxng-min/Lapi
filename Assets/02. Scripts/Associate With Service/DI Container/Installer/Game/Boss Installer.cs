@@ -23,6 +23,7 @@ public class BossInstaller : MonoBehaviour, IInstaller
                            ServiceLocator.Get<IUserService>(),
                            ServiceLocator.Get<IQuestService>(),
                            m_cursor_db,
+                           DIContainer.Resolve<BossStatusPresenter>(),
                            m_player_ctrl);
         }
     }

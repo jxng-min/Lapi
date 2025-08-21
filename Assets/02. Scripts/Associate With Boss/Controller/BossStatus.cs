@@ -11,6 +11,8 @@ public class BossStatus : MonoBehaviour
     public float HP { get; private set; }
     public bool IsDead { get; set; }
 
+    private bool m_is_in_battle;
+
     public event Action<BossCtrl> OnDead;
 
     private void Awake()
@@ -51,6 +53,15 @@ public class BossStatus : MonoBehaviour
         {
             m_damage_coroutine = StartCoroutine(SetDamage());
         }
+
+        if (!m_is_in_battle)
+        {
+            m_controller.StatusPresenter.OpenUI(m_controller.SO, m_controller);
+        }
+        else
+        {
+            m_controller.StatusPresenter.UpdateUI(m_controller.SO, m_controller);
+        }
     }
 
     public virtual void Death()
@@ -63,6 +74,7 @@ public class BossStatus : MonoBehaviour
         IsDead = true;
 
         m_controller.Animator.SetTrigger("Death");
+        m_controller.StatusPresenter.CloseUI();
 
         m_controller.Rigidbody.simulated = false;
         m_controller.Collider.enabled = false;

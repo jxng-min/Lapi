@@ -10,6 +10,7 @@ public class BossSpawner : MonoBehaviour
     private IUserService m_user_service;
     private IQuestService m_quest_service;
     private ICursorDataBase m_cursor_db;
+    private BossStatusPresenter m_boss_status_presenter;
     private PlayerCtrl m_player_ctrl;
 
     [Header("스폰될 보스 몬스터 프리펩")]
@@ -30,12 +31,14 @@ public class BossSpawner : MonoBehaviour
                        IUserService user_service,
                        IQuestService quest_service,
                        ICursorDataBase cursor_db,
+                       BossStatusPresenter boss_status_presenter,
                        PlayerCtrl player_ctrl)
     {
         m_inventory_service = inventory_service;
         m_user_service = user_service;
         m_quest_service = quest_service;
         m_cursor_db = cursor_db;
+        m_boss_status_presenter = boss_status_presenter;
         m_player_ctrl = player_ctrl;
 
         StartCoroutine(Co_SpawnBoss());
@@ -79,6 +82,7 @@ public class BossSpawner : MonoBehaviour
                         m_inventory_service,
                         m_user_service,
                         m_quest_service,
+                        m_boss_status_presenter,
                         m_player_ctrl);
 
         var mouse_detector = boss_obj.GetComponent<MouseDetector>();

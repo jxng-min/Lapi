@@ -19,6 +19,7 @@ public class BossCtrl : MonoBehaviour
     public BossDrop Drop { get; protected set; }
     public Pathfinder Pathfinder { get; protected set; }
     public PlayerCtrl Player { get; protected set; }
+    public BossStatusPresenter StatusPresenter { get; protected set; }
 
     public Enemy SO { get; protected set; }
 
@@ -79,6 +80,7 @@ public class BossCtrl : MonoBehaviour
                            IInventoryService inventory_service,
                            IUserService user_service,
                            IQuestService quest_service,
+                           BossStatusPresenter status_presenter,
                            PlayerCtrl player_ctrl)
     {
         SO = so;
@@ -86,6 +88,7 @@ public class BossCtrl : MonoBehaviour
         InventoryService = inventory_service;
         UserService = user_service;
         QuestService = quest_service;
+        StatusPresenter = status_presenter;
         Player = player_ctrl;
 
         Movement.Initialize(SO.SPD);
