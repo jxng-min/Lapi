@@ -29,6 +29,11 @@ public class BossStatusView : MonoBehaviour, IBossStatusView
 
         m_slider_coroutine = StartCoroutine(UpdateSlider(hp_rate));
         m_hp_slider.value = hp_rate;
+
+        if (hp_rate >= 1f)
+        {
+            CloseUI();
+        }
     }
 
     public void CloseUI()

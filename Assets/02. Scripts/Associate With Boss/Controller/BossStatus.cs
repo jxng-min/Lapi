@@ -33,6 +33,7 @@ public class BossStatus : MonoBehaviour
         }
 
         HP += amount;
+        HP = Mathf.Clamp(HP, 0, m_controller.SO.HP);
 
         if (amount < 0f)
         {
@@ -45,6 +46,8 @@ public class BossStatus : MonoBehaviour
                 Damage();
             }
         }
+
+        m_controller.StatusPresenter.UpdateUI(m_controller.SO, m_controller);
     }
 
     public virtual void Damage()
@@ -56,7 +59,7 @@ public class BossStatus : MonoBehaviour
 
         if (!m_is_in_battle)
         {
-            m_controller.StatusPresenter.OpenUI(m_controller.SO, m_controller);
+            m_controller.StatusPresenter.OpenUI(m_controller.SO);
         }
         else
         {

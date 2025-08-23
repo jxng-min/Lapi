@@ -7,10 +7,9 @@ public class BossStatusPresenter
         m_view = view;
     }
 
-    public void OpenUI(Enemy boss_so, BossCtrl boss_ctrl)
+    public void OpenUI(Enemy boss_so)
     {
         m_view.OpenUI(boss_so.Name);
-        UpdateUI(boss_so, boss_ctrl);
     }
 
     public void UpdateUI(Enemy boss_so, BossCtrl boss_ctrl)

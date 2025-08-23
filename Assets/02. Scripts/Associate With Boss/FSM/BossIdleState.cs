@@ -51,6 +51,11 @@ public class BossIdleState : MonoBehaviour, IState<BossCtrl>
                     m_controller.ChangeState(EnemyState.TRACE);
                     yield break;
                 }
+                else
+                {
+                    m_controller.ChangeState(EnemyState.RECOVERY);
+                    yield break;
+                }
             }
 
             yield return null;

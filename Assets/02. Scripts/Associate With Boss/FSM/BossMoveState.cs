@@ -40,6 +40,11 @@ public class BossMoveState : MonoBehaviour, IState<BossCtrl>
                     m_controller.ChangeState(EnemyState.TRACE);
                     yield break;
                 }
+                else
+                {
+                    m_controller.ChangeState(EnemyState.RECOVERY);
+                    yield break;
+                }
             }
 
             if (m_controller.Status.IsDead)

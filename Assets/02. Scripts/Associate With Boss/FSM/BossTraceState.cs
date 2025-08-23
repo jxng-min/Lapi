@@ -35,7 +35,7 @@ public class BossTraceState : MonoBehaviour, IState<BossCtrl>
 
                 if (!m_controller.Attack.CanTrace())
                 {
-                    m_controller.ChangeState(EnemyState.IDLE);
+                    m_controller.ChangeState(EnemyState.RECOVERY);
                     yield break;
                 }
 

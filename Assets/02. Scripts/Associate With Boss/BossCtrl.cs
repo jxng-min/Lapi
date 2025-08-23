@@ -12,6 +12,7 @@ public class BossCtrl : MonoBehaviour
     private IState<BossCtrl> m_trace_state;
     private IState<BossCtrl> m_attack_state;
     private IState<BossCtrl> m_dead_state;
+    private IState<BossCtrl> m_recovery_state;
 
     public BossMovement Movement { get; protected set; }
     public BossStatus Status { get; protected set; }
@@ -34,6 +35,8 @@ public class BossCtrl : MonoBehaviour
 
     public bool IsInit { get; protected set; }
 
+    public Vector3 OriginPosition { get; protected set; }
+
     protected virtual void Awake()
     {
         m_state_context = new BossStateContext(this);
@@ -42,6 +45,7 @@ public class BossCtrl : MonoBehaviour
         m_move_state = gameObject.AddComponent<BossMoveState>();
         m_trace_state = gameObject.AddComponent<BossTraceState>();
         m_dead_state = gameObject.AddComponent<BossDeadState>();
+        m_recovery_state = gameObject.AddComponent<BossRecoveryState>();
 
         Movement = GetComponent<BossMovement>();
         Status = GetComponent<BossStatus>();
@@ -81,7 +85,8 @@ public class BossCtrl : MonoBehaviour
                            IUserService user_service,
                            IQuestService quest_service,
                            BossStatusPresenter status_presenter,
-                           PlayerCtrl player_ctrl)
+                           PlayerCtrl player_ctrl,
+                           Vector3 origin_position)
     {
         SO = so;
 
@@ -90,10 +95,11 @@ public class BossCtrl : MonoBehaviour
         QuestService = quest_service;
         StatusPresenter = status_presenter;
         Player = player_ctrl;
+        OriginPosition = origin_position;        
 
         Movement.Initialize(SO.SPD);
         Status.Initialize(SO.HP);
-        Attack.Initialize(SO.ATK, 16f);
+        Attack.Initialize(SO.ATK, 25f);
         Drop.Initialize(SO.EXP, SO.EXP_DEV, SO.GOLD, SO.GOLD_DEV, SO.DropList, SO.DropRate);
 
         IsInit = true;
@@ -122,6 +128,10 @@ public class BossCtrl : MonoBehaviour
 
             case EnemyState.DEAD:
                 m_state_context.Transition(m_dead_state);
+                break;
+
+            case EnemyState.RECOVERY:
+                m_state_context.Transition(m_recovery_state);
                 break;
         }
     }    

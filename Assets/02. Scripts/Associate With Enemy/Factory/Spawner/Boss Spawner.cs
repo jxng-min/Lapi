@@ -83,7 +83,8 @@ public class BossSpawner : MonoBehaviour
                         m_user_service,
                         m_quest_service,
                         m_boss_status_presenter,
-                        m_player_ctrl);
+                        m_player_ctrl,
+                        transform.position);
 
         var mouse_detector = boss_obj.GetComponent<MouseDetector>();
         mouse_detector.Inject(m_cursor_db);
