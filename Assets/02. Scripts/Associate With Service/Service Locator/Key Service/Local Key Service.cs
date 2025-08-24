@@ -75,7 +75,6 @@ namespace KeyService
             Register(KeyCode.K, "Skill");
             Register(KeyCode.T, "Quest");
             Register(KeyCode.P, "Binder");
-            Register(KeyCode.H, "Shortcut");
 
             Register(KeyCode.Alpha1, "Shortcut0");
             Register(KeyCode.Alpha2, "Shortcut1");

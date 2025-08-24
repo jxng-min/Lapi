@@ -39,7 +39,6 @@ public class PopupUIManager : MonoBehaviour
             InputToggleKey("Equipment");
             InputToggleKey("Skill");
             InputToggleKey("Binder");
-            InputToggleKey("Shortcut");
             InputToggleKey("Quest");
         }
     }
