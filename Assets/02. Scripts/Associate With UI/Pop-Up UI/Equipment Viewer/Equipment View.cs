@@ -60,7 +60,7 @@ public class EquipmentView : MonoBehaviour, IEquipmentView
 
     public void SetDepth()
     {
-        (transform as RectTransform).SetAsFirstSibling();
+        (transform as RectTransform).SetAsLastSibling();
     }
 
     public void PopupCloseUI()
