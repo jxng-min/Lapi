@@ -1,0 +1,440 @@
+fileFormatVersion: 2
+guid: 820f3415c4af1d84da0e1b9849479350
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3912228220051244317
+    second: wendigo - attack 3 (hitbox)_0
+  - first:
+      213: -954815236769357387
+    second: wendigo - attack 3 (hitbox)_1
+  - first:
+      213: -7825713012416385645
+    second: wendigo - attack 3 (hitbox)_2
+  - first:
+      213: -5113697988178452419
+    second: wendigo - attack 3 (hitbox)_3
+  - first:
+      213: 8835720182080533294
+    second: wendigo - attack 3 (hitbox)_4
+  - first:
+      213: -6042697778658394194
+    second: wendigo - attack 3 (hitbox)_5
+  - first:
+      213: 3182670924897419292
+    second: wendigo - attack 3 (hitbox)_6
+  - first:
+      213: -8041474522115806451
+    second: wendigo - attack 3 (hitbox)_7
+  - first:
+      213: -3565813343820751339
+    second: wendigo - attack 3 (hitbox)_8
+  - first:
+      213: -5029656231735699817
+    second: wendigo - attack 3 (hitbox)_9
+  - first:
+      213: -2222547332061293513
+    second: wendigo - attack 3 (hitbox)_10
+  - first:
+      213: 760027851326387089
+    second: wendigo - attack 3 (hitbox)_11
+  - first:
+      213: 4415315486534084817
+    second: wendigo - attack 3 (hitbox)_12
+  - first:
+      213: -4717173200096796752
+    second: wendigo - attack 3 (hitbox)_13
+  - first:
+      213: -467173196586762150
+    second: wendigo - attack 3 (hitbox)_14
+  - first:
+      213: 1079876460227744367
+    second: wendigo - attack 3 (hitbox)_15
+  - first:
+      213: -5598110742889684751
+    second: wendigo - attack 3 (hitbox)_16
+  - first:
+      213: -5293355295571764526
+    second: wendigo - attack 3 (hitbox)_17
+  - first:
+      213: 8124665561973672751
+    second: wendigo - attack 3 (hitbox)_18
+  - first:
+      213: -4930026962168078654
+    second: wendigo - attack 3 (hitbox)_19
+  - first:
+      213: 6180952699436570237
+    second: wendigo - attack 3 (hitbox)_20
+  - first:
+      213: -8559535036076700774
+    second: wendigo - attack 3 (hitbox)_21
+  - first:
+      213: -8033292837375617726
+    second: wendigo - attack 3 (hitbox)_22
+  - first:
+      213: -6338905048670304539
+    second: wendigo - attack 3 (hitbox)_23
+  - first:
+      213: 4517312011240236984
+    second: wendigo - attack 3 (hitbox)_24
+  - first:
+      213: -3635734198102126541
+    second: wendigo - attack 3 (hitbox)_25
+  - first:
+      213: 5543110075556471282
+    second: wendigo - attack 3 (hitbox)_26
+  - first:
+      213: -7214135666612092970
+    second: wendigo - attack 3 (hitbox)_27
+  - first:
+      213: 8711860165759618458
+    second: wendigo - attack 3 (hitbox)_28
+  - first:
+      213: 1840179387929739089
+    second: wendigo - attack 3 (hitbox)_29
+  - first:
+      213: -4751801418104049176
+    second: wendigo - attack 3 (hitbox)_30
+  - first:
+      213: 1998694399630796658
+    second: wendigo - attack 3 (hitbox)_31
+  - first:
+      213: 1599627636251518092
+    second: wendigo - attack 3 (hitbox)_32
+  - first:
+      213: -7967232891640141474
+    second: wendigo - attack 3 (hitbox)_33
+  - first:
+      213: -984223554846985573
+    second: wendigo - attack 3 (hitbox)_34
+  - first:
+      213: -496183924951293816
+    second: wendigo - attack 3 (hitbox)_35
+  - first:
+      213: 2079100777738885679
+    second: wendigo - attack 3 (hitbox)_36
+  - first:
+      213: 3814982359164746528
+    second: wendigo - attack 3 (hitbox)_37
+  - first:
+      213: -7579827290328417839
+    second: wendigo - attack 3 (hitbox)_38
+  - first:
+      213: -9015983767354538475
+    second: wendigo - attack 3 (hitbox)_39
+  - first:
+      213: -8286801642091060566
+    second: wendigo - attack 3 (hitbox)_40
+  - first:
+      213: -3438251824599868492
+    second: wendigo - attack 3 (hitbox)_41
+  - first:
+      213: 7576703829832339835
+    second: wendigo - attack 3 (hitbox)_42
+  - first:
+      213: -2804790487040394482
+    second: wendigo - attack 3 (hitbox)_43
+  - first:
+      213: 6003275056461410630
+    second: wendigo - attack 3 (hitbox)_44
+  - first:
+      213: -441777002275339320
+    second: wendigo - attack 3 (hitbox)_45
+  - first:
+      213: 3781627251995462844
+    second: wendigo - attack 3 (hitbox)_46
+  - first:
+      213: -4898590492652880105
+    second: wendigo - attack 3 (hitbox)_47
+  - first:
+      213: -334963982701592860
+    second: wendigo - attack 3 (hitbox)_48
+  - first:
+      213: 1911213014154179804
+    second: wendigo - attack 3 (hitbox)_49
+  - first:
+      213: -6265302661071743574
+    second: wendigo - attack 3 (hitbox)_50
+  - first:
+      213: 515373188843098868
+    second: wendigo - attack 3 (hitbox)_51
+  - first:
+      213: -5142788057155898818
+    second: wendigo - attack 3 (hitbox)_52
+  - first:
+      213: 1919421770298773710
+    second: wendigo - attack 3 (hitbox)_53
+  - first:
+      213: 2098193004651945459
+    second: wendigo - attack 3 (hitbox)_54
+  - first:
+      213: -6738293247773586895
+    second: wendigo - attack 3 (hitbox)_55
+  - first:
+      213: -6518566428557160546
+    second: wendigo - attack 3 (hitbox)_56
+  - first:
+      213: -18055104563671258
+    second: wendigo - attack 3 (hitbox)_57
+  - first:
+      213: 8192958607105670339
+    second: wendigo - attack 3 (hitbox)_58
+  - first:
+      213: -3650245964080197698
+    second: wendigo - attack 3 (hitbox)_59
+  - first:
+      213: -4876015655105612177
+    second: wendigo - attack 3 (hitbox)_60
+  - first:
+      213: 8070254617049842398
+    second: wendigo - attack 3 (hitbox)_61
+  - first:
+      213: 9184582732912078832
+    second: wendigo - attack 3 (hitbox)_62
+  - first:
+      213: 5241768342202407874
+    second: wendigo - attack 3 (hitbox)_63
+  - first:
+      213: -4696092386695350440
+    second: wendigo - attack 3 (hitbox)_64
+  - first:
+      213: -1291162315212661181
+    second: wendigo - attack 3 (hitbox)_65
+  - first:
+      213: 347556758575120059
+    second: wendigo - attack 3 (hitbox)_66
+  - first:
+      213: 347149395125716959
+    second: wendigo - attack 3 (hitbox)_67
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: wendigo - attack 3 (hitbox)_0
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d15c96896d60b4630800000000000000
+      internalID: 3912228220051244317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendigo - attack 3 (hitbox)_1
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b16b3ad990dfb2f0800000000000000
+      internalID: -954815236769357387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendigo - attack 3 (hitbox)_2
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39de4c44a7b756390800000000000000
+      internalID: -7825713012416385645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendigo - attack 3 (hitbox)_3
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d306ef5f5ce7809b0800000000000000
+      internalID: -5113697988178452419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ff424c3e62779e540837cdb932548448
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":100.0,"y":100.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      wendigo - attack 3 (hitbox)_0: 3912228220051244317
+      wendigo - attack 3 (hitbox)_1: -954815236769357387
+      wendigo - attack 3 (hitbox)_10: -2222547332061293513
+      wendigo - attack 3 (hitbox)_11: 760027851326387089
+      wendigo - attack 3 (hitbox)_12: 4415315486534084817
+      wendigo - attack 3 (hitbox)_13: -4717173200096796752
+      wendigo - attack 3 (hitbox)_14: -467173196586762150
+      wendigo - attack 3 (hitbox)_15: 1079876460227744367
+      wendigo - attack 3 (hitbox)_2: -7825713012416385645
+      wendigo - attack 3 (hitbox)_3: -5113697988178452419
+      wendigo - attack 3 (hitbox)_4: 8835720182080533294
+      wendigo - attack 3 (hitbox)_5: -6042697778658394194
+      wendigo - attack 3 (hitbox)_6: 3182670924897419292
+      wendigo - attack 3 (hitbox)_7: -8041474522115806451
+      wendigo - attack 3 (hitbox)_8: -3565813343820751339
+      wendigo - attack 3 (hitbox)_9: -5029656231735699817
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

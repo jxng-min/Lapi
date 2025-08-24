@@ -5,4 +5,5 @@ public enum EnemyState
     TRACE = 2,
     ATTACK = 3,
     DEAD = 4,
+    RECOVERY = 5,
 }

@@ -12,7 +12,6 @@ public class PopupUIManagerInstaller : MonoBehaviour, IInstaller
             new("Equipment", DIContainer.Resolve<EquipmentPresenter>()),
             new("Skill", DIContainer.Resolve<SkillPresenter>()),
             new("Binder", DIContainer.Resolve<KeyBinderPresenter>()),
-            new("Shortcut", DIContainer.Resolve<ShortcutPresenter>()),
             new("Quest", DIContainer.Resolve<FullQuestPresenter>()),
             new("Pause", DIContainer.Resolve<PausePresenter>()),
         };

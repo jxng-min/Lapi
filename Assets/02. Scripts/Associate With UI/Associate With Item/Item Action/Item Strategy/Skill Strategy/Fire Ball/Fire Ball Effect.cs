@@ -38,16 +38,21 @@ public class FireBallEffect : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
+        gameObject.transform.SetParent(collider.transform);
+        m_animator.SetTrigger("Boom");
+        m_rigidbody.linearVelocity = Vector2.zero;
+
+        InstantiateIndicator(collider.transform, -m_atk);
+
         if (collider.CompareTag("ENEMY"))
         {
-            gameObject.transform.SetParent(collider.transform);
-            m_animator.SetTrigger("Boom");
-            m_rigidbody.linearVelocity = Vector2.zero;
-
-            InstantiateIndicator(collider.transform, -m_atk);
-
             var enemy_ctrl = collider.GetComponent<EnemyCtrl>();
             enemy_ctrl.Status.UpdateHP(-m_atk, m_direction);
+        }
+        else if (collider.CompareTag("BOSS"))
+        {
+            var boss_ctrl = collider.GetComponent<BossCtrl>();
+            boss_ctrl.Status.UpdateHP(-m_atk);
         }
     }
 

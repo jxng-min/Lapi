@@ -1,0 +1,964 @@
+fileFormatVersion: 2
+guid: 0f2bc0e9c8d08344e8d357736608a87a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2942999482168915691
+    second: wendigo - attack 3  (no hitbox)_0
+  - first:
+      213: -4806384445497415344
+    second: wendigo - attack 3  (no hitbox)_1
+  - first:
+      213: -4291754226894687816
+    second: wendigo - attack 3  (no hitbox)_2
+  - first:
+      213: 7355612284869208873
+    second: wendigo - attack 3  (no hitbox)_3
+  - first:
+      213: 651027376916770838
+    second: wendigo - attack 3  (no hitbox)_4
+  - first:
+      213: 875354333914007418
+    second: wendigo - attack 3  (no hitbox)_5
+  - first:
+      213: -110049497559558809
+    second: wendigo - attack 3  (no hitbox)_6
+  - first:
+      213: 274770104862065911
+    second: wendigo - attack 3  (no hitbox)_7
+  - first:
+      213: 9145456095064252755
+    second: wendigo - attack 3  (no hitbox)_8
+  - first:
+      213: -2852090842912515302
+    second: wendigo - attack 3  (no hitbox)_9
+  - first:
+      213: 8046439979407083474
+    second: wendigo - attack 3  (no hitbox)_10
+  - first:
+      213: 6563275616398900049
+    second: wendigo - attack 3  (no hitbox)_11
+  - first:
+      213: 8427260859808516792
+    second: wendigo - attack 3  (no hitbox)_12
+  - first:
+      213: 6385375374661525433
+    second: wendigo - attack 3  (no hitbox)_13
+  - first:
+      213: 6610170105096602612
+    second: wendigo - attack 3  (no hitbox)_14
+  - first:
+      213: -7812266097377437228
+    second: wendigo - attack 3  (no hitbox)_15
+  - first:
+      213: 1646104295684942193
+    second: wendigo - attack 3  (no hitbox)_16
+  - first:
+      213: 8246162355431269757
+    second: wendigo - attack 3  (no hitbox)_17
+  - first:
+      213: 2001046328158910154
+    second: wendigo - attack 3  (no hitbox)_18
+  - first:
+      213: 4366053436720277133
+    second: wendigo - attack 3  (no hitbox)_19
+  - first:
+      213: -5726610386149694992
+    second: wendigo - attack 3  (no hitbox)_20
+  - first:
+      213: -7225800775524858454
+    second: wendigo - attack 3  (no hitbox)_21
+  - first:
+      213: -974328933615914772
+    second: wendigo - attack 3  (no hitbox)_22
+  - first:
+      213: -160017287456603540
+    second: wendigo - attack 3  (no hitbox)_23
+  - first:
+      213: -5198308608691807993
+    second: wendigo - attack 3  (no hitbox)_24
+  - first:
+      213: 7830902076599777537
+    second: wendigo - attack 3  (no hitbox)_25
+  - first:
+      213: 9158625176180685610
+    second: wendigo - attack 3  (no hitbox)_26
+  - first:
+      213: 2993677677427776214
+    second: wendigo - attack 3  (no hitbox)_27
+  - first:
+      213: 9060564304307200776
+    second: wendigo - attack 3  (no hitbox)_28
+  - first:
+      213: -4194968636874889506
+    second: wendigo - attack 3  (no hitbox)_29
+  - first:
+      213: 2295270229854238085
+    second: wendigo - attack 3  (no hitbox)_30
+  - first:
+      213: -2266907845748519624
+    second: wendigo - attack 3  (no hitbox)_31
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: wendigo - attack 3  (no hitbox)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 519c92b409d5827d0800000000000000
+      internalID: -2942999482168915691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendigo - attack 3  (no hitbox)_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 059e928efca4c4db0800000000000000
+      internalID: -4806384445497415344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendigo - attack 3  (no hitbox)_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b139a2f440a074c0800000000000000
+      internalID: -4291754226894687816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendigo - attack 3  (no hitbox)_3
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92be021c662641660800000000000000
+      internalID: 7355612284869208873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendigo - attack 3  (no hitbox)_4
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 610bd2433f9e80900800000000000000
+      internalID: 651027376916770838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendigo - attack 3  (no hitbox)_5
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a770b8df022e52c00800000000000000
+      internalID: 875354333914007418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendigo - attack 3  (no hitbox)_6
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7659046a096097ef0800000000000000
+      internalID: -110049497559558809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendigo - attack 3  (no hitbox)_7
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f4433f54fd20d300800000000000000
+      internalID: 274770104862065911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendigo - attack 3  (no hitbox)_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3516c3f1ddf2bee70800000000000000
+      internalID: 9145456095064252755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendigo - attack 3  (no hitbox)_9
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1b1e094d765b68d0800000000000000
+      internalID: -2852090842912515302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendigo - attack 3  (no hitbox)_10
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d78f078782baaf60800000000000000
+      internalID: 8046439979407083474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendigo - attack 3  (no hitbox)_11
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15b707e3660751b50800000000000000
+      internalID: 6563275616398900049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendigo - attack 3  (no hitbox)_12
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ba807a3a15a3f470800000000000000
+      internalID: 8427260859808516792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendigo - attack 3  (no hitbox)_13
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bf1a3472196d9850800000000000000
+      internalID: 6385375374661525433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendigo - attack 3  (no hitbox)_14
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f3803b30ba0cbb50800000000000000
+      internalID: 6610170105096602612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendigo - attack 3  (no hitbox)_15
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d99df62061459390800000000000000
+      internalID: -7812266097377437228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendigo - attack 3  (no hitbox)_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 179ab8fa22328d610800000000000000
+      internalID: 1646104295684942193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendigo - attack 3  (no hitbox)_17
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d75eda3e8f0407270800000000000000
+      internalID: 8246162355431269757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendigo - attack 3  (no hitbox)_18
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac6f201980525cb10800000000000000
+      internalID: 2001046328158910154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendigo - attack 3  (no hitbox)_19
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d86e516e776579c30800000000000000
+      internalID: 4366053436720277133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendigo - attack 3  (no hitbox)_20
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f12c76d13ef680b0800000000000000
+      internalID: -5726610386149694992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendigo - attack 3  (no hitbox)_21
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa549158a7cc8bb90800000000000000
+      internalID: -7225800775524858454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendigo - attack 3  (no hitbox)_22
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce030714ffc7a72f0800000000000000
+      internalID: -974328933615914772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendigo - attack 3  (no hitbox)_23
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c624a37ff1187cdf0800000000000000
+      internalID: -160017287456603540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendigo - attack 3  (no hitbox)_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 709d11abcd5ebd7b0800000000000000
+      internalID: -5198308608691807993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendigo - attack 3  (no hitbox)_25
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1093992e2f3fcac60800000000000000
+      internalID: 7830902076599777537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendigo - attack 3  (no hitbox)_26
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2bf231c219f91f70800000000000000
+      internalID: 9158625176180685610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendigo - attack 3  (no hitbox)_27
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6da59178cfdab8920800000000000000
+      internalID: 2993677677427776214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendigo - attack 3  (no hitbox)_28
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 803a0d6da379dbd70800000000000000
+      internalID: 9060564304307200776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendigo - attack 3  (no hitbox)_29
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed6ea2b204a78c5c0800000000000000
+      internalID: -4194968636874889506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendigo - attack 3  (no hitbox)_30
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 585bdf9fc107adf10800000000000000
+      internalID: 2295270229854238085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendigo - attack 3  (no hitbox)_31
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83d0d9b23535a80e0800000000000000
+      internalID: -2266907845748519624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 67f6ffbfc04147447a28b9cd6bc007bc
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":100.0,"y":100.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      wendigo - attack 3  (no hitbox)_0: -2942999482168915691
+      wendigo - attack 3  (no hitbox)_1: -4806384445497415344
+      wendigo - attack 3  (no hitbox)_10: 8046439979407083474
+      wendigo - attack 3  (no hitbox)_11: 6563275616398900049
+      wendigo - attack 3  (no hitbox)_12: 8427260859808516792
+      wendigo - attack 3  (no hitbox)_13: 6385375374661525433
+      wendigo - attack 3  (no hitbox)_14: 6610170105096602612
+      wendigo - attack 3  (no hitbox)_15: -7812266097377437228
+      wendigo - attack 3  (no hitbox)_16: 1646104295684942193
+      wendigo - attack 3  (no hitbox)_17: 8246162355431269757
+      wendigo - attack 3  (no hitbox)_18: 2001046328158910154
+      wendigo - attack 3  (no hitbox)_19: 4366053436720277133
+      wendigo - attack 3  (no hitbox)_2: -4291754226894687816
+      wendigo - attack 3  (no hitbox)_20: -5726610386149694992
+      wendigo - attack 3  (no hitbox)_21: -7225800775524858454
+      wendigo - attack 3  (no hitbox)_22: -974328933615914772
+      wendigo - attack 3  (no hitbox)_23: -160017287456603540
+      wendigo - attack 3  (no hitbox)_24: -5198308608691807993
+      wendigo - attack 3  (no hitbox)_25: 7830902076599777537
+      wendigo - attack 3  (no hitbox)_26: 9158625176180685610
+      wendigo - attack 3  (no hitbox)_27: 2993677677427776214
+      wendigo - attack 3  (no hitbox)_28: 9060564304307200776
+      wendigo - attack 3  (no hitbox)_29: -4194968636874889506
+      wendigo - attack 3  (no hitbox)_3: 7355612284869208873
+      wendigo - attack 3  (no hitbox)_30: 2295270229854238085
+      wendigo - attack 3  (no hitbox)_31: -2266907845748519624
+      wendigo - attack 3  (no hitbox)_4: 651027376916770838
+      wendigo - attack 3  (no hitbox)_5: 875354333914007418
+      wendigo - attack 3  (no hitbox)_6: -110049497559558809
+      wendigo - attack 3  (no hitbox)_7: 274770104862065911
+      wendigo - attack 3  (no hitbox)_8: 9145456095064252755
+      wendigo - attack 3  (no hitbox)_9: -2852090842912515302
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

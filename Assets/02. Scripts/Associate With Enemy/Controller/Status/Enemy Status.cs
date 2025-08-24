@@ -47,7 +47,7 @@ public class EnemyStatus : MonoBehaviour
         }
     }
 
-    public void Damage(Vector2 knockback_direction)
+    public virtual void Damage(Vector2 knockback_direction)
     {
         if (m_damage_coroutine == null)
         {
@@ -60,7 +60,7 @@ public class EnemyStatus : MonoBehaviour
         }
     }
 
-    public void Death()
+    public virtual void Death()
     {
         if (IsDead)
         {

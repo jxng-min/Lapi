@@ -14,6 +14,7 @@ public class ThunderEffect : MonoBehaviour
 
     private bool m_is_circle_collider_active;
     private HashSet<EnemyCtrl> m_enemy_set = new();
+    private HashSet<BossCtrl> m_boss_set = new();
     private Coroutine m_damage_coroutine;
 
     private void Awake()
@@ -43,9 +44,14 @@ public class ThunderEffect : MonoBehaviour
         {
             var enemy_ctrl = collider.GetComponent<EnemyCtrl>();
             enemy_ctrl.Status.UpdateHP(-m_main_atk, Vector2.zero);
-
-            InstantiateIndicator(enemy_ctrl.transform, -m_main_atk);
         }
+        else if (collider.CompareTag("BOSS"))
+        {
+            var boss_ctrl = collider.GetComponent<BossCtrl>();
+            boss_ctrl.Status.UpdateHP(-m_main_atk);
+        }
+
+        InstantiateIndicator(collider.transform, -m_main_atk);
     }
 
     public void Inject(float main_atk, float sub_atk)
@@ -98,6 +104,7 @@ public class ThunderEffect : MonoBehaviour
             );
 
             m_enemy_set.Clear();
+            m_boss_set.Clear();
             var enemy_objects = Physics2D.OverlapCircleAll(center, radius);
             for (int i = 0; i < enemy_objects.Length; i++)
             {
@@ -109,12 +116,26 @@ public class ThunderEffect : MonoBehaviour
                         m_enemy_set.Add(enemy_ctrl);
                     }
                 }
+                else if (enemy_objects[i].CompareTag("BOSS"))
+                {
+                    var boss_ctrl = enemy_objects[i].GetComponent<BossCtrl>();
+                    if (boss_ctrl != null)
+                    {
+                        m_boss_set.Add(boss_ctrl);
+                    }
+                }
             }
 
             foreach (var enemy_ctrl in m_enemy_set)
             {
                 enemy_ctrl.Status.UpdateHP(-m_sub_atk, Vector2.zero);
                 InstantiateIndicator(enemy_ctrl.transform, -m_sub_atk);
+            }
+
+            foreach (var boss_ctrl in m_boss_set)
+            {
+                boss_ctrl.Status.UpdateHP(-m_sub_atk);
+                InstantiateIndicator(boss_ctrl.transform, -m_sub_atk);                
             }
 
             yield return new WaitForSeconds(0.5f);

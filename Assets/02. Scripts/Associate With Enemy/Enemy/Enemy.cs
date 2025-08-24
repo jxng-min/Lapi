@@ -19,6 +19,10 @@ public class Enemy : ScriptableObject
     [SerializeField] private EnemyType m_type;
     public EnemyType Type => m_type;
 
+    [Header("몬스터 이름")]
+    [SerializeField] private string m_name;
+    public string Name => m_name;
+
     [Header("애니메이터")]
     [SerializeField] private RuntimeAnimatorController m_animator;
     public RuntimeAnimatorController Animator => m_animator;

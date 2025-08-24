@@ -1,5 +1,3 @@
-
-
 public class EnemyStateContext
 {
     private readonly EnemyCtrl m_controller;

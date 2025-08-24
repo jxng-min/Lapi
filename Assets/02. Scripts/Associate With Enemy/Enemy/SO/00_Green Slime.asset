@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_code: 0
   m_type: 0
+  m_name: "\uCD08\uB85D \uC2AC\uB77C\uC784"
   m_animator: {fileID: 9100000, guid: 070e5b61a4df5a84f9cdce37d3c0ba05, type: 2}
   m_hp: 150
   m_atk: 30
