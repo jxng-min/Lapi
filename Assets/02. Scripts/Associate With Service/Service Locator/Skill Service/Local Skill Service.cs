@@ -17,9 +17,9 @@ namespace SkillService
             Point = 0;
             Skills = new ItemData[3]
             {
-                new(ItemCode.DASH, 1),
-                new(ItemCode.FIRE_BALL, 1),
-                new(ItemCode.THUNDER, 1),
+                new(ItemCode.DASH, 0),
+                new(ItemCode.FIRE_BALL, 0),
+                new(ItemCode.THUNDER, 0),
             };
         }
 
