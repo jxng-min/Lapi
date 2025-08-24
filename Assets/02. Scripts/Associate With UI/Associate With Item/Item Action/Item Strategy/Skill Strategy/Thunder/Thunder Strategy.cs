@@ -9,6 +9,7 @@ public class ThunderStrategy : ItemStrategy, ISkillStrategy
     private float m_main_damage;
     private float m_sub_damage;
     private float m_mp_usage;
+    private float m_skill_range = 20f;
 
     public void Inject(ISkillService skill_service)
     {
@@ -46,7 +47,19 @@ public class ThunderStrategy : ItemStrategy, ISkillStrategy
     private void InstantiateThunderEffect(Vector2 mouse_position)
     {
         var thunder_object = ObjectManager.Instance.GetObject(ObjectType.THUNDER).GetComponent<ThunderEffect>();
-        thunder_object.transform.position = mouse_position;
+
+        var player_pos = (Vector2)m_player_ctrl.transform.position;
+        var sqr_distance = Vector2.SqrMagnitude(mouse_position - (Vector2)m_player_ctrl.transform.position);
+
+        if (sqr_distance <= m_skill_range * m_skill_range)
+        {
+            thunder_object.transform.position = mouse_position;
+        }
+        else
+        {
+            var direction = (mouse_position - player_pos).normalized;
+            thunder_object.transform.position = player_pos + direction * m_skill_range;
+        }
 
         var thunder = thunder_object.GetComponent<ThunderEffect>();
         thunder.Inject(m_main_damage, m_sub_damage);
