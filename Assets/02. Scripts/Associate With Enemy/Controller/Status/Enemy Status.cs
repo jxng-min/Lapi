@@ -12,6 +12,7 @@ public class EnemyStatus : MonoBehaviour
     public float HP { get; private set; }
     public bool IsDead { get; set; }
     public bool IsKnockback { get; private set; }
+    public bool CanReturn => Vector3.SqrMagnitude(transform.position - m_controller.Player.transform.position) > 70f * 70f;
 
     public event Action<EnemyCtrl> OnDead;
 
@@ -75,9 +76,7 @@ public class EnemyStatus : MonoBehaviour
 
         m_controller.QuestService.UpdateKillCount(m_controller.SO.Code, 1);
 
-        StartCoroutine(SetDeath());
-
-        OnDead?.Invoke(m_controller);
+        StartCoroutine(SetDeath()); 
     }
 
     private void SetAlpha(float alpha)
@@ -87,8 +86,10 @@ public class EnemyStatus : MonoBehaviour
         m_controller.Renderer.color = color;
     }
 
-    private void Return()
+    public void Return()
     {
+        OnDead?.Invoke(m_controller);
+
         var container = ObjectManager.Instance.GetPool(m_controller.SO.Type == EnemyType.MELEE ?
                                                        ObjectType.MELEE_ENEMY : ObjectType.RANGED_ENEMY).Container;
         transform.position = container.transform.position;

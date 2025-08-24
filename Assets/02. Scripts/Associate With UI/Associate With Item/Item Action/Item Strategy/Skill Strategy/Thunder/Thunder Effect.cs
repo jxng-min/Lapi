@@ -44,14 +44,16 @@ public class ThunderEffect : MonoBehaviour
         {
             var enemy_ctrl = collider.GetComponent<EnemyCtrl>();
             enemy_ctrl.Status.UpdateHP(-m_main_atk, Vector2.zero);
+
+            InstantiateIndicator(collider.transform, -m_main_atk);
         }
         else if (collider.CompareTag("BOSS"))
         {
             var boss_ctrl = collider.GetComponent<BossCtrl>();
             boss_ctrl.Status.UpdateHP(-m_main_atk);
-        }
 
-        InstantiateIndicator(collider.transform, -m_main_atk);
+            InstantiateIndicator(collider.transform, -m_main_atk);
+        }
     }
 
     public void Inject(float main_atk, float sub_atk)

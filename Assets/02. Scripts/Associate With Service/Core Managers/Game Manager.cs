@@ -14,11 +14,11 @@ public class GameManager : Singleton<GameManager>
         GameEventBus.Subscribe(GameEventType.LOGIN, Login);
         GameEventBus.Subscribe(GameEventType.LOADING, Loading);
     }
-
+    
     private void OnDisable()
     {
         GameEventBus.Unsubscribe(GameEventType.LOGIN, Login);
-        GameEventBus.Unsubscribe(GameEventType.LOADING, Loading);        
+        GameEventBus.Unsubscribe(GameEventType.LOADING, Loading);
     }
 
     public void Login()

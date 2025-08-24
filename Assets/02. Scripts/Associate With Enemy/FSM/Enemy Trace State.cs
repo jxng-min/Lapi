@@ -27,7 +27,12 @@ public class EnemyTraceState : MonoBehaviour, IState<EnemyCtrl>
         while (true)
         {
             yield return new WaitUntil(() => GameManager.Instance.Event != GameEventType.SETTING);
-            
+
+            if (m_controller.Status.CanReturn)
+            {
+                m_controller.Status.Return();
+            }
+
             trace_timer -= Time.deltaTime;
             if (trace_timer <= 0f)
             {
@@ -50,11 +55,6 @@ public class EnemyTraceState : MonoBehaviour, IState<EnemyCtrl>
 
                 m_controller.Movement.MoveAlongPath(current_path);
             }
-
-            // while (m_controller.Movement.IsMove)
-            // {
-            //     yield return null;
-            // }
 
             yield return null;
         }
