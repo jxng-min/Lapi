@@ -29,6 +29,11 @@ public class EnemyMoveState : MonoBehaviour, IState<EnemyCtrl>
         while (true)
         {
             yield return new WaitUntil(() => GameManager.Instance.Event != GameEventType.SETTING);
+
+            if (m_controller.Status.CanReturn)
+            {
+                m_controller.Status.Return();
+            }
             
             trace_timer -= Time.deltaTime;
             if (trace_timer <= 0f)

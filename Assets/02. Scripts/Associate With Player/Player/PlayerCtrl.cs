@@ -40,6 +40,12 @@ public class PlayerCtrl : MonoBehaviour
         GameEventBus.Unsubscribe(GameEventType.SETTING, GameManager.Instance.Setting);        
     }
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, 70f);
+    }
+
     private void Update()
     {
         if (GameManager.Instance.Event != GameEventType.PLAYING)

@@ -64,7 +64,9 @@ public class EnemySpawner : MonoBehaviour
         {
             yield return new WaitUntil(() => GameManager.Instance.Event != GameEventType.SETTING);
             yield return new WaitUntil(() => m_spawned_enemies.Count < m_max_count);
+            yield return new WaitUntil(() => Vector3.SqrMagnitude(transform.position - m_player_ctrl.transform.position) <= 70f * 70f);
 
+            CreateEnemy();
             elapsed_time = 0f;
 
             while (elapsed_time <= m_spawn_interval)
@@ -73,8 +75,6 @@ public class EnemySpawner : MonoBehaviour
                 elapsed_time += Time.deltaTime;
                 yield return null;
             }
-
-            CreateEnemy();
         }
     }
 

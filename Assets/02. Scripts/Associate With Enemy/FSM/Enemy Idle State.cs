@@ -37,6 +37,11 @@ public class EnemyIdleState : MonoBehaviour, IState<EnemyCtrl>
             duration -= Time.deltaTime;
             trace_timer -= Time.deltaTime;
 
+            if (m_controller.Status.CanReturn)
+            {
+                m_controller.Status.Return();
+            }
+
             if (trace_timer <= 0f)
             {
                 trace_timer = trace_check_interval;
