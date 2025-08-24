@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 22630109716706489}
   - component: {fileID: 5881911639662378478}
   - component: {fileID: 8733324711621288622}
+  - component: {fileID: 4730578074633131180}
   m_Layer: 0
   m_Name: Left Swing Effects
   m_TagString: Untagged
@@ -189,6 +190,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.88057077, y: 0.6843664}
   m_EdgeRadius: 0
+--- !u!114 &4730578074633131180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 563714062182887283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f7a9808e57b456428244cca27ff1a00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_boss_ctrl: {fileID: 2169123376427877432}
 --- !u!1 &926859317829415195
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,6 +215,7 @@ GameObject:
   - component: {fileID: 5149821347615131047}
   - component: {fileID: 1478977259784183541}
   - component: {fileID: 2406845019867464381}
+  - component: {fileID: 1259128482680582337}
   m_Layer: 0
   m_Name: Right Swing Effects
   m_TagString: Untagged
@@ -346,6 +361,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.87772787, y: 0.68720996}
   m_EdgeRadius: 0
+--- !u!114 &1259128482680582337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926859317829415195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f7a9808e57b456428244cca27ff1a00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_boss_ctrl: {fileID: 2169123376427877432}
 --- !u!1 &1210655212840932478
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,6 +386,7 @@ GameObject:
   - component: {fileID: 2825554880672971661}
   - component: {fileID: 1165636398632789553}
   - component: {fileID: 7025118800149896610}
+  - component: {fileID: 40220296515794347}
   m_Layer: 0
   m_Name: Earthquake
   m_TagString: Untagged
@@ -494,6 +523,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0.0013202553, y: -0.17029323}
   m_Size: {x: 0.79143006, y: 0.6594281}
   m_Direction: 1
+--- !u!114 &40220296515794347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210655212840932478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f8ea551fc7a7f34ab502a5e8eb8efc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_boss_ctrl: {fileID: 2169123376427877432}
 --- !u!1 &4820437175905661313
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,6 +583,7 @@ GameObject:
   - component: {fileID: 3652319004129558715}
   - component: {fileID: 8616965489088180897}
   - component: {fileID: 7287064790454732310}
+  - component: {fileID: 2715707747777362635}
   m_Layer: 0
   m_Name: Down Swing Effects
   m_TagString: Untagged
@@ -686,6 +729,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.7838898, y: 0.7696729}
   m_EdgeRadius: 0
+--- !u!114 &2715707747777362635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6060784756960257307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f7a9808e57b456428244cca27ff1a00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_boss_ctrl: {fileID: 2169123376427877432}
 --- !u!1 &6440943645730145833
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,6 +754,7 @@ GameObject:
   - component: {fileID: 1447637492409723204}
   - component: {fileID: 6534379594370764308}
   - component: {fileID: 8820744584732350007}
+  - component: {fileID: 832123389580443785}
   m_Layer: 0
   m_Name: Up Swing Effects
   m_TagString: Untagged
@@ -843,6 +900,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.78104603, y: 0.7838905}
   m_EdgeRadius: 0
+--- !u!114 &832123389580443785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6440943645730145833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f7a9808e57b456428244cca27ff1a00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_boss_ctrl: {fileID: 2169123376427877432}
 --- !u!1 &6868218282489286114
 GameObject:
   m_ObjectHideFlags: 0
@@ -860,9 +930,9 @@ GameObject:
   - component: {fileID: 662808575465094671}
   - component: {fileID: 7324791210649466353}
   - component: {fileID: 9002094112328896073}
-  - component: {fileID: 3827480207627734551}
-  - component: {fileID: 8880774614341377709}
   - component: {fileID: 3666656234053332684}
+  - component: {fileID: 4382342403183493829}
+  - component: {fileID: 2169123376427877432}
   m_Layer: 7
   m_Name: Wendigo
   m_TagString: BOSS
@@ -1076,30 +1146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff018034283fbd44e9e8b4a508604f09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3827480207627734551
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6868218282489286114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f6b4b74bb8e8a146acff4d2c15af7a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &8880774614341377709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6868218282489286114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22d5b68a8f8b4b04cbacb6ca05fc6896, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3666656234053332684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1110,5 +1156,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe55f51bdf0dcfd4cace5894c0e34b92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4382342403183493829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6868218282489286114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a93288a0c96e34b4ea3270c425fc4b52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_swing_colliders:
+  - {fileID: 6060784756960257307}
+  - {fileID: 6440943645730145833}
+  - {fileID: 563714062182887283}
+  - {fileID: 926859317829415195}
+  m_earthquake_collider: {fileID: 1210655212840932478}
+--- !u!114 &2169123376427877432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6868218282489286114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e57a3ab3717b7418afff6714d50670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

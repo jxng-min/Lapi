@@ -10,7 +10,7 @@ public class BossCtrl : MonoBehaviour
     private IState<BossCtrl> m_idle_state;
     private IState<BossCtrl> m_move_state;
     private IState<BossCtrl> m_trace_state;
-    private IState<BossCtrl> m_attack_state;
+    protected IState<BossCtrl> m_attack_state;
     private IState<BossCtrl> m_dead_state;
     private IState<BossCtrl> m_recovery_state;
 
@@ -99,7 +99,7 @@ public class BossCtrl : MonoBehaviour
 
         Movement.Initialize(SO.SPD);
         Status.Initialize(SO.HP);
-        Attack.Initialize(SO.ATK, 25f);
+        Attack.Initialize(SO.ATK, 25f, 10f);
         Drop.Initialize(SO.EXP, SO.EXP_DEV, SO.GOLD, SO.GOLD_DEV, SO.DropList, SO.DropRate);
 
         IsInit = true;

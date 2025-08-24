@@ -58,7 +58,7 @@ public class BossRecoveryState : MonoBehaviour, IState<BossCtrl>
                     yield break;
                 }
 
-                m_controller.Status.UpdateHP(m_controller.SO.HP * 0.2f * Time.deltaTime);
+                m_controller.Status.UpdateHP(m_controller.SO.HP * 0.2f);
             }
 
             yield return null;

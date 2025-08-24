@@ -39,10 +39,16 @@ public class BossTraceState : MonoBehaviour, IState<BossCtrl>
                     yield break;
                 }
 
-                if (m_controller.Status.IsDead)
+                if (m_controller.Attack.CanAttack())
                 {
+                    m_controller.ChangeState(EnemyState.ATTACK);
                     yield break;
                 }
+
+                if (m_controller.Status.IsDead)
+                    {
+                        yield break;
+                    }
 
                 var player_position = m_controller.Player.transform.position;
                 current_path = m_controller.Pathfinder.Pathfind(transform.position, player_position);
