@@ -315,3 +315,5 @@ MonoBehaviour:
   m_shadow_transform: {fileID: 7545224043702824086}
   m_amount: 1
   m_type: 201
+  m_coin_image: {fileID: 4767863146524523360}
+  m_shadow_image: {fileID: 2036107944916141557}

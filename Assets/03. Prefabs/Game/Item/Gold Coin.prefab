@@ -205,6 +205,8 @@ MonoBehaviour:
   m_shadow_transform: {fileID: 4962857058953921884}
   m_amount: 25
   m_type: 203
+  m_coin_image: {fileID: 2281032580772575941}
+  m_shadow_image: {fileID: 1303720234381488497}
 --- !u!1 &8338432725318679168
 GameObject:
   m_ObjectHideFlags: 0
