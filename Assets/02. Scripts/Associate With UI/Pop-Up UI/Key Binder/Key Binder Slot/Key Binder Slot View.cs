@@ -42,6 +42,8 @@ public class KeyBinderSlotView : MonoBehaviour
         m_button_text.text = "-";
 
         StartCoroutine(Co_AssignKey());
+
+        SoundManager.Instance.PlaySFX("Default");
     }
 
     private IEnumerator Co_AssignKey()

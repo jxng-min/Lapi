@@ -36,6 +36,7 @@ public class EnemyDrop : MonoBehaviour
         GetEXP();
         InstantiateCoin();
         InstantiateItem();
+        SoundManager.Instance.PlaySFX("Item Drop");
     }
 
     private void GetEXP()

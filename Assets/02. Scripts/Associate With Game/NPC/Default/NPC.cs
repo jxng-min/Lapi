@@ -178,6 +178,7 @@ public class NPC : MonoBehaviour
     {
         var target_position = (Vector2)transform.position + Vector2.up * 6f;
         m_dialogue_presenter.OpenUI(this, dialogue_id, new System.Numerics.Vector2(target_position.x, target_position.y));
+        SoundManager.Instance.PlaySFX("OpenUI");
     }
 
     private void UpdateQuestProgress()
@@ -190,12 +191,14 @@ public class NPC : MonoBehaviour
             {
                 case QuestState.NONE:
                     m_quest_service.AddQuest(quest);
+                    SoundManager.Instance.PlaySFX("Quest Begin");
                     break;
 
                 case QuestState.CAN_CLEAR:
                     m_quest_service.UpdateQuestState(quest.ID, QuestState.CLEARED);
                     m_quest_service.ClaimReward(quest);
                     m_quest_service.ClaimSubmit(quest);
+                    SoundManager.Instance.PlaySFX("Quest End");
                     break;
             }
         }

@@ -31,8 +31,13 @@ public class FullQuestSlotView : MonoBehaviour, IFullQuestSlotView
         m_presenter = presenter;
 
         m_compact_button.onClick.AddListener(m_presenter.OnClickedCompact);
+        m_compact_button.onClick.AddListener(() => SoundManager.Instance.PlaySFX("Default"));
+
         m_info_button.onClick.AddListener(m_presenter.OnClickedInfo);
-        m_nav_button.onClick.AddListener(m_presenter.OnCLickedNavigation);
+        m_info_button.onClick.AddListener(() => SoundManager.Instance.PlaySFX("Default"));
+
+        m_nav_button.onClick.AddListener(m_presenter.OnClickedNavigation);
+        m_nav_button.onClick.AddListener(() => SoundManager.Instance.PlaySFX("Default"));
     }
 
     public void InitializeSlot(string title, string state)

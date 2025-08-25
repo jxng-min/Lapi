@@ -16,6 +16,7 @@ MonoBehaviour:
   m_type: 0
   m_name: "\uD30C\uB780 \uC2AC\uB77C\uC784"
   m_animator: {fileID: 9100000, guid: 43a01b885072eca4a9e0edd7144d8d5a, type: 2}
+  m_dead_sound: Slime Dead
   m_hp: 220
   m_atk: 45
   m_spd: 2

@@ -27,6 +27,10 @@ public class Enemy : ScriptableObject
     [SerializeField] private RuntimeAnimatorController m_animator;
     public RuntimeAnimatorController Animator => m_animator;
 
+    [Header("처치 시 효과음")]
+    [SerializeField] private string m_dead_sound;
+    public string DeadSound => m_dead_sound;
+
     [Space(30f)]
     [Header("몬스터 능력 관련")]
     [Header("체력")]

@@ -69,10 +69,12 @@ public class PopupUIManager : MonoBehaviour
         if (m_active_popup_list.Contains(presenter))
         {
             CloseUI(presenter);
+            SoundManager.Instance.PlaySFX("CloseUI");
         }
         else
         {
             OpenUI(presenter);
+            SoundManager.Instance.PlaySFX("OpenUI");
         }
 
         SortDepth();

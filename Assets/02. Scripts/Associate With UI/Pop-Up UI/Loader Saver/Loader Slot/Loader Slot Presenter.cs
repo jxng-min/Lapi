@@ -93,10 +93,12 @@ public class LoaderSlotPresenter
         {
             Load();
             m_view.LoadScene("Game");
+            m_view.PlaySFX("Load");
         }
         else
         {
             Save();
+            m_view.PlaySFX("Save");
         }
     }
 

@@ -83,9 +83,9 @@ public class FullQuestSlotPresenter : IDisposable
         m_quest_view.UpdateInfo(m_quest_data_service.GetDescription(m_quest.ID));
     }
 
-    public void OnCLickedNavigation()
+    public void OnClickedNavigation()
     {
-        
+
     }
 
     public void ToggleSlot(bool active)

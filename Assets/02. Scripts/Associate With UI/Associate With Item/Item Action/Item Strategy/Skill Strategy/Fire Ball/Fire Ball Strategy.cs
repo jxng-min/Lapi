@@ -34,6 +34,8 @@ public class FireBallStrategy : ItemStrategy, ISkillStrategy
         m_player_ctrl.Status.UpdateMP(-m_mp_usage);
         InstantiateFireBallEffect(fire_ball_direction);
 
+        SoundManager.Instance.PlaySFX("Fire Ball");
+
         return true;
     }
 

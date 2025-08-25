@@ -32,6 +32,7 @@ public class SkillSlotView : MonoBehaviour, ISkillSlotView
         m_presenter = presenter;
 
         m_upgrade_button.onClick.AddListener(m_presenter.UpgradeSkill);
+        m_upgrade_button.onClick.AddListener(() => SoundManager.Instance.PlaySFX("Default"));
     }
 
     public void UpdateUI(string name, int level, bool can_upgrade, bool can_use, int constraint)

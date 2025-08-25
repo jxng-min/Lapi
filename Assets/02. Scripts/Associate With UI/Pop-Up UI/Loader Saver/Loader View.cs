@@ -41,11 +41,15 @@ public class LoaderView : MonoBehaviour, ILoaderView
         {
             m_ui_manager.AddPresenter(m_presenter);
         }
+
+        PlaySFX("OpenUI");
     }
     public void CloseUI()
     {
         m_animator.SetBool("Open", false);
         PopupCloseUI();
+
+        PlaySFX("CloseUI");
     }
 
     public void SetDepth()
@@ -59,5 +63,10 @@ public class LoaderView : MonoBehaviour, ILoaderView
         {
             m_ui_manager.RemovePresenter(m_presenter);
         }
+    }
+
+    private void PlaySFX(string sfx_name)
+    {
+        SoundManager.Instance.PlaySFX(sfx_name);
     }
 }

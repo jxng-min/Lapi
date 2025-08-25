@@ -32,6 +32,8 @@ public class FieldItem : FieldObject
         {
             m_quest_service.UpdateItemCount(Item.Code);
             m_inventory_service.AddItem(Item.Code, 1);
+
+            SoundManager.Instance.PlaySFX("Item Pickup");
             ObjectManager.Instance.ReturnObject(gameObject, ObjectType.ITEM);
         }
     }

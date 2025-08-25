@@ -57,12 +57,16 @@ public class WendigoAttackState : MonoBehaviour, IState<BossCtrl>
     {
         m_controller.Animator.SetTrigger("Earthquake");
         m_block_coroutine = StartCoroutine(Co_Blocking(2f));
+
+        SoundManager.Instance.PlaySFX("Wendigo Earthquake");
     }
 
     private void Swing()
     {
         m_controller.Animator.SetTrigger("Swing");
         m_block_coroutine = StartCoroutine(Co_Blocking(4f));
+
+        SoundManager.Instance.PlaySFX("Wendigo Swing");
     }
 
     private IEnumerator Co_Blocking(float target_time)
