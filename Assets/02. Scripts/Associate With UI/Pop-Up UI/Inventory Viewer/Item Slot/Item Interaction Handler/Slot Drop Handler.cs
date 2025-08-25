@@ -81,6 +81,8 @@ public class SlotDropHandler
         {
             m_tooltip_presenter.OpenUI(item.Code);
         }
+
+        SoundManager.Instance.PlaySFX("Default");
     }
 
     private void ChangeSlot()

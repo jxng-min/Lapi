@@ -39,6 +39,7 @@ public class Sword : Weapon
             CanUse = false;
             Animator.SetTrigger("Attack");
             Cool();
+            SoundManager.Instance.PlaySFX("Sword");
         }
     }
 

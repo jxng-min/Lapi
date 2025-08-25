@@ -16,6 +16,7 @@ MonoBehaviour:
   m_type: 0
   m_name: "\uC6EC\uB514\uACE0"
   m_animator: {fileID: 0}
+  m_dead_sound: Wendigo Dead
   m_hp: 5000
   m_atk: 200
   m_spd: 5

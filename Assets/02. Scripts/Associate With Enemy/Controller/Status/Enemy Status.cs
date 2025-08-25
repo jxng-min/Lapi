@@ -70,6 +70,8 @@ public class EnemyStatus : MonoBehaviour
 
         IsDead = true;
 
+        SoundManager.Instance.PlaySFX(m_controller.SO.DeadSound);
+
         m_controller.Animator.speed = 0f;
         m_controller.Rigidbody.simulated = false;
         m_controller.Collider.enabled = false;

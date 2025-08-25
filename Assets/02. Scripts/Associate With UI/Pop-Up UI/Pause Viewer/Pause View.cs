@@ -26,11 +26,13 @@ public class PauseView : MonoBehaviour, IPauseView
     public void OpenUI()
     {
         m_pause_panel.SetActive(true);
+        SoundManager.Instance.PlaySFX("OpenUI");
     }
 
     public void CloseUI()
     {
         m_pause_panel.SetActive(false);
+        SoundManager.Instance.PlaySFX("CloseUI");
     }
 
     public void SetDepth()

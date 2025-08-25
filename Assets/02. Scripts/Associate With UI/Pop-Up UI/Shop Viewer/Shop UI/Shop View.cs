@@ -31,9 +31,13 @@ public class ShopView : MonoBehaviour, IShopView
     public void Inject(ShopPresenter presenter)
     {
         m_presenter = presenter;
+
         m_toggle.onValueChanged.AddListener((isOn) => m_presenter.OnChangedToggle(isOn));
+        m_toggle.onValueChanged.AddListener((isOn) => SoundManager.Instance.PlaySFX("Default"));
+
         m_close_button.onClick.AddListener(m_presenter.CloseUI);
         m_close_button.onClick.AddListener(PopupCloseUI);
+        m_close_button.onClick.AddListener(() => SoundManager.Instance.PlaySFX("CloseUI"));
     }
 
     public void OpenUI()

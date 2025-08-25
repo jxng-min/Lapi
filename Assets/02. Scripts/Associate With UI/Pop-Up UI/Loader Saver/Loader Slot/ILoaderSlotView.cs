@@ -4,4 +4,5 @@ public interface ILoaderSlotView
 
     void UpdateUI(bool can_load, bool is_loader, int level = 0, float hour = 0f, float minute = 0f, float second = 0f);
     void LoadScene(string scene_name);
+    void PlaySFX(string sfx_name);
 }

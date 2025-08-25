@@ -39,6 +39,7 @@ public class Hand : Weapon
             CanUse = false;
             Animator.SetTrigger("Attack");
             Cool();
+            SoundManager.Instance.PlaySFX("Hand");
         }
     }
 

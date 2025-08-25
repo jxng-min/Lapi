@@ -16,17 +16,20 @@ public class TitleInstaller : MonoBehaviour, IInstaller
     {
         m_start_button.onClick.AddListener(OnClickedStart);
         m_exit_button.onClick.AddListener(OnClickedExit);
-        
+
         GameEventBus.Publish(GameEventType.LOGIN);
+        SoundManager.Instance.PlayBGM("Title");
     }
 
     public void OnClickedStart()
     {
         LoadingManager.Instance.LoadScene("Game");
+        SoundManager.Instance.PlaySFX("Default");
     }
 
     public void OnClickedExit()
     {
+        SoundManager.Instance.PlaySFX("Default");
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else

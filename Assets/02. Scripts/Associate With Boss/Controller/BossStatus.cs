@@ -76,6 +76,8 @@ public class BossStatus : MonoBehaviour
 
         IsDead = true;
 
+        SoundManager.Instance.PlaySFX(m_controller.SO.DeadSound);
+
         m_controller.Animator.SetTrigger("Death");
         m_controller.StatusPresenter.CloseUI();
 

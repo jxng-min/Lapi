@@ -44,6 +44,8 @@ public class FieldCoin : FieldObject
         if (collider.CompareTag("Player"))
         {
             m_inventory_service.UpdateGold(Amount);
+
+            SoundManager.Instance.PlaySFX("Item Pickup");
             ObjectManager.Instance.ReturnObject(gameObject, Type);
         }
     }

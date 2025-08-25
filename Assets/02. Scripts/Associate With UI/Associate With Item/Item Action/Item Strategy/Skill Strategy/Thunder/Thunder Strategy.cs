@@ -32,6 +32,8 @@ public class ThunderStrategy : ItemStrategy, ISkillStrategy
         m_player_ctrl.Status.UpdateMP(-m_mp_usage);
         InstantiateThunderEffect(mouse_position);
 
+        SoundManager.Instance.PlaySFX("Thunder");
+
         return true;
     }
 

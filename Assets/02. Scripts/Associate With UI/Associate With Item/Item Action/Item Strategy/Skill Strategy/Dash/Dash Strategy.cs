@@ -36,6 +36,8 @@ public class DashStrategy : ItemStrategy, ISkillStrategy
         InstantiateDashEffect(dash_direction);
         Dash(dash_direction);
 
+        SoundManager.Instance.PlaySFX("Dash");
+
         return true;
     }
 

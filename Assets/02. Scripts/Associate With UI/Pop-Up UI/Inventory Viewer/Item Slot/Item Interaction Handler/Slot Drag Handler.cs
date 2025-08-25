@@ -39,6 +39,7 @@ public class SlotDragHandler
         m_drag_slot_presenter.SetPosition(mouse_position);
 
         m_cursor_db.SetCursor(CursorMode.GRAB);
+        SoundManager.Instance.PlaySFX("Default");
     }
 
     public void OnDrag(System.Numerics.Vector2 mouse_position)

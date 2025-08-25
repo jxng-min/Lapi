@@ -60,4 +60,9 @@ public class LoaderSlotView : MonoBehaviour, ILoaderSlotView
         color.a = alpha;
         text.color = color;
     }
+
+    public void PlaySFX(string sfx_name)
+    {
+        SoundManager.Instance.PlaySFX(sfx_name);
+    }
 }

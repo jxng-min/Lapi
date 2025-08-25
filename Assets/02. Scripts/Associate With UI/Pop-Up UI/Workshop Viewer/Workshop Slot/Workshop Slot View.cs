@@ -46,6 +46,7 @@ public class WorkshopSlotView : MonoBehaviour, IWorkshopSlotView
         m_presenter = presenter;
 
         m_craft_button.onClick.AddListener(m_presenter.OnClickedPurchase);
+        m_craft_button.onClick.AddListener(() => SoundManager.Instance.PlaySFX("Crafting"));
     }
 
     public void UpdateUI(bool can_craft, bool is_constraint, int constraint)

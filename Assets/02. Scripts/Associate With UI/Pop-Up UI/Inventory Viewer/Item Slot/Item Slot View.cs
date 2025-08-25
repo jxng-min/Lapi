@@ -30,7 +30,7 @@ public class ItemSlotView : MonoBehaviour, IItemSlotView
         {
             return;
         }
-        
+
         if (!m_presenter.IsEmpty)
         {
             m_cooldown_image.fillAmount = m_presenter.GetCool();
@@ -121,6 +121,7 @@ public class ItemSlotView : MonoBehaviour, IItemSlotView
 
         var mouse_position = new System.Numerics.Vector2(eventData.position.x, eventData.position.y);
         m_presenter.OnBeginDrag(mouse_position, drag_mode);
+
     }
 
     public void OnDrag(PointerEventData eventData)

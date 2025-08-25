@@ -72,6 +72,8 @@ public class SlotPointerHandler
             return;
         }
 
+        SoundManager.Instance.PlaySFX("Default");
+
         if (m_slot_type == SlotType.Skill)
         {
             if (EventSystem.current.IsPointerOverGameObject())

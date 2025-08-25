@@ -1,22 +1,25 @@
 fileFormatVersion: 2
-guid: e3fcea75ce8d40544b8b09a295ba68be
+guid: b82d0ddc337047142afb0f2dda436a00
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -436185896965959137
-    second: Loader UI_0
+      213: 6020897712415337994
+    second: Loader UI 1_0
   - first:
-      213: -5012698859956796614
-    second: Loader UI_1
+      213: -8649516402185686332
+    second: Loader UI 1_1
   - first:
-      213: 6138259438880012980
-    second: Loader UI_2
+      213: -9126084654699702206
+    second: Loader UI 1_2
   - first:
-      213: 1942328923638235498
-    second: Loader UI_3
+      213: 1305956091670084975
+    second: Loader UI 1_3
   - first:
-      213: -7161219539509114547
-    second: Loader UI_4
+      213: 8982619410922896580
+    second: Loader UI 1_4
+  - first:
+      213: 8526318342236944338
+    second: Loader UI 1_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -84,7 +87,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -128,7 +131,7 @@ TextureImporter:
       name: Loader Panel
       rect:
         serializedVersion: 2
-        x: 591
+        x: 604
         y: 544
         width: 552
         height: 591
@@ -140,8 +143,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f121f4bdc3b52f9f0800000000000000
-      internalID: -436185896965959137
+      spriteID: 4c2bec8c8aeb6f780800000000000000
+      internalID: -8649516402185686332
       vertices: []
       indices: 
       edges: []
@@ -150,7 +153,7 @@ TextureImporter:
       name: Saver Panel
       rect:
         serializedVersion: 2
-        x: 1196
+        x: 1209
         y: 544
         width: 552
         height: 591
@@ -162,8 +165,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a33054ef1f05f6ab0800000000000000
-      internalID: -5012698859956796614
+      spriteID: 2481b7ecb52a95180800000000000000
+      internalID: -9126084654699702206
       vertices: []
       indices: 
       edges: []
@@ -172,9 +175,9 @@ TextureImporter:
       name: Grid Panel
       rect:
         serializedVersion: 2
-        x: 0
+        x: 12
         y: 0
-        width: 531
+        width: 532
         height: 487
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -184,17 +187,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4bab1a1107a7f2550800000000000000
-      internalID: 6138259438880012980
+      spriteID: f6db0486520bf1210800000000000000
+      internalID: 1305956091670084975
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slot Panel
+      name: Loader Slot
       rect:
         serializedVersion: 2
-        x: 604
+        x: 617
         y: 365
         width: 526
         height: 122
@@ -206,8 +209,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a618c6a7dd984fa10800000000000000
-      internalID: 1942328923638235498
+      spriteID: 4cc769423cca8ac70800000000000000
+      internalID: 8982619410922896580
       vertices: []
       indices: 
       edges: []
@@ -216,7 +219,7 @@ TextureImporter:
       name: Back Button
       rect:
         serializedVersion: 2
-        x: 604
+        x: 617
         y: 295
         width: 27
         height: 27
@@ -228,8 +231,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d4909f445cc3e9c90800000000000000
-      internalID: -7161219539509114547
+      spriteID: 2d73eee9b51935670800000000000000
+      internalID: 8526318342236944338
       vertices: []
       indices: 
       edges: []
@@ -238,7 +241,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 1ec5a0820fe49c849aafe3c141794511
+    spriteID: c526f477615053b4ba6cd65b9d70fb52
     internalID: 0
     vertices: []
     indices: 
@@ -248,11 +251,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Back Button: -7161219539509114547
-      Grid Panel: 6138259438880012980
-      Loader Panel: -436185896965959137
-      Saver Panel: -5012698859956796614
-      Slot Panel: 1942328923638235498
+      Back Button: 8526318342236944338
+      Grid Panel: 1305956091670084975
+      Loader Panel: -8649516402185686332
+      Loader Slot: 8982619410922896580
+      Loader UI 1_0: 6020897712415337994
+      Saver Panel: -9126084654699702206
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

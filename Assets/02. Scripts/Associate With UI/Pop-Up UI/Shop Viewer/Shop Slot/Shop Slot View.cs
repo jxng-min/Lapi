@@ -26,6 +26,7 @@ public class ShopSlotView : MonoBehaviour, IShopSlotView
     {
         m_presenter = presenter;
         m_purchase_button.onClick.AddListener(m_presenter.OnClickedPurchase);
+        m_purchase_button.onClick.AddListener(() => SoundManager.Instance.PlaySFX("Shop Purchase"));
     }
 
     public void UpdateUI(string name, int price, bool purchase, bool is_constraint, int constraint_level = 1)

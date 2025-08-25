@@ -38,6 +38,7 @@ public class EquipmentView : MonoBehaviour, IEquipmentView
 
         m_close_button.onClick.AddListener(m_presenter.CloseUI);
         m_close_button.onClick.AddListener(PopupCloseUI);
+        m_close_button.onClick.AddListener(() => SoundManager.Instance.PlaySFX("CloseUI"));
     }
 
     public void OpenUI()
