@@ -11,7 +11,6 @@ public class CompactQuestSlotPresenter: IDisposable
     private readonly IQuestDataBase m_quest_db;
 
     private readonly Quest m_quest;
-    private readonly QuestData m_quest_data;
 
     private bool m_is_active = true;
 
@@ -30,7 +29,6 @@ public class CompactQuestSlotPresenter: IDisposable
         m_quest_db = quest_db;
 
         m_quest = quest;
-        m_quest_data = m_quest_service.GetQuest(m_quest.ID);
 
         m_quest_service.OnUpdatedState += Updates;
 
@@ -103,7 +101,6 @@ public class CompactQuestSlotPresenter: IDisposable
         {
             if (subquests[i].ID == format_id)
             {
-                UnityEngine.Debug.Log($"{format_id}, {GetCurrentProcess(subquests[i].ID)}");
                 return subquests[i].GetFormatText(GetCurrentProcess(subquests[i].ID));
             }
         }

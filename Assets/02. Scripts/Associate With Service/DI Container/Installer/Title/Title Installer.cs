@@ -23,7 +23,7 @@ public class TitleInstaller : MonoBehaviour, IInstaller
 
     public void OnClickedStart()
     {
-        LoadingManager.Instance.LoadScene("Game");
+        LoadingManager.Instance.LoadScene("Event");
         SoundManager.Instance.PlaySFX("Default");
     }
 
