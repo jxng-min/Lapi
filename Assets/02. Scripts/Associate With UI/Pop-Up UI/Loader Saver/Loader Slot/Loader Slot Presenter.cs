@@ -30,7 +30,7 @@ public class LoaderSlotPresenter
                                IKeyService key_service,
                                IShortcutService shortcut_service,
                                IQuestService quest_service,
-                               ISettingService m_setting_service,
+                               ISettingService setting_service,
                                int offset,
                                bool is_loader)
     {
@@ -42,6 +42,7 @@ public class LoaderSlotPresenter
         m_key_service = key_service;
         m_shortcut_service = shortcut_service;
         m_quest_service = quest_service;
+        m_setting_service = setting_service;
 
         m_offset = offset;
         m_is_loader = is_loader;

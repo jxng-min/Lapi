@@ -1,9 +1,9 @@
 public class TitleBootstrapper : Bootstrapper
 {
-    protected override void Start()
+    protected override void Awake()
     {
+        base.Awake();
+        
         ServiceLocator.Initialize();
-
-        base.Start();
     }
 }
