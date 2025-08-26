@@ -2,6 +2,7 @@ using EquipmentService;
 using InventoryService;
 using KeyService;
 using QuestService;
+using SettingService;
 using ShortcutService;
 using SkillService;
 using UserService;
@@ -16,6 +17,7 @@ public class LoaderSlotPresenter
     private readonly IKeyService m_key_service;
     private readonly IShortcutService m_shortcut_service;
     private readonly IQuestService m_quest_service;
+    private readonly ISettingService m_setting_service;
 
     private readonly int m_offset;
     private readonly bool m_is_loader;
@@ -28,6 +30,7 @@ public class LoaderSlotPresenter
                                IKeyService key_service,
                                IShortcutService shortcut_service,
                                IQuestService quest_service,
+                               ISettingService setting_service,
                                int offset,
                                bool is_loader)
     {
@@ -39,6 +42,7 @@ public class LoaderSlotPresenter
         m_key_service = key_service;
         m_shortcut_service = shortcut_service;
         m_quest_service = quest_service;
+        m_setting_service = setting_service;
 
         m_offset = offset;
         m_is_loader = is_loader;
@@ -64,7 +68,8 @@ public class LoaderSlotPresenter
            !(m_skill_service as ISaveable).Load(m_offset) ||
            !(m_key_service as ISaveable).Load(m_offset) ||
            !(m_shortcut_service as ISaveable).Load(m_offset) ||
-           !(m_quest_service as ISaveable).Load(m_offset))
+           !(m_quest_service as ISaveable).Load(m_offset) ||
+           !(m_setting_service as ISaveable).Load(m_offset))
         {
             m_view?.UpdateUI(false, m_is_loader);
         }
@@ -83,6 +88,7 @@ public class LoaderSlotPresenter
         (m_key_service as ISaveable).Save(m_offset);
         (m_shortcut_service as ISaveable).Save(m_offset);
         (m_quest_service as ISaveable).Save(m_offset);
+        (m_setting_service as ISaveable).Save(m_offset);
 
         UpdateUI();
     }

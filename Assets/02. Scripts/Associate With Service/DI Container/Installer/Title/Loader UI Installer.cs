@@ -2,6 +2,7 @@ using EquipmentService;
 using InventoryService;
 using KeyService;
 using QuestService;
+using SettingService;
 using ShortcutService;
 using SkillService;
 using UnityEngine;
@@ -33,6 +34,7 @@ public class LoaderUIInstaller : MonoBehaviour, IInstaller
                                                                     ServiceLocator.Get<IKeyService>(),
                                                                     ServiceLocator.Get<IShortcutService>(),
                                                                     ServiceLocator.Get<IQuestService>(),
+                                                                    ServiceLocator.Get<ISettingService>(),
                                                                     i,
                                                                     m_is_loader);
         }

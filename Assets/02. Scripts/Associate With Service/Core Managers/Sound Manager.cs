@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using NUnit.Framework;
+using SettingService;
 using UnityEngine;
 
 public class SoundManager : Singleton<SoundManager>
@@ -16,13 +18,19 @@ public class SoundManager : Singleton<SoundManager>
     private Dictionary<string, int> m_sfx_channel_dict;
 
     private string m_last_bgm_key;
+    private ISettingService m_setting_service;
 
-    private AudioSource BGM => m_bgm_source;
+    public AudioSource BGM => m_bgm_source;
 
     protected override void Awake()
     {
         base.Awake();
         Initialize();
+    }
+
+    private void Start()
+    {
+        m_setting_service = ServiceLocator.Get<ISettingService>();
     }
 
     private void Initialize()
@@ -48,6 +56,11 @@ public class SoundManager : Singleton<SoundManager>
     #region BGM
     public void PlayBGM(string bgm_name)
     {
+        if (m_last_bgm_key == bgm_name)
+        {
+            return;
+        }
+
         StartCoroutine(Co_ChangeBGM(bgm_name));
     }
 
@@ -104,22 +117,34 @@ public class SoundManager : Singleton<SoundManager>
         var elapsed_time = 0f;
         var target_time = 0.4f;
 
-        while (elapsed_time <= target_time)
+        if (m_setting_service.Data.m_bgm_active)
         {
-            var delta = elapsed_time / target_time;
-            bgm_source.volume = is_out ? Mathf.Lerp(0.4f, 0f, delta) : Mathf.Lerp(0f, 0.4f, delta);
+            while (elapsed_time <= target_time)
+            {
+                var delta = elapsed_time / target_time;
+                bgm_source.volume = is_out ? Mathf.Lerp(m_setting_service.Data.m_bgm_rate, 0f, delta) : Mathf.Lerp(0f, m_setting_service.Data.m_bgm_rate, delta);
 
-            elapsed_time += Time.deltaTime;
-            yield return null;
+                elapsed_time += Time.deltaTime;
+                yield return null;
+            }
+
+            bgm_source.volume = is_out ? 0f : m_setting_service.Data.m_bgm_rate;
         }
-
-        bgm_source.volume = is_out ? 0f : 0.4f;
+        else
+        {
+            bgm_source.volume = 0f;
+        }
     }
     #endregion BGM
 
     #region SFX
     public void PlaySFX(string sfx_name)
     {
+        if (!m_setting_service.Data.m_sfx_active)
+        {
+            return;
+        }
+        
         if (m_sfx_dict.TryGetValue(sfx_name, out var sfx_data))
         {
             if (m_sfx_channel_dict.TryGetValue(sfx_name, out var channel))
@@ -142,6 +167,7 @@ public class SoundManager : Singleton<SoundManager>
             var sfx_source = sfx_obj.GetComponent<AudioSource>();
 
             sfx_source.clip = sfx_data.Clip;
+            sfx_source.volume = m_setting_service.Data.m_sfx_rate;
             sfx_source.Play();
 
             StartCoroutine(ReturnSFX(sfx_name, sfx_source));

@@ -9,6 +9,7 @@ using KeyService;
 using NPCService;
 using QuestDataService;
 using QuestService;
+using SettingService;
 using ShortcutService;
 using SkillService;
 using UserService;
@@ -33,6 +34,7 @@ public static class ServiceLocator
         Register<IDialogueService>(new LocalDialogueService());
         Register<IQuestDataService>(new LocalQuestDataService());
         Register<IQuestService>(new LocalQuestService());
+        Register<ISettingService>(new LocalSettingService());
     }
 
     public static void Register<T>(T service)
