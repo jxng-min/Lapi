@@ -9,6 +9,7 @@ public class LocalUserService : ISaveable, IUserService
     private Vector3 m_camera;
     private float m_playtime;
     private StatusData m_status;
+    private string m_map;
 
     public event Action<int, int> OnUpdatedLevel;
 
@@ -36,6 +37,12 @@ public class LocalUserService : ISaveable, IUserService
         set => m_status = value;
     }
 
+    public string Map
+    {
+        get => m_map;
+        set => m_map = value;
+    }
+
     public LocalUserService()
     {
         var user_data = new UserData();
@@ -44,6 +51,7 @@ public class LocalUserService : ISaveable, IUserService
         m_camera = user_data.Camera;
         m_playtime = user_data.PlayTime;
         m_status = user_data.Status;
+        m_map = user_data.Map;
 
         CreateDirectory();
     }
@@ -94,7 +102,7 @@ public class LocalUserService : ISaveable, IUserService
     {
         var local_data_path = Path.Combine(Application.persistentDataPath, "User", $"UserData{offset}.json");
 
-        var user_data = new UserData(m_position, m_camera, m_playtime, m_status);
+        var user_data = new UserData(m_position, m_camera, m_playtime, m_status, m_map);
         var json_data = JsonUtility.ToJson(user_data, true);
 
         File.WriteAllText(local_data_path, json_data);

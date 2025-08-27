@@ -26,6 +26,7 @@ namespace UserService
         public Vector3 Camera;
         public float PlayTime;
         public StatusData Status;
+        public string Map;
 
         public UserData()
         {
@@ -33,14 +34,16 @@ namespace UserService
             Camera = new Vector3(5.5f, -19.5f, -10f);
             PlayTime = 0f;
             Status = new StatusData();
+            Map = "Sprout Island";
         }
 
-        public UserData(Vector3 position, Vector3 camera, float playtime, StatusData status)
+        public UserData(Vector3 position, Vector3 camera, float playtime, StatusData status, string map)
         {
             Position = position;
             Camera = camera;
             PlayTime = playtime;
             Status = status;
+            Map = map;
         }
     }
 }
