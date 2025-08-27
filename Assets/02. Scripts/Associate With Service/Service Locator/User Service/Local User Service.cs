@@ -91,6 +91,7 @@ public class LocalUserService : ISaveable, IUserService
             m_camera = user_data.Camera;
             m_playtime = user_data.PlayTime;
             m_status = user_data.Status;
+            m_map = user_data.Map;
 
             return true;
         }

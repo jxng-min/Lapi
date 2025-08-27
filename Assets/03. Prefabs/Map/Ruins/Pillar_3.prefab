@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2342492913772305374}
   - component: {fileID: 8814790725429206831}
-  - component: {fileID: 8613598335173482824}
+  - component: {fileID: 5817455652536373476}
   m_Layer: 0
   m_Name: Pillar_3
   m_TagString: Untagged
@@ -88,8 +88,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &8613598335173482824
-BoxCollider2D:
+--- !u!70 &5817455652536373476
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -122,15 +122,6 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.3058158}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.77}
-    newSize: {x: 0.32, y: 0.77}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 0.32, y: 0.41640002}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0, y: -0.2962601}
+  m_Size: {x: 0.32, y: 0.41671044}
+  m_Direction: 0

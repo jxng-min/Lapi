@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4876298240689718815}
   - component: {fileID: 2184443360345448362}
-  - component: {fileID: 4498423319281019200}
+  - component: {fileID: 1538743008618813118}
   m_Layer: 0
   m_Name: Ruins Tree 1
   m_TagString: Untagged
@@ -88,8 +88,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &4498423319281019200
-BoxCollider2D:
+--- !u!70 &1538743008618813118
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -122,15 +122,6 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.012303472, y: -0.6573489}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.13, y: 1.39}
-    newSize: {x: 1.13, y: 1.39}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 0.14555424, y: 0.27285427}
-  m_EdgeRadius: 0
+  m_Offset: {x: -0.010157204, y: -0.62598044}
+  m_Size: {x: 0.115929924, y: 0.3474251}
+  m_Direction: 0

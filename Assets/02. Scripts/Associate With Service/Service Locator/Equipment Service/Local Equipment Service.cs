@@ -100,7 +100,7 @@ namespace EquipmentService
             {
                 if (code == ItemCode.NONE)
                 {
-                    OnUpdatedWeapon?.Invoke(WeaponType.NONE, 3f);
+                    OnUpdatedWeapon?.Invoke(WeaponType.NONE, 1f);
                 }
                 else
                 {
