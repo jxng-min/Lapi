@@ -7,8 +7,10 @@ public class CameraClamperHolder : MonoBehaviour
 
     private Coroutine m_wrap_coroutine;
 
-
     public PlayerCtrl Player => m_player_ctrl;
+
+    public CameraClamper LastClamper { get; set; }
+
     public Coroutine WarpCoroutine
     {
         get => m_wrap_coroutine;

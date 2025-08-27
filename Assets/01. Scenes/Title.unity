@@ -581,6 +581,9 @@ MonoBehaviour:
   - Name: Sprout Island
     Clip: {fileID: 8300000, guid: 0e0a2833e253e5e48858ae0402c0a08a, type: 3}
     Channel: 1
+  - Name: Ruins
+    Clip: {fileID: 8300000, guid: de91452e2c57d124c8c958a058c6e6a0, type: 3}
+    Channel: 1
   m_sfx_clips:
   - Name: Load
     Clip: {fileID: 8300000, guid: 1c90a42faadd28d449e2144817df4621, type: 3}

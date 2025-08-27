@@ -41,11 +41,12 @@ public class CameraClamper : MonoBehaviour
 
             if (m_holder.WarpCoroutine != null)
             {
-                StopCoroutine(m_holder.WarpCoroutine);
+                m_holder.LastClamper.StopCoroutine(m_holder.WarpCoroutine);
                 m_holder.WarpCoroutine = null;
             }
 
-            m_holder.WarpCoroutine = StartCoroutine("TranslateCamera");
+            m_holder.WarpCoroutine = StartCoroutine(TranslateCamera());
+            m_holder.LastClamper = this;
         }
     }
 
