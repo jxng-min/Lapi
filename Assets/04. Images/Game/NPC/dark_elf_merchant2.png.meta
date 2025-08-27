@@ -1,0 +1,528 @@
+fileFormatVersion: 2
+guid: 5b17941374fb0af48ace765a08142f7c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6297168342774760562
+    second: dark_elf_merchant2_0
+  - first:
+      213: -4514134081222769757
+    second: dark_elf_merchant2_1
+  - first:
+      213: -4919435850427696400
+    second: dark_elf_merchant2_2
+  - first:
+      213: 3511874037421514862
+    second: dark_elf_merchant2_3
+  - first:
+      213: -7779282051444041171
+    second: dark_elf_merchant2_4
+  - first:
+      213: 9101284719145907846
+    second: dark_elf_merchant2_5
+  - first:
+      213: -8780251366760105603
+    second: dark_elf_merchant2_6
+  - first:
+      213: -2303693911766927690
+    second: dark_elf_merchant2_7
+  - first:
+      213: -705125038081253817
+    second: dark_elf_merchant2_8
+  - first:
+      213: -2473955185965713589
+    second: dark_elf_merchant2_9
+  - first:
+      213: -5858522875985345678
+    second: dark_elf_merchant2_10
+  - first:
+      213: 8464266105205797561
+    second: dark_elf_merchant2_11
+  - first:
+      213: 6835076542429680898
+    second: dark_elf_merchant2_12
+  - first:
+      213: -5090468899441921334
+    second: dark_elf_merchant2_13
+  - first:
+      213: -8333471188982639749
+    second: dark_elf_merchant2_14
+  - first:
+      213: 9062071137250780026
+    second: dark_elf_merchant2_15
+  - first:
+      213: 3223799548601440656
+    second: dark_elf_merchant2_16
+  - first:
+      213: 2878550689335573139
+    second: dark_elf_merchant2_17
+  - first:
+      213: 4311242088911309543
+    second: dark_elf_merchant2_18
+  - first:
+      213: -4848630178848236194
+    second: dark_elf_merchant2_19
+  - first:
+      213: 2075075581494114660
+    second: dark_elf_merchant2_20
+  - first:
+      213: 2380252964331203026
+    second: dark_elf_merchant2_21
+  - first:
+      213: 5999525988929541509
+    second: dark_elf_merchant2_22
+  - first:
+      213: -8407719412766133284
+    second: dark_elf_merchant2_23
+  - first:
+      213: 7722713537075285394
+    second: dark_elf_merchant2_24
+  - first:
+      213: -871900722142881179
+    second: dark_elf_merchant2_25
+  - first:
+      213: 2304838730660554190
+    second: dark_elf_merchant2_26
+  - first:
+      213: -6987499744380812664
+    second: dark_elf_merchant2_27
+  - first:
+      213: 8643287539790229919
+    second: dark_elf_merchant2_28
+  - first:
+      213: 239070108332616866
+    second: dark_elf_merchant2_29
+  - first:
+      213: -8994141580405085693
+    second: dark_elf_merchant2_30
+  - first:
+      213: -2825996296009557308
+    second: dark_elf_merchant2_31
+  - first:
+      213: -7124600729675105325
+    second: dark_elf_merchant2_32
+  - first:
+      213: 4375317813124476600
+    second: dark_elf_merchant2_33
+  - first:
+      213: -393568911488116740
+    second: dark_elf_merchant2_34
+  - first:
+      213: -8346057562560989260
+    second: dark_elf_merchant2_35
+  - first:
+      213: 5105333131281729126
+    second: dark_elf_merchant2_36
+  - first:
+      213: -1121030272018698125
+    second: dark_elf_merchant2_37
+  - first:
+      213: -2225227712183543032
+    second: dark_elf_merchant2_38
+  - first:
+      213: -6384737372653128961
+    second: dark_elf_merchant2_39
+  - first:
+      213: 1698036727594866168
+    second: dark_elf_merchant2_40
+  - first:
+      213: -4071563680416855756
+    second: dark_elf_merchant2_41
+  - first:
+      213: -1948523585720835696
+    second: dark_elf_merchant2_42
+  - first:
+      213: 4655536206231169803
+    second: dark_elf_merchant2_43
+  - first:
+      213: 7074687990586558723
+    second: dark_elf_merchant2_44
+  - first:
+      213: -9121947917356317570
+    second: dark_elf_merchant2_45
+  - first:
+      213: -7283407295874158555
+    second: dark_elf_merchant2_46
+  - first:
+      213: -5676142793692750947
+    second: dark_elf_merchant2_47
+  - first:
+      213: -2751228988878868187
+    second: dark_elf_merchant2_48
+  - first:
+      213: -98121300661799673
+    second: dark_elf_merchant2_49
+  - first:
+      213: -4166315992926781423
+    second: dark_elf_merchant2_50
+  - first:
+      213: -2271168071607153144
+    second: dark_elf_merchant2_51
+  - first:
+      213: 2430577304537770755
+    second: dark_elf_merchant2_52
+  - first:
+      213: -3283570411623964046
+    second: dark_elf_merchant2_53
+  - first:
+      213: 5605730818834033939
+    second: dark_elf_merchant2_54
+  - first:
+      213: 2352014632943110680
+    second: dark_elf_merchant2_55
+  - first:
+      213: -7923535841461908595
+    second: dark_elf_merchant2_56
+  - first:
+      213: -759634034661901717
+    second: dark_elf_merchant2_57
+  - first:
+      213: -9102580311339130331
+    second: dark_elf_merchant2_58
+  - first:
+      213: -1045806212854473712
+    second: dark_elf_merchant2_59
+  - first:
+      213: 9107098090738029788
+    second: dark_elf_merchant2_60
+  - first:
+      213: 5163064718856464464
+    second: dark_elf_merchant2_61
+  - first:
+      213: -2079427831660520331
+    second: dark_elf_merchant2_62
+  - first:
+      213: 4147284915886481526
+    second: dark_elf_merchant2_63
+  - first:
+      213: -5742718059241057124
+    second: dark_elf_merchant2_64
+  - first:
+      213: 7588060102126220328
+    second: dark_elf_merchant2_65
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dark_elf_merchant2_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 743
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 274cce17e39046750800000000000000
+      internalID: 6297168342774760562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_elf_merchant2_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 743
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a38b3458f29a51c0800000000000000
+      internalID: -4514134081222769757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_elf_merchant2_2
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 711
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fa7fe78827aabbb0800000000000000
+      internalID: -4919435850427696400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_elf_merchant2_3
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 711
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e602d6094deacb030800000000000000
+      internalID: 3511874037421514862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_elf_merchant2_4
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 679
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2a1b1cc0307a0490800000000000000
+      internalID: -7779282051444041171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_elf_merchant2_5
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 679
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 686f16c3b324e4e70800000000000000
+      internalID: 9101284719145907846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a21d551cc16756640b667c35aa1ece8a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":20.0,"y":20.0},"gridSpriteOffset":{"x":6.0,"y":5.0},"gridSpritePadding":{"x":12.0,"y":12.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      dark_elf_merchant2_0: 6297168342774760562
+      dark_elf_merchant2_1: -4514134081222769757
+      dark_elf_merchant2_10: -5858522875985345678
+      dark_elf_merchant2_11: 8464266105205797561
+      dark_elf_merchant2_12: 6835076542429680898
+      dark_elf_merchant2_13: -5090468899441921334
+      dark_elf_merchant2_14: -8333471188982639749
+      dark_elf_merchant2_15: 9062071137250780026
+      dark_elf_merchant2_16: 3223799548601440656
+      dark_elf_merchant2_17: 2878550689335573139
+      dark_elf_merchant2_18: 4311242088911309543
+      dark_elf_merchant2_19: -4848630178848236194
+      dark_elf_merchant2_2: -4919435850427696400
+      dark_elf_merchant2_20: 2075075581494114660
+      dark_elf_merchant2_21: 2380252964331203026
+      dark_elf_merchant2_22: 5999525988929541509
+      dark_elf_merchant2_23: -8407719412766133284
+      dark_elf_merchant2_24: 7722713537075285394
+      dark_elf_merchant2_25: -871900722142881179
+      dark_elf_merchant2_26: 2304838730660554190
+      dark_elf_merchant2_27: -6987499744380812664
+      dark_elf_merchant2_28: 8643287539790229919
+      dark_elf_merchant2_29: 239070108332616866
+      dark_elf_merchant2_3: 3511874037421514862
+      dark_elf_merchant2_30: -8994141580405085693
+      dark_elf_merchant2_31: -2825996296009557308
+      dark_elf_merchant2_32: -7124600729675105325
+      dark_elf_merchant2_33: 4375317813124476600
+      dark_elf_merchant2_34: -393568911488116740
+      dark_elf_merchant2_35: -8346057562560989260
+      dark_elf_merchant2_36: 5105333131281729126
+      dark_elf_merchant2_37: -1121030272018698125
+      dark_elf_merchant2_38: -2225227712183543032
+      dark_elf_merchant2_39: -6384737372653128961
+      dark_elf_merchant2_4: -7779282051444041171
+      dark_elf_merchant2_40: 1698036727594866168
+      dark_elf_merchant2_41: -4071563680416855756
+      dark_elf_merchant2_42: -1948523585720835696
+      dark_elf_merchant2_43: 4655536206231169803
+      dark_elf_merchant2_44: 7074687990586558723
+      dark_elf_merchant2_45: -9121947917356317570
+      dark_elf_merchant2_46: -7283407295874158555
+      dark_elf_merchant2_47: -5676142793692750947
+      dark_elf_merchant2_48: -2751228988878868187
+      dark_elf_merchant2_49: -98121300661799673
+      dark_elf_merchant2_5: 9101284719145907846
+      dark_elf_merchant2_50: -4166315992926781423
+      dark_elf_merchant2_51: -2271168071607153144
+      dark_elf_merchant2_52: 2430577304537770755
+      dark_elf_merchant2_53: -3283570411623964046
+      dark_elf_merchant2_54: 5605730818834033939
+      dark_elf_merchant2_55: 2352014632943110680
+      dark_elf_merchant2_56: -7923535841461908595
+      dark_elf_merchant2_57: -759634034661901717
+      dark_elf_merchant2_58: -9102580311339130331
+      dark_elf_merchant2_59: -1045806212854473712
+      dark_elf_merchant2_6: -8780251366760105603
+      dark_elf_merchant2_60: 9107098090738029788
+      dark_elf_merchant2_61: 5163064718856464464
+      dark_elf_merchant2_62: -2079427831660520331
+      dark_elf_merchant2_63: 4147284915886481526
+      dark_elf_merchant2_64: -5742718059241057124
+      dark_elf_merchant2_65: 7588060102126220328
+      dark_elf_merchant2_7: -2303693911766927690
+      dark_elf_merchant2_8: -705125038081253817
+      dark_elf_merchant2_9: -2473955185965713589
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

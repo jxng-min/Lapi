@@ -1,0 +1,576 @@
+fileFormatVersion: 2
+guid: be36bc99e0d245845a9080194fbda1ad
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7565271813776684369
+    second: dark_elf_warrior2_0
+  - first:
+      213: 2400991600846070325
+    second: dark_elf_warrior2_1
+  - first:
+      213: 7853617170663039859
+    second: dark_elf_warrior2_2
+  - first:
+      213: 7420113577778803545
+    second: dark_elf_warrior2_3
+  - first:
+      213: 5069968660436976400
+    second: dark_elf_warrior2_4
+  - first:
+      213: 8682770656878711108
+    second: dark_elf_warrior2_5
+  - first:
+      213: -5171511540332409230
+    second: dark_elf_warrior2_6
+  - first:
+      213: 2177094953017457382
+    second: dark_elf_warrior2_7
+  - first:
+      213: 453264310290701402
+    second: dark_elf_warrior2_8
+  - first:
+      213: -4574475476861498766
+    second: dark_elf_warrior2_9
+  - first:
+      213: -4099332062594810474
+    second: dark_elf_warrior2_10
+  - first:
+      213: 8143344318848858409
+    second: dark_elf_warrior2_11
+  - first:
+      213: 3750672323382734116
+    second: dark_elf_warrior2_12
+  - first:
+      213: 8561425689116331491
+    second: dark_elf_warrior2_13
+  - first:
+      213: -2952865455696845127
+    second: dark_elf_warrior2_14
+  - first:
+      213: 3619398021411102506
+    second: dark_elf_warrior2_15
+  - first:
+      213: 2980318937175782405
+    second: dark_elf_warrior2_16
+  - first:
+      213: -8027900133416778715
+    second: dark_elf_warrior2_17
+  - first:
+      213: -7188453734560435784
+    second: dark_elf_warrior2_18
+  - first:
+      213: -587239012893841413
+    second: dark_elf_warrior2_19
+  - first:
+      213: 3865231483473538310
+    second: dark_elf_warrior2_20
+  - first:
+      213: -8887106061479558903
+    second: dark_elf_warrior2_21
+  - first:
+      213: 2358305583662348089
+    second: dark_elf_warrior2_22
+  - first:
+      213: -4464610151662181119
+    second: dark_elf_warrior2_23
+  - first:
+      213: 2883610290726615961
+    second: dark_elf_warrior2_24
+  - first:
+      213: -4958308789943156535
+    second: dark_elf_warrior2_25
+  - first:
+      213: -5142784744401818032
+    second: dark_elf_warrior2_26
+  - first:
+      213: -8776960331967259875
+    second: dark_elf_warrior2_27
+  - first:
+      213: 7884290157152323707
+    second: dark_elf_warrior2_28
+  - first:
+      213: 3287730459384422034
+    second: dark_elf_warrior2_29
+  - first:
+      213: -7018705957415166176
+    second: dark_elf_warrior2_30
+  - first:
+      213: 4948226461438807828
+    second: dark_elf_warrior2_31
+  - first:
+      213: 6975176818077628214
+    second: dark_elf_warrior2_32
+  - first:
+      213: -2046079075483085068
+    second: dark_elf_warrior2_33
+  - first:
+      213: -3270370091787704317
+    second: dark_elf_warrior2_34
+  - first:
+      213: -7462690836823828333
+    second: dark_elf_warrior2_35
+  - first:
+      213: 7485631712717977376
+    second: dark_elf_warrior2_36
+  - first:
+      213: 8293312289536429212
+    second: dark_elf_warrior2_37
+  - first:
+      213: -3238900804624069255
+    second: dark_elf_warrior2_38
+  - first:
+      213: -1606510102399406005
+    second: dark_elf_warrior2_39
+  - first:
+      213: -3863272546831574224
+    second: dark_elf_warrior2_40
+  - first:
+      213: 3646735380343630796
+    second: dark_elf_warrior2_41
+  - first:
+      213: 5985580354073847511
+    second: dark_elf_warrior2_42
+  - first:
+      213: 8351412003316427328
+    second: dark_elf_warrior2_43
+  - first:
+      213: -568069121959165818
+    second: dark_elf_warrior2_44
+  - first:
+      213: -2459522329189525742
+    second: dark_elf_warrior2_45
+  - first:
+      213: 5189731303834188573
+    second: dark_elf_warrior2_46
+  - first:
+      213: 4402560959087119275
+    second: dark_elf_warrior2_47
+  - first:
+      213: 2404621277934243321
+    second: dark_elf_warrior2_48
+  - first:
+      213: 2694770061500315899
+    second: dark_elf_warrior2_49
+  - first:
+      213: -6450974385918072906
+    second: dark_elf_warrior2_50
+  - first:
+      213: -1385195212886711297
+    second: dark_elf_warrior2_51
+  - first:
+      213: 7967500423378218757
+    second: dark_elf_warrior2_52
+  - first:
+      213: 1495762566443863333
+    second: dark_elf_warrior2_53
+  - first:
+      213: -4479509195998598411
+    second: dark_elf_warrior2_54
+  - first:
+      213: 5324167650397156772
+    second: dark_elf_warrior2_55
+  - first:
+      213: -1881379460876612156
+    second: dark_elf_warrior2_56
+  - first:
+      213: 7547256962315628505
+    second: dark_elf_warrior2_57
+  - first:
+      213: -3224338568612115601
+    second: dark_elf_warrior2_58
+  - first:
+      213: 8188470878246379132
+    second: dark_elf_warrior2_59
+  - first:
+      213: -8337695619483163325
+    second: dark_elf_warrior2_60
+  - first:
+      213: -6949670103496025998
+    second: dark_elf_warrior2_61
+  - first:
+      213: -237976791811956020
+    second: dark_elf_warrior2_62
+  - first:
+      213: 1771832338104178209
+    second: dark_elf_warrior2_63
+  - first:
+      213: 3066327666748595577
+    second: dark_elf_warrior2_64
+  - first:
+      213: -8718137257061092740
+    second: dark_elf_warrior2_65
+  - first:
+      213: 5498482233611096178
+    second: dark_elf_warrior2_66
+  - first:
+      213: 3061048141109950387
+    second: dark_elf_warrior2_67
+  - first:
+      213: -1515064006633719314
+    second: dark_elf_warrior2_68
+  - first:
+      213: -9067985081466291580
+    second: dark_elf_warrior2_69
+  - first:
+      213: -4921733934966301602
+    second: dark_elf_warrior2_70
+  - first:
+      213: -8155566071015748002
+    second: dark_elf_warrior2_71
+  - first:
+      213: 8416318081740737447
+    second: dark_elf_warrior2_72
+  - first:
+      213: -203291196137266070
+    second: dark_elf_warrior2_73
+  - first:
+      213: 8042057403317356050
+    second: dark_elf_warrior2_74
+  - first:
+      213: -8943053816897293543
+    second: dark_elf_warrior2_75
+  - first:
+      213: -5288135271837061552
+    second: dark_elf_warrior2_76
+  - first:
+      213: -8372551137014042584
+    second: dark_elf_warrior2_77
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dark_elf_warrior2_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 839
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faac09e2e51c20790800000000000000
+      internalID: -7565271813776684369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_elf_warrior2_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 839
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5326025d329025120800000000000000
+      internalID: 2400991600846070325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_elf_warrior2_2
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 807
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 373674bd437adfc60800000000000000
+      internalID: 7853617170663039859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_elf_warrior2_3
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 807
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 953fe8c4cf989f660800000000000000
+      internalID: 7420113577778803545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_elf_warrior2_4
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 775
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01385b382a52c5640800000000000000
+      internalID: 5069968660436976400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_elf_warrior2_5
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 775
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 441d07db8e56f7870800000000000000
+      internalID: 8682770656878711108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 43203100f90259948a0da2924b908370
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":20.0,"y":20.0},"gridSpriteOffset":{"x":6.0,"y":5.0},"gridSpritePadding":{"x":12.0,"y":12.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      dark_elf_warrior2_0: -7565271813776684369
+      dark_elf_warrior2_1: 2400991600846070325
+      dark_elf_warrior2_10: -4099332062594810474
+      dark_elf_warrior2_11: 8143344318848858409
+      dark_elf_warrior2_12: 3750672323382734116
+      dark_elf_warrior2_13: 8561425689116331491
+      dark_elf_warrior2_14: -2952865455696845127
+      dark_elf_warrior2_15: 3619398021411102506
+      dark_elf_warrior2_16: 2980318937175782405
+      dark_elf_warrior2_17: -8027900133416778715
+      dark_elf_warrior2_18: -7188453734560435784
+      dark_elf_warrior2_19: -587239012893841413
+      dark_elf_warrior2_2: 7853617170663039859
+      dark_elf_warrior2_20: 3865231483473538310
+      dark_elf_warrior2_21: -8887106061479558903
+      dark_elf_warrior2_22: 2358305583662348089
+      dark_elf_warrior2_23: -4464610151662181119
+      dark_elf_warrior2_24: 2883610290726615961
+      dark_elf_warrior2_25: -4958308789943156535
+      dark_elf_warrior2_26: -5142784744401818032
+      dark_elf_warrior2_27: -8776960331967259875
+      dark_elf_warrior2_28: 7884290157152323707
+      dark_elf_warrior2_29: 3287730459384422034
+      dark_elf_warrior2_3: 7420113577778803545
+      dark_elf_warrior2_30: -7018705957415166176
+      dark_elf_warrior2_31: 4948226461438807828
+      dark_elf_warrior2_32: 6975176818077628214
+      dark_elf_warrior2_33: -2046079075483085068
+      dark_elf_warrior2_34: -3270370091787704317
+      dark_elf_warrior2_35: -7462690836823828333
+      dark_elf_warrior2_36: 7485631712717977376
+      dark_elf_warrior2_37: 8293312289536429212
+      dark_elf_warrior2_38: -3238900804624069255
+      dark_elf_warrior2_39: -1606510102399406005
+      dark_elf_warrior2_4: 5069968660436976400
+      dark_elf_warrior2_40: -3863272546831574224
+      dark_elf_warrior2_41: 3646735380343630796
+      dark_elf_warrior2_42: 5985580354073847511
+      dark_elf_warrior2_43: 8351412003316427328
+      dark_elf_warrior2_44: -568069121959165818
+      dark_elf_warrior2_45: -2459522329189525742
+      dark_elf_warrior2_46: 5189731303834188573
+      dark_elf_warrior2_47: 4402560959087119275
+      dark_elf_warrior2_48: 2404621277934243321
+      dark_elf_warrior2_49: 2694770061500315899
+      dark_elf_warrior2_5: 8682770656878711108
+      dark_elf_warrior2_50: -6450974385918072906
+      dark_elf_warrior2_51: -1385195212886711297
+      dark_elf_warrior2_52: 7967500423378218757
+      dark_elf_warrior2_53: 1495762566443863333
+      dark_elf_warrior2_54: -4479509195998598411
+      dark_elf_warrior2_55: 5324167650397156772
+      dark_elf_warrior2_56: -1881379460876612156
+      dark_elf_warrior2_57: 7547256962315628505
+      dark_elf_warrior2_58: -3224338568612115601
+      dark_elf_warrior2_59: 8188470878246379132
+      dark_elf_warrior2_6: -5171511540332409230
+      dark_elf_warrior2_60: -8337695619483163325
+      dark_elf_warrior2_61: -6949670103496025998
+      dark_elf_warrior2_62: -237976791811956020
+      dark_elf_warrior2_63: 1771832338104178209
+      dark_elf_warrior2_64: 3066327666748595577
+      dark_elf_warrior2_65: -8718137257061092740
+      dark_elf_warrior2_66: 5498482233611096178
+      dark_elf_warrior2_67: 3061048141109950387
+      dark_elf_warrior2_68: -1515064006633719314
+      dark_elf_warrior2_69: -9067985081466291580
+      dark_elf_warrior2_7: 2177094953017457382
+      dark_elf_warrior2_70: -4921733934966301602
+      dark_elf_warrior2_71: -8155566071015748002
+      dark_elf_warrior2_72: 8416318081740737447
+      dark_elf_warrior2_73: -203291196137266070
+      dark_elf_warrior2_74: 8042057403317356050
+      dark_elf_warrior2_75: -8943053816897293543
+      dark_elf_warrior2_76: -5288135271837061552
+      dark_elf_warrior2_77: -8372551137014042584
+      dark_elf_warrior2_8: 453264310290701402
+      dark_elf_warrior2_9: -4574475476861498766
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

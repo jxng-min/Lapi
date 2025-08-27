@@ -1,0 +1,528 @@
+fileFormatVersion: 2
+guid: b67327d6fb4608a428fc226379db496d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3292076979600744110
+    second: dark_elf_prince2_0
+  - first:
+      213: -8371478379868096513
+    second: dark_elf_prince2_1
+  - first:
+      213: -7832574476954677986
+    second: dark_elf_prince2_2
+  - first:
+      213: 1408103627348427842
+    second: dark_elf_prince2_3
+  - first:
+      213: 78144926699111663
+    second: dark_elf_prince2_4
+  - first:
+      213: -6213879745280831809
+    second: dark_elf_prince2_5
+  - first:
+      213: -2201999439336922377
+    second: dark_elf_prince2_6
+  - first:
+      213: -3787231665721660455
+    second: dark_elf_prince2_7
+  - first:
+      213: -5812519701895273508
+    second: dark_elf_prince2_8
+  - first:
+      213: 5248419270743475032
+    second: dark_elf_prince2_9
+  - first:
+      213: 2565213648683105595
+    second: dark_elf_prince2_10
+  - first:
+      213: -6996635936172553855
+    second: dark_elf_prince2_11
+  - first:
+      213: -2487354921638581499
+    second: dark_elf_prince2_12
+  - first:
+      213: -2654697879011644279
+    second: dark_elf_prince2_13
+  - first:
+      213: 5551217795055283745
+    second: dark_elf_prince2_14
+  - first:
+      213: 6422908664945708660
+    second: dark_elf_prince2_15
+  - first:
+      213: -4965578994814131760
+    second: dark_elf_prince2_16
+  - first:
+      213: 3024590169594054984
+    second: dark_elf_prince2_17
+  - first:
+      213: 7752098099129123264
+    second: dark_elf_prince2_18
+  - first:
+      213: -3952544868642815221
+    second: dark_elf_prince2_19
+  - first:
+      213: 131880372670681654
+    second: dark_elf_prince2_20
+  - first:
+      213: 2351822462530288299
+    second: dark_elf_prince2_21
+  - first:
+      213: 9001144593386339850
+    second: dark_elf_prince2_22
+  - first:
+      213: -3290048043624379279
+    second: dark_elf_prince2_23
+  - first:
+      213: -8467029494558812093
+    second: dark_elf_prince2_24
+  - first:
+      213: 5657102371171431756
+    second: dark_elf_prince2_25
+  - first:
+      213: -6093555923095881684
+    second: dark_elf_prince2_26
+  - first:
+      213: 8762793336562066195
+    second: dark_elf_prince2_27
+  - first:
+      213: 90678691677857855
+    second: dark_elf_prince2_28
+  - first:
+      213: -2347547192326104443
+    second: dark_elf_prince2_29
+  - first:
+      213: 6600517391830402555
+    second: dark_elf_prince2_30
+  - first:
+      213: -1474011996768438964
+    second: dark_elf_prince2_31
+  - first:
+      213: -526373313193050335
+    second: dark_elf_prince2_32
+  - first:
+      213: 4220556504105277163
+    second: dark_elf_prince2_33
+  - first:
+      213: 4982052809876300425
+    second: dark_elf_prince2_34
+  - first:
+      213: -7753912965529081517
+    second: dark_elf_prince2_35
+  - first:
+      213: 1809443876553234970
+    second: dark_elf_prince2_36
+  - first:
+      213: -2572861203340900460
+    second: dark_elf_prince2_37
+  - first:
+      213: 9125783208003058155
+    second: dark_elf_prince2_38
+  - first:
+      213: -5028839641686332571
+    second: dark_elf_prince2_39
+  - first:
+      213: 6469442686511679137
+    second: dark_elf_prince2_40
+  - first:
+      213: -6484033123552066008
+    second: dark_elf_prince2_41
+  - first:
+      213: 8169670642007504662
+    second: dark_elf_prince2_42
+  - first:
+      213: -5621011095456631667
+    second: dark_elf_prince2_43
+  - first:
+      213: 7118998775498202174
+    second: dark_elf_prince2_44
+  - first:
+      213: -8548393669829488145
+    second: dark_elf_prince2_45
+  - first:
+      213: -6439359058604677740
+    second: dark_elf_prince2_46
+  - first:
+      213: -5830130332283133987
+    second: dark_elf_prince2_47
+  - first:
+      213: -2571782858848283875
+    second: dark_elf_prince2_48
+  - first:
+      213: -5573901769692360205
+    second: dark_elf_prince2_49
+  - first:
+      213: -6875601600505771014
+    second: dark_elf_prince2_50
+  - first:
+      213: 8635402529523810077
+    second: dark_elf_prince2_51
+  - first:
+      213: 337659971991241808
+    second: dark_elf_prince2_52
+  - first:
+      213: -3384632530369525824
+    second: dark_elf_prince2_53
+  - first:
+      213: 1668353569288948747
+    second: dark_elf_prince2_54
+  - first:
+      213: 6527394009609757001
+    second: dark_elf_prince2_55
+  - first:
+      213: -4732733096075878045
+    second: dark_elf_prince2_56
+  - first:
+      213: 3482965616725121348
+    second: dark_elf_prince2_57
+  - first:
+      213: 7113000163474261529
+    second: dark_elf_prince2_58
+  - first:
+      213: 1844388815654987540
+    second: dark_elf_prince2_59
+  - first:
+      213: -8856706421405967225
+    second: dark_elf_prince2_60
+  - first:
+      213: -6347915412051834432
+    second: dark_elf_prince2_61
+  - first:
+      213: 32162296910469354
+    second: dark_elf_prince2_62
+  - first:
+      213: -6433182204392632267
+    second: dark_elf_prince2_63
+  - first:
+      213: 8735590226559084386
+    second: dark_elf_prince2_64
+  - first:
+      213: -2377165008748975107
+    second: dark_elf_prince2_65
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dark_elf_prince2_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 743
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaed75e129ecfad20800000000000000
+      internalID: 3292076979600744110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_elf_prince2_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 743
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff7791b74c882db80800000000000000
+      internalID: -8371478379868096513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_elf_prince2_2
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 711
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1d4350130b1d4390800000000000000
+      internalID: -7832574476954677986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_elf_prince2_3
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 711
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 244ca03e9c69a8310800000000000000
+      internalID: 1408103627348427842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_elf_prince2_4
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 679
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe446e49560a51100800000000000000
+      internalID: 78144926699111663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_elf_prince2_5
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 679
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbe8a815b4dd3c9a0800000000000000
+      internalID: -6213879745280831809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 8541adfb6b18cff4485441a6cf8192aa
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":20.0,"y":20.0},"gridSpriteOffset":{"x":6.0,"y":5.0},"gridSpritePadding":{"x":12.0,"y":12.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      dark_elf_prince2_0: 3292076979600744110
+      dark_elf_prince2_1: -8371478379868096513
+      dark_elf_prince2_10: 2565213648683105595
+      dark_elf_prince2_11: -6996635936172553855
+      dark_elf_prince2_12: -2487354921638581499
+      dark_elf_prince2_13: -2654697879011644279
+      dark_elf_prince2_14: 5551217795055283745
+      dark_elf_prince2_15: 6422908664945708660
+      dark_elf_prince2_16: -4965578994814131760
+      dark_elf_prince2_17: 3024590169594054984
+      dark_elf_prince2_18: 7752098099129123264
+      dark_elf_prince2_19: -3952544868642815221
+      dark_elf_prince2_2: -7832574476954677986
+      dark_elf_prince2_20: 131880372670681654
+      dark_elf_prince2_21: 2351822462530288299
+      dark_elf_prince2_22: 9001144593386339850
+      dark_elf_prince2_23: -3290048043624379279
+      dark_elf_prince2_24: -8467029494558812093
+      dark_elf_prince2_25: 5657102371171431756
+      dark_elf_prince2_26: -6093555923095881684
+      dark_elf_prince2_27: 8762793336562066195
+      dark_elf_prince2_28: 90678691677857855
+      dark_elf_prince2_29: -2347547192326104443
+      dark_elf_prince2_3: 1408103627348427842
+      dark_elf_prince2_30: 6600517391830402555
+      dark_elf_prince2_31: -1474011996768438964
+      dark_elf_prince2_32: -526373313193050335
+      dark_elf_prince2_33: 4220556504105277163
+      dark_elf_prince2_34: 4982052809876300425
+      dark_elf_prince2_35: -7753912965529081517
+      dark_elf_prince2_36: 1809443876553234970
+      dark_elf_prince2_37: -2572861203340900460
+      dark_elf_prince2_38: 9125783208003058155
+      dark_elf_prince2_39: -5028839641686332571
+      dark_elf_prince2_4: 78144926699111663
+      dark_elf_prince2_40: 6469442686511679137
+      dark_elf_prince2_41: -6484033123552066008
+      dark_elf_prince2_42: 8169670642007504662
+      dark_elf_prince2_43: -5621011095456631667
+      dark_elf_prince2_44: 7118998775498202174
+      dark_elf_prince2_45: -8548393669829488145
+      dark_elf_prince2_46: -6439359058604677740
+      dark_elf_prince2_47: -5830130332283133987
+      dark_elf_prince2_48: -2571782858848283875
+      dark_elf_prince2_49: -5573901769692360205
+      dark_elf_prince2_5: -6213879745280831809
+      dark_elf_prince2_50: -6875601600505771014
+      dark_elf_prince2_51: 8635402529523810077
+      dark_elf_prince2_52: 337659971991241808
+      dark_elf_prince2_53: -3384632530369525824
+      dark_elf_prince2_54: 1668353569288948747
+      dark_elf_prince2_55: 6527394009609757001
+      dark_elf_prince2_56: -4732733096075878045
+      dark_elf_prince2_57: 3482965616725121348
+      dark_elf_prince2_58: 7113000163474261529
+      dark_elf_prince2_59: 1844388815654987540
+      dark_elf_prince2_6: -2201999439336922377
+      dark_elf_prince2_60: -8856706421405967225
+      dark_elf_prince2_61: -6347915412051834432
+      dark_elf_prince2_62: 32162296910469354
+      dark_elf_prince2_63: -6433182204392632267
+      dark_elf_prince2_64: 8735590226559084386
+      dark_elf_prince2_65: -2377165008748975107
+      dark_elf_prince2_7: -3787231665721660455
+      dark_elf_prince2_8: -5812519701895273508
+      dark_elf_prince2_9: 5248419270743475032
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

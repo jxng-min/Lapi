@@ -1,0 +1,528 @@
+fileFormatVersion: 2
+guid: d154fadd3130f9f4998708fa5367e892
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3964060683634732893
+    second: dark_elf_villager_1_0
+  - first:
+      213: 5067106030708347210
+    second: dark_elf_villager_1_1
+  - first:
+      213: 3488147178207478516
+    second: dark_elf_villager_1_2
+  - first:
+      213: -979329807489952940
+    second: dark_elf_villager_1_3
+  - first:
+      213: 3907347556804387370
+    second: dark_elf_villager_1_4
+  - first:
+      213: -655457526961098434
+    second: dark_elf_villager_1_5
+  - first:
+      213: -6574072085930470926
+    second: dark_elf_villager_1_6
+  - first:
+      213: -7927862531101888952
+    second: dark_elf_villager_1_7
+  - first:
+      213: 8889251405458845579
+    second: dark_elf_villager_1_8
+  - first:
+      213: 5262110404155621262
+    second: dark_elf_villager_1_9
+  - first:
+      213: -3421306354408109528
+    second: dark_elf_villager_1_10
+  - first:
+      213: -3538037870108221554
+    second: dark_elf_villager_1_11
+  - first:
+      213: 9221493352154076743
+    second: dark_elf_villager_1_12
+  - first:
+      213: -6756393422960335505
+    second: dark_elf_villager_1_13
+  - first:
+      213: 2178417018569289214
+    second: dark_elf_villager_1_14
+  - first:
+      213: 1305525087788023376
+    second: dark_elf_villager_1_15
+  - first:
+      213: -6478560590278258325
+    second: dark_elf_villager_1_16
+  - first:
+      213: 3103301196979677514
+    second: dark_elf_villager_1_17
+  - first:
+      213: 8348192761326063457
+    second: dark_elf_villager_1_18
+  - first:
+      213: 7591324170405752844
+    second: dark_elf_villager_1_19
+  - first:
+      213: -8499901675268151402
+    second: dark_elf_villager_1_20
+  - first:
+      213: 5017390678638364797
+    second: dark_elf_villager_1_21
+  - first:
+      213: -5168616376251583214
+    second: dark_elf_villager_1_22
+  - first:
+      213: -5666219789107165367
+    second: dark_elf_villager_1_23
+  - first:
+      213: -3325097138211321851
+    second: dark_elf_villager_1_24
+  - first:
+      213: -8549466866644866881
+    second: dark_elf_villager_1_25
+  - first:
+      213: -210418461294512447
+    second: dark_elf_villager_1_26
+  - first:
+      213: 3428652105530548594
+    second: dark_elf_villager_1_27
+  - first:
+      213: 4005601409139581062
+    second: dark_elf_villager_1_28
+  - first:
+      213: 6670488317105055684
+    second: dark_elf_villager_1_29
+  - first:
+      213: 4470508352994349165
+    second: dark_elf_villager_1_30
+  - first:
+      213: -7589070061631072129
+    second: dark_elf_villager_1_31
+  - first:
+      213: 1241558583099553841
+    second: dark_elf_villager_1_32
+  - first:
+      213: 3579159183820278946
+    second: dark_elf_villager_1_33
+  - first:
+      213: 5632066363102623893
+    second: dark_elf_villager_1_34
+  - first:
+      213: 5231660799033952980
+    second: dark_elf_villager_1_35
+  - first:
+      213: -2339255697464071123
+    second: dark_elf_villager_1_36
+  - first:
+      213: -987521571706917933
+    second: dark_elf_villager_1_37
+  - first:
+      213: -4551945509048967542
+    second: dark_elf_villager_1_38
+  - first:
+      213: 1909232888548838647
+    second: dark_elf_villager_1_39
+  - first:
+      213: 6272911233238550281
+    second: dark_elf_villager_1_40
+  - first:
+      213: -2014651434775676516
+    second: dark_elf_villager_1_41
+  - first:
+      213: -7322530759778525901
+    second: dark_elf_villager_1_42
+  - first:
+      213: -4277276585078591488
+    second: dark_elf_villager_1_43
+  - first:
+      213: 7186740945425687636
+    second: dark_elf_villager_1_44
+  - first:
+      213: 5322699235779090902
+    second: dark_elf_villager_1_45
+  - first:
+      213: 2422685445739746214
+    second: dark_elf_villager_1_46
+  - first:
+      213: -966240087915637457
+    second: dark_elf_villager_1_47
+  - first:
+      213: 7627858603327613194
+    second: dark_elf_villager_1_48
+  - first:
+      213: 6862715286257525404
+    second: dark_elf_villager_1_49
+  - first:
+      213: 8870202068051854653
+    second: dark_elf_villager_1_50
+  - first:
+      213: -6268692272833364158
+    second: dark_elf_villager_1_51
+  - first:
+      213: 99623168648588606
+    second: dark_elf_villager_1_52
+  - first:
+      213: -3678391487137034340
+    second: dark_elf_villager_1_53
+  - first:
+      213: -6650773046912040266
+    second: dark_elf_villager_1_54
+  - first:
+      213: -1003740955012758506
+    second: dark_elf_villager_1_55
+  - first:
+      213: -8072978693250152308
+    second: dark_elf_villager_1_56
+  - first:
+      213: 379266491151244486
+    second: dark_elf_villager_1_57
+  - first:
+      213: 5064735349700676705
+    second: dark_elf_villager_1_58
+  - first:
+      213: 4115308857725349430
+    second: dark_elf_villager_1_59
+  - first:
+      213: -2770046716284535095
+    second: dark_elf_villager_1_60
+  - first:
+      213: 2185272874677184688
+    second: dark_elf_villager_1_61
+  - first:
+      213: 7316040032348352072
+    second: dark_elf_villager_1_62
+  - first:
+      213: -8266853273779616199
+    second: dark_elf_villager_1_63
+  - first:
+      213: 5859172707643854089
+    second: dark_elf_villager_1_64
+  - first:
+      213: 1643729893619414397
+    second: dark_elf_villager_1_65
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dark_elf_villager_1_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 743
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a01cdb8fc3dcf8c0800000000000000
+      internalID: -3964060683634732893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_elf_villager_1_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 743
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a415c97961af15640800000000000000
+      internalID: 5067106030708347210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_elf_villager_1_2
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 711
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f28659a063686030800000000000000
+      internalID: 3488147178207478516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_elf_villager_1_3
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 711
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4531c929ab8b862f0800000000000000
+      internalID: -979329807489952940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_elf_villager_1_4
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 679
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a22e051a6efa93630800000000000000
+      internalID: 3907347556804387370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_elf_villager_1_5
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 679
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e31b02c1ad857e6f0800000000000000
+      internalID: -655457526961098434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 67363822e114d12428417b5a248810b1
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":20.0,"y":20.0},"gridSpriteOffset":{"x":6.0,"y":5.0},"gridSpritePadding":{"x":12.0,"y":12.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      dark_elf_villager_1_0: -3964060683634732893
+      dark_elf_villager_1_1: 5067106030708347210
+      dark_elf_villager_1_10: -3421306354408109528
+      dark_elf_villager_1_11: -3538037870108221554
+      dark_elf_villager_1_12: 9221493352154076743
+      dark_elf_villager_1_13: -6756393422960335505
+      dark_elf_villager_1_14: 2178417018569289214
+      dark_elf_villager_1_15: 1305525087788023376
+      dark_elf_villager_1_16: -6478560590278258325
+      dark_elf_villager_1_17: 3103301196979677514
+      dark_elf_villager_1_18: 8348192761326063457
+      dark_elf_villager_1_19: 7591324170405752844
+      dark_elf_villager_1_2: 3488147178207478516
+      dark_elf_villager_1_20: -8499901675268151402
+      dark_elf_villager_1_21: 5017390678638364797
+      dark_elf_villager_1_22: -5168616376251583214
+      dark_elf_villager_1_23: -5666219789107165367
+      dark_elf_villager_1_24: -3325097138211321851
+      dark_elf_villager_1_25: -8549466866644866881
+      dark_elf_villager_1_26: -210418461294512447
+      dark_elf_villager_1_27: 3428652105530548594
+      dark_elf_villager_1_28: 4005601409139581062
+      dark_elf_villager_1_29: 6670488317105055684
+      dark_elf_villager_1_3: -979329807489952940
+      dark_elf_villager_1_30: 4470508352994349165
+      dark_elf_villager_1_31: -7589070061631072129
+      dark_elf_villager_1_32: 1241558583099553841
+      dark_elf_villager_1_33: 3579159183820278946
+      dark_elf_villager_1_34: 5632066363102623893
+      dark_elf_villager_1_35: 5231660799033952980
+      dark_elf_villager_1_36: -2339255697464071123
+      dark_elf_villager_1_37: -987521571706917933
+      dark_elf_villager_1_38: -4551945509048967542
+      dark_elf_villager_1_39: 1909232888548838647
+      dark_elf_villager_1_4: 3907347556804387370
+      dark_elf_villager_1_40: 6272911233238550281
+      dark_elf_villager_1_41: -2014651434775676516
+      dark_elf_villager_1_42: -7322530759778525901
+      dark_elf_villager_1_43: -4277276585078591488
+      dark_elf_villager_1_44: 7186740945425687636
+      dark_elf_villager_1_45: 5322699235779090902
+      dark_elf_villager_1_46: 2422685445739746214
+      dark_elf_villager_1_47: -966240087915637457
+      dark_elf_villager_1_48: 7627858603327613194
+      dark_elf_villager_1_49: 6862715286257525404
+      dark_elf_villager_1_5: -655457526961098434
+      dark_elf_villager_1_50: 8870202068051854653
+      dark_elf_villager_1_51: -6268692272833364158
+      dark_elf_villager_1_52: 99623168648588606
+      dark_elf_villager_1_53: -3678391487137034340
+      dark_elf_villager_1_54: -6650773046912040266
+      dark_elf_villager_1_55: -1003740955012758506
+      dark_elf_villager_1_56: -8072978693250152308
+      dark_elf_villager_1_57: 379266491151244486
+      dark_elf_villager_1_58: 5064735349700676705
+      dark_elf_villager_1_59: 4115308857725349430
+      dark_elf_villager_1_6: -6574072085930470926
+      dark_elf_villager_1_60: -2770046716284535095
+      dark_elf_villager_1_61: 2185272874677184688
+      dark_elf_villager_1_62: 7316040032348352072
+      dark_elf_villager_1_63: -8266853273779616199
+      dark_elf_villager_1_64: 5859172707643854089
+      dark_elf_villager_1_65: 1643729893619414397
+      dark_elf_villager_1_7: -7927862531101888952
+      dark_elf_villager_1_8: 8889251405458845579
+      dark_elf_villager_1_9: 5262110404155621262
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
