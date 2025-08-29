@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1bfed551ea51cc4d993c2bf867e305b, type: 3}
+  m_Name: 10_Senior Bow Receipe
+  m_EditorClassIdentifier: 
+  m_ingredient_item_list:
+  - Item: {fileID: 11400000, guid: 07f9a2efe06103d43a6afbe2eebd299f, type: 2}
+    Count: 20
+  - Item: {fileID: 11400000, guid: 2dade82777c8dfc418dd03dcda28970b, type: 2}
+    Count: 20
+  - Item: {fileID: 11400000, guid: 736ddb1a838599d4887126b5dbf30377, type: 2}
+    Count: 10
+  - Item: {fileID: 11400000, guid: 1f670a75056de454ba03e9d70cc1e2d2, type: 2}
+    Count: 1
+  - Item: {fileID: 11400000, guid: 6d705dc8dd0d14f4daa47a8c715d6cd8, type: 2}
+    Count: 1
+  m_target_item: {fileID: 11400000, guid: b79da0924ca38484fbf364ea1d516a53, type: 2}
+  m_item_count: 1
+  m_crafting_time: 150
+  m_constraint_level: 20

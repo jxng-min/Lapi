@@ -59,7 +59,7 @@ namespace EXPService
 
         public int GetEXP(int current_level)
         {
-            return m_exp_dict.TryGetValue(current_level + 1, out var exp) ? exp : 0;
+            return m_exp_dict.TryGetValue(current_level + 1, out var exp) ? exp : int.MaxValue;
         }
     }
 }
