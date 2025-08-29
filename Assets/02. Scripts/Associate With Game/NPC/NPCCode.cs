@@ -7,4 +7,10 @@ public enum NPCCode
     BELL = 4,
     MIO = 5,
     NICK = 6,
+    DRAKAR = 7,
+    SILVARA = 8,
+    ELISAR = 9,
+    VALION = 10,
+    DREIRA = 11,
+    ZAREK = 12,
 }

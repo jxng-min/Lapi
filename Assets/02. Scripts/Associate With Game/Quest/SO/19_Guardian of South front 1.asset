@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a51ba9a1dc3196d458d78a21c9f99d0e, type: 3}
+  m_Name: 19_Guardian of South front 1
+  m_EditorClassIdentifier: 
+  m_quest_id: 19
+  m_kill_quest_list:
+  - m_subquest_id: 0
+    m_enemy_code: 8
+    m_total_kill_count: 20
+  m_item_quest_list: []
+  m_dialogue_quest_list: []
+  m_start_diaglogue_id: 55
+  m_progress_dialogue_id: 56
+  m_can_clear_dialogue_id: 57
+  m_quest_level: 12
+  m_previous_quest_list:
+  - {fileID: 11400000, guid: c6992c442e3c506418cdf7bfe3b68615, type: 2}
+  m_gold: 1200
+  m_exp: 1000
+  m_item_list:
+  - Code: 6
+    Count: 5

@@ -581,6 +581,9 @@ MonoBehaviour:
   - Name: Sprout Island
     Clip: {fileID: 8300000, guid: 0e0a2833e253e5e48858ae0402c0a08a, type: 3}
     Channel: 1
+  - Name: Ruins
+    Clip: {fileID: 8300000, guid: de91452e2c57d124c8c958a058c6e6a0, type: 3}
+    Channel: 1
   m_sfx_clips:
   - Name: Load
     Clip: {fileID: 8300000, guid: 1c90a42faadd28d449e2144817df4621, type: 3}
@@ -650,6 +653,12 @@ MonoBehaviour:
     Channel: 1
   - Name: Slime Dead
     Clip: {fileID: 8300000, guid: 64d52e8259b4ebc48afffe4c35a1e5f5, type: 3}
+    Channel: 3
+  - Name: Mushroom Dead
+    Clip: {fileID: 8300000, guid: 2d435c228a378cf4eb795d8b6273a4c4, type: 3}
+    Channel: 3
+  - Name: Pygmy Dead
+    Clip: {fileID: 8300000, guid: 627fb297611db594a87c60a2559aaa8c, type: 3}
     Channel: 3
 --- !u!82 &192637011
 AudioSource:

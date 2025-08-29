@@ -83,7 +83,7 @@ public class Prologue : MonoBehaviour
         }
         else
         {
-            LoadingManager.Instance.LoadScene("Game");
+            LoadingManager.Instance.LoadScene("Sprout Island");
             yield break;
         }
     }  

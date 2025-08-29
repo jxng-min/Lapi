@@ -11,7 +11,17 @@ public class FactoryManager : MonoBehaviour
             EnemyCode.GREEN_SLIME,
             EnemyCode.RED_SLIME,
             EnemyCode.PINK_SLIME,
-            EnemyCode.BLUE_SLIME
+            EnemyCode.BLUE_SLIME,
+            EnemyCode.GREEN_HORN_SLIME,
+            EnemyCode.RED_HORN_SLIME,
+            EnemyCode.BLUE_HORN_SLIME,
+            EnemyCode.GREEN_MUSHROON,
+            EnemyCode.RED_MUSHROOM,
+            EnemyCode.PINK_MUSHROOM,
+            EnemyCode.WHITE_PYGMY,
+            EnemyCode.GREEN_PYGMY,
+            EnemyCode.BROWN_PYGMY,
+            EnemyCode.BLACK_PYGMY
         );
     }
 

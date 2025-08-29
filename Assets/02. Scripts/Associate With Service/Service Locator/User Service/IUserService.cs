@@ -9,6 +9,7 @@ namespace UserService
         Vector3 Camera { get; set; }
         float PlayTime { get; set; }
         StatusData Status { get; set; }
+        string Map { get; set;}
 
         event Action<int, int> OnUpdatedLevel;
 

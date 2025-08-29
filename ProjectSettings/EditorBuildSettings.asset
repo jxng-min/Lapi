@@ -12,8 +12,11 @@ EditorBuildSettings:
     path: Assets/01. Scenes/Event.unity
     guid: 69ece26dce20f4c4aa6af3b7e6282ff4
   - enabled: 1
-    path: Assets/01. Scenes/Game.unity
+    path: Assets/01. Scenes/Sprout Island.unity
     guid: 49057190074025a4e92f0df467efa635
+  - enabled: 1
+    path: Assets/01. Scenes/Ruins.unity
+    guid: ca534a4fcf0da3942851b748a7d89013
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

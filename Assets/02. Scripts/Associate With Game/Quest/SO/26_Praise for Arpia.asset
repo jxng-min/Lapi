@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a51ba9a1dc3196d458d78a21c9f99d0e, type: 3}
+  m_Name: 26_Praise for Arpia
+  m_EditorClassIdentifier: 
+  m_quest_id: 26
+  m_kill_quest_list: []
+  m_item_quest_list: []
+  m_dialogue_quest_list:
+  - m_subquest_id: 0
+    m_npc_code: 11
+    m_total_dialogue_count: 0
+  m_start_diaglogue_id: 71
+  m_progress_dialogue_id: -1
+  m_can_clear_dialogue_id: 72
+  m_quest_level: 14
+  m_previous_quest_list:
+  - {fileID: 11400000, guid: aa5313ab1a347934a8c29e6512d6f314, type: 2}
+  m_gold: 400
+  m_exp: 300
+  m_item_list: []

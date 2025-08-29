@@ -9,6 +9,7 @@ public class EnemyCtrl : MonoBehaviour
     private EnemyStateContext m_state_context;
 
     #region States
+    private IState<EnemyCtrl> m_none_state;
     private IState<EnemyCtrl> m_idle_state;
     private IState<EnemyCtrl> m_move_state;
     private IState<EnemyCtrl> m_trace_state;
@@ -40,6 +41,7 @@ public class EnemyCtrl : MonoBehaviour
     {
         m_state_context = new EnemyStateContext(this);
 
+        m_none_state = gameObject.AddComponent<EnemyNoneState>();
         m_idle_state = gameObject.AddComponent<EnemyIdleState>();
         m_move_state = gameObject.AddComponent<EnemyMoveState>();
         m_trace_state = gameObject.AddComponent<EnemyTraceState>();
@@ -106,6 +108,10 @@ public class EnemyCtrl : MonoBehaviour
     {
         switch (state)
         {
+            case EnemyState.NONE:
+                m_state_context.Transition(m_none_state);
+                break;
+
             case EnemyState.IDLE:
                 m_state_context.Transition(m_idle_state);
                 break;

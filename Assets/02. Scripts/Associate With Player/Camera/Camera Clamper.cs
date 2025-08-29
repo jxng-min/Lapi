@@ -16,6 +16,9 @@ public class CameraClamper : MonoBehaviour
     [Header("다음 스폰 위치")]
     [SerializeField] private Transform m_spawn_transform;
 
+    [Header("맵 이름")]
+    [SerializeField] private string m_map_name;
+
     private IUserService m_user_service;
 
     private void Awake()
@@ -34,14 +37,16 @@ public class CameraClamper : MonoBehaviour
 
             m_user_service.Position = m_spawn_transform.position;
             m_user_service.Camera = m_clamped_transform.position;
+            m_user_service.Map = m_map_name;
 
             if (m_holder.WarpCoroutine != null)
             {
-                StopCoroutine(m_holder.WarpCoroutine);
+                m_holder.LastClamper.StopCoroutine(m_holder.WarpCoroutine);
                 m_holder.WarpCoroutine = null;
             }
 
-            m_holder.WarpCoroutine = StartCoroutine("TranslateCamera");
+            m_holder.WarpCoroutine = StartCoroutine(TranslateCamera());
+            m_holder.LastClamper = this;
         }
     }
 

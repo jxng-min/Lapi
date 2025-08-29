@@ -92,6 +92,8 @@ public class EnemyStatus : MonoBehaviour
     {
         OnDead?.Invoke(m_controller);
 
+        m_controller.ChangeState(EnemyState.NONE);
+
         var container = ObjectManager.Instance.GetPool(m_controller.SO.Type == EnemyType.MELEE ?
                                                        ObjectType.MELEE_ENEMY : ObjectType.RANGED_ENEMY).Container;
         transform.position = container.transform.position;

@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using EquipmentService;
 using InventoryService;
 using KeyService;
@@ -98,7 +99,7 @@ public class LoaderSlotPresenter
         if (m_is_loader)
         {
             Load();
-            m_view.LoadScene("Game");
+            m_view.LoadScene(m_user_service.Map);
             m_view.PlaySFX("Load");
         }
         else
